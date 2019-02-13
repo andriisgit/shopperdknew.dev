@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<config>
+<modules>
+    <Nybohansen_Pacsoft>
+        <version>1.7.7</version>
+        <license>a3df2219416dba1c9c42edb66b221493</license>
+    </Nybohansen_Pacsoft>
+</modules>
+<global>
+    <helpers>
+        <pacsoft>
+            <class>Nybohansen_Pacsoft_Helper</class>
+        </pacsoft>
+    </helpers>
+    <models>
+        <pacsoft>
+            <class>Nybohansen_Pacsoft_Model</class>
+            <resourceModel>pacsoft_mysql4</resourceModel>
+        </pacsoft>
+        <shipping>
+            <rewrite>
+                <rate_result>Nybohansen_Pacsoft_Model_Rate_Result</rate_result>
+            </rewrite>
+        </shipping>
+        <!-- declaring model vs db table relation -->
+        <pacsoft_mysql4>
+            <class>Nybohansen_Pacsoft_Model_Mysql4</class>
+            <entities>
+                <orderInfo>
+                    <table>pacsoft_order_info</table>
+                </orderInfo>
+                <rates>
+                    <table>pacsoft_rates</table>
+                </rates>
+                <ratesStore>
+                    <table>pacsoft_rates_store</table>
+                </ratesStore>
+                <salesRule>
+                    <table>pacsoft_sales_rule</table>
+                </salesRule>
+            </entities>
+        </pacsoft_mysql4>
+    </models>
+<!-- declaring controllers -->    
+    <controllers>
+        <pacsoft>
+            <class>Nybohansen_Pacsoft_Controllers</class>
+        </pacsoft>
+    </controllers>
+<!-- declaring blocks -->
+    <blocks>
+        <pacsoft>
+            <class>Nybohansen_Pacsoft_Block</class>
+        </pacsoft>
+    </blocks>
+<!-- declaring resources -->
+    <resources>
+        <pacsoft_setup>
+            <setup>
+                <module>Nybohansen_Pacsoft</module>
+            </setup>
+            <connection>
+                <use>core_setup</use>
+            </connection>
+        </pacsoft_setup>
+        <pacsoft_write>
+            <connection>
+                <use>core_write</use>
+            </connection>
+        </pacsoft_write>
+        <pacsoft_read>
+            <connection>
+                <use>core_read</use>
+            </connection>
+        </pacsoft_read>
+    </resources>
+<!-- declaring event controllers and actions -->
+    <events>
+        <checkout_controller_multishipping_shipping_post>
+            <observers>
+                <pacsoft_checkout_controller_multishipping_shipping_post>
+                    <type>model</type>
+                    <class>pacsoft/observer</class>
+                    <method>saveShippingMethod</method>
+                </pacsoft_checkout_controller_multishipping_shipping_post>
+            </observers>
+        </checkout_controller_multishipping_shipping_post>
+        <checkout_controller_onepage_save_shipping_method>
+            <observers>
+                <pacsoft_checkout_controller_onepage_save_shipping_method>
+                    <type>model</type>
+                    <class>pacsoft/observer</class>
+                    <method>saveShippingMethod</method>
+                </pacsoft_checkout_controller_onepage_save_shipping_method>
+            </observers>
+        </checkout_controller_onepage_save_shipping_method>
+        <sales_order_save_after>
+            <observers>
+                <pacsoft_sales_order_save_after>
+                    <type>model</type>
+                    <class>pacsoft/observer</class>
+                    <method>saveOrderAfter</method>
+                </pacsoft_sales_order_save_after>
+            </observers>
+        </sales_order_save_after>
+        <sales_quote_load_after>
+            <observers>
+                <pacsoft_sales_quote_load_after>
+                    <type>model</type>
+                    <class>pacsoft/observer</class>
+                    <method>loadQuoteAfter</method>
+                </pacsoft_sales_quote_load_after>
+            </observers>
+        </sales_quote_load_after>
+        <sales_convert_quote_address_to_order>
+        	<observers>
+                <pacsoft_sales_convert_quote_address_to_order>
+                    <type>model</type>
+                    <class>pacsoft/observer</class>
+                    <method>convertQuoteAddress</method>
+                </pacsoft_sales_convert_quote_address_to_order>
+            </observers>
+        </sales_convert_quote_address_to_order>
+        <sales_quote_save_after>
+            <observers>
+                <pacsoft_sales_quote_save_after>
+                    <type>model</type>
+                    <class>pacsoft/observer</class>
+                    <method>salesQuoteSaveAfter</method>
+                </pacsoft_sales_quote_save_after>
+            </observers>
+        </sales_quote_save_after>
+        <core_block_abstract_to_html_after>
+            <observers>
+                <pacsoft_adminhtml_block_html_before>
+                    <type>model</type>
+                    <class>pacsoft/observer</class>
+                    <method>coreBlockAbstractToHtmlAfter</method>
+                </pacsoft_adminhtml_block_html_before>
+            </observers>
+        </core_block_abstract_to_html_after>
+    </events>
+</global>
+<frontend>
+    <routers>
+        <pacsoft>
+            <use>standard</use>
+            <args>
+                <module>Nybohansen_Pacsoft</module>
+                <frontName>pacsoft</frontName>
+            </args>
+        </pacsoft>
+    </routers>
+    <layout>
+        <updates>
+            <pacsoft>
+                <file>pacsoft.xml</file>
+            </pacsoft>
+        </updates>
+    </layout>
+    <translate>
+        <modules>
+            <Nybohansen_Pacsoft>
+                <files>
+                    <default>Nybohansen_Pacsoft.csv</default>
+                </files>
+            </Nybohansen_Pacsoft>
+        </modules>
+    </translate>
+</frontend>
+<admin>
+    <routers>
+        <adminhtml>
+            <args>
+                <modules>
+                    <nybohansen_pacsoft before="Mage_Adminhtml">Nybohansen_Pacsoft_Adminhtml</nybohansen_pacsoft>
+                </modules>
+            </args>
+        </adminhtml>
+    </routers>
+</admin>
+<adminhtml>
+<layout>
+<updates>
+    <pacsoft>
+        <!--
+        We again keep a nice naming convention and make our module upgrade proof by placing it in a separate folder
+        - Since we are in the adminhtml node, this will look for the XML file in the app/design/adminhtml/default/default root folder
+        -->
+                <file>nybohansen/pacsoft.xml</file>
+            </pacsoft>
+        </updates>
+    </layout>
+    <translate>
+        <modules>
+            <Nybohansen_Pacsoft>
+                <files>
+                    <default>Nybohansen_Pacsoft.csv</default>
+                </files>
+            </Nybohansen_Pacsoft>
+        </modules>
+    </translate>
+    <events>
+        <core_block_abstract_prepare_layout_before>
+            <observers>
+                <pacsoft_core_block_abstract_prepare_layout_before>
+                    <class>pacsoft/observer</class>
+                    <method>addMassAction</method>
+                </pacsoft_core_block_abstract_prepare_layout_before>
+            </observers>
+        </core_block_abstract_prepare_layout_before>
+        <adminhtml_block_salesrule_actions_prepareform>
+            <observers>
+                <pacsoft_adminhtml_block_salesrule_actions_prepareform>
+                    <type>model</type>
+                    <class>pacsoft/observer</class>
+                    <method>adminhtmlBlockSalesruleActionsPrepareform</method>
+                </pacsoft_adminhtml_block_salesrule_actions_prepareform>
+            </observers>
+        </adminhtml_block_salesrule_actions_prepareform>
+        <salesrule_rule_save_before>
+            <observers>
+                <pacsoft_salesrule_rule_save_after>
+                    <type>model</type>
+                    <class>pacsoft/observer</class>
+                    <method>salesruleRuleSaveBefore</method>
+                </pacsoft_salesrule_rule_save_after>
+            </observers>
+        </salesrule_rule_save_before>
+        <salesrule_rule_save_after>
+            <observers>
+                <pacsoft_salesrule_rule_save_after>
+                    <type>model</type>
+                    <class>pacsoft/observer</class>
+                    <method>salesruleRuleSaveAfter</method>
+                </pacsoft_salesrule_rule_save_after>
+            </observers>
+        </salesrule_rule_save_after>
+    </events>
+</adminhtml>
+<default>
+    <carriers>
+        <pacsoft>
+            <active>0</active>
+            <model>pacsoft/carrier_pacsoft</model>
+            <name>Pacsoft</name>
+            <title>Pacsoft parcel shop</title>
+            <specificerrmsg>
+                This shipping method is currently unavailable.
+                If you would like to ship using this shipping
+                method, please contact us.
+            </specificerrmsg>
+            <handling_type>F</handling_type>
+            <handling_fee></handling_fee>
+            <free_shipping_enable>0</free_shipping_enable>
+            <showmethod>0</showmethod>
+            <weightUnit>1</weightUnit>
+            <trackandtrace_active>1</trackandtrace_active>
+            <trackandtrace_createShipment>1</trackandtrace_createShipment>
+            <trackandtrace_sendEmailOnImport>1</trackandtrace_sendEmailOnImport>
+        </pacsoft>
+    </carriers>
+</default>
+<crontab>
+    <jobs>
+        <pacsoft_trackandtrace>
+            <schedule>
+                <cron_expr>*/5 * * * *</cron_expr>
+            </schedule>
+            <run>
+                <model>pacsoft/trackAndTrace::import</model>
+            </run>
+        </pacsoft_trackandtrace>
+        <pacsoft_servicepoints_import>
+            <schedule>
+                <cron_expr>* * * * *</cron_expr>
+            </schedule>
+            <run>
+                <model>pacsoft/servicePoints::update</model>
+            </run>
+        </pacsoft_servicepoints_import>
+    </jobs>
+</crontab>
+</config>

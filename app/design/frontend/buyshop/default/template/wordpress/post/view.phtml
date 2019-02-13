@@ -1,0 +1,49 @@
+<?php
+/**
+ * @category    Fishpig
+ * @package     Fishpig_Wordpress
+ * @license     http://fishpig.co.uk/license.txt
+ * @author      Ben Tideswell <help@fishpig.co.uk>
+ */
+?>
+<?php $post = $this->getPost() ?>
+<?php if ($post): ?>
+	<?php $helper = $this->helper('wordpress') ?>
+	<?php $author = $post->getAuthor() ?>
+
+
+
+
+    <div class="post-preview">
+        <?php echo $this->getBeforePostContentHtml() ?>
+        <h3><?php echo $this->escapeHtml($post->getPostTitle()) ?></h3>
+
+        <?php if ($post->isViewableForVisitor()): ?>
+            <?php if ($featuredImage = $post->getFeaturedImage()): ?>
+                <div class="image"><img class="img-responsive img-rounded" src="<?php echo $featuredImage->getFullSizeImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>"></div>
+                <br >
+            <?php endif; ?>
+
+            <?php echo $post->getPostContent() ?>
+            <?php echo $this->getAfterPostContentHtml() ?>
+
+        <?php else: ?>
+            <?php echo $this->getPasswordProtectHtml() ?>
+        <?php endif; ?>
+
+        <div class="line"></div>
+        <br />
+        <?php echo $this->getCommentsHtml() ?>
+        <br />
+
+    </div>
+
+
+    <div class="clearfix"></div>
+
+
+
+
+
+
+<?php endif; ?>

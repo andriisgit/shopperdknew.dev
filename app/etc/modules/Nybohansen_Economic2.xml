@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Nybohansen_Economic2>
+      <active>true</active>
+      <codePool>local</codePool> 
+    </Nybohansen_Economic2>
+  </modules>
+</config>

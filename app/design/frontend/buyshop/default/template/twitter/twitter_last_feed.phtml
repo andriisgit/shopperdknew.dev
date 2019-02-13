@@ -1,0 +1,18 @@
+<?php if(Mage::getStoreConfig('buyshopconfig/social_accounts/twitter_account')): ?>
+
+    <?php
+        $twitts=$this->getTwitts();
+        if(count($twitts))
+        {
+            foreach (array_slice($twitts,0,1) as $twitt)
+            {
+            ?>
+            <p><em class="icon-twitter-bird white"></em>&nbsp;&nbsp;&nbsp;
+                <?php echo Mage::helper('buyshopconfig')->replace_uri($twitt->text)?> - <?php echo Mage::helper('buyshopconfig')->nicetime($twitt->created_at)?>
+            </p>
+
+            <?php
+            }
+        }
+    ?>
+<?php endif;?>

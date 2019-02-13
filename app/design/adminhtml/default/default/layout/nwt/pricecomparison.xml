@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * NWT_Pricecomparison extension
+ *
+ * @category    NWT
+ * @package     NWT_Pricecomparison
+ * @copyright   Copyright (c) 2014 Nordic Web Team ( http://nordicwebteam.se/ )
+ * @license     NWT Commercial License (NWTCL 1.0)
+ * @author      Emil [carco] Sirbu (emil.sirbu@gmail.com)
+ *
+ */
+ -->
+
+<layout version="0.1.0">
+
+    <!-- Feeds grid action -->
+    <adminhtml_pricecomparison_feed_index>
+        <reference name="content">
+            <block type="pricecomparison/adminhtml_feed" name="feed" />
+        </reference>
+    </adminhtml_pricecomparison_feed_index>
+
+    <adminhtml_pricecomparison_feed_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="pricecomparison/adminhtml_feed_grid" name="feed_grid"/>
+        </block>
+    </adminhtml_pricecomparison_feed_grid>
+
+    <!-- Feed add/edit action -->
+    <adminhtml_pricecomparison_feed_edit>
+        <reference name="content">
+            <block type="pricecomparison/adminhtml_feed_edit" name="feed_edit"></block>
+        </reference>
+        <reference name="left">
+            <block type="pricecomparison/adminhtml_feed_edit_tabs" name="feed_tabs"></block>
+        </reference>
+    </adminhtml_pricecomparison_feed_edit>  
+
+</layout>

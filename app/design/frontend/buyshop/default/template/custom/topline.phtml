@@ -1,0 +1,101 @@
+<?php
+$config=Mage::getStoreConfig('buyshoplayout/general/header_tool_line');
+if($config=='a')
+{
+    ?>
+    <!--TOPLINE v1-->
+    <div id="topline">
+        <div class="container">
+            <div class="pull-left hidden-phone hidden-tablet twitt">
+                <?php echo $this->getChildHtml('twitter_last_feed')?>
+            </div>
+
+            <?php if(!Mage::getStoreConfig('buyshopconfig/options/catalog_mode')): ?>
+            <div class="pull-right">
+                <?php
+                //check the user is loggedon or not
+                if (! Mage::getSingleton('customer/session')->isLoggedIn()){
+                    //if user logged on show the logout link - add this code within anchor tag
+                    ?>
+
+                    <div class="login_block">
+                        <a href="<?php echo Mage::helper('customer')->getLoginUrl();?>" class="login_link"><?php echo $this->__('Login') ?></a>
+                        <div class="form-login-wrapper hidden-phone">
+                            <?php echo $this->getChildHtml('mini_login') ?>
+                        </div>
+                        / <a href="<?php echo Mage::helper('customer')->getRegisterUrl();?>"><?php echo $this->__('Register') ?></a>
+                    </div>
+                    <?php
+                }
+                else{
+                    //if user is not logged on yet show the login link - add this code within anchor tag
+                    ?>
+                    <span> <?php echo $this->__('Hello') ?>, <?php echo Mage::helper('customer')->getCustomerName(); ?>! <a href="<?php echo Mage::helper('customer')->getLogoutUrl();?>"><?php echo $this->__('Logout') ?></a></span>
+                    <?php
+                }
+                ?>
+            </div>
+            <?php endif; ?>
+
+        </div>
+    </div>
+    <!--TOPLINE v1 EOF-->
+    <?php
+} elseif ($config=='b')
+{
+
+    ?>
+    <!--TOPLINE v2-->
+    <div id="topline" >
+        <div class="container">
+            <div class="wrapper_w">
+                <div class="pull-left hidden-phone hidden-tablet ">
+                    <div class="phone"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('buyshop_header_phone')->toHtml() ?></div>
+                </div>
+                <div class="pull-right">
+
+                    <div class="alignright"><span class="hidden-small-desktop"><?php echo Mage::getStoreConfig('design/header/welcome'); ?> &nbsp;&nbsp;</span>
+
+                        <?php if(!Mage::getStoreConfig('buyshopconfig/options/catalog_mode')): ?>
+                        <?php
+                        //check the user is loggedon or not
+                        if (! Mage::getSingleton('customer/session')->isLoggedIn()){
+                            //if user logged on show the logout link - add this code within anchor tag
+                            ?>
+
+                                <div class="hidden-phone" style="display: inline-block">
+                                    <a href="<?php echo Mage::helper('customer')->getLoginUrl();?>"><?php echo $this->__('Login') ?></a> /
+                                    <a href="<?php echo Mage::helper('customer')->getRegisterUrl();?>"><?php echo $this->__('Register') ?></a> &nbsp;&nbsp;
+                                </div>
+                            <?php
+                        }
+                        else{
+                            //if user is not logged on yet show the login link - add this code within anchor tag
+                            ?>
+                             <span class="hidden-phone"> <?php echo $this->__('Hello') ?>, <?php echo Mage::helper('customer')->getCustomerName(); ?>! </span>
+                            <?php
+                        }
+                        ?>
+                        <div class="fadelink"  style="z-index:50006"> <a href="#"><?php echo $this->__('Account') ?></a>
+                            <div class="ul_wrapper toplinks">
+                                <?php echo $this->getChildHtml('topLinks')?>
+                            </div>
+                        </div>
+                        <?php endif; ?>
+
+                        <?php echo $this->getChildHtml('store_language')?>
+                        <?php echo $this->getChildHtml('currency_top')?>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--TOPLINE v2 EOF-->
+    <?php
+}
+?>
+
+
+
+

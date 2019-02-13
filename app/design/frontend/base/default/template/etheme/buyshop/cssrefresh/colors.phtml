@@ -1,0 +1,782 @@
+/*
+ATTENTION! changes in this css file will be overwritten. If you want to change this template change file  \app\design\frontend\default\buyshop\template\custom\cssrefresh\colors.phtml
+*/
+<?php
+    $store=Mage::registry('store_for_css')
+?>
+    /*CAPTIONS*/
+    /*font*/
+
+#megamenu ul.rows_outer ul.menu_row li.col li.title a,.quickview,.opc .step-title .number, button.button-2x, .button.button-2x, .nav-list li a, h3, #footer_popup h3, #footer_popup h4, h1, h4, .custom_blocks .box a, .product-shop .product-name h1, .block .block-title, .button, #nav > li > a, h2, #content h2 {
+    font-family: '<?php echo str_replace('+',' ',Mage::getStoreConfig('buyshopcolors/captions/font',$store)) ?>'
+}
+
+    /*text color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/captions/text_color',$store);
+if (!empty($temp)) {
+    ?>
+h4, h1, .block-title, h2, h2 a {
+    color: <?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*text color 2*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/captions/text_color_2',$store);
+if (!empty($temp)) {
+    ?>
+h4, h1, .block-title, h2, h2 a {
+    color: <?php echo $temp?>;
+}
+
+.row>.span12>h1, .multiple-checkout > h2, .multiple-checkout > div.page-title > h1, .account-create .page-title h1, .product_info_left>.product-name>h1, section#content>div.container>div.page-title>h1, div.container>div.row>div.span9>div.row>div.span12>h1, .my-account h2, .my-account h4, .my-account h1, .upsell h2, .product_related h4, .block-title, .category-products h2, .product_custom h2, h2 a, #carousel_tabs, .carousels h2, h2.nopadding, h2.pull-left {
+    color: <?php echo Mage::getStoreConfig('buyshopcolors/captions/text_color',$store)?>;
+}
+    <?php unset ($temp);
+} ?>
+    /*GENERAL*/
+
+    /*Theme color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/general/theme_color',$store);
+if (!empty($temp)) {
+    ?>
+
+    .jcarousel-skin-brands a.btn:hover,.carousel-testimonials .flexslider .flex-direction-nav a,#nav > li.hover > a, #nav > li > a:hover,.filters-by-category li a.selected,.countdown_inner,#megamenu ul.rows_outer ul.menu_row li.col li.title span,a.quickview:hover,.sale_discount,.dashboard .box-tags .number, .button_small, #topline a.button_small, .data-table thead th, .flexslider.vertical .flex-direction-nav a:hover, button.button-3x, .button.button-3x, .button, .flexslider.banners .flex-direction-nav a:hover, a.btn, .loader-slider, .nav-header > a, .nav-list > li > a:hover, button, .form-search button, .form-mail button, .shoppingcart .fadelink span a, .shopping_cart_mini .button:hover, a.small_icon_color i, .middle_icon_color, .nav-tabs > li > a:hover, .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .direction-nav a:hover, .es-nav a.btn:hover {
+    background-color: <?php echo $temp?>;
+}
+#header.header_v_2 #nav li.level1:hover {
+    border-left: 4px solid <?php echo $temp?>;
+}
+.cloud-zoom-lens {
+    border: 2px solid <?php echo $temp?>;
+}
+
+.checkout-progress li.active, #nav > li > ul, #nav li:hover .menu_custom_block {
+    border-top-color: <?php echo $temp?>;
+}
+    .ls-nav-prev, .ls-nav-next,.ls-nav-prev:hover, .ls-nav-next:hover, #collapsed-menu li.active > label > a,#nav li.active > a, #collapsed-menu .nav-list li.active > a,.price-label,#megamenu span.inside i,.flex-next .icon-up, .flex-prev .icon-down, a.fancy-zoom,#megamenu i, #megamenu em,.tparrows i,.product-listing a.outofstock,a.icon-trash-2, .block-account .block-content li.current, .product-img-box .more-views li i, .listing_header_row1 a.icon-th.active, .listing_header_row1 a.icon-th-list.active, .listing_header_row1 a.icon-th:hover, .listing_header_row1 a.icon-th-list:hover, a:hover .custom_color, a.custom_color:hover, #header.header_v_2 #nav li li li a:hover, h4 [class^="icon-"], #carousel_tabs a.active, h2 a:hover, .preview .product-tocart a, .rating strong i, .custom_color, a .custom_color, .flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover, .flex-direction-nav a, h2 i, h2 span, #nav > li:hover > a, .nav-list li li a:hover, #topline a, .product .product-tocart a, .twit a, .twit .icon, .form-login button i {
+    color: <?php echo $temp?>;
+}
+    .carousel-testimonials .quotes,.in.collapse li.active > a{
+color: <?php echo $temp?> !important;
+}
+.quickviewblock .price{color: <?php echo $temp?> !important;}
+
+    .filters-by-category li a.selected, .filters-by-category li a:hover,.style2 .es-nav, .custom_blocks .box .inside, .tab-content, #nav li:hover .menu_custom_block, #header.header_v_2 .bylink li li:hover a, #header.header_v_2 #nav li li li:hover {
+    border-color:<?php echo $temp?>;
+}
+.flexslider.banners {
+    border-bottom: 5px solid <?php echo $temp?>;
+}
+.box-wrapper .line {
+    border-top: 5px solid <?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*Theme hover color */
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/general/theme_hover_color',$store);
+if (!empty($temp)) {
+    ?>
+.flexslider.more-views .flex-direction-nav a:hover, .button_small:hover, #topline a.button_small:hover, .promo_box:hover div, .button:hover, button:hover, .form-search button.btn:hover, .form-mail button.btn:hover, .shoppingcart:hover .fadelink span a, a.small_icon_color:hover i, button:hover, .form-search button.btn:hover, .form-mail button.btn:hover, .shoppingcart:hover .fadelink span a, a.small_icon_color:hover i {
+    background-color: <?php echo $temp?>;
+}
+.preview .product-tocart a:hover, .product-img-box .more-views li a i:hover, .product .product-tocart a:hover, a.custom_color:hover {
+    color:<?php echo $temp?>}
+#footer_bottom a i:hover {
+    color:<?php echo $temp?> !important
+}
+    <?php unset ($temp);
+} ?>
+
+
+
+    /*Input hover color (focus border) */
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/general/input_focus',$store);
+if (!empty($temp)) {
+    ?>
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+    border-color: <?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*Text color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/general/text_color',$store);
+if (!empty($temp)) {
+    ?>
+body, ul#poll-answers .label {
+    color:<?php echo $temp?>
+}
+
+    <?php unset ($temp);
+} ?>
+
+    /*Link color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/general/link_color',$store);
+if (!empty($temp)) {
+    ?>
+a, .listing_header_row1 a[class^="icon-"] {
+    color:<?php echo $temp?>
+}
+    <?php unset ($temp);
+} ?>
+
+    /*Link color:hover*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/general/link_hover_color',$store);
+if (!empty($temp)) {
+    ?>
+.block-account .block-content li a:hover, a:hover {
+    color:<?php echo $temp?>
+}
+
+    <?php unset ($temp);
+} ?>
+
+    /****************************************CONTENT******************************************/
+    /*Text color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/content/text_color',$store);
+if (!empty($temp)) {
+    ?>
+.tab-content, .upsell, .product_outer, .big_with_description, .box-wrapper, #checkoutSteps, #checkout-progress-wrapper {
+    color:<?php echo $temp?>}
+    <?php unset ($temp);
+} ?>
+    /*Link color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/content/link_color',$store);
+if (!empty($temp)) {
+    ?>
+.account-create, .tab-content a, .upsell a, .product_outer a, .big_with_description a, .box-wrapper a, #checkoutSteps a, #checkout-progress-wrapper a {
+    color:<?php echo $temp?>}
+    <?php unset ($temp);
+} ?>
+    /*Link color:hover*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/content/link_hover_color',$store);
+if (!empty($temp)) {
+    ?>
+.tab-content a:hover, .upsell a:hover, .product_outer a:hover, .big_with_description a:hover, .box-wrapper a:hover, #checkoutSteps a:hover, #checkout-progress-wrapper a:hover {
+    color:<?php echo $temp?>}
+.small_with_description a {
+    color:<?php echo Mage::getStoreConfig('buyshopcolors/general/text_color',$store)?>
+}
+    <?php unset ($temp);
+} ?>
+
+
+    /*HEADER TOOL LINE v2*/
+    /*Header tool line (top and bottom line)*/
+    /*Text Color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/header_tool_line/text_color',$store);
+if (!empty($temp)) {
+    ?>
+#topline {
+    color:<?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*Link Color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/header_tool_line/link_color',$store);
+if (!empty($temp)) {
+    ?>
+#topline a, #topline .login_social span.custom_color {
+    color:<?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*Link Color Hover*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/header_tool_line/link_hover_color',$store);
+if (!empty($temp)) {
+    ?>
+#topline a:hover {
+    color:<?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*Background Color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/header_tool_line/background_color',$store);
+if (!empty($temp)) {
+    ?>
+#topline, .form-login-wrapper {
+    background-color:<?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*Shadow*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/header_tool_line/shadow',$store);
+if ($temp) {
+    ?>
+#topline {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.27);
+}
+    <?php unset ($temp);
+} ?>
+
+    /*Phone*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/header_tool_line/phone_color',$store);
+if ($temp) {
+    ?>
+#topline .phone span {
+    color:<?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*Drop down boxes*/
+    /*Link Color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/drop_down_boxes/link_color',$store);
+if (!empty($temp)) {
+    ?>
+#topline .fadelink li a, #topline .fadelink > a {
+    color:<?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*Link Color Hover*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/drop_down_boxes/link_hover_color',$store);
+if (!empty($temp)) {
+    ?>
+#topline .fadelink li a:hover, #topline .fadelink > a:hover {
+    color:<?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*Link Color Hover*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/drop_down_boxes/background_color',$store);
+if (!empty($temp)) {
+    ?>
+#topline .fadelink .ul_wrapper ul, #topline .fadelink > a {
+    background-color:<?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*Border Color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/drop_down_boxes/border_color',$store);
+if (!empty($temp)) {
+    ?>
+#topline .fadelink > a, #topline .fadelink .ul_wrapper ul {
+    border: 1px solid <?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*Arrow Image*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/drop_down_boxes/arrow_image',$store);
+if (!empty($temp)) {
+    ?>
+#topline .fadelink > a {
+    background-image: url("<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'buyshop/' . $temp?>");
+}
+    <?php unset ($temp);
+} ?>
+
+    /*Background Color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/general/background_color',$store);
+if (!empty($temp)) {
+    ?>
+body,#spy {
+    background-color: <?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*Background Image*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/general/background_image',$store);
+if (!empty($temp)) {
+    ?>
+body {
+    background-image: url("<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'buyshop/' . $temp?>");
+    <?php
+    switch (Mage::getStoreConfig('buyshopcolors/general/background_image_display_mode',$store)) {
+        case 'center':
+            ?> background-position: center top; background-repeat: no-repeat; <?php break;
+        case 'no-repeat':
+            ?> background-attachment: fixed; background-position: center top; background-repeat: no-repeat;<?php break;
+    }
+    ?>
+}
+    <?php unset ($temp);
+} ?>
+
+
+
+
+    /*HEADER / NAVIGATION*/
+    /*Text Color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/header_navigation/text_color',$store);
+if (!empty($temp)) {
+    ?>
+.category_desc_in_menu p, #nav, #nav h1 {
+    color:<?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*Link Color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/header_navigation/link_color',$store);
+if (!empty($temp)) {
+    ?>
+#nav li li a {
+    color:<?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*Link Color:hover*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/header_navigation/link_hover_color',$store);
+if (!empty($temp)) {
+    ?>
+#header.header_v_2 #nav li.level1 > a:hover, #nav li li li a:hover {
+    color:<?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*Link Color 1st level*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/header_navigation/link_color_level_0',$store);
+if (!empty($temp)) {
+    ?>
+#nav > li > a, ul#level1.in li a {
+    color:<?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+
+
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/header_navigation/menu_lable',$store);
+if (!empty($temp)) {
+    ?>
+    /*LABEL MENU ITEM BG COLOR*/
+#collapsed-menu span.badge,#megamenu ul.rows_outer ul.menu_row li.col li.title span.hot{background:<?php echo $temp?>}
+
+    <?php unset ($temp);
+} ?>
+
+
+    /*BG Image*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/header_navigation/background_image',$store);
+if (!empty($temp)) {
+    ?>
+.header_wrapper {
+    background-image: url("<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'buyshop/' . $temp?>");
+}
+    <?php unset ($temp);
+} ?>
+
+
+    /*CONTENT*/
+    /*Background Color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/content/background_color',$store);
+if (!empty($temp)) {
+    ?>
+section#content {
+    background-color: <?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*Background Image*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/content/background_image',$store);
+if (!empty($temp)) {
+    ?>
+section#content {
+    background-image: url("<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'buyshop/' . $temp?>");
+    <?php
+    switch (Mage::getStoreConfig('buyshopcolors/content/background_image_display_mode',$store)) {
+        case 'center':
+            ?> background-position: center top; background-repeat: no-repeat; <?php break;
+        case 'no-repeat':
+            ?> background-attachment: fixed; background-position: center top; background-repeat: no-repeat;<?php break;
+    }
+    ?>
+}
+    <?php unset ($temp);
+} ?>
+
+    /*FOOTER INFO*/
+    /*bg color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/footer_info/background_color',$store);
+if (!empty($temp)) {
+    ?>
+#bottom_block {
+    background-color: <?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*bg image*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/footer_info/background_image',$store);
+if (!empty($temp)) {
+    ?>
+#bottom_block {
+    background-image: url("<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'buyshop/' . $temp?>");
+
+}
+    <?php unset ($temp);
+} ?>
+
+    /*text color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/footer_info/text_color',$store);
+if (!empty($temp)) {
+    ?>
+#bottom_block {
+    color: <?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*captions color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/footer_info/captions_color',$store);
+if (!empty($temp)) {
+    ?>
+#bottom_block h4 {
+    color: <?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*link color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/footer_info/link_color',$store);
+if (!empty($temp)) {
+    ?>
+#bottom_block a {
+    color: <?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+    /*bold color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/footer_info/bold_color',$store);
+if (!empty($temp)) {
+    ?>
+#bottom_block b, #bottom_block strong, .name a {
+    color: <?php echo $temp?> !important;
+}
+    <?php unset ($temp);
+} ?>
+
+
+
+    /*link hover color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/footer_info/link_hover_color',$store);
+if (!empty($temp)) {
+    ?>
+#bottom_block a:hover {
+    color: <?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*Line color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/footer_info/line_color',$store);
+if (!empty($temp)) {
+    ?>
+.line_above_footer {
+    border-top: 1px solid <?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+    /*FOOTER POPUP*/
+    /*Text Color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/footer_popup/text_color',$store);
+if (!empty($temp)) {
+    ?>
+#footer_popup, #footer_popup .form-mail input {
+    color: <?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+    /*Caption Text Color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/footer_popup/caption_text_color',$store);
+if (!empty($temp)) {
+    ?>
+#footer_popup h3, #footer_popup h4 {
+    color: <?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+    /*Link Color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/footer_popup/link_color',$store);
+if (!empty($temp)) {
+    ?>
+#footer_popup a {
+    color: <?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+    /*Link Hover Color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/footer_popup/link_hover_color',$store);
+if (!empty($temp)) {
+    ?>
+#footer_popup a:hover {
+    color: <?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+    /*Background Color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/footer_popup/background_color',$store);
+if (!empty($temp)) {
+    $temp = Mage::helper('buyshopconfig')->hex2rgb($temp);
+    ?>
+#footer_popup {
+    background-color: rgba(<?php echo $temp[0]?>, <?php echo $temp[1]?>, <?php echo $temp[2]?>, <?php echo Mage::getStoreConfig('buyshopcolors/footer_popup/background_transparency',$store)?>);
+}
+    <?php unset ($temp);
+} ?>
+
+    /*FOOTER*/
+    /*Text Color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/footer/text_color',$store);
+if (!empty($temp)) {
+    ?>
+#footer_bottom {
+    color: <?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+    /*Link Color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/footer/link_color',$store);
+if (!empty($temp)) {
+    ?>
+#footer_bottom a, #footer_bottom a i, #footer_button {
+    color: <?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+    /*Link Hover Color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/footer/link_hover_color',$store);
+if (!empty($temp)) {
+    ?>
+#footer_bottom a:hover, #footer_bottom a i:hover {
+    color: <?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+    /*Background Color*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/footer/background_color',$store);
+if (!empty($temp)) {
+    ?>
+#footer_line, #footer_button {
+    background-color:<?php echo $temp?>;
+}
+    <?php unset ($temp);
+} ?>
+
+
+    /*DELIMITERS*/
+    /*Delimeter Content Image*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/delimeters/delimetr_content_image',$store);
+$temp2x = explode('.', $temp);
+if(isset($temp2x[1]))$temp2x = $temp2x[0] . '_2x.' . $temp2x[1];
+else $temp2x = $temp2x[0] . '_2x';
+if (!empty($temp)) {
+    ?>
+section#content .line {
+    background: url("<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'buyshop/' . $temp?>") repeat-x 0 0;
+    border: medium none;
+    height: 40px;
+    margin: 5px 0;
+}
+
+@media (min--moz-device-pixel-ratio: 1.3),
+(-o-min-device-pixel-ratio: 2.6/2),
+(-webkit-min-device-pixel-ratio: 1.3),
+(min-device-pixel-ratio: 1.3),
+(min-resolution: 1.3dppx) {
+    section#content .line {
+        background-image: url("<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'buyshop/' . $temp2x?>");
+        background-repeat: repeat-x;
+        background-size: 379px 40px;
+    }
+}
+    <?php unset ($temp);
+} ?>
+    /*Delimeter Footer Image*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/delimeters/delimetr_footer_image',$store);
+$temp2x = explode('.', $temp);
+if(isset($temp2x[1]))$temp2x = $temp2x[0] . '_2x.' . $temp2x[1];
+else $temp2x = $temp2x[0] . '_2x';
+if (!empty($temp)) {
+    ?>
+section#content .line_above_footer {
+    background: url("<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'buyshop/' . $temp?>") repeat-x 0 0;
+    border: medium none;
+    height: 40px;
+}
+@media (min--moz-device-pixel-ratio: 1.3),
+(-o-min-device-pixel-ratio: 2.6/2),
+(-webkit-min-device-pixel-ratio: 1.3),
+(min-device-pixel-ratio: 1.3),
+(min-resolution: 1.3dppx) {
+    section#content .line_above_footer {
+        background-image: url("<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'buyshop/' . $temp2x?>");
+        background-repeat: repeat-x;
+        background-size: 379px 40px;
+    }
+}
+    <?php unset ($temp);
+} ?>
+<?php  if (preg_match('/(?i)msie [1-8]/', $_SERVER['HTTP_USER_AGENT'])): ?>
+.block_img img, #login-box, .box-wrapper, .form-search input.search-query, button, .button, .next-slider img, .prev-slider img, .message {
+    behavior: url(<?php echo str_replace('index.php/', '', Mage::getBaseUrl())?>PIE.htc);
+}
+button, .button, .next-slider img, .prev-slider img, .message {
+    position: relative;
+}
+    <?php endif;?>
+
+<?php if (Mage::getStoreConfig('buyshopcolors/delimeters/product_border_shadow',$store)): ?>
+.product, .small_with_description .product .product-image-wrapper, .big_without_description .product .product-image-wrapper, .small_without_description .product .product-image-wrapper, .product-listing .product .product-image-wrapper {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.27);
+}
+    <?php
+    $temp = Mage::getStoreConfig('buyshopcolors/delimeters/product_border_color',$store);
+    if (!empty($temp)) {
+        $temp = Mage::helper('buyshopconfig')->hex2rgb($temp);?>
+    .preview, .product, .small_with_description .product .product-image-wrapper, .big_without_description .product .product-image-wrapper, .small_without_description .product .product-image-wrapper, .product-listing .product .product-image-wrapper {
+        box-shadow: 0px 0px 4px rgba(<?php echo $temp[0]?>, <?php echo $temp[1]?>, <?php echo $temp[2]?>, 0.27);
+    }
+
+        <?php unset ($temp);
+    } ?>
+    <?php endif;?>
+
+    /*PRICE*/
+<?php
+$temp = Mage::getStoreConfig('buyshopcolors/price/text_color',$store);
+if (!empty($temp)) {
+    ?>
+.price {
+    color:<?php echo $temp?>;
+    font-family: '<?php echo str_replace('+',' ',Mage::getStoreConfig('buyshopcolors/price/font',$store)) ?>'
+}
+<?php $temp2=Mage::getStoreConfig('buyshopcolors/content/link_color',$store); if (!empty($temp2)) {?>
+.old .price {
+    color:<?php echo Mage::getStoreConfig('buyshopcolors/content/link_color',$store)?>;
+}
+<?php } ?>
+    <?php unset ($temp);
+} ?>
+.product_info_left .price {
+    color:<?php echo Mage::getStoreConfig('buyshopcolors/price/product_info_price_color',$store)?>;
+}
+    /*ICON ANIMATION*/
+<?php if(Mage::getStoreConfig('buyshopconfig/options/css3_animation',$store)):?>
+.product .product-tocart a:hover i, .preview .product-tocart a:hover i,
+.btn:hover i.icon-right-thin,
+.btn:hover i.icon-left-thin,
+.flex-next:hover  i.icon-right-thin,
+.flex-prev:hover i.icon-left-thin,
+i.icon-star:hover,
+a.icon-trash-2:hover,
+i.icon-trash-3:hover,
+i.icon-edit-1:hover {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+}
+
+.btn:hover i.icon-left-thin,
+.flex-prev:hover i.icon-left-thin {
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+}
+.custom_blocks .box:hover .icon_circle i {
+    font-size: 40px;
+    -moz-transition: all 0.2s 0s ease;
+    -o-transition: all 0.2s 0s ease;
+    -webkit-transition: all 0.2s 0s ease;
+}
+    <?php endif;?>
+
+.block a.icon-trash-2:hover{
+    -webkit-transform:none ;
+    -moz-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+<?php if(!Mage::getStoreConfig('buyshoplayout/general/footer_transparent_popup',$store) && Mage::getStoreConfig('buyshoplayout/general/footer_transparent_popup_static',$store)):?>
+#wrap {
+    z-index: 9999;
+    position: relative;
+}
+
+    <?php
+    $temp = Mage::getStoreConfig('buyshopcolors/footer_info/background_image',$store);
+    if (!empty($temp)) {
+        ?>
+    #footer_popup {
+        background-image: url("<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) . 'buyshop/' . $temp?>");
+
+    }
+        <?php unset ($temp);
+    } ?>
+
+    <?php endif;?>

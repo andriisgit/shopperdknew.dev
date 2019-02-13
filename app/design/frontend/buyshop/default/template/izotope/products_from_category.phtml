@@ -1,0 +1,36 @@
+<?php if ($_productCollection=$this->getLoadedProductCollection()): ?>
+    <?php foreach ($_productCollection as $_product): ?>
+    <?php  if(!$_product->isSaleable() && !Mage::getStoreConfig('cataloginventory/options/show_out_of_stock'))continue; ?>
+    <?php
+        $widthBig=258;
+        $heightBig=245;
+        $widthSmall=71;
+        $heightSmall=65;
+    $price=$this->getPriceHtml($_product, true);
+    $izotope=true;
+    ?>
+        <?php
+        /*
+         * Product Preview HTML  is using in many blocks (category listing, shortcodes).
+         * That is why Product Preview HTML generation collected in one function drawProductPreview()
+         * You can edit this function  in file \app\code\local\Etheme\Megatronconfig\Helper\Data.php
+        */
+        ?>
+        <?php
+        $colorswatches='';
+        if (Mage::getStoreConfig('configswatches/general/enabled', Mage::app()->getStore())) {
+            $colorswatches=$this->getLayout()->createBlock('core/template')->setTemplate('configurableswatches/catalog/product/list/swatches.phtml')->setProduct($_product)->toHtml();
+        }
+        ?>
+        <!--PRODUCT-->
+        <?php  echo Mage::helper('buyshopconfig')->getProductHtml($_product,$this,$widthBig,$heightBig,3,true,true,false,true,$price,$izotope, $this->getCategoryId(),$colorswatches)?>
+        <?php echo Mage::helper('buyshopconfig')->getProductHover($_product,$this,$widthBig,$heightBig,$widthSmall,$heightSmall,$type='',true,true,$price, $colorswatches)?>
+        <!--PRODUCT EOF-->
+
+    <?php endforeach ?>
+    <?php
+    if (Mage::getStoreConfig('configswatches/general/enabled', Mage::app()->getStore())) {
+        echo $this->getLayout()->createBlock('configurableswatches/catalog_media_js_list')->setTemplate('configurableswatches/catalog/media/js.phtml')->setProductCollection($_productCollection)->toHtml();
+    }
+    ?>
+<?php endif; ?>

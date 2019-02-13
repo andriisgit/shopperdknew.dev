@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+
+    <cms_index_index>
+        <reference name="before_body_end">
+            <block type="core/template" name="layer_revolution_init"  as="layer_revolution_init">
+                <action method="setTemplate" ifconfig="buyshoplayout/home_page/revolution_slider_init">
+                    <template>custom/layer_revolution_init.phtml</template>
+                </action>
+            </block>
+        </reference>
+    </cms_index_index>
+</layout>

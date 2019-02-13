@@ -1,0 +1,51 @@
+<?php
+$msie = strpos($_SERVER["HTTP_USER_AGENT"], 'Trident') ;
+if(!$msie){
+?>
+<section class="slider">
+    <div id="layerslider-container">
+        <div id="layerslider" style="width: 1600px; height: 500px; margin: 0 auto;">
+
+            <?php
+            $slides = $this->getDataSlides();
+            foreach($slides as $slide)
+            {
+                echo str_replace(array('{{BASE}}media/',"<div class=\"ls-layer link\""), array(Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA), "<div class='ls-layer link' onClick=\"window.location='".$slide['link']."'\" "),$slide['slide_html_code']);
+            }
+            ?>
+
+
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS); ?>etheme/buyshop/jquery-transit-modified.js"></script>
+<script type="text/javascript" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS); ?>etheme/buyshop/layerslider.transitions.js"></script>
+<script type="text/javascript" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS); ?>etheme/buyshop/layerslider.kreaturamedia.jquery.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+
+
+        jQuery('#layerslider').layerSlider({
+            thumbnailNavigation : 'hover',
+            hoverPrevNext : true,
+            keybNav                 : false,
+            navPrevNext             : true,
+            navStartStop            : false,
+            navButtons              : false,
+            thumbnailNavigation     : 'disabled',
+            pauseOnHover : false,
+            showCircleTimer: false,
+            skin                    : 'creative',
+            skinsPath               : '<?php echo $this->getSkinUrl('css/skins/')?>',
+            cbInit      : function(element){
+                jQuery('.ls-nav-prev').append('<i class="icon-left-thin"></i>');
+                jQuery('.ls-nav-next').append('<i class="icon-right-thin"></i>')
+            }
+        });
+
+
+    });
+</script>
+<?php }?>
+

@@ -1,0 +1,167 @@
+<?php
+$slides = $this->getDataSlides();
+$fixed=false;
+if(Mage::getStoreConfig('buyshopflex/options/width')=='fixed')$fixed=true;
+if(count($slides)):?>
+<!--SLIDER FLEX-->
+<section class="slider <?php if($fixed)echo 'container'?>">
+    <div class="flexslider big">
+        <ul class="slides">
+            <?php
+            $i=0;
+            $first=1;
+
+            foreach($slides as $slide)
+            {
+                if(!$i)$first=$slide['slide_id'];
+                $i++;
+            ?>
+                <li data-prev="<?php echo $this->helper('buyshopflex')->getPreview($slide['slide_id'],'prev')?>" data-next="<?php echo $this->helper('buyshopflex')->getPreview($slide['slide_id'],'next')?>">
+                    <a href="<?php echo $slide['link'];?>"><img src="<?php echo Mage::getBaseUrl('media') . $slide['image'];?>" alt="" /></a>
+                </li>
+            <?php } ?>
+        </ul>
+        <?php if(Mage::getStoreConfig('buyshopflex/options/timeline')){?><div class="loader-slider hidden-phone"></div><?php } ?>
+        <?php if(Mage::getStoreConfig('buyshopflex/options/prev_next')) {?>
+        <div class="next-slider"><img src="<?php echo $this->helper('buyshopflex')->getPreview($first,'next')?>"  alt=""></div>
+        <div class="prev-slider"><img src="<?php echo $this->helper('buyshopflex')->getPreview($first,'prev')?>"  alt=""></div>
+        <?php } ?>
+    </div>
+</section>
+<!--SLIDER FLEX EOF-->
+
+<?php
+    $browser='';
+    if (strpos($_SERVER['HTTP_USER_AGENT'], 'Safari') && !strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome'))
+    {
+        $browser = 'Safari';
+    }
+?>
+<script type="text/javascript">
+    function TopSlider() {
+        /*var w0 = jQuery(document).width();
+        var w1 = (w0 - jQuery(".container").width()) * 0.5 - 0;
+        var w1 = 50;
+        jQuery(".flexslider.big .flex-direction-nav .flex-next").css({
+            "right": w1 + "px"
+        });
+        jQuery(".flexslider.big .flex-direction-nav .flex-prev").css({
+            "left": w1 + "px"
+        });
+
+        <?php if(Mage::getStoreConfig('buyshopflex/options/prev_next')){?>
+        jQuery(".flexslider.big .next-slider").css({
+            "right": w1 + "px"
+        });
+        jQuery(".flexslider.big .prev-slider").css({
+            "left": w1 + "px"
+        });
+        <?php }?>*/
+    };
+
+    jQuery(function(){
+
+
+        jQuery('.flexslider.big').flexslider({
+            animation: "<?php echo Mage::getStoreConfig('buyshopflex/options/animation')?>",
+            controlNav: false,
+            animationLoop: true,
+            slideshowSpeed: <?php echo Mage::getStoreConfig('buyshopflex/options/slideshowspeed')?>,           //Integer: Set the speed of the slideshow cycling, in milliseconds
+            animationSpeed: <?php echo Mage::getStoreConfig('buyshopflex/options/animationspeed')?>,
+            direction:"<?php echo Mage::getStoreConfig('buyshopflex/options/direction')?>",
+            pauseOnHover: true,
+            <?php if(Mage::getStoreConfig('buyshopflex/options/timeline')){?>
+            start:function(){
+
+                /*jQuery('.loader-slider').animate({'width':jQuery('.flexslider.big').width()+'px'},this.slideshowSpeed-this.animationSpeed,'linear',function(){
+                    jQuery(this).hide().css({width:'0'});
+                });*/
+
+                <?php if($browser!='Safari'):?>
+                jQuery('.loader-slider').stop().animate({'width':jQuery('.flexslider.big').width()+'px'},this.slideshowSpeed-this.animationSpeed);
+                <?php endif; ?>
+            },
+            <?php } ?>
+            pause:false,
+
+            <?php if(Mage::getStoreConfig('buyshopflex/options/timeline')){?>
+            before:function(slider){
+
+                jQuery('.loader-slider').hide().css({width:'0'});
+
+            },
+            <?php } ?>
+            after:function(slider){
+
+                data_prev=jQuery(slider.slides[slider.currentSlide]).attr('data-prev');
+                data_next=jQuery(slider.slides[slider.currentSlide]).attr('data-next');
+
+                <?php if(Mage::getStoreConfig('buyshopflex/options/prev_next')){?>
+                jQuery('.next-slider img').attr('src',data_next);
+                jQuery('.prev-slider img').attr('src',data_prev);
+                <?php }?>
+
+                <?php if(Mage::getStoreConfig('buyshopflex/options/timeline')){?>
+                jQuery('.loader-slider').hide();
+
+                if(this.pause)return;
+                /*.stop(true)*/
+                <?php if($browser!='Safari'):?>
+               jQuery('.loader-slider').show().animate({width:jQuery('.flexslider.big').width()+'px'},this.slideshowSpeed-this.animationSpeed,'linear',function(){
+                    jQuery('.loader-slider').hide().css({width:'0'});
+                });
+                        <?php endif; ?>
+                <?php } ?>
+
+
+            },
+
+            <?php if(Mage::getStoreConfig('buyshopflex/options/timeline')){?>
+            pauseOn:function(slider){
+
+                this.pause=true;
+                time=jQuery('.loader-slider').width()*this.slideshowSpeed/jQuery('.flexslider.big').width();
+                jQuery('.loader-slider').stop(true);
+                jQuery('.loader-slider').hide().css({width:'0'});
+            },
+            pauseOff:function(slider){
+
+                this.pause=false;
+                time=(jQuery('.flexslider.big').width()-jQuery('.loader-slider').width())*this.slideshowSpeed/jQuery('.flexslider.big').width();
+                //console.log(time);
+                <?php if($browser!='Safari'):?>
+                jQuery('.loader-slider').stop(true).show().animate({width:jQuery('.flexslider.big').width()+'px'},time,'linear',function(){
+                    jQuery('.loader-slider').hide().css({width:'0'});
+                })
+                <?php endif; ?>
+            },
+            <?php } ?>
+        });
+
+        <?php if(Mage::getStoreConfig('buyshopflex/options/prev_next')){?>
+            jQuery(".flexslider.big .flex-direction-nav .flex-prev").hover(function() {
+                jQuery(".prev-slider").show();
+            },function(){
+                jQuery(".prev-slider").hide();
+            });
+            jQuery(".flexslider.big .flex-direction-nav .flex-next").hover(function() {
+                jQuery(".next-slider").show();
+            },function(){
+                jQuery(".next-slider").hide();
+
+            });
+        <?php } ?>
+
+        TopSlider();
+    })
+
+    jQuery(window).resize(function() {
+
+
+        TopSlider();
+    });
+
+
+</script>
+<?php endif;?>
+

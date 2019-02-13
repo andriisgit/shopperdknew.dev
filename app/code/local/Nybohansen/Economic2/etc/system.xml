@@ -1,0 +1,972 @@
+<config>
+    <sections>
+        <economic2_options translate="label" module="economic2">
+            <label>e-conomic integration</label>
+            <tab>service</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>2000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+        	<groups>
+        	<moduleInfo translate="label">
+                    <expanded>1</expanded>
+                    <label>Module options</label>
+                    <comment><![CDATA[e-conomic module developed by Nybohansen ApS]]></comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>5</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <versionNumber translate="label">
+           					<label>Version number</label>
+           					<frontend_model>economic2/moduleInfo</frontend_model>
+           					<sort_order>10</sort_order>
+           					<show_in_default>1</show_in_default>
+           					<show_in_website>1</show_in_website>
+           					<show_in_store>1</show_in_store>
+          				</versionNumber>
+          				<licenseKey translate="label">
+           					<label>License key</label>
+           					<frontend_model>economic2/licenseKey</frontend_model>
+           					<sort_order>15</sort_order>
+           					<show_in_default>1</show_in_default>
+          				</licenseKey>
+                        <api_url translate="label">
+                            <label>API Url</label>
+                            <comment>Please do not change, unless completely sure of the consequences!</comment>
+                            <depends></depends>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                        </api_url>
+          				<moduleStatus translate="label">
+           					<label>Module enabled</label>
+                            <frontend_type>select</frontend_type>
+ 							<source_model>adminhtml/system_config_source_yesno</source_model>
+ 							<sort_order>25</sort_order>
+           					<show_in_default>1</show_in_default>
+           					<show_in_website>1</show_in_website>
+           					<show_in_store>1</show_in_store>
+          				</moduleStatus>
+                        <documentation translate="label">
+                            <label></label>
+                            <frontend_model>economic2/DocumentationBtn</frontend_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </documentation>
+                    </fields>                
+             </moduleInfo>
+			<accountInfo translate="label">
+                    <label>e-conomic user credentials</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<use_token_based_login translate="label">
+			    			<label>Use token based login</label>
+							<comment></comment>
+                            <frontend_type>select</frontend_type>
+ 							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </use_token_based_login>
+                        <agreement_number translate="label">
+			    			<label>Agreement number</label>
+							<comment>Economic agreement number</comment>
+							<depends><use_token_based_login>0</use_token_based_login></depends>
+                            <frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </agreement_number>
+						<username translate="label">
+			    			<label>Username</label>
+							<comment>Username of e-conomic account</comment>
+                            <frontend_model>economic2/Username</frontend_model>
+                            <depends><use_token_based_login>0</use_token_based_login></depends>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </username>
+                        <password translate="label">
+			    			<label>Password</label>
+			    			<comment>Password of e-conomic account</comment>
+                            <frontend_model>economic2/Password</frontend_model>
+                            <depends><use_token_based_login>0</use_token_based_login></depends>
+							<sort_order>40</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </password>
+                        <apiToken translate="label">
+			    			<label>API token</label>
+							<comment>Token used to connect to e-conomic</comment>
+                            <depends><use_token_based_login>1</use_token_based_login></depends>
+                            <frontend_type>text</frontend_type>
+							<sort_order>50</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </apiToken>
+						<connectionResult translate="label">
+			    			<label></label>
+			    			<comment></comment>
+                            <frontend_type>label</frontend_type>
+							<sort_order>60</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </connectionResult>
+                        <connectionTest translate="label">
+           					<label></label>
+           					<frontend_model>economic2/testConnectionBtn</frontend_model>
+           					<sort_order>70</sort_order>
+           					<show_in_default>1</show_in_default>
+           					<show_in_website>1</show_in_website>
+           					<show_in_store>1</show_in_store>
+          				</connectionTest>
+                    </fields>
+                </accountInfo>
+                <productConfig translate="label">
+                    <label>e-conomic product configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                    	<product_update_from_economic translate="label">
+			    			<label>Update from e-conomic</label>
+							<comment>Determines if products in Magento should have their information updated with information from e-conomic, when products are updated in e-conomic</comment>
+                            <frontend_type>select</frontend_type>
+ 							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </product_update_from_economic>
+                        <webhook_url translate="label">
+			    			<label>Webhook url</label>
+			    			<comment>Insert this into e-conomic under Webhooks</comment>
+							<frontend_model>economic2/webhookURL</frontend_model>
+							<depends><product_update_from_economic>1</product_update_from_economic></depends>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </webhook_url>
+						<field_mapping_from_e_to_m translate="label">
+                            <label>Mapping of e-conomic fields to Magento fields</label>
+                            <frontend_model>economic2/fieldMappingFromEToM</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <comment>Determines the mapping between the fields in e-conomic and the attributes in Magento</comment>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </field_mapping_from_e_to_m>
+                        <inventory_location_heading translate="label">
+                            <label>Inventory location</label>
+                            <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </inventory_location_heading>
+                        <inventory_location translate="label">
+                            <label>The location id of the inventory to use when creating orderlines, and updating stock values from</label>
+                            <comment>Only applicable if you use inventory location, otherwise leave it blank</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>55</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </inventory_location>
+                        <product_creation_heading translate="label">
+                            <label>Product creation and updating configuration</label>
+                            <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_creation_heading>
+                        <product_creation translate="label">
+			    			<label>Create or update product in e-conomic when</label>
+							<comment></comment>
+                            <frontend_type>select</frontend_type>
+ 							<source_model>economic2/system_config_source_productCreationList</source_model>
+							<sort_order>70</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </product_creation>
+                        <product_deletion translate="label">
+			    			<label>Delete product from e-conomic when product is deleted in Magento</label>
+							<comment>Note: If an order/invoice in e-conomic contains the product, it cannot be deleted from e-conomic, and will therefore only be deleted in Magento</comment>
+                            <frontend_type>select</frontend_type>
+ 							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>80</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </product_deletion>
+                        <product_group_heading translate="label">
+                            <label>Product group configuration</label>
+                            <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_group_heading>
+                        <product_group_use_default translate="label">
+			    			<label>Use default product group</label>
+							<comment>If set to Yes, all created products will belong to a single product group in e-conomic. If set to No a magento product attribute can be used to determine the productgroup</comment>
+                            <frontend_type>select</frontend_type>
+ 							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>100</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </product_group_use_default>
+                        <default_product_group translate="label">
+			    			<label>Default product group</label>
+							<comment>All created products will belong to this prouct group in e-conomic</comment>
+                            <frontend_type>Select</frontend_type>
+                            <source_model>economic2/system_config_source_productGroupList</source_model>
+							<depends><product_group_use_default>1</product_group_use_default></depends>
+							<sort_order>110</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </default_product_group>
+                        <product_group_attribute translate="label">
+			    			<label>Magento attribute to use as product group</label>
+							<comment>All created products will belong to the product group (id) contained in the chosen attribute. Note: The attribute values must exist as product group ids in e-conomic</comment>
+                            <frontend_type>Select</frontend_type>
+                            <source_model>economic2/system_config_source_productAttributeList</source_model>
+							<depends><product_group_use_default>1</product_group_use_default></depends>
+							<sort_order>120</sort_order>
+							<depends><product_group_use_default>0</product_group_use_default></depends>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </product_group_attribute>
+						<product_id_heading translate="label">
+                            <label>Product id configuration</label>
+                            <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_id_heading>
+                        <product_id_use_default translate="label">
+			    			<label>Use default product id</label>
+                            <frontend_type>select</frontend_type>
+ 							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>140</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </product_id_use_default>
+                        <product_id_attribute translate="label">
+			    			<label>Attribute containing the product id</label>
+							<comment>Created products will have an e-conomic id equal to the value of the attribute. Note the values of the attribute must exist and be unique, the maximum length of the product id including prefix is 25 characters!</comment>
+                            <frontend_type>Select</frontend_type>
+                            <source_model>economic2/system_config_source_productAttributeListUniqueRequired</source_model>
+							<depends><product_id_use_default>0</product_id_use_default></depends>
+							<sort_order>150</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </product_id_attribute>
+                        <product_id_prefix translate="label">
+			    			<label>Prefix of product id</label>
+							<comment>Add prefix to all created products in e-conomic</comment>
+                            <frontend_type>text</frontend_type>
+							<sort_order>160</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </product_id_prefix>
+                        <product_mapping_from_m_e_heading translate="label">
+                            <label>Product mapping configuration from Magento to e-conomic</label>
+                            <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                            <sort_order>170</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_mapping_from_m_e_heading>
+						<field_mapping_from_m_to_e translate="label">
+                            <label>Mapping of Magento fields to Economic fields</label>
+                            <frontend_model>economic2/fieldMappingFromMToE</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <comment>Determines how fields in Magento are mapped to fields in e-conomic</comment>
+                            <sort_order>180</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </field_mapping_from_m_to_e>
+						<product_unit_heading translate="label">
+                            <label>Product unit configuration</label>
+                            <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                            <sort_order>190</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_unit_heading>
+                        <product_unit_use_default translate="label">
+			    			<label>Use default product unit</label>
+							<comment></comment>
+                            <frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>200</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </product_unit_use_default>
+                        <product_unit_default translate="label">
+			    			<label>Choose e-conomic product unit</label>
+							<comment></comment>
+                            <frontend_type>select</frontend_type>
+							<source_model>economic2/system_config_source_unitList</source_model>
+							<sort_order>210</sort_order>
+							<depends><product_unit_use_default>1</product_unit_use_default></depends>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </product_unit_default>
+						<product_unit_attribute translate="label">
+			    			<label>Choose attribute containing the product unit</label>
+							<comment>Created products will have an e-conomic unit, equal to the value of the attribute</comment>
+                            <frontend_type>Select</frontend_type>
+                            <source_model>economic2/system_config_source_productAttributeList</source_model>
+							<depends><product_unit_use_default>0</product_unit_use_default></depends>
+							<sort_order>220</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </product_unit_attribute>
+                        <product_unit_create_if_not_exists translate="label">
+			    			<label>Create unit if it doesn't exists</label>
+							<comment>Create units specified in Magento which doesn't exists in e-conomic</comment>
+                            <frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<depends><product_unit_use_default>0</product_unit_use_default></depends>
+							<sort_order>230</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </product_unit_create_if_not_exists>
+                    </fields>
+                </productConfig>
+                <debtorConfig translate="label">
+                    <label>e-conomic debtor configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <debtor_create_new translate="label">
+			    			<label>Create new debtors in e-conomic</label>
+							<comment>If set to Yes, the module will create debtors in e-conomic if the debtor does not exists. If set to no, a default debtor must be chosen. If set to always, a debtor is always created regardless if a debtor with the same credentials exists</comment>
+                            <frontend_type>select</frontend_type>
+ 							<source_model>economic2/system_config_source_yesnoalways</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </debtor_create_new>
+                        <default_debtor_home translate="label">
+			    			<label>Default debtor (Home country)</label>
+							<comment>All orders belonging to the home country, will be placed on the debtor with this debtor-id in e-conomic</comment>
+                            <frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </default_debtor_home>
+                        <default_debtor_eu translate="label">
+                            <label>Default debtor (EU country)</label>
+                            <comment>All orders belonging to a EU country, will be placed on the debtor with this debtor-id in e-conomic</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </default_debtor_eu>
+                        <default_debtor_abroad translate="label">
+                            <label>Default debtor (Abroad)</label>
+                            <comment>All orders not belonging to the home country or EU, will be placed on the debtor with this debtor id in e-conomic</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </default_debtor_abroad>
+                        <debtor_mapping translate="label">
+                            <label>Mapping of Magento's customer groups to e-conomic's debtor groups</label>
+                            <frontend_model>economic2/debtorMapping</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <comment>Determines how Magento's customer groups are mapped to e-conomic's debtor groups</comment>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </debtor_mapping>
+						<debtor_identification_field translate="label">
+			    			<label>Identification field</label>
+							<comment>Field to identify customers between e-conomic and Magento</comment>
+                            <frontend_type>Select</frontend_type>
+                            <source_model>economic2/system_config_source_debtorIdentificationFields</source_model>
+							<sort_order>60</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </debtor_identification_field>
+                        <compare_debtorgroup_when_searching_for_debtor>
+                            <label>Compare the debtorgroup when searching for existing debtors in e-conomic</label>
+                            <comment>If this is set to yes and the identification field matches but the debtorgroup doesn't, a new debtor will be created in e-conomic</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </compare_debtorgroup_when_searching_for_debtor>
+                        <use_company_name_if_available>
+                            <label>Use company name, instead of customer name if available?</label>
+                            <comment>If company name is available, this will be used instead of customer name when creating debtors and creating orders</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </use_company_name_if_available>
+                        <update_debtor_information>
+                            <label>Update debtor information everytime a order is placed</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>95</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </update_debtor_information>
+                        <vat_home_country>
+                            <label>Choose VAT home country/countries</label>
+                            <comment>Choose the country/countries that refers to VAT home country in e-conomic. Countries chosen here, will override the countries under EU</comment>
+                            <frontend_type>Multiselect</frontend_type>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </vat_home_country>
+                        <vat_eu_countries>
+                            <label>Choose VAT EU countries</label>
+                            <comment>Selected countries have VAT zone EU in e-conomic. All other countries (except the home country) will have a VAT zone in e-conomic that is identical to Abroad.</comment>
+                            <frontend_type>Multiselect</frontend_type>
+                            <source_model>adminhtml/system_config_source_country</source_model>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </vat_eu_countries>
+                        <javascript>
+                            <label></label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>
+                                <![CDATA[
+                                        <script type="text/javascript">
+                                            checkDebtorCreation = function() {
+                                                //No
+                                                if ($('economic2_options_debtorConfig_debtor_create_new').getValue() == 0) {
+
+                                                    //Show
+                                                    $('economic2_options_debtorConfig_default_debtor_home').up(1).show();
+                                                    $('economic2_options_debtorConfig_default_debtor_eu').up(1).show();
+                                                    $('economic2_options_debtorConfig_default_debtor_abroad').up(1).show();
+                                                    $('economic2_options_debtorConfig_update_debtor_information').show();
+
+                                                    //hide
+                                                    $('economic2_options_debtorConfig_debtor_identification_field').up(1).hide();
+                                                    $('economic2_options_debtorConfig_compare_debtorgroup_when_searching_for_debtor').up(1).hide();
+                                                    $('row_economic2_options_debtorConfig_debtor_mapping').hide();
+
+
+                                                    $('economic2_options_debtorConfig_use_company_name_if_available').up(1).show();
+
+                                                    if ($('economic2_options_debtorConfig_debtor_create_new').getValue() == 1) {
+                                                        $('economic2_options_debtorConfig_debtor_identification_field').up(1).show();
+                                                        $('economic2_options_debtorConfig_compare_debtorgroup_when_searching_for_debtor').up(1).show();
+                                                    }
+                                                }
+                                                //Yes
+                                                if ($('economic2_options_debtorConfig_debtor_create_new').getValue() == 1) {
+                                                    //Show
+                                                    $('economic2_options_debtorConfig_debtor_identification_field').up(1).show();
+                                                    $('economic2_options_debtorConfig_compare_debtorgroup_when_searching_for_debtor').up(1).show();
+                                                    $('row_economic2_options_debtorConfig_debtor_mapping').show();
+                                                    $('economic2_options_debtorConfig_update_debtor_information').show();
+
+                                                    //hide
+                                                    $('economic2_options_debtorConfig_default_debtor_home').up(1).hide();
+                                                    $('economic2_options_debtorConfig_default_debtor_eu').up(1).hide();
+                                                    $('economic2_options_debtorConfig_default_debtor_abroad').up(1).hide();
+                                                }
+
+                                                //Always
+                                                if ($('economic2_options_debtorConfig_debtor_create_new').getValue() == 2) {
+                                                    //Show
+                                                    $('economic2_options_debtorConfig_debtor_identification_field').up(1).show();
+                                                    $('economic2_options_debtorConfig_compare_debtorgroup_when_searching_for_debtor').up(1).show();
+                                                    $('row_economic2_options_debtorConfig_debtor_mapping').show();
+
+                                                    //Hide
+                                                    $('economic2_options_debtorConfig_debtor_identification_field').up(1).hide();
+                                                    $('economic2_options_debtorConfig_compare_debtorgroup_when_searching_for_debtor').up(1).hide();
+                                                    $('economic2_options_debtorConfig_default_debtor_home').up(1).hide();
+                                                    $('economic2_options_debtorConfig_default_debtor_eu').up(1).hide();
+                                                    $('economic2_options_debtorConfig_default_debtor_abroad').up(1).hide();
+                                                    $('economic2_options_debtorConfig_update_debtor_information').hide();
+                                                }
+
+                                            }
+                                            Event.observe(window, 'load', function() {
+                                                Event.observe('economic2_options_debtorConfig_debtor_create_new', 'change', checkDebtorCreation);
+                                                $('economic2_options_debtorConfig_javascript').up(1).hide();
+                                                checkDebtorCreation();
+                                            })
+                                        </script>
+                                    ]]>
+                            </comment>
+                        </javascript>
+                    </fields>
+                </debtorConfig>
+                <orderConfig>
+                	<label>e-conomic order creation configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>40</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                    	<create_order_status translate="label">
+                            <label>Create order in e-conomic when status is</label>
+                            <comment>If nothing is selected, no order will be created in e-conomic</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>economic2/system_config_source_orderStatusList</source_model>
+                            <sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </create_order_status>
+                        <create_invoice_status translate="label">
+                            <label>Create invoice in e-conomic when status is</label>
+							<comment>If nothing is selected, no invoice will be created in e-conomic</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>economic2/system_config_source_orderStatusList</source_model>
+                            <sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </create_invoice_status>
+                        <delete_order_status translate="label">
+                            <label>Delete order in e-conomic when status is</label>
+                            <comment>If nothing is selected, no orders will be deleted in e-conomic</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>economic2/system_config_source_orderStatusList</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </delete_order_status>
+                        <sync_credit_memo>
+                            <label>Synchronize credit memos?</label>
+                            <comment>Credit memos will be synchronized to e-conomic</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sync_credit_memo>
+                        <sync_credit_as_invoice>
+                            <label>Create credit memos as invoices?</label>
+                            <comment>All synchronized credit memos will be synchronized as invoices to e-conomic</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <depends><sync_credit_memo>1</sync_credit_memo></depends>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sync_credit_as_invoice>
+                        <force_book translate="label">
+                            <label>Force creation of invoice, even if integrity fails</label>
+                            <comment>It is not recommended to set this to true. This could cause the booking of invoices that are not correct</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>65</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </force_book>
+                        <book_invoice translate="label">
+                            <label>Automatically book the invoice?</label>
+                            <comment>The created invoice will be booked automatically after creation</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>67</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </book_invoice>
+                        <use_magento_invoice_number translate="label">
+                            <label>Book invoices and credit memos with Magento invoice number?</label>
+                            <comment>This requires the the invoice number is free and available in e-conomic. It also requires that a invoice number is available in Magento (It is possible to synchronize invoices to e-conomic, without actually creating an invoice in Magento)</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>70</sort_order>
+                            <depends><book_invoice>1</book_invoice></depends>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </use_magento_invoice_number>
+                        <store_order_number_in_economic translate="label">
+                            <label>Save the order number from Magento in e-conomic</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </store_order_number_in_economic>
+                        <store_order_number_in translate="label">
+                            <label>Store the Magento order number in the e-conomic field</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>economic2/system_config_source_orderNumberFieldList</source_model>
+                            <sort_order>85</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><store_order_number_in_economic>1</store_order_number_in_economic></depends>
+                        </store_order_number_in>
+                        <order_number_prefix>
+                            <label>Text to place in front of order number</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>87</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends><store_order_number_in_economic>1</store_order_number_in_economic></depends>
+                        </order_number_prefix>
+                        <add_comment_when_synced translate="label">
+			    			<label>Add comment to the Magento order when the order is synced to e-conomic?</label>
+							<comment>If set to Yes, comments will be added to the Magento order, when a sync has been performed</comment>
+                            <frontend_type>select</frontend_type>
+ 							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>90</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </add_comment_when_synced>
+                        <use_base_currency translate="label">
+                            <label>Transfer orders using base currency</label>
+                            <comment>This is only applicable if the store uses multiple currencies</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </use_base_currency>
+                        <use_departments translate="label">
+                            <label>Use departments</label>
+                            <comment>To use this feature you must be authorized to use the Dimension add-on module in e-conomic.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>105</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </use_departments>
+                        <default_department translate="label">
+                            <label>Default department to place order</label>
+                            <comment>All created orders will be placed in this department. Requires the dimension module to be activated in e-conomic.</comment>
+                            <frontend_type>Select</frontend_type>
+                            <source_model>economic2/system_config_source_departmentList</source_model>
+                            <sort_order>110</sort_order>
+                            <depends><use_departments>1</use_departments></depends>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </default_department>
+                    </fields>
+				</orderConfig>
+				<shipping_item_config translate="label">
+                    <label>e-conomic shipping item configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>50</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <use_default_shipping_item translate="label">
+                            <label>Use default shipping item</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </use_default_shipping_item>
+                        <default_shipping_item translate="label">
+                            <label>e-conomic item id to use for default shipping</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <depends><use_default_shipping_item>1</use_default_shipping_item></depends>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </default_shipping_item>
+                        <shipping_item_mapping translate="label">
+                            <label>Mapping of e-conomic items to magento shipping types</label>
+                            <frontend_model>economic2/shippingMapping</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                       </shipping_item_mapping>
+                       <javascript_shipping>
+                            <label></label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>
+                                <![CDATA[
+                                        <script type="text/javascript">
+                                            economic2ShippingToggle = function() {
+                                                if ($('economic2_options_shipping_item_config_use_default_shipping_item').getValue() == 0) {
+                                                    //Show
+                                                    $('row_economic2_options_shipping_item_config_shipping_item_mapping').show();
+                                                }else{
+                                                    //hide
+                                                    $('row_economic2_options_shipping_item_config_shipping_item_mapping').hide();
+                                                }
+
+                                            }
+                                            Event.observe(window, 'load', function() {
+                                                Event.observe('economic2_options_shipping_item_config_use_default_shipping_item', 'change', economic2ShippingToggle);
+                                                $('economic2_options_shipping_item_config_javascript_shipping').up(1).hide();
+                                                economic2ShippingToggle();
+                                            })
+                                        </script>
+                                    ]]>
+                            </comment>
+                       </javascript_shipping>
+                    </fields>
+                </shipping_item_config>
+				<discount_item_config translate="label">
+                    <label>e-conomic discount item configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>55</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <use_row_discount translate="label">
+                            <label>Add discounts to the individual rows</label>
+                            <comment>Set this to yes, if your products belongs to different tax rates</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </use_row_discount>
+                        <discount_item translate="label">
+                            <label>e-conomic item id to use for order discount</label>
+                            <frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+                            <depends><use_row_discount>0</use_row_discount></depends>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+                        </discount_item>
+                        <reward_points_item translate="label">
+                            <label>e-conomic item id to use for reward points</label>
+                            <comment>Currently this function only works with the reward points module from Magestore</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <depends><use_row_discount>0</use_row_discount></depends>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </reward_points_item>
+                        <reward_points_text translate="label">
+                            <label>Reward points text</label>
+                            <comment>Text to use on orders and invoice regarding reward points</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <depends><use_row_discount>0</use_row_discount></depends>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </reward_points_text>
+                        <reward_points_tax_rate translate="label">
+                            <label>Reward points tax rate</label>
+                            <comment>Tax rate should be entered as e.g. 25 for 25% tax rate</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <depends><use_row_discount>0</use_row_discount></depends>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </reward_points_tax_rate>
+                    </fields>
+                </discount_item_config>
+                <credit_memo_item_config translate="label">
+                    <label>e-conomic creditmemo adjustment item configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>57</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <credit_memo_adjustment_item translate="label">
+                            <label>e-conomic item id to use for credit memo adjustment</label>
+                            <comment>Please note, this item cannot have tax applied in e-conomic</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </credit_memo_adjustment_item>
+                        <credit_memo_adjustment_text translate="label">
+                            <label>Text to use when credit memo adjustment is used</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </credit_memo_adjustment_text>
+                    </fields>
+                </credit_memo_item_config>
+                <payment_fee_item_config translate="label">
+                    <label>e-conomic payment fee item configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>60</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <payment_fee_item translate="label">
+                            <label>e-conomic item id to use for payment fee</label>
+                            <comment>e-conomic item used for payment fee. (This function is only implemented for certain external extensions)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </payment_fee_item>
+                        <payment_fee_label translate="label">
+                            <label>Payment fee label</label>
+                            <comment>The label used for the payment fee in e-conomic</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </payment_fee_label>
+
+                    </fields>
+                </payment_fee_item_config>
+				<terms_of_payment_config translate="label">
+                    <label>e-conomic term of payment configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>70</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<terms_of_payment translate="label">
+                            <label>Mapping of e-conomic terms of payment to magento payment types</label>
+                            <frontend_model>economic2/paymentMapping</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                       </terms_of_payment>
+                    </fields>
+                </terms_of_payment_config>
+                <order_integrity_config translate="label">
+                    <label>e-conomic order integrity check</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>80</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <integrity_check_notify translate="label">
+                            <label>Send e-mail if integrity check fails?</label>
+                            <comment>The order integrity is checked by comparing the net and gross totals of the order in Magento with the net and gross totals e-conomic</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </integrity_check_notify>
+                        <integrity_report_email translate="label">
+                            <label>E-mail address to send the integrity report</label>
+                            <comment>A report will only be sent in the case where the integrity check fails</comment>
+                            <depends><integrity_check_notify>1</integrity_check_notify></depends>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </integrity_report_email>
+                    </fields>
+                </order_integrity_config>
+                <log_config translate="label">
+                    <label>Log information</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>90</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <logview translate="label">
+                            <frontend_model>economic2/logView</frontend_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </logview>
+                    </fields>
+                </log_config>
+            </groups>
+        </economic2_options>
+    </sections> 
+</config>

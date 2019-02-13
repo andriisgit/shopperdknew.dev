@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <buyshopflex>
+            <tab>buyshop</tab>
+            <label>Buyshop - Flexslider</label>
+            <sort_order>4</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <options>
+                    <label>Settings</label>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <timeline>
+                            <label>Timeline</label>
+                            <comment>Enable/disable timeline at slider</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </timeline>
+                        <width>
+                            <label>Width</label>
+                            <comment>wide-full screen/fixed-width of site</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>buyshopflex/fields_source_width</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </width>
+                        <prev_next>
+                            <label>Prev/next slide preview</label>
+                            <comment>Enable/disable previous/next slide preview image</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </prev_next>
+                        <animation>
+                            <label>Animation</label>
+                            <frontend_type>select</frontend_type>
+                            <comment>Select your animation type, "fade" or "slide"</comment>
+                            <source_model>buyshopflex/fields_source_animation</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </animation>
+                        <direction>
+                            <label>Animation</label>
+                            <frontend_type>select</frontend_type>
+                            <comment>Select the sliding direction, "horizontal" or "vertical"</comment>
+                            <source_model>buyshopflex/fields_source_direction</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </direction>
+                        <slideshowspeed>
+                            <label>slideshowSpeed</label>
+                            <comment>Set the speed of the slideshow cycling, in milliseconds</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </slideshowspeed>
+                        <animationspeed>
+                            <label>animationSpeed</label>
+                            <comment>Set the speed of animations, in milliseconds</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </animationspeed>
+                    </fields>
+                </options>
+            </groups>
+        </buyshopflex>
+    </sections>
+</config>

@@ -1,0 +1,135 @@
+<?php
+/**
+ * Nybohansen ApS
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ *
+ * =================================================================
+ *                 MAGENTO EDITION USAGE NOTICE
+ * =================================================================
+ * This package designed for Magento COMMUNITY edition
+ * We do not guarantee correct work of this extension
+ * on any other Magento edition except Magento COMMUNITY edition.
+ * In case of incorrect edition usage, we don't provide support.
+ * =================================================================
+ *
+ * @category   Nybohansen
+ * @package    Nybohansen_Pacsoft
+ * @copyright  Copyright (c) 2014 Nybohansen ApS
+ * @license    LICENSE.txt
+ */
+
+$rateId = $this->getRateId();
+$carrier = $this->getMethodInstance();
+$rateCode = $this->getRate()->getCode();
+$addressId = $this->getAddressId();
+$countryCode = $this->getCountryCode();
+
+$formCode = $this->getFormCode();
+$zipInputId = 'pacsoft_zip_input_'.$formCode;
+$searchButtonId = 'pacsoft_submit_button_id'.$formCode;
+$searchButtonValidationClass = 'required-entry-pacsoft-choose-shop'.$formCode;
+$loadingSpinnerId = 'pacsoft_spinner'.$formCode;
+$chosenShopDescriptionId = 'pacsoft_chosen_parcel_shop_desciption'.$formCode;
+$chosenParcelShopId = 'pacsoft_chosen_parcel_shop_id'.$formCode;
+$responseDivId = 'pacsoft_content'.$formCode;
+
+?>
+<?php if ($this->showParcelShopChoice() || $this->showDeliveryNote()): ?>
+
+<ul class="form-list" id="<?php echo $formCode ?>" style="">
+
+    <?php if ($this->showParcelShopChoice()): ?>
+
+
+        <li>
+            <label>
+                <em>*</em><?php echo $this->__('Enter the zip code, to find the nearest Pacsoft parcel shop:') ?>
+            </label>
+            <span class="input-box">
+                <input type='hidden' name='pacsoft[<?php echo $formCode; ?>][rate_id]' value='<?php echo $rateId ?>'/>
+                <input type='text' id='<?php echo $zipInputId; ?>' autocomplete=off value='<?php echo $this->getSelectedZip(); ?>'/>
+                <?php if ($this->enableMapOverlay()): ?>
+                    <button type='button' id='<?php echo $searchButtonId; ?>' class="button <?php echo $searchButtonValidationClass; ?>" title="<?php echo $this->__('Search') ?>"><span><?php echo $this->__('Show map') ?></span></button>
+                <?php endif; ?>
+                <img id='<?php echo $loadingSpinnerId; ?>' src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" border="0" title="Loading" style="height: 16px; width: 16px;"/>
+            </span>
+
+            <?php if ($this->enableMapOverlay()): ?>
+                <p id="<?php echo $chosenShopDescriptionId; ?>">
+                    <?php echo $this->getSelectedPickupDescription(); ?>
+                </p>
+                <input type='hidden' id="<?php echo $chosenParcelShopId; ?>" name="pacsoft[<?php echo $formCode; ?>][parcelshopId]" value="<?php echo $this->getSelectedPickupId(); ?>"/>
+            <?php else: ?>
+                <div id="<?php echo $responseDivId; ?>" ><?php $this->getParcelShopsAsSelectBox()?></div>
+            <?php endif; ?>
+
+        </li>
+
+
+        <script type="text/javascript">
+            // <![CDATA[
+
+            document.observe('dom:loaded', function(){
+                Translator.add('Please select a delivery point', '<?php echo $this->__('Please select a delivery point'); ?>');
+                createServiceForm<?php echo $formCode?>();
+            });
+
+            createServiceForm<?php echo $formCode?>();
+
+            function createServiceForm<?php echo $formCode?>(){
+                new ServicePointForm('<?php echo $formCode; ?>',
+                                        '<?php echo $loadingSpinnerId; ?>',
+                                        '<?php echo $zipInputId; ?>',
+                                        '<?php echo $responseDivId; ?>',
+                                        '<?php echo $searchButtonId; ?>',
+                                        '<?php echo $searchButtonValidationClass; ?>',
+                                        '<?php echo $chosenParcelShopId; ?>',
+                                        '<?php echo $chosenShopDescriptionId; ?>',
+                                        '<?php echo $addressId; ?>',
+                                        '<?php echo $rateCode; ?>',
+                                        '<?php echo $countryCode; ?>',
+                                        '<?php echo $this->getUrl('pacsoft/ajax/index'); ?>');
+            }
+
+            // ]]>
+        </script>
+    <?php endif; ?>
+
+    <?php if ($this->showDeliveryNote()): ?>
+
+        <li>
+            <label for="pacsoft[<?php echo $formCode?>][deliveryNote]"><?php echo $this->__('Enter a delivery note:') ?></label>
+        <span class="input-box">
+            <input type='text' name='pacsoft[<?php echo $formCode; ?>][deliveryNote]' autocomplete=off value='<?php echo $this->getDeliveryNote(); ?>'/>
+        </span>
+        </li>
+
+        <script type="text/javascript">
+            // <![CDATA[
+
+            document.observe('dom:loaded', function(){
+                createDeliveryNoteForm<?php echo $formCode?>();
+            });
+
+            createDeliveryNoteForm<?php echo $formCode?>();
+
+            function createDeliveryNoteForm<?php echo $formCode?>(){
+                new DeliveryNoteForm('<?php echo $addressId?>',
+                                     '<?php echo $rateCode; ?>',
+                                     '<?php echo $formCode; ?>',
+                                     '<?php echo $loadingSpinnerId ?>');
+            }
+
+            // ]]>
+        </script>
+
+    <?php endif; ?>
+
+</ul>
+
+<?php endif; ?>
+

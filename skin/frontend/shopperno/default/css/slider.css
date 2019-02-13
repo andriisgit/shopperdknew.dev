@@ -1,0 +1,49 @@
+.jcarousel-skin-tango .jcarousel-direction-rtl {
+	direction: rtl;
+}
+
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+    margin:0;
+    width: auto;
+    padding:0px;
+}
+.jcarousel-skin-tango .jcarousel-clip-horizontal {
+    width:auto;
+}
+.home-main .jcarousel-skin-tango .jcarousel-container-horizontal {
+    width: auto;
+}
+.home-main .jcarousel-skin-tango .jcarousel-clip-horizontal {
+    width: auto;
+}
+.sidebar .jcarousel-skin-tango .jcarousel-clip-horizontal,
+.home-left .jcarousel-skin-tango .jcarousel-clip-horizontal,
+.home-right .jcarousel-skin-tango .jcarousel-clip-horizontal {
+    width:300px;
+}
+
+.jcarousel-skin-tango .jcarousel-clip {
+    overflow:hidden;
+}
+.jcarousel-skin-tango .jcarousel-item {
+    width:252px;
+}
+
+.jcarousel-skin-tango .jcarousel-item-horizontal {
+	margin:0;
+    position:relative;
+}
+
+.jcarousel-skin-tango .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left:0;
+    margin-right: 0;
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-next-horizontal, .jcarousel-prev-horizontal  {display:block; position:absolute; width:35px; height:35px; background:#fefefe url(../images/sprite/arrow_about.png) 0 0 no-repeat; border-radius:100%; }
+.jcarousel-prev-horizontal {margin:-54px 0 0; right:44px; background-position:100% 0;}
+.jcarousel-next-horizontal {margin:-54px 0 0; right:4px;}
+.jcarousel-next-horizontal:hover {background-color:#fe5252; background-position:0 100%;}
+.jcarousel-prev-horizontal:hover {background-color:#fe5252; background-position:100% 100%;}

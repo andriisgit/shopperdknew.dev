@@ -1,0 +1,72 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * @see Mage_Page_Block_Template_Links
+ */
+?>
+
+
+<?php
+$additional_links = false;
+if (Mage::getSingleton('customer/session')->isLoggedIn() == false && Mage::getStoreConfig('shoppersettings/header/top_signup', Mage::app()->getStore()->getId())) {
+	$additional_links = true;
+}
+if (Mage::getStoreConfig('shoppersettings/header/top_custom_link', Mage::app()->getStore()->getId())) {
+	$additional_links = true;
+}
+
+$path = Mage::getStoreConfig('shoppersettings/header/top_custom_link_path');
+$title = Mage::getStoreConfig('shoppersettings/header/top_custom_link_title');
+$anchor = Mage::getStoreConfig('shoppersettings/header/top_custom_link_anchor');
+
+if ( strpos($path, 'http') !== 0 ) {
+	$path = Mage::getURL( $path );
+}
+
+?>
+
+
+		<font size=5><i class="fa fa-thumbs-o-up"></font></i><span> <font size=3><b>Priser inkl. MVA og norsk toll</b></span></font>
+
+
+&nbsp;&nbsp;
+
+		<font size=5><i class="fa fa-thumbs-o-up"></font></i><span> <font size=3>30 dagers full returrett </span></font>
+
+
+&nbsp;&nbsp;
+		<font size=5><i class="fa fa-truck"></font></i><span> <font size=3>Vi sender gratis over 500kr</font></span>
+&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;</font></i><span> <font size=3><img src=https://cdn.klarna.com/1.0/shared/image/generic/logo/nb_no/basic/logo_black.png?width=100></span></font>
+&nbsp;&nbsp;
+
+
+<?php $_links = $this->getLinks(); ?>
+<?php if(count($_links)>0 || $additional_links ): ?>
+
+<?php endif; ?>

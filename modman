@@ -1,0 +1,6 @@
+app/code/local/NWT/Pricecomparison
+app/etc/modules/NWT_Pricecomparison.xml
+app/design/adminhtml/default/default/layout/nwt/pricecomparison.xml
+app/design/adminhtml/default/default/template/nwt/pricecomparison
+feeds/.htaccess
+feeds/read.me

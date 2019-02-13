@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * NWT_Pricecomparison extension
+ *
+ * @category    NWT
+ * @package     NWT_Pricecomparison
+ * @copyright   Copyright (c) 2014 Nordic Web Team ( http://nordicwebteam.se/ )
+ * @license     NWT Commercial License (NWTCL 1.0)
+ * @author      Emil [carco] Sirbu (emil.sirbu@gmail.com)
+ *
+ */
+ -->
+<config>
+    
+    <menu>
+        <nwt>
+            <children>
+                <pricecomparison translate="title" module="pricecomparison">
+                    <title>Price Comparison Feeds</title>
+                    <sort_order>10</sort_order>
+                    <action>adminhtml/pricecomparison_feed</action>
+                    <!--
+                    <children>
+                        <feeds translate="title">
+                            <title>Feeds</title>
+                            <action>adminhtml/pricecomparison_feed</action>
+                        </feeds>
+                        <settings module="pricecomparison">
+                            <title>Settings Module</title>
+                            <sort_order>20</sort_order>
+                            <action>adminhtml/system_config/edit/section/pricecomparison</action>
+                        </settings>
+                    </children>
+                    -->
+                </pricecomparison>
+            </children>
+        </nwt>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <pricecomparison translate="title" module="pricecomparison">
+                                        <title>Price Comparison Settings</title>
+                                    </pricecomparison>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <nwt>
+                        <children>
+                            <pricecomparison translate="title" module="pricecomparison">
+                                <title>Price Comparison Feeds</title>
+                                <sort_order>10</sort_order>
+                                <!--
+                                <children>
+                                    <feeds translate="title">
+                                        <title>Feeds</title>
+                                    </feeds>
+                                    <settings module="pricecomparison">
+                                        <title>Settings Module</title>
+                                    </settings>
+                                </children>
+                                -->
+                            </pricecomparison>
+                        </children>
+                    </nwt>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config> 

@@ -1,0 +1,74 @@
+<?php
+/**
+ * Nybohansen ApS
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ *
+ * =================================================================
+ *                 MAGENTO EDITION USAGE NOTICE
+ * =================================================================
+ * This package designed for Magento COMMUNITY edition
+ * We do not guarantee correct work of this extension
+ * on any other Magento edition except Magento COMMUNITY edition.
+ * In case of incorrect edition usage, we don't provide support.
+ * =================================================================
+ *
+ * @category   Nybohansen
+ * @package    Nybohansen_Pacsoft
+ * @copyright  Copyright (c) 2014 Nybohansen ApS
+ * @license    LICENSE.txt
+ */
+
+?>
+
+<?php foreach ($this->getAddons() as $code => $addon): ?>
+    <input onclick="toggleAddOn(this)" type="checkbox" name="addons[]" value="<?php echo $code; ?>" <?php if($addon['checked']): ?> checked <?php endif; ?> /> <label for="<?php echo $code; ?>" class="normal"><?php echo $addon['desc']; ?></label><br />
+    <?php if ($code == 'COD'):?>
+        <div id="COD" <?php if(!$addon['checked']): ?> style="display: none; " <?php endif; ?> >
+            <label for="COD[amount]" class="normal"><?php echo Mage::helper('pacsoft')->__('Amount') ?></label><br />
+            <input type="text" name="COD[amount]" id="COD[amount]" style="width: 270px;" value="<?php echo $this->_pacsoftOrder->getAddons_settings('COD','amount'); ?>" /><br />
+            <label for="COD[reference]" class="normal"><?php echo Mage::helper('pacsoft')->__('Reference') ?></label><br />
+            <input type="text" name="COD[reference]" id="COD[reference]" style="width: 270px;" value="<?php echo $this->_pacsoftOrder->getAddons_settings('COD','reference'); ?>" /><br />
+        </div>
+    <?php elseif ($code == 'INSU'): ?>
+        <div id="INSU" <?php if(!$addon['checked']): ?> style="display: none; " <?php endif; ?> >
+            <label for="INSU[amount]" style="width: 0px;" class="normal"><?php echo Mage::helper('pacsoft')->__('Amount') ?></label><br />
+            <input type="text" name="INSU[amount]" id="INSU[amount]" style="width: 270px;" value="<?php echo $this->_pacsoftOrder->getAddons_settings('INSU','amount'); ?>"/><br />
+
+            <label for="INSU[misc]" style="width: 0px;" class="normal"><?php echo Mage::helper('pacsoft')->__('Description') ?></label><br />
+            <input type="text" name="INSU[misc]" id="INSU[misc]" style="width: 270px;" value="<?php echo $this->_pacsoftOrder->getAddons_settings('INSU','misc'); ?>" />
+        </div>
+    <?php elseif ($code == 'VALUE'): ?>
+        <div id="VALUE" <?php if(!$addon['checked']): ?> style="display: none; " <?php endif; ?> >
+            <label for="VALUE[amount]" style="width: 0px;" class="normal"><?php echo Mage::helper('pacsoft')->__('Amount') ?></label><br />
+            <input type="text" name="VALUE[amount]" id="VALUE[amount]" style="width: 270px;" value="<?php echo $this->_pacsoftOrder->getAddons_settings('VALUE','amount'); ?>" />
+        </div>
+    <?php elseif ($code == 'NOTSMS'): ?>
+        <div id="NOTSMS" <?php if(!$addon['checked']): ?> style="display: none; " <?php endif; ?> >
+            <label for="NOTSMS[misc]" style="width: 0px;" class="normal"><?php echo Mage::helper('pacsoft')->__('Phone number') ?></label><br />
+            <input type="text" name="NOTSMS[misc]" id="NOTSMS[misc]" style="width: 270px;" value="<?php echo $this->_pacsoftOrder->getAddons_settings('NOTSMS','misc') ?>" />
+        </div>
+    <?php elseif ($code == 'NOTEMAIL'): ?>
+        <div id="NOTEMAIL" <?php if(!$addon['checked']): ?> style="display: none; " <?php endif; ?> >
+            <label for="NOTEMAIL[misc]" style="width: 0px;" class="normal"><?php echo Mage::helper('pacsoft')->__('E-mail') ?></label><br/>
+            <input type="text" name="NOTEMAIL[misc]" id="NOTEMAIL[misc]" style="width: 270px;" value="<?php echo $this->_pacsoftOrder->getAddons_settings('NOTEMAIL','misc'); ?>" />
+        </div>
+    <?php elseif ($code == 'NOTPHONE'): ?>
+        <div id="NOTPHONE" <?php if(!$addon['checked']): ?> style="display: none; " <?php endif; ?> >
+            <label for="NOTPHONE[misc]" style="width: 0px;" class="normal"><?php echo Mage::helper('pacsoft')->__('Phone number') ?></label><br/>
+            <input type="text" name="NOTPHONE[misc]" id="NOTPHONE[misc]" style="width: 270px;" value="<?php echo $this->_pacsoftOrder->getAddons_settings('NOTPHONE','misc'); ?>" />
+        </div>
+    <?php elseif ($code == 'PUPOPT'): ?>
+    <div id="PUPOPT" <?php if(!$addon['checked']): ?> style="display: none; " <?php endif; ?> >
+        <label for="PUPOPT[zip]" style="width: 0px;" class="normal"><?php echo Mage::helper('pacsoft')->__('Zip') ?></label><br/>
+        <input type="text" onkeydown="servicePointsOnKeyDown(this)" onkeyup="servicePoints(this)" name="PUPOPT[zip]" id="PUPOPT[zip]" style="width: 270px;" value="<?php echo $this->_pacsoftOrder->getVisitingAddress_postalCode(); ?>" />
+        <div id="pupopt_response">
+            <?php echo $this->servicePointSelectHtml(); ?>
+        </div>
+    </div>
+    <?php endif; ?>
+<?php endforeach; ?>
+

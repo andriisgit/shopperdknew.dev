@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<buyshop>
+    <slides>
+        <slide1>
+        <![CDATA[
+            <div class="ls-layer link" style="slidedirection: right; slidedelay: 8000;"> <img src="{{BASE}}media/etheme/buyshop/buyshoparallax/buyshop3/slide1.jpg" class="ls-s1 nofade" style="position: absolute; top:0; left: 0; slidedirection:  fade ; slideoutdirection :fade; durationin : 100; durationout : 7600; easingin : easeInSine; easingout : easeOutSine; delayin : 0; delayout : 0; showuntil :  100; rotateout : 0; scaleout : 1.2;">
+                <div class="ls-s2 text1" style="top:135px; left: 910px; slidedirection : fade; slideoutdirection : fade; durationin : 500; durationout : 500; easingin : easeOutQuint; easingout : easeOutSine; showuntil : 7000; delayin : 400; scalein : 0.1; scaleout : 1;">Pay Attention</div>
+                <div class="ls-s3 text2" style="top:190px; left: 940px; slidedirection : fade; slideoutdirection : fade; durationin : 500; durationout : 500; easingin : easeOutQuint; easingout : easeOutSine; showuntil : 7200; delayin : 600; scalein : 0.1; scaleout : 1;">to the</div>
+                <div class="ls-s4 text3" style="top:190px; left: 1025px; slidedirection : fade; slideoutdirection : fade; durationin : 500; durationout : 500; easingin : easeOutQuint; easingout : easeOutSine; showuntil : 7400; delayin : 800; scalein : 0.1; scaleout : 1;">Details</div>
+                <div class="ls-s5 text4" style="top:270px; left: 1025px; slidedirection : fade; slideoutdirection : fade; durationin : 500; durationout : 500; easingin : easeOutQuint; easingout : easeOutSine; showuntil : 7600; delayin : 1000; scalein : 0.1; scaleout : 1;">Be original!</div>
+            </div>
+        ]]>
+        </slide1>
+        <slide2>
+            <![CDATA[
+                <div class="ls-layer link" style="slidedirection: right; slidedelay: 8000;"> <img src="{{BASE}}media/etheme/buyshop/buyshoparallax/buyshop3/slide2.jpg" class="ls-s1 nofade" style="position: absolute; top:0; left: 0; slidedirection:  fade ; slideoutdirection :fade; durationin : 100; durationout : 7600; easingin : easeInSine; easingout : easeOutSine; delayin : 0; delayout : 0; showuntil :  100; rotateout : 0; scaleout : 1.6;">
+                    <div class="ls-s2 text5" style="top:122px; left: 885px; slidedirection : fade; slideoutdirection : fade; durationin : 500; durationout : 500; easingin : easeOutQuint; easingout : easeOutSine; showuntil : 7000; delayin : 400; scalein : 0.1; scaleout : 1;">THOSE WHO CANNOT CHANGE THEIR MINDS</div>
+                    <div class="ls-s3 text6" style="top:157px; left: 840px; slidedirection : fade; slideoutdirection : fade; durationin : 500; durationout : 500; easingin : easeOutQuint; easingout : easeOutSine; showuntil : 7200; delayin : 600; scalein : 0.1; scaleout : 1;">CANNOT CHANGE</div>
+                    <div class="ls-s4 text6" style="top:215px; left: 1040px; slidedirection : fade; slideoutdirection : fade; durationin : 500; durationout : 500; easingin : easeOutQuint; easingout : easeOutSine; showuntil : 7400; delayin : 600; scalein : 0.1; scaleout : 1;">ANYTHING</div>
+                    <div class="ls-s5 text7" style="top:295px; left: 1135px; slidedirection : fade; slideoutdirection : fade; durationin : 500; durationout : 500; easingin : easeOutQuint; easingout : easeOutSine; showuntil : 7600; delayin : 800; scalein : 0.1; scaleout : 1;">Bernard Shaw</div>
+                </div>
+            ]]>
+        </slide2>
+        <slide3>
+            <![CDATA[
+                <div class="ls-layer link" style="slidedirection: right; slidedelay: 8000;"> <img src="{{BASE}}media/etheme/buyshop/buyshoparallax/buyshop3/slide3.jpg" class="ls-s1 nofade" style="position: absolute; top:0; left: 0; slidedirection:  fade ; slideoutdirection :fade; durationin : 100; durationout : 7600; easingin : easeInSine; easingout : easeOutSine; delayin : 0; delayout : 0; showuntil :  100; rotateout : 0; scaleout : 1.2;">
+                    <div class="ls-s2 text5" style="top:122px; left: 355px; slidedirection : fade; slideoutdirection : fade; durationin : 500; durationout : 500; easingin : easeOutQuint; easingout : easeOutSine; showuntil : 7000; delayin : 400; scalein : 0.1; scaleout : 1;">FASHION IS A FORM OF UGLINESS</div>
+                    <div class="ls-s3 text6" style="top:157px; left: 355px; slidedirection : fade; slideoutdirection : fade; durationin : 500; durationout : 500; easingin : easeOutQuint; easingout : easeOutSine; showuntil : 7200; delayin : 600; scalein : 0.1; scaleout : 1;">SO INTOLERABLE THAT</div>
+                    <div class="ls-s4 text6" style="top:213px; left: 420px; slidedirection : fade; slideoutdirection : fade; durationin : 500; durationout : 500; easingin : easeOutQuint; easingout : easeOutSine; showuntil : 7200; delayin : 600; scalein : 0.1; scaleout : 1;">WE HAVE TO ALTER IT</div>
+                    <div class="ls-s5 text8" style="top:280px; left: 420px; slidedirection : fade; slideoutdirection : fade; durationin : 500; durationout : 500; easingin : easeOutQuint; easingout : easeOutSine; showuntil : 7400; delayin : 800; scalein : 0.1; scaleout : 1;">EVERY SIX MONTHS</div>
+                    <div class="ls-s6 text7" style="top:325px; left: 420px; slidedirection : fade; slideoutdirection : fade; durationin : 500; durationout : 500; easingin : easeOutQuint; easingout : easeOutSine; showuntil : 7600; delayin : 800; scalein : 0.1; scaleout : 1;">Oscar Wilde</div>
+                </div>
+            ]]>
+        </slide3>
+        <slide4>
+            <![CDATA[
+               <div class="ls-layer link" style="slidedirection: right; slidedelay: 8000;"> <img src="{{BASE}}media/etheme/buyshop/buyshoparallax/buyshop3/slide4.jpg" class="ls-s1 nofade" style="position: absolute; top:0; left: 0; slidedirection:  fade ; slideoutdirection :fade; durationin : 100; durationout : 7400; easingin : easeInSine; easingout : easeOutSine; delayin : 0; delayout : 0; showuntil :  100; rotateout : 0; scaleout : 1.6;">
+                    <div class="ls-s1 text9" style="top:95px; left: 885px; slidedirection : fade; slideoutdirection : fade; durationin : 500; durationout : 500; easingin : easeOutQuint; easingout : easeOutSine; showuntil : 7000; delayin : 400; scalein : 0.1; scaleout : 1;">BUYSHOP</div>
+                    <div class="ls-s2 text10" style="top:122px; left: 1105px; slidedirection : fade; slideoutdirection : fade; durationin : 500; durationout : 500; easingin : easeOutQuint; easingout : easeOutSine; showuntil : 7000; delayin : 400; scalein : 0.1; scaleout : 1;">is featured product</div>
+                    <div class="ls-s3 text11" style="top:157px; left: 885px; slidedirection : fade; slideoutdirection : fade; durationin : 500; durationout : 500; easingin : easeOutQuint; easingout : easeOutSine; showuntil : 7200; delayin : 600; scalein : 0.1; scaleout : 1;">on ThemeFores</div>
+                    <div class="ls-s4 text12" style="top:225px; left: 885px; slidedirection : fade; slideoutdirection : fade; durationin : 500; durationout : 500; easingin : easeOutQuint; easingout : easeOutSine; showuntil : 7400; delayin : 600; scalein : 0.1; scaleout : 1;">Don't hesitate - buy it!</div>
+                </div>
+            ]]>
+        </slide4>
+    </slides>
+</buyshop>

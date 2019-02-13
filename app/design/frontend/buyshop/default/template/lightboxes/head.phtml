@@ -1,0 +1,26 @@
+<?php
+/**
+ * @category   MagentoPycho
+ * @package    MagentoPycho_Lightboxes
+ * @author     magepsycho@gmail.com
+ * @website    http://www.magepsycho.com
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+?>
+<?php
+$helper = Mage::helper('lightboxes');
+$route=Mage::app()->getRequest()->getRouteName().Mage::app()->getRequest()->getControllerName().Mage::app()->getRequest()->getActionName();
+if($helper->getConfig('active') && $route!='ajaxindexoptions'):
+    $moduleName         = $this->getRequest()->getModuleName();
+    $controllerName     = $this->getRequest()->getControllerName();
+    $actionName         = $this->getRequest()->getActionName();
+    #echo $moduleName . '|' . $controllerName . '|' . $actionName;
+    if($controllerName == 'product' && in_array($actionName, array('view', 'list'))):
+?>
+	<?php echo $this->getChildHtml('lightboxes_inclusion'); ?>
+	<?php echo $this->getChildHtml('lightboxes_initialization'); ?>
+
+    <?php endif; ?>
+<?php
+
+endif; //end active ?>

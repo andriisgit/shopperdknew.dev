@@ -1,0 +1,108 @@
+1.7.7 - Made the module compatible with Pakkelabels.dk. Added new servicenames to Post Danmark services
+
+1.7.6 - Changed module to use version 2 of the postnord API.
+
+1.7.5 - Removed old developer key, added new one.
+
+1.7.4 - Fixed URL bug, causing creation of new shipping rates to fail. Bug was intruduced with SUPEE-6788.
+
+1.7.3 - Made the module compatible with multiplie checkout modules
+
+1.7.2 - Removed event not used
+        Made module compatible with SUPEE-6788
+
+1.7.1 - Fixed bug, causing Pacsofts webservice to be called every minute
+
+1.7.0 - Fixed problem with corrupt pakkeshoplist, and added randomness in updating
+        Fixed bug when causing the Pacsoft and GLS module to be incompatible.
+
+
+1.6.9 - Fixed missing translation
+
+1.6.8 - Fixed bug with onepagecheckout, causing maps to be loading twice
+
+1.6.7 - Fixed bug causing shipping rates not to be loaded in backend when
+        editing an order. E.g. when choosing Post Danmark Privatpakke norden, a JSON error occured
+        Added new feature, so the module can be used in shopping cart rules
+        Fixed bug, when the zip code contains spaces
+
+1.6.6 - Fixed issue causing error on order page, when order was completely virtual
+
+1.6.5 - Fixed issue with rates and negativ subtotal
+
+1.6.4 - Disabled call to Post DK doing T&T import, when import function is disabled in configuration
+        Added store view id to displaytype function
+
+1.6.3 - Fixed issue with shippinginfobox extending the wrong parrent block
+        Added new feature, so shipping infobox is collapsed, when used on a non pacsoft order
+
+1.6.2 - Fixed issue with multiple packages and import of T&T
+
+1.6.1 - Fixed minor error with PacsoftRatesController
+
+1.6.0 - Fixed issue with special chars in XML
+
+1.5.9 - Moved Design and skin files to base/default
+        Fixed minor spelling issues
+
+1.5.8 - Fixed Unifaun URL's and track and trace import, so it is compatible with the new version of Unifauns API
+
+1.5.7 - Added Last mile as shipping method
+        Added new feature: Default content
+        Fixed issue with password being in plaintext in backend
+
+1.5.6 - Added possibility to apply fallback solution when mobiledevice is used
+        Fixed issue with not validating chosen parcel shop, when using radio buttons
+        Fixed issue with not loading the correct version of google maps
+        Added compatability with a version of the onestepcheckout checkout module (Not IWD)
+        Updated module to transfer recievers phone number to pacsoft online
+
+1.5.5 - Fixed issue with backend controllers, when Add store codes to URL was set to Yes
+
+1.5.4 - Fixed small bugs regarding empty rate array.
+        Fixed bug when & is used in e-mail message
+
+1.5.3 - Fixed issue when no pakkeshop is available in cached files
+
+1.5.1 - Made compatible with opc checkout
+
+1.5.0 - Fixed small translation error. Added chosen servicepoints when reloading
+
+1.3.1 - Fixed minor CSS bug, causing overlay not to be entered when scrolling
+
+1.3.0 - Changed the module to use local parcelshop data, instead of calling a server.
+        The module can now be used in all nordic countries (DK, SE, NO and FI)
+        Rewrote Javascript part
+
+1.2.3 - Changed so developer id is sent to Post Danmarks API as per mail from Post Danmark IT
+        Fixed & in url
+
+1.2.1 - Updated copyrights
+
+1.2.0 - Fixed bug regarding weight
+
+1.1.9 - Added delivery note to frontend, when flexlevering is used
+
+1.1.8 - Fixed small ACL error
+
+1.1.7 - Fixed problem in observer, causing a lot og warnings to be printed to the log files!
+
+1.1.6 - Fixed bug causing inavtive rates to be displayed.
+        Made the module compatible with onestepcheckout
+
+1.1.5 - Fixed bug when basing shipping rates on subtotal
+
+1.1.4 - Removed free shipping from configuration because it didn't make sense!
+
+1.1.3 - Fixed bug causing rates page in admin to fail
+
+1.1.2 - Rewrote free shipping part
+
+1.1.1 - Fix small error on some Magento installation causing a infinit loop.
+        Fix error when using permissions in backend
+
+1.1.0 - New documentation feature
+
+1.0.0 - initial version
+
+

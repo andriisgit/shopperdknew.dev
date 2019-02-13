@@ -1,0 +1,35 @@
+<?php
+/**
+ * @category    Fishpig
+ * @package     Fishpig_Wordpress
+ * @license     http://fishpig.co.uk/license.txt
+ */
+?>
+<?php $post = $this->getPost() ?>
+<?php if ($post): ?>
+
+    <div class="post-meta">
+        <span class="meta-date"><i class="icon-clock-alt"></i><?php echo $post->getPostDate()?></span>
+        <span class="meta-author"><i class="icon-user-2"></i><?php echo $post->getAuthor()->getDisplayName()?></span>
+        <span class="meta-tags"><i class="icon-tag-1"></i><?php echo $this->getCategoryString($post) ?></span>
+        <?php if ($this->hasTags($post)): ?>
+        <span class="meta-tags"><i class="icon-tag-1"></i><?php echo $this->getTagString($post) ?></span>
+        <?php endif; ?>
+    </div>
+
+
+
+    <?php if ($this->canDisplayPreviousNextLinks()): ?>
+
+        <div class="post-navigation">
+            <?php if (($previous = $post->getPreviousPost()) !== false): ?>
+                <div class="pull-left"><i class="icon-left-open"></i>&nbsp;<a href="<?php echo $previous->getPermalink() ?>" title="<?php echo $this->escapeHtml($previous->getPostTitle()) ?>"><?php echo $this->__('Previous Post') ?></a></div>
+            <?php endif; ?>
+            <?php if (($next = $post->getNextPost()) !== false): ?>
+                <div class="pull-right"><a href="<?php echo $next->getPermalink() ?>" title="<?php echo $this->escapeHtml($next->getPostTitle()) ?>"><?php echo $this->__('Next Post') ?></a>&nbsp;<i class="icon-right-open"></i></div>
+            <?php endif; ?>
+        </div>
+
+    <?php endif; ?>
+
+<?php endif; ?>

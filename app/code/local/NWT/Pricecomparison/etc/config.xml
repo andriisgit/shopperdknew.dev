@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * NWT_Pricecomparison extension
+ *
+ * @category    NWT
+ * @package     NWT_Pricecomparison
+ * @copyright   Copyright (c) 2014 Nordic Web Team ( http://nordicwebteam.se/ )
+ * @license     NWT Commercial License (NWTCL 1.0)
+ * @author      Emil [carco] Sirbu (emil.sirbu@gmail.com)
+ *
+ */
+ -->
+<config>
+  <modules>
+    <NWT_Pricecomparison>
+      <version>2.1.4</version>
+    </NWT_Pricecomparison>
+  </modules>
+  <global>
+        <resources>
+            <pricecomparison_setup>
+                <setup>
+                    <module>NWT_Pricecomparison</module>
+                    <class>NWT_Pricecomparison_Model_Resource_Setup</class>
+                </setup>
+            </pricecomparison_setup>
+        </resources>
+        <models>
+            <pricecomparison>
+                <class>NWT_Pricecomparison_Model</class>
+                <resourceModel>pricecomparison_resource</resourceModel>
+            </pricecomparison>
+            <pricecomparison_resource>
+                <class>NWT_Pricecomparison_Model_Resource</class>
+                <entities>
+                    <feed>
+                        <table>pricecomparison_feed</table>
+                    </feed>
+                </entities>
+            </pricecomparison_resource>
+        </models>
+         <blocks>
+            <pricecomparison>
+                <class>NWT_Pricecomparison_Block</class>
+            </pricecomparison>
+        </blocks>
+        <helpers>
+            <pricecomparison>
+                <class>NWT_Pricecomparison_Helper</class>
+            </pricecomparison>
+        </helpers>
+  </global>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <pricecomparison>
+                    <file>nwt/pricecomparison.xml</file>
+                </pricecomparison>
+            </updates>
+        </layout>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <NWT_Pricecomparison before="Mage_Adminhtml">NWT_Pricecomparison_Adminhtml</NWT_Pricecomparison>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+
+
+    <crontab>
+        <jobs>            
+            <pricecomparison_generate_feeds>
+                <schedule><cron_expr>10 1 * * *</cron_expr></schedule> 
+                <run><model>pricecomparison/observer::generate</model></run>
+            </pricecomparison_generate_feeds>
+        </jobs>
+    </crontab>
+
+    <!-- FEEDS configuration -->
+    <nwt>
+        <pricecomparison>
+            <feeds>
+                
+                <!-- 
+                
+                    you can disable a (default) feed or an attribute by using disabled="1"
+
+                    every attribute can have parameters:
+                        label  (optional)
+                        filter (see Filters)
+                        params (see Filtes)
+                        default - default value, if value is empty
+                        max     - maximum length
+                        wrap    - wrap template for results, use $val for attribute value
+                -->
+
+                <simple label="Simple/Starter feed">
+                    <name />
+                    <sku />
+                    <category />
+                    <price_by_type  filter="convert_price"/>
+                    <url />
+                    <manufacturer />
+                    <image />
+                    <is_saleable filter="yesno" />
+                </simple>
+
+                <prisjakt label="Prisjakt">
+                    <name label="Product Name" />
+                    <sku  label="SKU" />
+                    <category label="Category" />
+                    <price_by_type label="Price" />
+                    <url label="Product URL" />
+                    <manufacturer label="Manufacturer" />
+                    <image label="Image" />
+                    <is_saleable  label="In Stock" filter="yesno" params="Ja,Nej" />
+                    <pc_delivery_cost label="Delivery Cost" />
+                </prisjakt>
+
+                <pricerunner label="Pricerunner">
+                    <name label="Product Name" />
+                    <sku  label="SKU" />
+                    <category  label="Category" />
+                    <category_id  label="Category ID" />
+                    <price_by_type  label="Price" />
+                    <url label="Product URL" />
+                    <manufacturer label="Manufacturer" />
+                    <pc_manufacturer_sku label="Manufacturer SKU" />
+                    <description label="Description" filter="striptags" max="255" />
+                    <image label="Image" />
+                    <is_saleable label="In Stock" filter="yesno" params="Ja,Nej" /> 
+                    <pc_delivery_cost label="Delivery Cost" />
+                    <pc_delivery_time label="Delivery Time" />
+                    <pc_eanorupc_prod label="EAN or UPC" />
+                    <pc_reitaler_message label="Retailer Message" />
+                    <pc_isbn_prod lable="ISBN Number" />
+                </pricerunner>
+
+                <kelkoo label="Kelkoo">
+                    <name label="Product Name" />
+                    <brand label="Brand" />
+                    <description label="Description" filter="striptags" max="255" oneline="1" />
+                    <short_description  label="Short Description" filter="striptags"  max="255" oneline="1" />
+                    <price_by_type label="Price" />
+                    <sku label="SKU" />
+                    <id label="Id" />
+                    <url label="Product URL" />
+                    <is_saleable label="In Stock" filter="yesno" params="Ja,Nej" />
+                    <category label="Category" />
+                    <image label="Image" />
+                    <manufacturer label="Manufacturer" />
+                </kelkoo>
+                
+                <prices>
+                    <sku />
+                    <name />
+                    <type_id />
+                    <visibility />
+                    <price_by_type label="Price (by Type)" />
+                    <price_by_type2 attribute="price_by_type" filter="convert_price" label="Store Price" />
+                    <price />
+                    <minimal_price />
+                    <group_price />
+                    <special_price />
+                    <tier_price />
+                    <is_saleable />
+                    <is_in_stock/>
+                    <qty />
+                    <url />
+                </prices>
+
+            </feeds>
+
+            <!-- 
+                Filters which is apply to the calculated value.
+                    you can specify your model as model="yourmodule/path_to_model"
+                    you can disable a filter by using disabled="1"
+                    the function receive the value as first argument and all params specified by user
+                    See Helper/Filter.php
+            -->
+
+            <filters>
+                <!-- You can specify help as attribute, or, for long/html text, as node content  -->
+                <yesno  label="Yes/No" helper="pricecomparison/filter"><![CDATA[Return first parameter if value is not empty, else second. Default: <strong>Yes,No</strong>]]></yesno>
+                <striptags label="Strip Tags" help="Strip all html tags from value" />
+                <htmlescape label="HTML Escape" help="Escape all html tags" />
+                <round label="Round" help="Round value to the specified number of decimals (in the parameters column); Default: 2" />
+                <convert_price label="Convert Price" help="Convert format price value to the store currency. You can specify decimals number as parameter (default: 2)" />
+                <convert_format_price label="Convert &amp; Format Price" help="Convert and format price value to the store currency." />
+                <format_price label="Format Price" help="Format price as per store currenccy configuration" />
+            </filters>
+
+            <!-- 
+                custom attributes, need to define a getter for every of this
+                you can specify your model as model="yourmodule/path_to_model, or don't use a model getter with module="false"
+                model false mean that will be use getDataUsingMethod, on product
+                you can disable an attributes by using disabled="1"
+                the function receive the product as parameter
+                See Helper/Attribute.php
+            -->
+
+            <attributes>
+                <name label="Product Name" model="false" /> ><!-- Not a special getter, just want to be "in front" -->
+                <sku label="SKU" model="false" /><!-- Not a special getter, just want to be "in front" -->
+                <category label="Category" /> <!-- use default pricecomparison/feed_attribute model -->
+                <category_id label="Category ID" />
+                <url label="Product Url" />
+                <type_id label="Product Type" model="false" />
+                <price_by_type  label="Price by type (Final or Minimal)" />
+                <image label="Main Image" />
+                <is_saleable label="Is Saleable"  />  <!-- use default pricecomparison/feed_attribute model -->
+                <is_in_stock label="In Stock" />
+                <qty label="Qty Inventory" model="false" />
+                <empty label="Fixed (add it into the Empty column)" />
+            </attributes>
+            
+            <!-- Wrap template filter -->
+            <wrap>
+                <tempate_filter>pricecomparison/template_filter</tempate_filter>
+            </wrap>
+
+
+        </pricecomparison>
+    </nwt>
+    
+</config> 

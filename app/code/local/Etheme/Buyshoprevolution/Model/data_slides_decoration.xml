@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<buyshop>
+    <slides>
+        <slide1>
+
+            <li data-transition="fade" data-slotamount="10" data-masterspeed="300" data-link="#" data-target="_blank" >
+                  <!-- THE MAIN IMAGE IN THE SLIDE -->
+                  <img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/decoration/slider_1.jpg"  alt="" />
+
+                  <!-- THE CAPTIONS OF THE FIRST SLIDE -->
+                  <div class="caption  sft text1"
+											 data-x="110"
+											 data-y="100"
+											 data-speed="300"
+											 data-start="800"
+											 data-captionhidden="on"
+											 data-easing="easeOutExpo"  >usability and creative</div>
+                  <div class="caption  sft text2"
+											 data-x="110"
+											 data-y="130"
+											 data-speed="300"
+											 data-start="1100"
+											 data-captionhidden="on"
+											 data-easing="easeOutExpo"  >ALL YOU NEED</div>
+                  <div class="caption  sft text3"
+											 data-x="110"
+											 data-y="205"
+											 data-speed="300"
+											 data-start="1500"
+											 data-captionhidden="on"
+											 data-easing="easeOutExpo"  >to be a gorgeous</div>
+                  <div class="caption  randomrotate"
+											 data-x="100"
+											 data-y="330"
+											 data-speed="500"
+											 data-start="500"
+											 data-captionhidden="on"
+											 data-easing="easeOutExpo"  >
+                      <img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/decoration/sale-circle.png" width="130" height="129" alt=""/>
+                  </div>
+                </li>
+
+
+        </slide1>
+
+        <slide2>
+
+            <li data-transition="papercut" data-slotamount="15" data-masterspeed="300"> 
+                <img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/decoration/slider_2.jpg" alt="" />
+                <div class="caption  sfb text4"
+                     data-x="110"
+                     data-y="340"
+                     data-speed="300"
+                     data-start="800"
+                     data-captionhidden="on"
+                     data-easing="easeOutExpo"  >HI-TECH furniture</div>
+                <div class="caption  sfb text5"
+                     data-x="110"
+                     data-y="365"
+                     data-speed="300"
+                     data-start="1100"
+                     data-captionhidden="on"
+                     data-easing="easeOutExpo"  >NEW STYLE</div>
+                <div class="caption  sfb text6"
+                     data-x="110"
+                     data-y="440"
+                     data-speed="300"
+                     data-start="1500"
+                     data-captionhidden="on"
+                     data-easing="easeOutExpo"  >for new generation</div>
+                <div class="caption  randomrotate"
+                     data-x="370"
+                     data-y="25"
+                     data-speed="500"
+                     data-start="500"
+                     data-captionhidden="on"
+                     data-easing="easeOutExpo"  >
+                    <img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/decoration/sale-circle.png" width="130" height="129" alt="" />
+                </div>
+            </li>
+
+        </slide2>
+
+
+
+
+
+
+    </slides>
+</buyshop>

@@ -1,0 +1,55 @@
+<?php if (($_products = $this->getProductCollection()) && $_products->getSize()): ?>
+<!--SALE PRODUCTS-->
+<h2><?php echo $this->getBlockName(); ?></h2>
+<div class="carousel es-carousel-wrapper style0"  id="carousel_sale">
+    <div class="es-carousel">
+        <div class="row">
+            <div class="product_outer">
+
+                <?php foreach ($_products->getItems() as $_product): ?>
+                <?php  if(!$_product->isSaleable() && !Mage::getStoreConfig('cataloginventory/options/show_out_of_stock'))continue; ?>
+                <?php
+
+                $widthBig=258;
+                $heightBig=245;
+                $widthSmall=71;
+                $heightSmall=65;
+                $price=$this->getPriceHtml($_product, true);
+                ?>
+                    <?php
+                    $colorswatches='';
+                    if (Mage::getStoreConfig('configswatches/general/enabled', Mage::app()->getStore())) {
+                        $colorswatches=$this->getLayout()->createBlock('core/template')->setTemplate('configurableswatches/catalog/product/list/swatches.phtml')->setProduct($_product)->toHtml();
+                    }
+                    ?>
+                <!--PRODUCT-->
+                <?php  echo Mage::helper('buyshopconfig')->getProductHtml($_product,$this,$widthBig,$heightBig,3,true,true,false,true,$price,false,0,$colorswatches)?>
+                <?php echo Mage::helper('buyshopconfig')->getProductHover($_product,$this,$widthBig,$heightBig,$widthSmall,$heightSmall,$type='',true,true,$price,$colorswatches)?>
+                <!--PRODUCT EOF-->
+                <?php endforeach ?>
+            </div>
+        </div>
+    </div>
+</div>
+<!--SALE PRODUCTS EOF-->
+    <?php
+    if (Mage::getStoreConfig('configswatches/general/enabled', Mage::app()->getStore())) {
+        echo $this->getLayout()->createBlock('configurableswatches/catalog_media_js_list')->setTemplate('configurableswatches/catalog/media/js.phtml')->setProductCollection($_productCollection)->toHtml();
+    }
+    ?>
+<?php endif; ?>
+<script type="text/javascript">
+    jQuery(function(){
+        if(jQuery('.carousel').parent().attr('id')!='carousel_tabs_content'){
+            jQuery('.carousel.style0').elastislide({
+                easing: 'easeInQuart',
+                speed: 400,
+
+            });
+        }
+
+
+    })
+</script>
+
+

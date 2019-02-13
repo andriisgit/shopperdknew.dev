@@ -1,0 +1,293 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/**
+ * Product view template
+ *
+ * @see Mage_Catalog_Block_Product_View
+ * @see Mage_Review_Block_Product_View
+ */
+?>
+
+<?php $_helper = $this->helper('catalog/output'); ?>
+<?php $_product = $this->getProduct(); ?>
+<script type="text/javascript">
+    var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+</script>
+<center><?php echo $this->getChildHtml('media') ?></center>
+
+
+  <div class="col-lg-12 col-md-12 col-sm-12" style="    position: relative; top: 0px; height:auto" align=left>
+ <div  style=" text-align:right;  width:100%; position: relative; top: -100px; right:15%; ">
+
+<div style="float: right; background-color:#303c4b; padding:15px;"><font color=#fff size=6><?php echo $this->getPriceHTML($_product); ?></font><font size=2 color=#fff>/  <?php echo $_helper->productAttribute($_product, $_product->getAttributeText('unit'));  ?> </font></div>
+
+
+</div>
+</div>
+
+
+<div class=row>
+  <div class="col-lg-8 col-lg-push-2 col-md-8 col-md-push-2 col-sm-12" style="    position: relative; top: 0px; height:auto" align=left>
+         <div class="product-name">
+                <h1 itemprop="name"><font size=6 face=verdana><b><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></b></font></h1>
+<br>
+            <?php if ($_product->getShortDescription()):?>
+                    <div class="std" itemprop="description"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
+            <?php endif;?>
+            </div>
+
+
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+<div class="product-view" itemscope itemtype="http://schema.org/Product">
+    <div class="product-essential">
+    <form action="<?php echo $this->getSubmitUrl($_product) ?>" method="post" id="product_addtocart_form"<?php if($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+        <?php echo $this->getBlockHtml('formkey') ?>
+        <div class="no-display">
+            <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
+            <input type="hidden" name="related_product" id="related-products-field" value="" />
+        </div>
+        <div class="product-img-box">
+
+        </div>
+        <div class="product-shop">
+   
+
+
+
+<br><?php echo $besparelse; ?>
+
+
+
+            <div class="clear"></div>
+            <div class="clear"></div>
+            <?php echo $this->getChildHtml('extrahint') ?>
+
+
+            <?php if ($this->displayProductStockStatus()): ?>
+                <?php if ($_product->isAvailable()): ?>
+                    <p class="availability in-stock"><?php echo $this->__('Availability:') ?> <span><?php echo $this->__('In stock') ?></span></p>
+                <?php else: ?>
+                    <p class="availability out-of-stock"><?php echo $this->__('Availability:') ?> <span><?php echo $this->__('Out of stock') ?></span></p>
+                <?php endif; ?>
+            <?php endif; ?> 
+
+            <?php if (!$this->hasOptions()):?>
+                <div class="add-to-box">
+
+                    <?php if($_product->isSaleable()): ?>
+
+
+                        <?php echo $this->getChildHtml('addtocart') ?>
+
+                        <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
+                            <span class="or"><?php echo $this->__('OR') ?></span>
+                        <?php endif; ?>                   
+
+ <?php endif; ?>
+                    <?php echo $this->getChildHtml('addto') ?>
+                </div>
+                <?php echo $this->getChildHtml('extra_buttons') ?>
+            <?php elseif (!$_product->isSaleable()): ?>
+                <div class="add-to-box">
+                    <?php echo $this->getChildHtml('addto') ?>
+                </div>
+            <?php endif; ?>
+
+
+
+
+            <?php echo $this->getChildHtml('other');?>
+            <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
+            <?php endif;?>
+
+                <?php //  echo $this->getReviewsSummaryHtml($_product, false, true)  // ANMELDELSER?>
+
+          <?php    echo $this->getChildHtml('alert_urls') ?>
+
+        </div>
+        <div class="clearer"></div>
+        <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+            <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
+        <?php endif;?>
+    </form>
+
+
+</div>
+
+
+</div></div></div>
+
+
+
+    <script type="text/javascript">
+    //<![CDATA[
+        var productAddToCartForm = new VarienForm('product_addtocart_form');
+        productAddToCartForm.submit = function(button, url) {
+            if (this.validator.validate()) {
+                var form = this.form;
+                var oldUrl = form.action;
+
+                if (url) {
+                   form.action = url;
+                }
+                var e = null;
+                try {
+                    this.form.submit();
+                } catch (e) {
+                }
+                this.form.action = oldUrl;
+                if (e) {
+                    throw e;
+                }
+
+                if (button && button != 'undefined') {
+                    button.disabled = true;
+                }
+            }
+        }.bind(productAddToCartForm);
+
+        productAddToCartForm.submitLight = function(button, url){
+            if(this.validator) {
+                var nv = Validation.methods;
+                delete Validation.methods['required-entry'];
+                delete Validation.methods['validate-one-required'];
+                delete Validation.methods['validate-one-required-by-name'];
+                // Remove custom datetime validators
+                for (var methodName in Validation.methods) {
+                    if (methodName.match(/^validate-datetime-.*/i)) {
+                        delete Validation.methods[methodName];
+                    }
+                }
+
+                if (this.validator.validate()) {
+                    if (url) {
+                        this.form.action = url;
+                    }
+                    this.form.submit();
+                }
+                Object.extend(Validation.methods, nv);
+            }
+        }.bind(productAddToCartForm);
+    //]]>
+    </script>
+    </div>
+
+
+
+    <div class="product-collateral">
+        <?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
+                <div class="box-collateral <?php echo "box-{$alias}"?>">
+                    <?php if ($title = $this->getChildData($alias, 'title')):?>
+                    <h2><?php echo $this->escapeHtml($title); ?></h2>
+                    <?php endif;?>
+                    <?php echo $html; ?>
+                </div>
+        <?php endforeach;?>
+        
+        <?php echo $this->getChildHtml('product_additional_data') ?>
+        <?php $attStuff= $_product->getData(); ?>
+        <?php if( !empty( $attStuff['videoid'] ) ): ?>        
+            <div class="video-box box-collateral">
+                <h2><?php echo $this->__('Video') ?></h2>  
+                <div class="box-collateral-content">
+                    <div class="video">
+                         <iframe src="<?php echo $attStuff['videoid']; ?>?wmode=opaque" frameborder="0" allowfullscreen></iframe>     
+                   </div>
+                </div>
+              </div>
+        <?php endif; ?>
+    </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<?php echo $this->getChildHtml('upsell_products') ?>
+
+</div></div></div></div></div></div>
+<div class="container-fluid" style="background-color:#000000;">
+<div class="container" >
+      <div class="row">
+        <div class="col-lg-6 col-lg-push-3 col-md-6 col-md-push-3" align=center>
+<center><br /><br /><font color=#fff>
+<b><div style="font-size: 16pt; ">
+  <p>PROVA DET HEMMA HOS DIG SJ&Auml;LV!</p>
+</div></b><strong>
+
+</strong> <br />
+F&ouml;r att kunna ge dig b&auml;ttre priser har vi inget showroom, men hos HiFi Freaks vet vi hur viktigt det &auml;r att du kan prova och testa produkterna i ditt eget vardagsrum. D&auml;rf&ouml;r kan du returnera varorna till oss i upp till 30 dagar efter k&ouml;pet om du skulle &aring;ngra ditt k&ouml;p.
+<br><br>
+Vi skickar gratis (vid k&ouml;p &ouml;ver 500,- kr) och vid k&ouml;p betalar vi ocks&aring; returfrakten.
+<br><br>
+S&aring; om du dr&ouml;mmer om ny hi-fi utrustning s&aring; finns det ingen anledning att v&auml;nta - det &auml;r helt riskfritt och du kan h&ouml;ra ljudet fr&aring;n din nya utrustning i ditt eget vardagsrum och tillsammans med din &ouml;vriga utrustning.
+</center>
+        </div>
+</div>
+</div>
+<br />
+</div>
+<div class="container-fluid" style="background-color:#f7f7f7;">
+<div class="container" >
+      <div class="row">
+        <div class="col-lg-4 col-lg-push-2 col-md-5" align=center>
+
+
+<center>
+<img src=http://hifi-freaks.dk/webshop//footer_direktetildig.jpg class="img-responsive" />
+</center>
+
+        </div>
+        
+            <div class="col-lg-4 col-lg-push-2 col-md-6"> <font color=#000000><br />
+<br><br>   <br>           <strong><font size=4>VI IMPORTERAR SJ&Auml;LV ALLA VAROR<br>
+ALLTID SKARPA DIREKT-TILL-DIG-PRISER!</font></strong></strong><br />
+  Vinstmarginalerna i branschen &auml;r helt enkelt f&ouml;r h&ouml;ga - Det har vi f&ouml;r avsikt att &auml;ndra.
+<br><br>
+Vi agerar som ett distributionsbolag som har ett mycket enkelt m&aring;l.
+<br><br>
+Vi vill ge den b&auml;
+sta servicen och s&auml;
+lja de b&auml;
+sta produkterna till det b&auml;
+sta priset. D&auml;rf&ouml;r har vi sparat bort v&aring;ra &aring;terf&ouml;rs&auml;
+ljare och s&auml;ljer direkt till dig. Detta inneb&auml;
+r att ett brett spektrum av produkter som tidigare har s&aring;lts i Danmark nu kan hittas med en priss&auml;
+nkning p&aring; upp till 50 %!
+
+  
+      </div>
+</div>
+<br />
+</div>

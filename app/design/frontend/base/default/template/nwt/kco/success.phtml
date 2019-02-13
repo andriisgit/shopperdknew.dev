@@ -1,0 +1,83 @@
+
+    
+<!-- Engage Commerce: Facebook Pixel Base Code -->
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+      fbq('init', '1648874592050422');
+  
+  fbq('track', "PageView");
+</script>
+
+  <noscript>
+    <img height="1" width="1" style="display:none" src="//www.facebook.com/tr?id=1648874592050422&ev=PageView&noscript=1" />
+  </noscript>
+
+<?php 
+$sOrderId = Mage::getSingleton('checkout/session')->getLastOrderId();
+$oOrder = Mage::getModel('sales/order')->load($sOrderId);
+?>
+<script>
+fbq('track', 'Purchase', {
+value: <?php echo $oOrder->getGrandTotal();?>,
+currency: 'SEK'
+});
+</script>
+
+<div id="nwtkco-bigwrap" class="nwtkco-<?php echo Mage::helper('nwtkco')->responsiveTheme()?'responsive':'fixed';?>-theme">
+
+    <div class="kco-left nwtkco-hide">
+
+        <?php if ($this->getOrderId()):?>
+            <p><?php echo $this->__('You will receive an order confirmation email with details of your order and a link to track its progress.') ?></p>
+            <?php if ($this->getCanViewOrder() && $this->getCanPrintOrder()) :?>
+                <p>
+                    <?php echo $this->__('Click <a href="%s" onclick="this.target=\'_blank\'">here to print</a> a copy of your order confirmation.', $this->getPrintUrl()) ?>
+                </p>
+            <?php endif;?>
+
+        <?php elseif($this->isTest()): ?>
+
+            <?php echo $this->__('You will receive an order confirmation email with details of your order and a link to track its progress.'); ?>
+            <p><br /><br /><strong style="color:red">This is a test page...</strong></p>
+            
+        <?php endif;?>
+        
+        <div class="buttons-set">
+            <button type="button" class="button" title="<?php echo $this->__('Continue Shopping') ?>" onclick="window.location='<?php echo $this->getUrl() ?>'"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>
+        </div>
+        
+    </div>
+    
+    <!-- Klarna -->
+    <?php echo $this->getChildHtml(); ?>
+    <!-- /Klarna -->
+    
+</div>
+
+
+
+<!-- Google Code for Konverteringer - Adtimize Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 844438703;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "mn6pCIHYo3MQr7nUkgM";
+var google_conversion_value = <?php echo $total;?>;
+var google_conversion_currency = "SEK";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/844438703/?value=<?php echo $total;?>&amp;currency_code=SEK&amp;label=mn6pCIHYo3MQr7nUkgM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>

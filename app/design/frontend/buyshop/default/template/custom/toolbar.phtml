@@ -1,0 +1,9 @@
+<?php if(Mage::getStoreConfig('buyshopconfig/options/right_quick_panel')): ?>
+<div id="right_toolbar" class="hidden-phone hidden-tablet">
+    <div><a href="<?php echo $this->getUrl('')?>"><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'buyshop/'.Mage::getStoreConfig('buyshopconfig/options/logo_quick_panel')?>" width="52" height="142" alt=""></a></div>
+    <?php echo $this->getChildHtml('topcart')?>
+
+    <?php echo $this->getChildHtml('rightSearch')?>
+    <div id="back-top"> <a href="#top"><i class="icon-up-2"></i></a> </div>
+</div>
+<?php endif; ?>

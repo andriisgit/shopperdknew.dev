@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+    <checkout_multishipping_shipping>
+    	<reference name='checkout_shipping'>
+    		<action method='setTemplate'><template>pacsoft/checkout/multishipping/shipping.phtml</template></action>
+    	</reference>
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/pacsoft.js</name></action>
+            <action method="addItem"><type>skin_css</type><name>css/pacsoft.css</name></action>
+            <block type="core/text" name="jquery">
+                <action method="setText"><text><![CDATA[<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDpmAeOI0M2y4hchW9EKyCSK9XMSL3h_Lc&sensor=false&v=3"></script>]]></text></action>
+            </block>
+        </reference>
+    </checkout_multishipping_shipping>
+
+    <checkout_onepage_index>
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/pacsoft.js</name></action>
+            <action method="addItem"><type>skin_css</type><name>css/pacsoft.css</name></action>
+            <block type="core/text" name="jquery">
+                <action method="setText"><text><![CDATA[<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDpmAeOI0M2y4hchW9EKyCSK9XMSL3h_Lc&sensor=false&v=3"></script>]]></text></action>
+            </block>
+        </reference>
+    </checkout_onepage_index>
+
+    <firecheckout_index_index>
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/pacsoft.js</name></action>
+            <action method="addItem"><type>skin_css</type><name>css/pacsoft.css</name></action>
+            <block type="core/text" name="jquery">
+                <action method="setText"><text><![CDATA[<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDpmAeOI0M2y4hchW9EKyCSK9XMSL3h_Lc&sensor=false&v=3"></script>]]></text></action>
+            </block>
+        </reference>
+    </firecheckout_index_index>
+
+    <onepagecheckout_index_index>
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/pacsoft.js</name></action>
+            <action method="addItem"><type>skin_css</type><name>css/pacsoft.css</name></action>
+            <block type="core/text" name="jquery">
+                <action method="setText"><text><![CDATA[<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDpmAeOI0M2y4hchW9EKyCSK9XMSL3h_Lc&sensor=false&v=3"></script>]]></text></action>
+            </block>
+        </reference>
+    </onepagecheckout_index_index>
+
+    <opc_index_index>
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/pacsoft.js</name></action>
+            <action method="addItem"><type>skin_css</type><name>css/pacsoft.css</name></action>
+            <block type="core/text" name="jquery">
+                <action method="setText"><text><![CDATA[<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDpmAeOI0M2y4hchW9EKyCSK9XMSL3h_Lc&sensor=false&v=3"></script>]]></text></action>
+            </block>
+        </reference>
+    </opc_index_index>
+
+    <onestepcheckout_index_index>
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/pacsoft.js</name></action>
+            <action method="addItem"><type>skin_css</type><name>css/pacsoft.css</name></action>
+            <block type="core/text" name="jquery">
+                <action method="setText"><text><![CDATA[<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDpmAeOI0M2y4hchW9EKyCSK9XMSL3h_Lc&sensor=false&v=3"></script>]]></text></action>
+            </block>
+        </reference>
+    </onestepcheckout_index_index>
+
+
+
+</layout>

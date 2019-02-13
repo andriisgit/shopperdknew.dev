@@ -1,0 +1,12 @@
+<?php $block_type=Mage::getStoreConfig('buyshoplayout/product_info/product_custom_block'); ?>
+
+<?php if($block_type=='customhtml'): ?>
+<div class="product_custom">
+    <h2><?php echo Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('buyshop_product_custom_block')->getTitle()?></h2>
+    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('buyshop_product_custom_block')->toHtml() ?>
+</div>
+<?php endif; ?>
+
+<?php if($block_type=='related'): ?>
+    <?php echo $this->getChildHtml('related_products'); ?>
+<?php endif; ?>

@@ -1,0 +1,91 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<!--FOOTER-->
+<div  id="footer">
+    <?php if(Mage::getStoreConfig('buyshoplayout/general/footer_transparent_popup')):?>
+    <div id="footer_line">
+    <?php endif; ?>
+        <?php if(Mage::getStoreConfig('buyshoplayout/general/footer_transparent_popup') || (!Mage::getStoreConfig('buyshoplayout/general/footer_transparent_popup') && Mage::getStoreConfig('buyshoplayout/general/footer_transparent_popup_static'))): ?>
+        <div id="footer_popup" class="footer_bg allowHover <?php if(!Mage::getStoreConfig('buyshoplayout/general/footer_transparent_popup') && Mage::getStoreConfig('buyshoplayout/general/footer_transparent_popup_static')): ?> static-popup <?php endif; ?>">
+            <div class="container">
+                <div class="row">
+                    <div class="span6">
+                        <div class="row">
+                            <div class="span3">
+                                <h3><?php echo Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('buyshop_information')->getTitle()?></h3>
+                                <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('buyshop_information')->toHtml() ?>
+                            </div>
+                            <div class="span3">
+                                <h3><?php echo Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('buyshop_customer_service')->getTitle()?></h3>
+                                <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('buyshop_customer_service')->toHtml() ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="row">
+                            <div class="span3">
+                                <?php if(!Mage::getStoreConfig('buyshopconfig/options/catalog_mode')): ?>
+                                <h3><?php echo Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('buyshop_my_account')->getTitle()?></h3>
+                                <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('buyshop_my_account')->toHtml() ?>
+                                <?php endif; ?>
+                            </div>
+                            <div class="span3">
+                                <?php echo $this->getChildHtml('footer_newsletter');?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php if(Mage::getStoreConfig('buyshoplayout/general/footer_transparent_popup') && !Mage::getStoreConfig('buyshoplayout/general/footer_transparent_popup_static')): ?>
+        <div id="footer_button"><i class="icon-up"></i></div>
+        <?php endif;?>
+    <?php endif;?>
+
+    <?php if(!Mage::getStoreConfig('buyshoplayout/general/footer_transparent_popup')):?>
+    <div id="footer_line">
+    <?php endif; ?>
+
+
+        <div class="container" id="footer_bottom">
+            <div class="row">
+                <div class="span12">
+                    <div class="pull-left noHover">
+                        <span class="hidden-phone payment_icons">
+                            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('buyshop_payments')->toHtml() ?>
+                        </span>
+                        <span class="text"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('buyshop_copyright')->toHtml() ?></span>
+                    </div>
+                    <div class="pull-right noHover">
+                        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('buyshop_footer_social_links')->toHtml() ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS); ?>etheme/buyshop/jquery.parallax.js"></script>

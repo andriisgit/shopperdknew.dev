@@ -1,0 +1,24 @@
+<?php if(Mage::getStoreConfig('buyshopconfig/options/login_using_facebook') || Mage::getStoreConfig('buyshopconfig/options/login_using_twitter')){?>
+<script type="text/javascript">
+    function popupwindow(url, title, w, h) {
+        var left = (screen.width/2)-(w/2);
+        var top = (screen.height/2)-(h/2);
+        return window.open(url, title, 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+    }
+</script>
+<div class="login_social hidden-tablet hidden-phone">
+    <span class="custom_color"><?php echo $this->__('Login') ?> <span class="hidden-phone"><?php echo $this->__('using') ?>:</span></span>&nbsp;&nbsp;
+    <?php if(Mage::getStoreConfig('buyshopconfig/options/login_using_facebook')){?>
+    <a href="#" onclick="return fblogin();" class="button_small"><i class="icon-facebook"></i></a>
+    <?php }?>
+	<?php if(Mage::getStoreConfig('buyshopconfig/options/login_using_twitter')){?>
+    <a href="#"   onclick="popupwindow('<?php echo $this->getUrl('facebookfree/customer/TwitterLogin')?>','','620','630');return false;" class="button_small"><i class="icon-twitter-bird"></i></a>
+    <?php }?>
+</div>
+<?php }?>
+
+
+
+
+
+

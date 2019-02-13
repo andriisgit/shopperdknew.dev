@@ -1,0 +1,475 @@
+<?xml version="1.0"?>
+<config>
+   <sections>
+    <carriers>
+        <groups>
+            <pacsoft translate="label" module="shipping">
+                <label>Pacsoft</label>
+                <comment>Pacsoft shipping module developed by Nybohansen ApS</comment>
+                <frontend_type>text</frontend_type>
+                <sort_order>13</sort_order>
+                <show_in_default>1</show_in_default>
+                <show_in_website>1</show_in_website>
+                <show_in_store>1</show_in_store>
+                   <fields>
+                       <documentation translate="label">
+                           <label></label>
+                           <frontend_model>pacsoft/DocumentationBtn</frontend_model>
+                           <sort_order>1</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </documentation>
+                       <versionNumber translate="label">
+                           <label>Version number</label>
+                           <frontend_model>pacsoft/moduleInfo</frontend_model>
+                           <sort_order>10</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </versionNumber>
+                       <licenseKey translate="label">
+                           <label>License key</label>
+                           <frontend_model>pacsoft/licenseKey</frontend_model>
+                           <sort_order>20</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </licenseKey>
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+                       <title translate="label">
+                            <label>Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+                        <handling_type translate="label">
+                            <label>Calculate Handling Fee</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>shipping/source_handlingType</source_model>
+                            <comment>Percentage is percentage of shipping value cost, not order subtotal!</comment>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </handling_type>
+                        <handling_fee translate="label">
+                            <label>Handling fee</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </handling_fee>                                                   
+                       <ratesSetup translate="label">
+                           <frontend_model>pacsoft/ratesSetupLink</frontend_model>
+                           <comment>Remember to save before setting up rates!</comment>
+                           <sort_order>85</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </ratesSetup>
+                        <sort_order translate="label">
+                            <label>Sort order</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sort_order>
+                       <heading_servicePoints translate="label">
+                           <label>Servicepoints</label>
+                           <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                           <sort_order>135</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </heading_servicePoints>
+                       <parcelShopPresentation translate="label">
+                           <label>Show the parcel shops as</label>
+                           <frontend_type>select</frontend_type>
+                           <sort_order>137</sort_order>
+                           <source_model>pacsoft/ParcelShopPresentationList</source_model>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </parcelShopPresentation>
+                       <useFallbackOnMobile translate="label">
+                           <label>Show parcel shops as select box when used on mobile units</label>
+                           <frontend_type>select</frontend_type>
+                           <source_model>adminhtml/system_config_source_yesno</source_model>
+                           <sort_order>138</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </useFallbackOnMobile>
+                       <lastUpdatedTime translate="label">
+                           <label>Service point data last updated</label>
+                           <comment></comment>
+                           <frontend_model>pacsoft/servicePointLastUpdatedTime</frontend_model>
+                           <sort_order>140</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </lastUpdatedTime>
+                       <updateResult translate="label">
+                           <label></label>
+                           <comment></comment>
+                           <frontend_type>label</frontend_type>
+                           <sort_order>142</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </updateResult>
+                       <connectionTest translate="label">
+                           <label></label>
+                           <frontend_model>pacsoft/updateServicePointDataBtn</frontend_model>
+                           <sort_order>144</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </connectionTest>
+                       <replaceDeliveryAddress translate="label">
+                           <label>Replace delivery address with servicepoint information</label>
+                           <comment>The delivery address will only be replaced, when the user chooses a servicepoint as delivery point</comment>
+                           <frontend_type>select</frontend_type>
+                           <source_model>adminhtml/system_config_source_yesno</source_model>
+                           <sort_order>145</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </replaceDeliveryAddress>
+                       <heading_webservice translate="label">
+                           <label>Pacsoftonline user information</label>
+                           <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                           <sort_order>150</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </heading_webservice>
+                       <pacsoftUser translate="label">
+                           <label>Pacsoft user</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>160</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>0</show_in_website>
+                           <show_in_store>0</show_in_store>
+                       </pacsoftUser>
+                       <pacsoftPin translate="label">
+                           <label>Pacsoft pincode</label>
+                           <frontend_type>password</frontend_type>
+                           <sort_order>170</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>0</show_in_website>
+                           <show_in_store>0</show_in_store>
+                       </pacsoftPin>
+                       <PacsoftQuickId translate="label">
+                           <label>Quick Id of sender</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>180</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </PacsoftQuickId>
+
+                       <heading_weight translate="label">
+                           <label>Weight calculation</label>
+                           <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                           <sort_order>190</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </heading_weight>
+                       <weightUnit translate="label">
+                           <label>Weight unit</label>
+                           <frontend_type>select</frontend_type>
+                           <source_model>pacsoft/system_config_source_weightUnitList</source_model>
+                           <sort_order>210</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </weightUnit>
+                       <heading_default_content translate="label">
+                           <label>Standard content</label>
+                           <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                           <sort_order>217</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </heading_default_content>
+                       <default_content translate="label">
+                           <label>Content</label>
+                           <frontend_type>text</frontend_type>
+                           <comment>Standard content used as default when labels are printed. Can be overridden on the individual orders</comment>
+                           <sort_order>218</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </default_content>
+                       <heading_services translate="label">
+                           <label>Services</label>
+                           <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                           <sort_order>219</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </heading_services>
+                       <nondelivery translate="label">
+                           <label>Defines action when the package is undeliverable.</label>
+                           <frontend_type>select</frontend_type>
+                           <source_model>pacsoft/system_config_source_nonDelivery</source_model>
+                           <sort_order>220</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </nondelivery>
+
+                       <heading_COD translate="label">
+                           <label>COD Addon</label>
+                           <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                           <sort_order>230</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </heading_COD>
+                       <COD_referenceType translate="label">
+                           <label>COD reference type</label>
+                           <frontend_type>select</frontend_type>
+                           <source_model>pacsoft/system_config_source_cODReferenceType</source_model>
+                           <sort_order>240</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </COD_referenceType>
+                       <COD_account translate="label">
+                           <label>COD account</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>250</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </COD_account>
+                       <COD_accountType translate="label">
+                           <label>COD account type</label>
+                           <frontend_type>select</frontend_type>
+                           <source_model>pacsoft/system_config_source_cODAccountType</source_model>
+                           <sort_order>260</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </COD_accountType>
+
+                       <heading_INSU translate="label">
+                           <label>Insurance Addon</label>
+                           <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                           <sort_order>270</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </heading_INSU>
+                       <INSU_misc translate="label">
+                           <label>Description of the insured goods</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>280</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </INSU_misc>
+
+                       <heading_linkToPrint translate="label">
+                           <label>Link to print</label>
+                           <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                           <sort_order>290</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </heading_linkToPrint>
+                       <linkToPrint_sendemail translate="label">
+                           <label>Send mail containg link to print label</label>
+                           <frontend_type>select</frontend_type>
+                           <source_model>adminhtml/system_config_source_yesno</source_model>
+                           <sort_order>300</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </linkToPrint_sendemail>
+                       <linkToPrint_from translate="label">
+                           <label>Sender of e-mail message</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>310</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                           <depends><linkToPrint_sendemail>1</linkToPrint_sendemail></depends>
+                       </linkToPrint_from>
+                       <linkToPrint_to translate="label">
+                           <label>Recipient of e-mail message</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>315</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                           <depends><linkToPrint_sendemail>1</linkToPrint_sendemail></depends>
+                       </linkToPrint_to>
+                       <linkToPrint_bcc translate="label">
+                           <label>Recipient of blind message copy</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>320</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                           <depends><linkToPrint_sendemail>1</linkToPrint_sendemail></depends>
+                       </linkToPrint_bcc>
+                       <linkToPrint_message translate="label">
+                           <label>Text string with any contents. Line breaks can be entered with pipe character, |.</label>
+                           <frontend_type>textarea</frontend_type>
+                           <sort_order>330</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                           <depends><linkToPrint_sendemail>1</linkToPrint_sendemail></depends>
+                       </linkToPrint_message>
+
+                       <heading_emailNotification translate="label">
+                           <label>Pre-notification by e-mail</label>
+                           <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                           <sort_order>340</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </heading_emailNotification>
+                       <emailNotification_active translate="label">
+                           <label>Send e-mail with track and trace to customer</label>
+                           <frontend_type>select</frontend_type>
+                           <source_model>adminhtml/system_config_source_yesno</source_model>
+                           <sort_order>350</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </emailNotification_active>
+                       <emailNotification_from translate="label">
+                           <label>Sender of e-mail message</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>360</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                           <depends><emailNotification_active>1</emailNotification_active></depends>
+                       </emailNotification_from>
+                       <emailNotification_cc translate="label">
+                           <label>Recipient of a message copy</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>370</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                           <depends><emailNotification_active>1</emailNotification_active></depends>
+                       </emailNotification_cc>
+                       <emailNotification_bcc translate="label">
+                           <label>Recipient of blind message copy</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>380</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                           <depends><emailNotification_active>1</emailNotification_active></depends>
+                       </emailNotification_bcc>
+                       <emailNotification_message translate="label">
+                           <label>Text string with any contents. Line breaks can be entered with pipe character, |.</label>
+                           <frontend_type>textarea</frontend_type>
+                           <sort_order>390</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                           <depends><emailNotification_active>1</emailNotification_active></depends>
+                       </emailNotification_message>
+                       <emailNotification_errorto translate="label">
+                           <label>Recipient of error messages</label>
+                           <frontend_type>text</frontend_type>
+                           <sort_order>400</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                           <depends><emailNotification_active>1</emailNotification_active></depends>
+                       </emailNotification_errorto>
+
+                       <heading_defaults translate="label">
+                           <label>Default</label>
+                           <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                           <sort_order>410</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </heading_defaults>
+                       <default_service translate="label">
+                           <label>Default shipping service</label>
+                           <frontend_type>select</frontend_type>
+                           <source_model>pacsoft/system_config_source_services</source_model>
+                           <sort_order>420</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </default_service>
+                       <insert_comment translate="label">
+                           <label>Insert comment on order, after information has been transfered to Pacosft</label>
+                           <frontend_type>select</frontend_type>
+                           <source_model>adminhtml/system_config_source_yesno</source_model>
+                           <sort_order>425</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>1</show_in_website>
+                           <show_in_store>1</show_in_store>
+                       </insert_comment>
+
+                       <heading_trackandtrace translate="label">
+                           <label>Track and Trace import</label>
+                           <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                           <sort_order>430</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>0</show_in_website>
+                           <show_in_store>0</show_in_store>
+                       </heading_trackandtrace>
+                       <trackandtrace_active translate="label">
+                           <label>Automatically import Track and Trace information from Pacsoft</label>
+                           <frontend_type>select</frontend_type>
+                           <source_model>adminhtml/system_config_source_yesno</source_model>
+                           <sort_order>450</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>0</show_in_website>
+                           <show_in_store>0</show_in_store>
+                       </trackandtrace_active>
+                       <trackandtrace_createShipment translate="label">
+                           <label>Automatically create shipment when track and trace number is imported</label>
+                           <frontend_type>select</frontend_type>
+                           <source_model>adminhtml/system_config_source_yesno</source_model>
+                           <sort_order>460</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>0</show_in_website>
+                           <show_in_store>0</show_in_store>
+                           <depends><trackandtrace_active>1</trackandtrace_active></depends>
+                       </trackandtrace_createShipment>
+                       <trackandtrace_sendEmailOnImport translate="label">
+                           <label>Send e-mail to customer after import of track and trace</label>
+                           <frontend_type>select</frontend_type>
+                           <source_model>adminhtml/system_config_source_yesno</source_model>
+                           <sort_order>460</sort_order>
+                           <show_in_default>1</show_in_default>
+                           <show_in_website>0</show_in_website>
+                           <show_in_store>0</show_in_store>
+                           <depends><trackandtrace_active>1</trackandtrace_active></depends>
+                       </trackandtrace_sendEmailOnImport>
+                    </fields>
+                </pacsoft>
+            </groups>
+        </carriers>
+    </sections>
+</config>

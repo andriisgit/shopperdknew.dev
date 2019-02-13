@@ -1,0 +1,1668 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <buyshop>
+            <label><![CDATA[<div style="width:150px; height: 38px;background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAAAmCAYAAAAmy2KXAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAABFyaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/Pgo8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSIzLjEuMS0xMTEiPgogICA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczp4YXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIKICAgICAgICAgICAgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiPgogICAgICAgICA8eGFwTU06T3JpZ2luYWxEb2N1bWVudElEPnhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMThEQkI4RjcxMUMyNEZGQUI8L3hhcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD4KICAgICAgICAgPHhhcE1NOkRvY3VtZW50SUQ+YWRvYmU6ZG9jaWQ6aW1hZ2VyZWFkeTplNzAwYzU2MC02MGNhLTExZTItYWRmNi1iMTRhNGJlMzJjMzE8L3hhcE1NOkRvY3VtZW50SUQ+CiAgICAgICAgIDx4YXBNTTpJbnN0YW5jZUlEPnhtcC5paWQ6RTFGRTQxMTc0REEwMTFFMjgwRjNDMjVFNTY3MkZGODc8L3hhcE1NOkluc3RhbmNlSUQ+CiAgICAgICAgIDx4YXBNTTpEZXJpdmVkRnJvbSByZGY6cGFyc2VUeXBlPSJSZXNvdXJjZSI+CiAgICAgICAgICAgIDxzdFJlZjppbnN0YW5jZUlEPnV1aWQ6ZTcwMGM1NWYtNjBjYS0xMWUyLWFkZjYtYjE0YTRiZTMyYzMxPC9zdFJlZjppbnN0YW5jZUlEPgogICAgICAgICAgICA8c3RSZWY6ZG9jdW1lbnRJRD54bXAuZGlkOkUxRkU0MTE4NERBMDExRTI4MEYzQzI1RTU2NzJGRjg3PC9zdFJlZjpkb2N1bWVudElEPgogICAgICAgICA8L3hhcE1NOkRlcml2ZWRGcm9tPgogICAgICAgICA8eGFwTU06VmVyc2lvbklEPjE8L3hhcE1NOlZlcnNpb25JRD4KICAgICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgICAgIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiCiAgICAgICAgICAgIHhtbG5zOnhhcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyI+CiAgICAgICAgIDx4YXA6Q3JlYXRvclRvb2w+QWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzPC94YXA6Q3JlYXRvclRvb2w+CiAgICAgICAgIDx4YXA6Q3JlYXRlRGF0ZT4yMDEzLTAxLTE3VDE5OjQyOjMwKzAyOjAwPC94YXA6Q3JlYXRlRGF0ZT4KICAgICAgICAgPHhhcDpNZXRhZGF0YURhdGU+MjAxMy0wMS0xN1QxOTo0MjozMCswMjowMDwveGFwOk1ldGFkYXRhRGF0ZT4KICAgICAgICAgPHhhcDpNb2RpZnlEYXRlPjIwMTMtMDEtMTdUMTk6NDI6MzArMDI6MDA8L3hhcDpNb2RpZnlEYXRlPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6ZXhpZj0iaHR0cDovL25zLmFkb2JlLmNvbS9leGlmLzEuMC8iPgogICAgICAgICA8ZXhpZjpQaXhlbFhEaW1lbnNpb24+MTUwPC9leGlmOlBpeGVsWERpbWVuc2lvbj4KICAgICAgICAgPGV4aWY6UGl4ZWxZRGltZW5zaW9uPjM4PC9leGlmOlBpeGVsWURpbWVuc2lvbj4KICAgICAgPC9yZGY6RGVzY3JpcHRpb24+CiAgICAgIDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiCiAgICAgICAgICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIj4KICAgICAgICAgPHRpZmY6U2FtcGxlc1BlclBpeGVsPjM8L3RpZmY6U2FtcGxlc1BlclBpeGVsPgogICAgICAgICA8dGlmZjpDb2xvclNwYWNlPjE8L3RpZmY6Q29sb3JTcGFjZT4KICAgICAgICAgPHRpZmY6WFJlc29sdXRpb24+NzIvMTwvdGlmZjpYUmVzb2x1dGlvbj4KICAgICAgICAgPHRpZmY6WVJlc29sdXRpb24+NzIvMTwvdGlmZjpZUmVzb2x1dGlvbj4KICAgICAgICAgPHRpZmY6UmVzb2x1dGlvblVuaXQ+MjwvdGlmZjpSZXNvbHV0aW9uVW5pdD4KICAgICAgICAgPHRpZmY6Qml0c1BlclNhbXBsZT4KICAgICAgICAgICAgPHJkZjpTZXE+CiAgICAgICAgICAgICAgIDxyZGY6bGk+ODwvcmRmOmxpPgogICAgICAgICAgICAgICA8cmRmOmxpPjg8L3JkZjpsaT4KICAgICAgICAgICAgICAgPHJkZjpsaT44PC9yZGY6bGk+CiAgICAgICAgICAgIDwvcmRmOlNlcT4KICAgICAgICAgPC90aWZmOkJpdHNQZXJTYW1wbGU+CiAgICAgIDwvcmRmOkRlc2NyaXB0aW9uPgogICAgICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgICAgICAgICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3BuZzwvZGM6Zm9ybWF0PgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg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');"></div>]]></label>            <sort_order>0</sort_order>
+        </buyshop>
+    </tabs>
+    <sections>
+        <buyshopconfig>
+            <tab>buyshop</tab>
+            <label>General</label>
+            <sort_order>1</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <options>
+                    <label>Options</label>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <logo_header>
+                            <label>Logo (header)</label>
+                            <comment>Upload logo image (JPG, PNG or GIF image)</comment>
+                            <frontend_type>image</frontend_type>
+                            <upload_dir config="buyshop" scope_info="1">buyshop</upload_dir>
+                            <base_url type="media" scope_info="1">buyshop</base_url>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </logo_header>
+                        <right_quick_panel>
+                            <label>Right quick panel</label>
+                            <comment>Enable right quick panel</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </right_quick_panel>
+
+                        <spy_panel>
+                            <label>Following top panel</label>
+                            <comment>Enable top fixed panel (WORKS ONLY WITH SIMPLE HEADER AND WITH ENABLED TOPMENU)</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </spy_panel>
+
+                        <logo_quick_panel>
+                            <label>Logo (Right quick panel)</label>
+                            <comment>Upload logo image (JPG, PNG or GIF image)</comment>
+                            <frontend_type>image</frontend_type>
+                            <upload_dir config="buyshop" scope_info="1">buyshop</upload_dir>
+                            <base_url type="media" scope_info="1">buyshop</base_url>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+
+                        </logo_quick_panel>
+
+                        <!--<login_using_facebook>
+                            <label>Login using Facebook</label>
+                            <comment>Allows your users to register using their Facebook accounts</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </login_using_facebook>
+                        <login_using_twitter>
+                            <label>Login using Twitter</label>
+                            <comment>Allows your users to register using their Twitter accounts </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </login_using_twitter>-->
+
+                        <ajax_add_to_cart>
+                            <label>Ajax add to cart</label>
+                            <comment>Add to cart without render of the page</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </ajax_add_to_cart>
+
+                        <ajax_wish_comp>
+                            <label>Ajax for add to wishlist/compare button</label>
+                            <comment>Enable Ajax feature for wish list and compare buttons</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </ajax_wish_comp>
+
+                        <ajax_toolbar>
+                            <label>Ajax for toolbar/paging</label>
+                            <comment>Enable Ajax feature for sort / paging buttons</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </ajax_toolbar>
+
+
+                        <image_rollover_mode>
+                            <label>Image rollover mode</label>
+                            <comment>Choose rollover effect.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </image_rollover_mode>
+                        <quick_view>
+                            <label>Quick view</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </quick_view>
+                        <short_description>
+                            <label>Show short description on rollover</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <image_rollover_mode>1</image_rollover_mode>
+                            </depends>
+                        </short_description>
+                        <short_attributes>
+                            <label>Show short Attributes on rollover</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>14</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <image_rollover_mode>1</image_rollover_mode>
+                            </depends>
+                        </short_attributes>
+                        <tag_cloud>
+                            <label>Tag cloud</label>
+                            <comment>Switch between usual and flash animated tag block</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>buyshopconfig/fields_source_tagcloud</source_model>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </tag_cloud>
+                        <responsive>
+                            <label>Responsive html</label>
+                            <comment>Enable/disable responsive mode for all gadget (iphone, ipad etc)</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>16</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </responsive>
+                        <catalog_mode>
+                            <label>Catalog mode</label>
+                            <comment>Create your shopping cart into simple catalog</comment>
+                            <tooltip>This mode turns off add to cart buttons, account profile and cart functionality</tooltip>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>17</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </catalog_mode>
+                        <css3_animation>
+                            <label>Icon animation</label>
+                            <comment>
+                                <![CDATA[
+                                    <b style="color:red">ATTENTION!</b> Refresh css files in <br/> <b>buyshop/theme configuration/colors, bg, fonts</b><br/> to see changes
+                                ]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>18</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </css3_animation>
+                        <crossels>
+                            <label>Show crossells products in shopping cart</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>19</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </crossels>
+                        <brands>
+                            <label>Brands for Amazing style</label>
+                            <comment>in module 'Shop by Brands' (separate labels by comma)</comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </brands>
+                        <countdown>
+                            <label>Sale price countdown</label>
+                            <comment>Enable/disable js timer</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>21</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </countdown>
+                    </fields>
+                </options>
+                <product_labels>
+                    <label>Product labels</label>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <show_sale_label>
+                            <label>Show "Sale" label</label>
+                            <comment>Show sale label on products</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_sale_label>
+                        <sale_label_position>
+                            <label>"Sale" label position</label>
+                            <comment>Label position</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>buyshopconfig/fields_source_position</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <show_sale_label>1</show_sale_label>
+                            </depends>
+                        </sale_label_position>
+                        <discount_label>
+                            <label>Show discount label</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </discount_label>
+                        <show_new_label>
+                            <label>Show "New" label</label>
+                            <comment>Show new label on products</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_new_label>
+                        <new_label_position>
+                            <label>"New" label position</label>
+                            <comment>Label position</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>buyshopconfig/fields_source_position</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <show_new_label>1</show_new_label>
+                            </depends>
+                        </new_label_position>
+                    </fields>
+                </product_labels>
+                <social_accounts>
+                    <label>Social accounts</label>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <twitter_account>
+                            <label>Twitter account</label>
+                            <comment>Account name for twitter block</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </twitter_account>
+                        <facebook_profile_name>
+                            <label>Facebook profile name</label>
+                            <comment>Account ID for Facebook fan box</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </facebook_profile_name>
+                    </fields>
+                </social_accounts>
+            </groups>
+        </buyshopconfig>
+        <buyshopcolors>
+            <label>Colors, backgrounds, fonts</label>
+            <sort_order>2</sort_order>
+            <tab>buyshop</tab>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <run translate="label">
+                    <label>Run now</label>
+                    <comment><![CDATA[
+                    <br /><b color="red">ATTENTION!</b> Be sure that folder skin/frontend/buyshop/default/css/colors has 777 permission. After click on 'Save Config' click 'Refresh css files'. After this you will be able to see changes on storefront.
+                    <br /><br />]]></comment>
+                    <frontend_type>button</frontend_type>
+                    <frontend_model>buyshopconfig/adminhtml_fields_cssupdate</frontend_model>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </run>
+                <general>
+                    <label>General</label>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+
+                        <custom_css>
+                            <label>Use custom css file</label>
+                            <comment>To use custom css file you must rename file skin/frontend/buyshop/default/css/DELETE-PREFIXcustom_changes.css to custom_changes.css (remove just prefix 'DELETE-PREFIX')</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </custom_css>
+
+                        <theme_color>
+                            <label>Theme Color</label>
+                            <comment>Set color for buttons, icons and backgrounds</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </theme_color>
+                        <theme_hover_color>
+                            <label>Theme Hover Color</label>
+                            <comment>Set color for mouse over for buttons, icons and backgrounds</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </theme_hover_color>
+                        <input_focus>
+                            <label>Input hover color (focus border)</label>
+                            <comment>Set color for input border</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </input_focus>
+                        <text_color>
+                            <label>Text Color</label>
+                            <comment>Set default text color for all blocks</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_color>
+                        <link_color>
+                            <label>Link Color</label>
+                            <comment>Set default link color for all blocks</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link_color>
+                        <link_hover_color>
+                            <label>Link Hover Color</label>
+                            <comment>Set default link hover color for all blocks</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link_hover_color>
+                        <background_color>
+                            <label>Background Color</label>
+                            <comment>Set background color for all blocks</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </background_color>
+                        <background_image>
+                            <label>Background Image (All pages)</label>
+                            <comment>Upload background image/pattern for all blocks (JPG, PNG or GIF image)</comment>
+                            <frontend_type>image</frontend_type>
+                            <upload_dir config="buyshop" scope_info="1">buyshop</upload_dir>
+                            <base_url type="media" scope_info="1">buyshop</base_url>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </background_image>
+                        <background_image_display_mode>
+                            <label>Background Image display mode</label>
+                            <comment>Set background image display mode</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>buyshopconfig/fields_source_bgposition2</source_model>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </background_image_display_mode>
+                    </fields>
+                </general>
+                <captions>
+                    <label>Captions</label>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <font>
+                            <label>Font</label>
+                            <comment><![CDATA[Select font which will be used for headings, buttons, block titles etc. Theme use Google font's
+        library. Find out more here - <a target=_"blank" href="http://www.google.com/webfonts">Google web fonts free library</a>]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>buyshopconfig/fields_source_fonts</source_model>
+                            <frontend_model>buyshopconfig/adminhtml_fields_fonts</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </font>
+                        <text_color>
+                            <label>Text Color</label>
+                            <comment>Set text color for captions</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_color>
+                        <text_color_2>
+                            <label>Text Color (dark style)</label>
+                            <comment>Set text color for captions</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_color_2>
+                    </fields>
+                </captions>
+                <drop_down_boxes>
+                    <label>Drop down boxes (topline)</label>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <!--<text_color>
+                            <label>Text Color</label>
+                            <comment>Set text color for drop down box in header tool line</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_color>-->
+                        <link_color>
+                            <label>Link Color</label>
+                            <comment>Set link color for drop down box in header tool line</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link_color>
+                        <link_hover_color>
+                            <label>Link Hover Color</label>
+                            <comment>Set link hover color for drop down box in header tool line</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link_hover_color>
+                        <background_color>
+                            <label>Background Color</label>
+                            <comment>Set background color for drop down box in header tool line</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </background_color>
+                        <border_color>
+                            <label>Border Color</label>
+                            <comment>Set border color for drop down box in header tool line</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </border_color>
+                        <arrow_image>
+                            <label>Arrow Image</label>
+                            <comment>Upload arrow image for dropdown boxes (JPG, PNG or GIF image)</comment>
+                            <frontend_type>image</frontend_type>
+                            <upload_dir config="buyshop" scope_info="1">buyshop</upload_dir>
+                            <base_url type="media" scope_info="1">buyshop</base_url>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </arrow_image>
+                    </fields>
+                </drop_down_boxes>
+                <header_tool_line>
+                    <label>Header tool line (top and bottom line)</label>
+                    <sort_order>4</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <text_color>
+                            <label>Text Color</label>
+                            <comment>Set text color for header tool line</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_color>
+                        <link_color>
+                            <label>Link Color</label>
+                            <comment>Set link color for header tool line</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link_color>
+                        <link_hover_color>
+                            <label>Link Hover Color</label>
+                            <comment>Set link hover color for header tool line</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link_hover_color>
+                        <background_color>
+                            <label>Background Color</label>
+                            <comment>Set background color for header tool line</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </background_color>
+                        <shadow>
+                            <label>Shadow</label>
+                            <comment>Set bottom shadow for header tool line</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shadow>
+                        <phone_color>
+                            <label>Phone Color</label>
+                            <comment>Set phone color for header tool line</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </phone_color>
+                    </fields>
+                </header_tool_line>
+                <header_navigation>
+                    <label>Header / Navigation</label>
+                    <sort_order>5</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <text_color>
+                            <label>Text Color</label>
+                            <comment>Set text color for header</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_color>
+
+                        <link_color_level_0>
+                            <label>Link Color (level_0)</label>
+                            <comment>Set link color for first level of top menu</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link_color_level_0>
+
+                        <background_color>
+                            <label>Background Color</label>
+                            <comment>Set background color for header</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </background_color>
+                        <background_image>
+                            <label>Background Image</label>
+                            <comment>For example: snow pattern for Christams</comment>
+                            <frontend_type>image</frontend_type>
+                            <upload_dir config="buyshop" scope_info="1">buyshop</upload_dir>
+                            <base_url type="media" scope_info="1">buyshop</base_url>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </background_image>
+                        <image_form_search>
+                            <label>Search decoration in header</label>
+                            <comment>For example: search decoration for Christams</comment>
+                            <frontend_type>image</frontend_type>
+                            <upload_dir config="buyshop" scope_info="1">buyshop</upload_dir>
+                            <base_url type="media" scope_info="1">buyshop</base_url>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </image_form_search>
+                        <decoration_fix>
+                            <label>Search decoration position</label>
+                            <comment>Negative value in px to align search decoration</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </decoration_fix>
+                        <central_image>
+                            <label>Central image in header</label>
+                            <comment>For example: Santa Claus for Christams (only png)</comment>
+                            <frontend_type>image</frontend_type>
+                            <upload_dir config="buyshop" scope_info="1">buyshop</upload_dir>
+                            <base_url type="media" scope_info="1">buyshop</base_url>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </central_image>
+                        <!--<dropdown_box_text_color>
+                            <label>Dropdown Box Text Color</label>
+                            <comment>Set text color for drop down box (navigation menu, cart) in header</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </dropdown_box_text_color>-->
+                        <link_color>
+                            <label>Link Color</label>
+                            <comment>Set link color for drop down box (navigation menu, cart) in header</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link_color>
+                        <link_hover_color>
+                            <label>Link Hover Color</label>
+                            <comment>Set link hover color for drop down box (navigation menu, cart) in header</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link_hover_color>
+                        <background_color>
+                            <label>Background Color</label>
+                            <comment>Set background color for drop down box (navigation menu, cart) in header</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </background_color>
+                        <menu_lable>
+                            <label>Item Menu Label BGcolor</label>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </menu_lable>
+
+
+
+                    </fields>
+                </header_navigation>
+                <content>
+                    <label>Content</label>
+                    <sort_order>6</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <text_color>
+                            <label>Text Color</label>
+                            <comment>Set text color for content blocks</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_color>
+                        <link_color>
+                            <label>Link Color</label>
+                            <comment>Set link color for content blocks</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link_color>
+                        <link_hover_color>
+                            <label>Link Hover Color</label>
+                            <comment>Set link hover color for content blocks</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link_hover_color>
+                        <background_color>
+                            <label>Background Color</label>
+                            <comment>Set background color for content blocks</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </background_color>
+                        <background_image>
+                            <label>Background Image</label>
+                            <comment>Upload background image/pattern for content blocks (JPG, PNG or GIF image)</comment>
+                            <frontend_type>image</frontend_type>
+                            <upload_dir config="buyshop" scope_info="1">buyshop</upload_dir>
+                            <base_url type="media" scope_info="1">buyshop</base_url>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </background_image>
+                        <background_image_display_mode>
+                            <label>Background Image display mode</label>
+                            <comment>Set background image display mode</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>buyshopconfig/fields_source_bgposition</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </background_image_display_mode>
+                    </fields>
+                </content>
+                <footer_info>
+                    <label>Footer info</label>
+                    <sort_order>7</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <text_color>
+                            <label>Text Color</label>
+                            <comment>Set text color for footer info block</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_color>
+                        <link_color>
+                            <label>Link Color</label>
+                            <comment>Set link color for footer info block</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link_color>
+                        <link_hover_color>
+                            <label>Link Hover Color</label>
+                            <comment>Set link hover color for footer info block</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link_hover_color>
+                        <captions_color>
+                            <label>Captions Color</label>
+                            <comment>Set captions color for footer info block</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </captions_color>
+                        <bold_color>
+                            <label>Bold Text Color</label>
+                            <comment>Set bold text color for footer info block</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bold_color>
+                        <background_color>
+                            <label>Background Color</label>
+                            <comment>Set background color for footer info block</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </background_color>
+                        <background_image>
+                            <label>Background Image</label>
+                            <comment>Upload background image/pattern for footer info block (JPG, PNG or GIF image)</comment>
+                            <frontend_type>image</frontend_type>
+                            <upload_dir config="buyshop" scope_info="1">buyshop</upload_dir>
+                            <base_url type="media" scope_info="1">buyshop</base_url>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </background_image>
+
+                        <line_color>
+                            <label>Line Color</label>
+                            <comment>Above Footer Info</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </line_color>
+
+                        <!--<background_image_display_mode>
+                            <label>Background Image display mode</label>
+                            <comment>Set background image display mode for footer info block</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>buyshopconfig/fields_source_bgposition</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </background_image_display_mode>-->
+
+
+                    </fields>
+                </footer_info>
+                <footer>
+                    <label>Footer</label>
+                    <sort_order>8</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <text_color>
+                            <label>Text Color</label>
+                            <comment>Set text color for footer block</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_color>
+                        <link_color>
+                            <label>Link Color</label>
+                            <comment>Set link color for footer block</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link_color>
+                        <link_hover_color>
+                            <label>Link Hover Color</label>
+                            <comment>Set link hover color for footer block</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link_hover_color>
+                        <background_color>
+                            <label>Background Color</label>
+                            <comment>Set background color for footer block</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </background_color>
+                    </fields>
+                </footer>
+                <footer_popup>
+                    <label>Footer popup</label>
+                    <sort_order>9</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <text_color>
+                            <label>Text Color</label>
+                            <comment>Set text color for footer popup block</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_color>
+                        <caption_text_color>
+                            <label>Caption Text Color</label>
+                            <comment>Set caption text color for footer popup block</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </caption_text_color>
+                        <link_color>
+                            <label>Link Color</label>
+                            <comment>Set link color for footer popup block</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link_color>
+                        <link_hover_color>
+                            <label>Link Hover Color</label>
+                            <comment>Set link hover color for footer popup block</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </link_hover_color>
+                        <background_color>
+                            <label>Background Color</label>
+                            <comment>Set background color for footer popup block</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </background_color>
+                        <background_transparency>
+                            <label>Background Transparency</label>
+                            <comment>Set background transparency for footer popup block (0..1)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <validate>validate-number</validate>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </background_transparency>
+                    </fields>
+                </footer_popup>
+                <delimeters>
+                    <label>Delimiters</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <delimetr_content_image>
+                            <label>Delimiter Content Image</label>
+                            <comment>Upload delimiter content image (JPG, PNG or GIF image)</comment>
+                            <frontend_type>image</frontend_type>
+                            <upload_dir config="buyshop" scope_info="1">buyshop</upload_dir>
+                            <base_url type="media" scope_info="1">buyshop</base_url>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </delimetr_content_image>
+                        <delimetr_footer_image>
+                            <label>Delimiter Footer Image</label>
+                            <comment>Upload delimiter footer image (JPG, PNG or GIF image)</comment>
+                            <frontend_type>image</frontend_type>
+                            <upload_dir config="buyshop" scope_info="1">buyshop</upload_dir>
+                            <base_url type="media" scope_info="1">buyshop</base_url>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </delimetr_footer_image>
+                        <product_border_color>
+                            <label>Product border color (listing)</label>
+                            <comment>Set product border color in listing</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_border_color>
+                        <product_border_shadow>
+                            <label>Product border shadow (listing)</label>
+                            <comment>Enable product border shadow in listing</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_border_shadow>
+                    </fields>
+                </delimeters>
+                <price>
+                    <label>Price</label>
+                    <sort_order>11</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <font>
+                            <label>Font</label>
+                            <comment><![CDATA[Select font which will be used for headings, buttons, block titles etc. Theme use Google font's
+        library. Find out more here - <a target=_"blank" href="http://www.google.com/webfonts">Google web fonts free library</a>]]></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>buyshopconfig/fields_source_fonts</source_model>
+                            <frontend_model>buyshopconfig/adminhtml_fields_fonts</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </font>
+                        <text_color>
+                            <label>Price Color</label>
+                            <comment>Set text color for price</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </text_color>
+                        <product_info_price_color>
+                            <label>Price Color in product info</label>
+                            <comment>Set text color for price</comment>
+                            <frontend_type>text</frontend_type>
+                            <frontend_model>buyshopconfig/adminhtml_fields_color</frontend_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_info_price_color>
+                    </fields>
+                </price>
+
+            </groups>
+        </buyshopcolors>
+        <buyshoplayout>
+            <label>Layout</label>
+            <tab>buyshop</tab>
+            <sort_order>3</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general>
+                    <label>General</label>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <header_tool_line>
+                            <label>Header tool line</label>
+                            <comment>Choose header tool line block layout or disable it. You can edit blocks content via CMS static block. To edit content go to CMS -> Static blocks. Choose needed block and edit it.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>buyshopconfig/fields_source_headertoolline</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </header_tool_line>
+                        <header>
+                            <label>Header</label>
+                            <comment>Choose header block layout</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>buyshopconfig/fields_source_header</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </header>
+                        <footer_info>
+                            <label>Footer info</label>
+                            <comment>Enable footer info block. You can edit block content via CMS static block. To edit content go to CMS -> Static blocks. Choose needed block and edit it.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </footer_info>
+                        <footer_transparent_popup>
+                            <label>Footer popup</label>
+                            <comment>Enable footer transparent popup block. You can edit block content via CMS static block. To edit content go to CMS -> Static blocks. Choose needed block and edit it.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </footer_transparent_popup>
+                        <footer_transparent_popup_static>
+                            <label>Show Footer popup content</label>
+                            <comment>Enable footer Footer popup content as static block. You can edit block content via
+                                CMS static block. To edit content go to CMS -> Static blocks. Choose needed block and
+                                edit it.
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+
+                        </footer_transparent_popup_static>
+
+                    </fields>
+                </general>
+                <navigation>
+                    <label>Navigation</label>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+
+                        <home_button>
+                            <label>Home button</label>
+                            <comment>Enable home button in navigation</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </home_button>
+                        <custom_block>
+                            <label>Custom block</label>
+                            <comment>Enable custom block in main menu. You can edit block content via CMS static block. To edit content go to CMS -> Static blocks. Choose needed block and edit it.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </custom_block>
+                        <custom_menu_title>
+                            <label>Custom menu item - title</label>
+                            <comment>Set menu item title</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </custom_menu_title>
+                        <custom_menu_url>
+                            <label>Custom menu item - url</label>
+                            <comment>Set url for custom menu item (use full url format starting with http://)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </custom_menu_url>
+
+
+
+
+
+                        <second_link>
+                            <label>Second custom link in top menu</label>
+                            <comment>Enable second custom link in top menu main menu.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </second_link>
+                        <second_link_title>
+                            <label>Second custom link in top menu - title</label>
+                            <comment>Set menu item title</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </second_link_title>
+                        <second_link_url>
+                            <label>Second custom link in top menu - url</label>
+                            <comment>Set url for second custom link in top menu (use full url format starting with http://)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </second_link_url>
+
+
+
+
+                        <amazing_menu_description>
+                            <label>"Shop by category"  description</label>
+                            <comment>Enable custom block in amazing main menu. You can edit block content via CMS static block. To edit content go to CMS -> Static blocks. Choose needed block and edit it.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </amazing_menu_description>
+                        <amazing_shop_by_brand>
+                            <label>"Shop by Brand" description</label>
+                            <comment>Enable Shop by Brand description. You can edit block content via CMS static block. To edit content go to CMS -> Static blocks. Choose needed block and edit it.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>14</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </amazing_shop_by_brand>
+
+                        <show_topmenu>
+                            <label>Show topmenu</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_topmenu>
+
+                        <menutype>
+                            <label>Menu type</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>buyshopconfig/fields_source_menutype</source_model>
+                            <sort_order>16</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </menutype>
+                    </fields>
+                </navigation>
+
+                <home_page>
+                    <label>Home page</label>
+                    <sort_order>4</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <slider>
+                            <label>Slider</label>
+                            <comment>
+                                <![CDATA[
+                                Choose slider type.<br />
+                                Flex is simple, fully responsive slider.<br />
+                                Parallax is layered slider. You can create slides with unlimited layres.<br />
+                                Staic image is good for corporate style<br />
+                                To edit slides and slider options go to eTheme - BuyShop -> Slider Configuration. Detailed description of configuration options you can find below in this doc.
+                                ]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>buyshopconfig/fields_source_slider</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </slider>
+
+                        <revolution_slider_init>
+                            <label>Init Revolution Slider</label>
+                            <frontend_type>select</frontend_type>
+                            <comment>
+                                <![CDATA[
+                                        <b style="color:red">ATTENTION!</b> If you want use revolution slider set Enable to init js
+                                        ]]>
+                            </comment>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <slider>revolution</slider>
+                            </depends>
+                        </revolution_slider_init>
+
+                        <parallax_slider_init>
+                            <label>Init Parallax Slider</label>
+                            <frontend_type>select</frontend_type>
+                            <comment>
+                                <![CDATA[
+                                        <b style="color:red">ATTENTION!</b> If you want use parallax slider set Enable to init js
+                                        ]]>
+                            </comment>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <slider>parallax</slider>
+                            </depends>
+                        </parallax_slider_init>
+
+                        <blog_posts>
+                            <label>Recent posts</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </blog_posts>
+
+
+
+                    </fields>
+                </home_page>
+
+                <product_listing>
+                    <label>Product Listing</label>
+                    <sort_order>5</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <product_listing_mode>
+                            <label>Product listing mode</label>
+                            <comment>Choose products listing mode</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>buyshopconfig/fields_source_productlistingmode</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_listing_mode>
+                        <product_listing_image_size>
+                            <label>Product listing image size</label>
+                            <comment>Choose product image preview size in listing</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>buyshopconfig/fields_source_productlistingimagesize</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_listing_image_size>
+                        <show_category_description>
+                            <label>Show category description</label>
+                            <comment>Enable/disable custom category description before product listing. You can use custom HTML (description text, image banner or slider). To edit content go to Catalog -> Manage Categories -> choose category. On tab "General" fill field "Description" </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </show_category_description>
+                        <sidebar>
+                            <label>Sidebar</label>
+                            <comment>Enable/disable sidebar in product listing mode.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sidebar>
+
+                        <!--<sidebar_blocks>
+                            <label>Sidebar blocks</label>
+                            <comment>Enable/disable blocks in sidebar.</comment>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>buyshopconfig/fields_source_sidebar</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sidebar_blocks>-->
+
+                        <!--<sidebar_blocks_sort>
+                            <label>Sidebar blocks sort</label>
+                            <comment>Write separated by commas sort codes of the blocks in the output order</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sidebar_blocks_sort>-->
+
+                    </fields>
+                </product_listing>
+
+                <product_info>
+                    <label>Product Info</label>
+                    <sort_order>6</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <product_info_image_size>
+                            <label>Product info image size</label>
+                            <comment>Choose product preview image size on product info page.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>buyshopconfig/fields_source_productinfoimagesize</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_info_image_size>
+                        <product_custom_block>
+                            <label>Product custom block</label>
+                            <comment>Choose product custom block type or disable it. You can edit option a (custom HTML) content via CMS static block. To edit content go to CMS -> Static blocks. Choose needed block and edit it.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>buyshopconfig/fields_source_productcustomblock</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_custom_block>
+                        <prev_next_buttons>
+                            <label>Prev / Next buttons</label>
+                            <comment>
+                                Enable/disable previous, next buttons on product info page.
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </prev_next_buttons>
+                        <prev_next_image_preview>
+                            <label>Prev / Next image preview</label>
+                            <comment>
+                                <![CDATA[
+                                Enable/disable image preview for previous, next buttons on product info page.<br/>
+                                <b style="color:red">ATTENTION!</b> prev/next buttons will disabled if enabled Flat catalogue mode
+]]>
+                                </comment>
+
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </prev_next_image_preview>
+                        <!--<custom_tab>
+                            <label>Custom tab</label>
+                            <comment>Enable/disable custom tab on product info page. You can edit custom tab content via CMS static block. To edit content go to CMS -> Static blocks. Choose needed block and edit it.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </custom_tab>-->
+                        <upsell_products_slider>
+                            <label>Upsell products slider</label>
+                            <comment>Enable/Disable upsell products slider</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </upsell_products_slider>
+                        <qr>
+                            <label>QR-code</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </qr>
+                        <sku>
+                            <label>Show product Sku</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sku>
+
+
+                    </fields>
+                </product_info>
+            </groups>
+        </buyshoplayout>
+        <buyshopimage>
+            <label>Static image</label>
+            <tab>buyshop</tab>
+            <sort_order>6</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <image>
+                    <label>Image</label>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <image>
+                            <label>Image</label>
+                            <comment>[JPG, PNG or GIF image]</comment>
+                            <frontend_type>image</frontend_type>
+                            <upload_dir config="buyshop" scope_info="1">buyshop</upload_dir>
+                            <base_url type="media" scope_info="1">buyshop</base_url>
+                            <backend_model>adminhtml/system_config_backend_image</backend_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </image>
+                        <image_url>
+                            <label>Image url</label>
+                            <comment>Set url for Image</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </image_url>
+                    </fields>
+                </image>
+            </groups>
+        </buyshopimage>
+    </sections>
+</config>

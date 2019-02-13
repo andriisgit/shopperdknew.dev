@@ -1,0 +1,145 @@
+<?php $postData = $this->getPost() ?>
+<?php $manufacturers = $this->getManufacturersName() ?>
+<?php $manufacturersAsoc = $this->getManufacturersNameAsocArray() ?>
+<script type="text/javascript">
+    
+    function filterProducts(url) {
+        new Ajax.Request(
+              url, {
+                  method: 'post',
+                  parameters: $('manufacturer').serialize(true),
+                  onSuccess: function(transport) {
+                    $("backorders").innerHTML = transport.responseText;
+                  }
+              }
+        );
+    }
+
+</script>
+<?php if(!$this->getPost()) : ?>
+    <div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+    <div class="content-header">
+    <table cellspacing="0">
+        <tr>
+            <td style="width:50%;"><h3><?php echo $this->__('Backorder Report') ?></h3></td>
+            <td class="a-right">
+                <form action="" id="ticketForm" method="post">
+                    <label for="manufacturer"><?php echo $this->__('Limit to') ?></label>
+                    <select id="manufacturer" name="manufacturer" onchange="filterProducts(<?php echo "'".$this->getUrl('*/backorderreport_backorder/filter')."'";?>)">
+                        <option value="0"><?php echo $this->__('All manufacturers') ?></option>
+                        <?php foreach ($manufacturers as $manufacturer) : ?>
+                            <option value="<?php echo $manufacturer["value"] ?>"><?php echo $manufacturer["label"] ?></option>
+                        <?php endforeach ?>
+                    </select>  
+                </form>
+            </td>
+        </tr>
+    </table>
+    </div>
+<?php endif ?>
+<div id="backorders">
+    <div class="entry-edit">
+        <?php $noBackorderMessage = $this->__('Your search did not find any backorder. Please try again with other manufacturer filter!') ?>
+        <?php foreach ($manufacturers as $manufacturer) : ?>
+            <?php if($postData && $postData["manufacturer"] != $manufacturer["value"] && $postData["manufacturer"] != 0) : ?>
+                <?php continue; ?>
+            <?php endif ?>
+            <?php $orders = $this->getOrderIdByManufacturerValue($manufacturer["value"]); ?>
+            <?php $backOrders = $this->getBackorders($orders); ?>    
+                <?php $i = 0 ?>    
+                
+                <?php foreach ($backOrders as $backOrder) : ?>
+                    <?php if ($i==0) : ?>
+                        <div class="entry-edit-head" style="float:left;width:99%;padding:2px 9px;margin:25px 0 0 0">
+                            <h4><?php echo $manufacturer["label"] ?></h4>
+                        </div>
+                        <?php if(isset ($noBackorderMessage)) unset ($noBackorderMessage) ?>     
+                    <?php $i++ ?>  
+                    <?php endif ?>
+                    <div class="fieldset" style="float:left;width:99%;padding:10px 8px;margin:0;border-top:none ">
+                        <table class="form-list" cellspacing="0" style="width:30%;float:left">
+                            <tbody>    
+                                <tr>
+                                    <td class="label"><?php echo $this->__('Order #') ?></td>
+                                    <td class="value"><a href="<?php echo $this->getUrl('*/sales_order/view', array('order_id' => $backOrder->getEntityId())) ?>"><?php echo $backOrder->getIncrementId() ?></a></td>
+                                </tr>
+                                <tr>
+                                    <td class="label"><?php echo $this->__('Purchased on') ?></td>
+                                    <td class="value"><?php echo $backOrder->getCreatedAt() ?></td>
+                                <tr>
+                                    <td class="label"><?php echo $this->__('Customer') ?></td>
+                                    <td class="value"><?php echo $backOrder->getCustomerFirstname() . ' ' . $backOrder->getCustomerLastname() ?></td>
+                                </tr>        
+                                    <td class="label"><?php echo $this->__('Order total') ?></td>
+                                    <td class="value"><?php echo $backOrder->getGrandTotal() . ' ' . $backOrder->getBaseCurrencyCode() ?></td>
+                                </tr>
+                                <tr>
+                                    <td class="label"><?php echo $this->__('Payment information') ?></td>
+                                    <td class="value"><?php echo Mage::helper('payment')->getInfoBlock($backOrder->getPayment())->getMethod()->getTitle() ?></td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                        <div class="grid">
+                        <?php $backorderItems = $this->getBackorderItems($backOrder->getEntityId()); ?>
+                            <table class="data" style="width: 67%; float: right; margin: 5px 20px 0pt 0pt;">
+                                <colgroup>
+                                    <col width="10%">
+                                    <col width="41%">
+                                    <col width="6%">
+                                    <col width="8%">
+                                    <col width="8%">
+                                    <col width="10%">
+                                    <col width="17%">
+                                </colgroup>
+                                <thead>
+                                    <tr class="headings">
+                                        <th class=" no-link"><span class="nobr"><?php echo $this->__('Model') ?></span></th>
+                                        <th class=" no-link"><span class="nobr"><?php echo $this->__('Description') ?></span></th>
+                                        <th class=" no-link"><span class="nobr"><?php echo $this->__('Stock') ?></span></th>
+                                        <th class=" no-link"><span class="nobr"><?php echo $this->__('Qty in order') ?></span></th>
+                                        <th class=" no-link"><span class="nobr"><?php echo $this->__('Undelivered Qty') ?></span></th>
+                                        <th class=" no-link"><span class="nobr"><?php echo $this->__('Price') ?></span></th>
+                                        <th class=" no-link"><span class="nobr"><?php echo $this->__('Manufacturer') ?></span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($backorderItems as $backorderItem) : ?>
+                                        <?php
+                                        $formatedPrice = Mage::getModel('sales/order')->formatPrice($backorderItem->getPrice());
+                                        ?>
+                                        <?php if($backorderItem->getValueVarchar() == $manufacturer["value"] 
+                                                || $backorderItem->getValueInt() == $manufacturer["value"]) : ?>
+                                                    <?php $td_style = 'style="background-color:#F16048; color:#FFFFFF;"' ?>
+                                        <?php else : ?>
+                                            <?php $td_style='' ?>
+                                        <?php endif ?>
+                                        <tr>    
+                                            <td><?php echo $backorderItem->getSku() ?></td>
+                                            <td><?php echo $backorderItem->getName() ?></td>
+                                            <td><?php echo (int) $backorderItem->getQty() ?></td>
+                                            <td><?php echo (int) $backorderItem->getQtyOrdered() ?></td>
+                                            <td>
+                                                <?php if($backorderItem->getQtyOrdered() > $backorderItem->getQtyRefund() + $backorderItem->getQtyShipped()) : ?>
+                                                    <?php echo (int) $backorderItem->getQtyOrdered() -  $backorderItem->getQtyRefund() - $backorderItem->getQtyShipped() ?>
+                                                <?php else : ?>
+                                                    0
+                                                <?php endif; ?>    
+                                            </td>
+                                            <td><?php echo $formatedPrice ?></td>
+                                            <td <?php echo $td_style ?>><?php if($backorderItem->getValueVarchar()) : ?>
+                                                    <?php echo $manufacturersAsoc[$backorderItem->getValueVarchar()] ?>
+                                                <?php elseif($backorderItem->getValueInt()) : ?>
+                                                    <?php echo $manufacturersAsoc[$backorderItem->getValueInt()] ?>
+                                                <?php endif ?>
+                                            </td>
+                                        </tr>
+                                    <?php endforeach ?>
+                                </tbody>       
+                            </table>
+                        </div>   
+                    </div>    
+                <?php endforeach ?>
+        <?php endforeach ?>
+        <p><?php if(isset ($noBackorderMessage)) echo $noBackorderMessage ?></p>
+    </div>
+</div>

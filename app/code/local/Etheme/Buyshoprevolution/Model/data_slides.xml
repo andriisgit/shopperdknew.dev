@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<buyshop>
+    <slides>
+        <slide1>
+        <![CDATA[
+            <li data-transition="fade" data-slotamount="10" data-masterspeed="300" data-link="http://www.google.de" data-target="_blank" data-slideindex="back" data-thumb="images/thumbs/thumb1.jpg">
+                <!-- THE MAIN IMAGE IN THE SLIDE -->
+                <img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/slider_1.jpg" >
+                <!-- THE CAPTIONS OF THE FIRST SLIDE -->
+                <div class="caption  sft" data-x="147" data-y="31" data-speed="300" data-start="800" data-captionhidden="on" data-easing="easeOutExpo"><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/slider1_text1.png"></div>
+                <div class="caption  sft" data-x="147" data-y="64" data-speed="300" data-start="1100" data-captionhidden="on" data-easing="easeOutExpo"><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/slider1_text3.png"></div>
+                <div class="caption  randomrotate" data-x="264" data-y="64" data-speed="300" data-start="1500" data-captionhidden="on" data-easing="easeOutExpo"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/slider1_text2.png"></div>
+                <div class="caption randomrotate" data-x="335" data-y="292" data-speed="600" data-start="1100" data-easing="easeOutExpo"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/p1.png"></div>
+                <div class="caption randomrotate" data-x="296" data-y="316" data-speed="600" data-start="1200" data-easing="easeOutExpo"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/p2.png" ></div>
+                <div class="caption randomrotate" data-x="143" data-y="250" data-speed="600" data-start="1300" data-easing="easeOutExpo"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/p3.png" ></div>
+                <div class="caption randomrotate" data-x="224" data-y="200" data-speed="300"  data-start="1400" data-easing="easeOutExpo"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/p4.png" ></div>
+                <div class="caption randomrotate" data-x="195" data-y="300" data-speed="600" data-start="1500" data-easing="easeOutExpo"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/p5.png" ></div>
+                <div class="caption randomrotate" data-x="264" data-y="153" data-speed="300" data-start="1600" data-easing="easeOutExpo"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/p6.png" ></div>
+                <div class="caption randomrotate" data-x="370" data-y="190" data-speed="300"  data-start="1700" data-easing="easeOutExpo"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/p7.png" ></div>
+                <div class="caption randomrotate" data-x="413" data-y="245" data-speed="300" data-start="1800" data-easing="easeOutExpo"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/p8.png" ></div>
+                <div class="caption randomrotate" data-x="435" data-y="165"  data-speed="300" data-start="1900" data-easing="easeOutExpo"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/p9.png" ></div>
+                <div class="caption randomrotate" data-x="382"  data-y="245" data-speed="300" data-start="2000" data-easing="easeOutExpo"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/p10.png" ></div>
+                <div class="caption randomrotate" data-x="280" data-y="230" data-speed="300" data-start="2100" data-easing="easeOutExpo"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/p11.png"></div>
+              </li>
+        ]]>
+        </slide1>
+        <slide2>
+            <![CDATA[
+              <li data-transition="papercut" data-slotamount="15" data-masterspeed="300"> <img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/slider2.jpg" >
+                <div class="caption lfr" data-x="700" data-y="160" data-speed="500" data-start="500" data-easing="easeOutExpo" ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/slider2_text1.png" ></div>
+                <div class="caption lfl" data-x="700" data-y="220" data-speed="500" data-start="1000" data-easing="easeOutExpo"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/slider2_text2.png" ></div>
+                <div class="caption lfb" data-x="700" data-y="330" data-speed="500" data-start="1500" data-easing="easeOutExpo"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/slider2_text3.png" ></div>
+              </li>
+            ]]>
+        </slide2>
+        <slide3>
+            <![CDATA[
+              <li data-transition="slidedown" data-slotamount="1" data-masterspeed="300">
+                <img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/black.jpg" >
+                <div class="caption fade fullscreenvideo" data-autoplay="false" data-x="0" data-y="0" data-speed="500" data-start="10" data-easing="easeOutBack">
+                  <iframe src="http://player.vimeo.com/video/22775048?title=0&amp;byline=0&amp;portrait=0;api=1" width="100%" height="100%"></iframe>
+                </div>
+                <div class="caption big_white sft stt" data-x="327" data-y="25" data-speed="300" data-start="500"  data-easing="easeOutExpo" data-end="4000" data-endspeed="300" data-endeasing="easeInSine" >Have Fun Watching the Video</div>
+              </li>
+            ]]>
+        </slide3>
+        <slide4>
+            <![CDATA[
+               <li data-transition="slotfade-horizontal" data-slotamount="1" data-masterspeed="300"> <img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/coloredbg.png"  data-fullwidthcentering="off">
+                <div class="caption coloredbg fade" data-x="0" data-y="0" data-speed="10" data-start="0" style="background-color:#fff; width:100%;height:100%"></div>
+                <div class="caption lfl" data-x="0" data-y="0" data-speed="1000" data-start="200" data-easing="easeOutBounce"  data-end="9000" data-endeasing="easeOutQuad" ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/slider3.jpg" alt="Image 0"></div>
+                <div class="caption lfr" data-x="680" data-y="180" data-speed="300" data-start="1800" data-easing="easeOutExpo"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/slider3_text1.png" ></div>
+                <div class="caption randomrotate" data-x="680" data-y="230" data-speed="500" data-start="2200" data-easing="easeOutExpo"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/slider3_text2.png" ></div>
+                <div class="caption lfr" data-x="680" data-y="310" data-speed="500" data-start="2800"  data-easing="easeInBack"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/slider3_text3.png" ></div>
+              </li>
+            ]]>
+        </slide4>
+
+
+        <slide5>
+            <![CDATA[
+               <li data-transition="slideleft" data-slotamount="1" data-masterspeed="300" > <img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/white.jpg" >
+                <div class="caption lfl" data-x="0" data-y="0" data-speed="1000" data-start="200" data-easing="easeOutBack" ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/iphone1.png" alt="Image 0"></div>
+                <div class="caption lfr" data-x="0" data-y="0" data-speed="1000" data-start="600" data-easing="easeOutBack" ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/iphone2.png" alt="Image 0"></div>
+                <div class="caption lfr" data-x="580" data-y="180" data-speed="300"  data-start="1800" data-easing="easeOutExpo"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/slider4_text1.png" ></div>
+                <div class="caption lfl" data-x="580" data-y="230" data-speed="500" data-start="2200" data-easing="easeOutExpo"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/slider4_text2.png" ></div>
+                <div class="caption lfr" data-x="580" data-y="310" data-speed="500" data-start="2400" data-easing="easeInBack" data-end="5700"  data-endspeed="300"data-endeasing="easeInBack"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/slider4_text3.png" ></div>
+                <div class="caption lfr" data-x="580" data-y="310" data-speed="500" data-start="5800" data-easing="easeInBack"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/slider4_text4.png" ></div>
+              </li>
+            ]]>
+        </slide5>
+
+        <slide6>
+            <![CDATA[
+              <li data-transition="slotfade-horizontal" data-slotamount="1" data-masterspeed="300"> <img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/white.jpg" >
+                <div class="caption sfl" data-x="0"  data-y="0" data-speed="1000" data-start="600" data-easing="easeOutExpo"><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/slider5.jpg" alt="Image 0"></div>
+                <div class="caption lft" data-x="680" data-y="120" data-speed="300" data-start="1800" data-easing="easeOutExpo"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/slider5_text1.png" ></div>
+                <div class="caption randomrotate" data-x="680" data-y="180" data-speed="500" data-start="2200" data-easing="easeOutExpo"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/slider5_text2.png" ></div>
+                <div class="caption lfb" data-x="680" data-y="300" data-speed="500" data-start="2800" data-easing="easeInBack"  ><img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/slider5_text3.png" ></div>
+              </li>
+            ]]>
+        </slide6>
+    </slides>
+</buyshop>

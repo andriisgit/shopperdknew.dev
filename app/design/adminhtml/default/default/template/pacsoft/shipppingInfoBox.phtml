@@ -1,0 +1,173 @@
+<?php
+/**
+ * Nybohansen ApS
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ *
+ * =================================================================
+ *                 MAGENTO EDITION USAGE NOTICE
+ * =================================================================
+ * This package designed for Magento COMMUNITY edition
+ * We do not guarantee correct work of this extension
+ * on any other Magento edition except Magento COMMUNITY edition.
+ * In case of incorrect edition usage, we don't provide support.
+ * =================================================================
+ *
+ * @category   Nybohansen
+ * @package    Nybohansen_Pacsoft
+ * @copyright  Copyright (c) 2014 Nybohansen ApS
+ * @license    LICENSE.txt
+ */
+?>
+
+<div class="box-right" style="margin-bottom: 10px">
+    <!--Pacsoft shipping-->
+    <div class="entry-edit open">
+        <div class="entry-edit-head collapseable">
+            <a id="pacsoft_shipping_form-head" href="#" onclick="Fieldset.toggleCollapse('pacsoft_shipping_form'); return false;">
+                <?php echo $this->helper('pacsoft')->__('Pacsoft Shipping Information') ?>
+            </a>
+            <input id="pacsoft_shipping_form-state" type="hidden" value="<?php echo $this->_pacsoftOrder->isPostDanmarkOrder() ? '1': '0' ?>">
+        </div>
+        <div id="pacsoft_shipping_form" <?php echo $this->_pacsoftOrder->isPostDanmarkOrder() ? '': 'style="display: none;"' ?>>
+            <fieldset>
+                <form method="post" enctype="multipart/form-data">
+                    <input name="pacsoft_order_id" type="hidden" id="pacsoft_order_id" value="<?php echo $this->getOrder()->getId() ?>" style="width: 270px;"/>
+                    <table cellspacing="0" class="form-list">
+                        <tbody>
+                        <tr>
+                            <td class="label"><label><?php echo Mage::helper('pacsoft')->__('Pacsoft service') ?></label></td>
+                            <td class="value">
+                                <select onchange="loadAddOns(this)" name="pacsoft_service" class="select" id="pacsoft_service">
+                                    <?php foreach($this->getServices() as $service_key => $service_label): ?>
+                                        <option value="<?php echo $service_key ?>" <?php if($this->chosenService() == $service_key): ?> selected="selected"<?php endif; ?>><?php echo $service_label ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label><?php echo Mage::helper('pacsoft')->__('Addons') ?></label></td>
+                            <td class="value" id="addons">
+                                <?php echo $this->getAddonsHtml(); ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label><?php echo Mage::helper('pacsoft')->__('Parcel content') ?></label></td>
+                            <td class="value">
+                                <input name="pacsoft_contents" type="text" id="pacsoft_contents" value="<?php echo $this->_pacsoftOrder->getContents(); ?>" style="width: 270px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label><?php echo Mage::helper('pacsoft')->__('Weight (kg)') ?></label></td>
+                            <td class="value">
+                                <input name="pacsoft_weight" type="text" id="pacsoft_weight" value="<?php echo $this->_pacsoftOrder->getWeight(); ?>" maxlength="30" style="width: 270px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label><?php echo Mage::helper('pacsoft')->__('Delivery note 1') ?></label></td>
+                            <td class="value">
+                                <input name="pacsoft_freetext1" type="text" id="pacsoft_freetext1" value="<?php echo $this->_pacsoftOrder->getFreetext1(); ?>" maxlength="30" style="width: 270px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label><?php echo Mage::helper('pacsoft')->__('Delivery note 2') ?></label></td>
+                            <td class="value">
+                                <input name="pacsoft_freetext2" type="text" id="pacsoft_freetext2" value="<?php echo $this->_pacsoftOrder->getFreetext2(); ?>" maxlength="30" style="width: 270px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label"><label><?php echo Mage::helper('pacsoft')->__('Number of collies') ?></label></td>
+                            <td class="value">
+                                <select name="pacsoft_copies" class="select" id="pacsoft_copies" style="width: 50px;">
+                                    <?php for($n=1; $n<10; $n++): ?>
+                                    <option value="<?php echo $n ?>"<?php if($this->_pacsoftOrder->getCopies() == $n): ?> selected="selected"<?php endif; ?>><?php echo $n ?></option>
+                                    <?php endfor; ?>
+                                </select>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+                <div id="pacsoftReturn">
+                </div>
+                <div style="text-align: left; margin: 10px 0;">
+                    <?php echo $this->getCreateLabelButton()?>
+                    <?php echo $this->getCreateReturnLabelButton()?>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+
+<script type="text/javascript">
+    function loadAddOns(selectElement){
+        var reloadurl = "<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/sales_pacsoftOrder/getAddonsForService', array('' => '')) ?>";
+        new Ajax.Request(reloadurl, {
+            method: 'POST',
+            parameters: { serviceCode: selectElement.value,
+                          orderId: '<?php echo $this->getOrderId(); ?>'},
+            onComplete: function(transport) {
+                $('addons').update(transport.responseText.evalJSON());
+            }
+        });
+    }
+
+    function toggleAddOn(selectElement){
+        if(selectElement.checked){
+            $(selectElement.value).show();
+        }else{
+            $(selectElement.value).hide();
+        }
+    }
+
+    function pacsoftPrintLabel(returnLabel){
+        if(returnLabel){
+            var reloadurl = "<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/sales_pacsoftOrder/printReturnLabel', array('' => '')) ?>";
+        }else{
+            var reloadurl = "<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/sales_pacsoftOrder/printLabel', array('' => '')) ?>";
+        }
+        new Ajax.Request(reloadurl, {
+            method: 'POST',
+            parameters: Form.serialize($('pacsoft_shipping_form'), true),
+            onComplete: function (transport) {
+                $('pacsoftReturn').innerHTML = transport.responseText;
+            }});
+    }
+
+
+    var zip_length = 0;
+    function servicePointsOnKeyDown(element){
+        zip_length = element.value.length
+    }
+
+    function servicePoints(selectElement){
+        if(selectElement.value.length>3 && zip_length != selectElement.value.length){
+            zip_length = selectElement.value.length;
+            $('pupopt_response').innerHTML = '';
+            new Ajax.Request('<?php echo Mage::helper("adminhtml")->getUrl('pacsoft/ajax/index'); ?>',
+                    {
+                        method:'post',
+                        parameters: { action      : 'getServicePointElement',
+                                      zip         : selectElement.value,
+                                      countryCode : '<?php echo ($this->_pacsoftOrder->getDeliveryAddress_countryCode() ? $this->_pacsoftOrder->getDeliveryAddress_countryCode() : $this->_pacsoftOrder->getShippingAddress()->getCountry()); ?>',
+                                      elementName : '',
+                                      displayType : 'admin' },
+                        onSuccess: function(data){
+                            var response = data.responseText.evalJSON(true);
+                            $('pupopt_response').innerHTML = response['html'];
+                        },
+                        onFailure: function(){
+                            $('pupopt_response').innerHTML = '<p>An error occured</p>';
+                        }
+                    });
+        }
+    }
+
+
+</script>
+
+

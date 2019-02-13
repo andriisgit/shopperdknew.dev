@@ -1,0 +1,69 @@
+<?php
+/**
+ * @category    Fishpig
+ * @package     Fishpig_Wordpress
+ * @license     http://fishpig.co.uk/license.txt
+ * @author      Ben Tideswell <help@fishpig.co.uk>
+ */
+?>
+<?php $posts = $this->getPosts() ?>
+<?php if (count($posts) > 1 && Mage::getStoreConfig('buyshoplayout/home_page/blog_posts')): ?>
+
+
+
+<div class="blog_module">
+    <?php if ($title = $this->getTitle()): ?>
+    <div class="blog_text"><h2><?php echo $this->__($title) ?></h2></div>
+    <?php endif; ?>
+
+    <!--end carousel-->
+    <div class="carousel es-carousel-wrapper style0 " id="carousel_bestsellers">
+        <div class="es-carousel">
+            <div class="row">
+                <div class="product_outer">
+                    <?php foreach($posts as $post): ?>
+                    <div class="span6 product  animate fadeUp ">
+                        <div class="row">
+                            <?php if ($featuredImage = $post->getFeaturedImage()): ?>
+                            <div class="span3">
+                                <a href="<?php echo $post->getPermalink() ?>"><img data-image2x="<?php echo $featuredImage->getFullSizeImage() ?>" src="<?php echo $featuredImage->getThumbnailImage() ?>" alt="<?php echo $this->escapeHtml($post->getPostTitle()) ?>" /></a>
+                            </div>
+
+                            <?php
+                            /*
+                             *  getThumbnailImage()
+                                getMediumImage()
+                                getLargeImage()
+                                getFullSizeImage()
+                                getPostThumbnailImage()
+                                getAvailableImage()
+                                getImageByType($type = 'thumbnail')
+                            */
+                            ?>
+                                    <?php endif; ?>
+
+                            <div class="span3">
+                                <div class="title">
+                                    <a href="<?php echo $post->getPermalink() ?>"><?php echo $this->htmlEscape($post->getPostTitle()) ?></a>
+                                </div>
+                                <?php echo $post->getPostExcerpt();?>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        jQuery(function(){
+
+            jQuery('.carousel.style0').elastislide({
+                easing: 'easeInQuart',
+                speed: 400,
+            });
+        })
+    </script>
+<?php endif; ?>

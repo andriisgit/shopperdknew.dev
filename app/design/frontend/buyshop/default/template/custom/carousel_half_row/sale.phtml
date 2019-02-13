@@ -1,0 +1,41 @@
+<!--SALE PRODUCTS-->
+<div class="span6">
+    <?php if (($_products = $this->getProductCollection()) && $_products->getSize()): ?>
+    <h2><?php echo $this->getBlockName(); ?></h2>
+    <div class="carousel es-carousel-wrapper style1">
+        <div class="es-carousel">
+            <div class="row small_with_description">
+                <div class="product_outer">
+                    <?php foreach ($_products->getItems() as $_product): ?>
+                    <?php  if(!$_product->isSaleable() && !Mage::getStoreConfig('cataloginventory/options/show_out_of_stock'))continue; ?>
+                    <?php
+                        $widthBig=160;
+                        $heightBig=155;
+                        $widthSmall=52;
+                        $heightSmall=49;
+                        $price=$this->getPriceHtml($_product, true);
+                    ?>
+                    <!--PRODUCT-->
+                    <?php echo Mage::helper('buyshopconfig')->getProductHtml($_product,$this,$widthBig,$heightBig,2,false,false,false,true,$price)?>
+                    <?php echo Mage::helper('buyshopconfig')->getProductHover($_product,$this,$widthBig,$heightBig,$widthSmall,$heightSmall,'small',true,false,$price)?>
+                    <!--PRODUCT EOF-->
+                    <?php endforeach ?>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php endif; ?>
+</div>
+<!--SALE PRODUCTS EOF-->
+<script type="text/javascript">
+    jQuery(function(){
+        jQuery('.carousel.style1').elastislide({
+            easing: 'easeInQuart',
+            speed: 400,
+
+        });
+    })
+</script>
+
+

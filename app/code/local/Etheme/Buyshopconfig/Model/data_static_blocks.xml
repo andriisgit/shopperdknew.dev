@@ -1,0 +1,480 @@
+<?xml version="1.0"?>
+<dresscode>
+     <blocks>
+         <block>
+             <title>Buyshop Phone</title>
+              <identifier>buyshop_header_phone</identifier>
+              <content>
+                    <![CDATA[<p><span><i class="icon-mobile-alt"></i>+1</span> 234 <span>5678900</span></p>]]>
+              </content>
+              <is_active>1</is_active>
+         </block>
+         <block>
+             <title>Buyshop Top Twitt</title>
+             <identifier>buyshop_header_twitt</identifier>
+             <content>
+                 <![CDATA[<p><i class="icon-twitter-bird white"></i>&nbsp;&nbsp;&nbsp;Duis sollicitudin, dui ac More info at labore <a href="#">http://t.co/f9E9cJEg</a> Thanks for the patience :) - 3 days ago</p>]]>
+             </content>
+             <is_active>1</is_active>
+         </block>
+         <block>
+             <title>Buyshop Custom Block</title>
+             <identifier>buyshop_header_topmenu_custom_block</identifier>
+             <content>
+                 <![CDATA[
+                    <div class="shadow">
+                    <div class="col-third"> <img alt="" src="{{media url='wysiwyg/custom_block_img1.png'}}">
+                      <h3>Login using facebook/twitter accounts</h3>
+                      <p>This is a HTML block; you can create it via admin panel. There are many blocks like this on site. They are created especially to set to everybody's preferences. If you have any questions please make a request via our <a href="#">contact form</a></p>
+                    </div>
+                    <div class="col-third"> <img alt="" src="{{media url='wysiwyg/custom_block_img2.png'}}">
+                      <h3><br>
+                        Festive themes</h3>
+                      <p>This is a HTML block; you can create it via admin panel. There are many blocks like this on site. They are created especially to set to everybody's preferences. If you have any questions please make a request via our <a href="#">contact form</a></p><br>
+                    </div>
+                    <div class="col-third"> <img width="230" height="180" alt="" src="{{media url='wysiwyg/custom_block_img3.png'}}">
+                      <h3><br>
+                        Parallax slider</h3>
+                      <p>This is a HTML block; you can create it via admin panel. There are many blocks like this on site. They are created especially to set to everybody's preferences. If you have any questions please make a request via our <a href="{{store direct_url='contacts'}}">contact form</a></p><br>
+                    </div>
+                  </div>
+                 ]]>
+             </content>
+             <is_active>1</is_active>
+         </block>
+
+         <block>
+             <title>Buyshop Top Menu Description Block</title>
+             <identifier>buyshop_header_topmenu_description_block</identifier>
+             <content>
+                 <![CDATA[
+                    <p><img src="{{media url='wysiwyg/menu_html_img.jpg'}}" alt="" /></p>
+                    <p class="custom_category_menu_text"> This is a HTML block; you can create it via admin panel. There are many blocks like this on site. They are created especially to set to everybody's preferences. If you have any questions please make a request via our <a class="custom_category_link" href="{{store direct_url='contacts'}}">contact form</a> </p>
+                    <p class="clear"></p>
+                 ]]>
+             </content>
+             <is_active>1</is_active>
+         </block>
+
+         <block>
+             <title>Buyshop 'Shop by Brand' HTML Block</title>
+             <identifier>buyshop_header_shop_by_brand_block</identifier>
+             <content>
+                 <![CDATA[
+                    <p><img src="{{media url='wysiwyg/menu_html_img.jpg'}}" alt="" /></p>
+                    <p class="custom_category_menu_text"> This is a HTML block; you can create it via admin panel. There are many blocks like this on site. They are created especially to set to everybody's preferences. If you have any questions please make a request via our <a class="custom_category_link" href="{{store direct_url='contacts'}}">contact form</a> </p>
+                    <p class="clear"></p>
+                 ]]>
+             </content>
+             <is_active>1</is_active>
+         </block>
+
+         <block>
+             <title>Buyshop Banner Slider (right side of Featured Products)</title>
+             <identifier>buyshop_slider_banners</identifier>
+             <content>
+                 <![CDATA[
+                    <ul class="slides">
+                        <li> <a href="http://themeforest.net/item/buyshop-premium-responsive-retina-magento-theme/4287671"><img data-retina="true" src="{{media url='wysiwyg/banner1.jpg'}}" alt=""></a> </li>
+                        <li> <a href="http://themeforest.net/item/buyshop-premium-responsive-retina-magento-theme/4287671"><img data-retina="true" src="{{media url='wysiwyg/banner2.jpg'}}" alt=""></a> </li>
+                        <li> <a href="http://themeforest.net/item/buyshop-premium-responsive-retina-magento-theme/4287671"><img data-retina="true" src="{{media url='wysiwyg/banner3.jpg'}}" alt=""></a> </li>
+                    </ul>
+                 ]]>
+             </content>
+             <is_active>1</is_active>
+         </block>
+
+         <block>
+             <title>Buyshop Banners tight</title>
+             <identifier>buyshop_banners_tight</identifier>
+             <content>
+                 <![CDATA[
+                    <div class="pull-left">
+                        <div class="wrapper_w">
+                            <div class="box animate-delay scale">
+                                <div class="inside">
+                                    <a href="#"><span class="icon_circle dark"><i class="icon-truck"></i><span class="hidden">&nbsp;</span></span><span class="text">FREE SHIPPING</span></a>
+                                </div>
+                            </div>
+                            <div class="box animate-delay scale">
+                                <div class="inside">
+                                    <a href="#"><span class="icon_circle light"><i class="icon-dollar"></i><span class="hidden">&nbsp;</span></span><span class="text">CASH ON DELIVERY</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pull-left">
+                        <div class="wrapper_w">
+                            <div class="box animate-delay scale">
+                                <div class="inside">
+                                    <a href="#"><span class="icon_circle dark"><i class="icon-clock"></i><span class="hidden">&nbsp;</span></span><span class="text">30-DAY RETURNS</span></a>
+                                </div>
+                            </div>
+                            <div class="box animate-delay scale">
+                                <div class="inside">
+                                    <a href="#"><span class="icon_circle light"><i class="icon-flight"></i><span class="hidden">&nbsp;</span></span><span class="text">World Shipping</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 ]]>
+             </content>
+             <is_active>1</is_active>
+         </block>
+
+         <block>
+             <title>Buyshop Banners Bottom</title>
+             <identifier>buyshop_banners</identifier>
+             <content>
+                 <![CDATA[
+                    <div class="span3 block_img"><a href="#"><img  data-retina="true" src="{{media url='wysiwyg/img1.png'}}" alt=""></a> </div>
+                    <div class="span3 block_img"><a href="#"><img  data-retina="true" src="{{media url='wysiwyg/img2.png'}}" alt=""></a> </div>
+                    <div class="span3 block_img"><a href="#"><img  data-retina="true" src="{{media url='wysiwyg/img3.png'}}" alt=""></a> </div>
+                    <div class="span3 block_img"><a href="#"><img  data-retina="true" src="{{media url='wysiwyg/img4.png'}}" alt=""></a> </div>
+                 ]]>
+             </content>
+             <is_active>1</is_active>
+         </block>
+
+         <block>
+             <title>ABOUT BUYSHOP</title>
+             <identifier>buyshop_about_in_footer</identifier>
+             <content>
+                 <![CDATA[
+                   <p><strong>Fusce eu dui. Integer vel nibh sit amet turpis vulputate aliquet. </strong>Phasellus id tesque a leo. Donec consequat lectus sed felis. Quisque vestibulum massa. Nulla ornare. Nulla libero.</p>
+                   <p>Nullam ac nisi non eros gravida venenatis.<br>
+                        Ut euismod, turpis sollicitudin lobortis pellentesque, libero massa dapibus dui, eu dictum justo urna et mi. Integer dictum est vitae sem. </p>
+                   <p>Vestibulum justo. Nulla mauris ipsum, convallis ut, vestibulum eu, tincidunt vel, nisi. Curabitur molestie euismod erat. Proin eros odio, mattis rutrum. </p>
+                 ]]>
+             </content>
+             <is_active>1</is_active>
+         </block>
+
+         <block>
+             <title>CONTACT US</title>
+             <identifier>buyshop_contacts_in_footer</identifier>
+             <content>
+                 <![CDATA[
+                  <ul class="icons">
+                        <li><i class="icon-call"></i><strong>CONTACT PHONE:</strong><br>
+                            321321321, 321321321 </li>
+                        <li><i class="icon-mobile-alt"></i><strong>CELL PHONE:</strong><br>
+                            123123123,  123123123 </li>
+                        <li><i class="icon-mail-2"></i><strong>E-MAIL ADDRESSES:</strong><br>
+                            <a href="mailto:sales@mydomain.com">SALES@MYDOMAIL.COM</a> <br>
+                            <a href="mailto:info@mydomain.com">INFO@MYDOMAIN.COM</a> </li>
+                        <li><i class="icon-skype"></i><strong>SKYPE:</strong><br>
+                            TEST.SHOP,   SHOP.TEST </li>
+                    </ul>
+                 ]]>
+             </content>
+             <is_active>1</is_active>
+         </block>
+
+         <block>
+             <title>Buyshop copyright</title>
+             <identifier>buyshop_copyright</identifier>
+             <content>
+                 <![CDATA[
+                 &copy; 2013 <a href="#"><span class="custom_color">BUY</span>SHOP</a>. All Rights Reserved.
+                 ]]>
+             </content>
+             <is_active>1</is_active>
+         </block>
+
+         <block>
+             <title>Buyshop payments</title>
+             <identifier>buyshop_payments</identifier>
+             <content>
+                 <![CDATA[
+                     <img data-retina="true" src="{{media url='wysiwyg/payment1.png'}}" alt="">
+                     <img data-retina="true" src="{{media url='wysiwyg/payment2.png'}}" alt="" height="26">
+                     <img data-retina="true" src="{{media url='wysiwyg/payment3.png'}}" alt="">
+                     <img data-retina="true" src="{{media url='wysiwyg/payment4.png'}}" alt="">
+                     <img data-retina="true" src="{{media url='wysiwyg/payment5.png'}}" alt="">
+                 ]]>
+             </content>
+             <is_active>1</is_active>
+         </block>
+
+         <block>
+             <title>Buyshop footer social links</title>
+             <identifier>buyshop_footer_social_links</identifier>
+             <content>
+                 <![CDATA[
+                        <a href="#"><i class="icon-facebook">&nbsp;</i></a> &nbsp;
+                        <a href="#"><i class="icon-twitter-bird">&nbsp;</i></a> &nbsp;&nbsp;&nbsp;
+                        <a href="#"><i class="icon-linkedin">&nbsp;</i></a> &nbsp;
+                        <a href="#"><i class="icon-pinterest">&nbsp;</i></a> &nbsp;
+                        <a href="#"><i class="icon-gplus">&nbsp;</i></a>
+                 ]]>
+             </content>
+             <is_active>1</is_active>
+         </block>
+
+         <block>
+             <title>Information</title>
+             <identifier>buyshop_information</identifier>
+             <content>
+                 <![CDATA[
+                        <p><a href="{{store direct_url='about-us'}}">About</a> </p>
+                        <p><a href="{{store direct_url='delivery'}}">Delivery</a> </p>
+                        <p><a href="{{store direct_url='privacy-policy'}}">Privacy Policy</a> </p>
+                        <p><a href="{{store direct_url='terms-and-conditions'}}">Terms &amp; Conditions</a> </p>
+                 ]]>
+             </content>
+             <is_active>1</is_active>
+         </block>
+
+         <block>
+             <title>CUSTOMER SERVICE</title>
+             <identifier>buyshop_customer_service</identifier>
+             <content>
+                 <![CDATA[
+                        <p><a href="{{store direct_url='contacts'}}">Contact Us </a> </p>
+                        <p><a href="{{store direct_url='returns'}}">Returns</a> </p>
+                        <p><a href="{{store direct_url='catalog/seo_sitemap/category'}}">Site Map </a> </p>
+                        <p><a href="{{store direct_url='catalogsearch/term/popular'}}">Search Terms </a> </p>
+                 ]]>
+             </content>
+             <is_active>1</is_active>
+         </block>
+
+         <block>
+             <title>MY ACCOUNT</title>
+             <identifier>buyshop_my_account</identifier>
+             <content>
+                 <![CDATA[
+                        <p><a href="{{store direct_url='customer/account'}}">My Account </a> </p>
+                        <p><a href="{{store direct_url='sales/guest/form'}}">Order History</a> </p>
+                        <p><a href="{{store direct_url='wishlist'}}">Wish List</a> </p>
+                        <p><a href="{{store direct_url='newsletter'}}">Newsletter</a> </p>
+                 ]]>
+             </content>
+             <is_active>1</is_active>
+         </block>
+
+
+         <block>
+             <title>PRODUCT CUSTOM BLOCK</title>
+             <identifier>buyshop_product_custom_block</identifier>
+             <content>
+                 <![CDATA[
+                         <p>You can add your content <br>
+                        here, like promotions <br>
+                        or some additional info</p>
+                    <div class="promo_box">
+                        <div class="middle_icon_color pull-left"><i class="icon-tag-1"></i><span class="hidden">&nbsp;</span></div>
+                        <span> <strong>Special offer: 1+1=3</strong> Get a gift!</span> </div>
+                    <div class="promo_box">
+                        <div class="middle_icon_color pull-left"><i class="icon-credit-card"></i><span class="hidden">&nbsp;</span></div>
+                        <span><strong>Free Reward Card </strong>Worth $10, $50, $100</span></div>
+                    <div class="promo_box">
+                        <div class="middle_icon_color pull-left"><i class="icon-users"></i><span class="hidden">&nbsp;</span></div>
+                        <span><a href="#"><strong>Join to our Club</strong></a></span></div>
+                    <div class="promo_box">
+                        <div class="middle_icon_color pull-left"><i class="icon-truck"></i><span class="hidden">&nbsp;</span></div>
+                        <span> <strong><a href="#">Free shipping</a></strong></span> </div>
+                 ]]>
+             </content>
+             <is_active>1</is_active>
+         </block>
+
+         <block>
+             <title>Buyshop no products</title>
+             <identifier>buyshop_no_products</identifier>
+             <content>
+                 <![CDATA[
+                        <div class="button button-3x"><i class="icon-comment"></i></div>
+                        <p style="font-size:28px;"><strong>Sorry!</strong></p>
+                        <p style="font-size:18px;"> There are no products matching the selection.</p>
+                        <p>* This is a static CMS block displayed if category is empty. <br>
+                            You can put your own content here.</p>
+                        <a href="{{store url=''}}" class="button">BACK TO MAIN PAGE</a><br>
+                 ]]>
+             </content>
+             <is_active>1</is_active>
+         </block>
+
+         <block>
+             <title>Buyshop Shopping cart Empty</title>
+             <identifier>buyshop_cart_empty</identifier>
+             <content>
+                 <![CDATA[
+                        <div class="button button-3x"><i class="icon-comment"></i></div>
+                        <p style="font-size:28px;"><strong>Shopping Cart is Empty!</strong></p>
+                        <p style="font-size:18px;"> You have no items in your shopping cart.</p>
+                        <p>* This is a static CMS block displayed if category is empty. <br>
+                            You can put your own content here.</p>
+                        <a href="{{store url=''}}" class="button">BACK TO MAIN PAGE</a><br>
+                 ]]>
+             </content>
+             <is_active>1</is_active>
+         </block>
+
+
+         <block>
+             <title>Buyshop Product Info social like buttons</title>
+             <identifier>buyshop_social_like_buttons</identifier>
+             <content>
+                 <![CDATA[
+                        <div class="facebook_button">
+                            <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.web-flash-template.com%2F&amp;layout=button_count&amp;show_faces=false&amp;width=150&amp;action=like&amp;font=verdana&amp;colorscheme=light&amp;height=21&amp;locale=en_US" style="border:none; overflow:hidden; display:inline-block; width:90px; height:21px;" ></iframe>
+                        </div>
+                        <div class="twitter_button"> <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+                        <div class="pinit_button"> <a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fpinterest.com%2Ffreepeople%2F&amp;media=http%3A%2F%2Fpinterest.com%2Ffreepeople%2F" class="pin-it-button"><img src="{{media url="wysiwyg/but_pinit.png}}" width="43" height="20" alt=""></a></div>
+                        <div class="clear"></div>
+                 ]]>
+             </content>
+             <is_active>1</is_active>
+         </block>
+
+         <block>
+             <title>Buyshop From Blog Posts</title>
+             <identifier>buyshop_from_blog_posts</identifier>
+             <content>
+                 <![CDATA[
+                        <div class="blog_module">
+                <div class="blog_text"><h2>FROM THE BLOG</h2></div>
+                <!--end carousel-->
+                <div class="carousel es-carousel-wrapper style0" id="carousel_bestsellers">
+                    <div class="es-carousel">
+                        <div class="row">
+                            <div class="product_outer">
+
+
+                                <div class="span6 product">
+                                    <div class="row">
+
+                                        <div class="span3">
+                                            <img src="{{media url='wysiwyg/blog_img1.jpg'}}" alt="" />
+                                        </div>
+                                        <div class="span3">
+                                            <div class="title">
+                                                <a href="#">
+                                                    Nullam id justo sed diam duis sollicitudin commodo
+                                                </a>
+                                            </div>
+
+                                            <p>Nullam id justo sed diam aliquam tincidunt. Duis sollicitudin, dui ac commodo iaculis, mi risus sagittis odio, vel ultrices enim sem ut imperdiet. Integer ligula magna, dictum et, pulvinar non, ultric</p>
+                                            <p>Nullam id justo sed diam aliquam tincidunt. Duis sollicitudin, dui ac commodo iaculis, mi risus sagittis odio, vel ultrices enim sem ut imperdiet. Integer ligula magna, dictum et, pulvinar non, ultric..</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="span6 product">
+                                    <div class="row">
+
+                                        <div class="span3">
+                                            <img src="{{media url='wysiwyg/blog_img.jpg'}}" alt="" />
+                                        </div>
+                                        <div class="span3">
+                                            <div class="title">
+                                                <a href="#">
+                                                    Nullam id justo sed diam duis sollicitudin commodo
+                                                </a>
+                                            </div>
+
+                                            <p>Nullam id justo sed diam aliquam tincidunt. Duis sollicitudin, dui ac commodo iaculis, mi risus sagittis odio, vel ultrices enim sem ut imperdiet. Integer ligula magna, dictum et, pulvinar non, ultric</p>
+                                            <p>Nullam id justo sed diam aliquam tincidunt. Duis sollicitudin, dui ac commodo iaculis, mi risus sagittis odio, vel ultrices enim sem ut imperdiet. Integer ligula magna, dictum et, pulvinar non, ultric..</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="span6 product">
+                                    <div class="row">
+
+                                        <div class="span3">
+                                            <img src="{{media url='wysiwyg/blog_img1.jpg'}}" alt="" />
+                                        </div>
+                                        <div class="span3">
+                                            <div class="title">
+                                                <a href="#">
+                                                    Nullam id justo sed diam duis sollicitudin commodo
+                                                </a>
+                                            </div>
+
+                                            <p>Nullam id justo sed diam aliquam tincidunt. Duis sollicitudin, dui ac commodo iaculis, mi risus sagittis odio, vel ultrices enim sem ut imperdiet. Integer ligula magna, dictum et, pulvinar non, ultric</p>
+                                            <p>Nullam id justo sed diam aliquam tincidunt. Duis sollicitudin, dui ac commodo iaculis, mi risus sagittis odio, vel ultrices enim sem ut imperdiet. Integer ligula magna, dictum et, pulvinar non, ultric..</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--end carousel-->
+                <p class="blog_text see_all"><a href="#">See all posts</a></p>
+
+
+            </div>
+
+            <script type="text/javascript">
+                jQuery(function(){
+
+                        jQuery('.carousel.style0').elastislide({
+                            easing: 'easeInQuart',
+                            speed: 400,
+                        });
+                })
+            </script>
+                 ]]>
+             </content>
+             <is_active>1</is_active>
+         </block>
+
+
+
+         <block>
+                 <title>Buyshop Brands</title>
+             <identifier>buyshop_brands</identifier>
+             <content>
+                 <![CDATA[
+
+          <h3 class="padding">Brands</h3>
+          <div class="brands_block" id="brands0">
+            <ul class="jcarousel-skin-brands">
+              <li><a href="#"><img src="{{media url='wysiwyg/logos/logo1.png'}}" alt="3docean" title="3docean" /></a></li>
+              <li><a href="#"><img src="{{media url='wysiwyg/logos/logo2.png'}}" alt="Graphicriver" title="Graphicriver" /></a></li>
+              <li><a href="#"><img src="{{media url='wysiwyg/logos/logo3.png'}}" alt="Videohive" title="Videohive" /></a></li>
+              <li><a href="#"><img src="{{media url='wysiwyg/logos/logo4.png'}}" alt="Audiojungle" title="Audiojungle" /></a></li>
+              <li><a href="#"><img src="{{media url='wysiwyg/logos/logo5.png'}}" alt="Activeden" title="Activeden" /></a></li>
+              <li><a href="#"><img src="{{media url='wysiwyg/logos/logo6.png'}}" alt="ThemeForest" title="ThemeForest" /></a></li>
+              <li><a href="#"><img src="{{media url='wysiwyg/logos/logo1.png'}}" alt="Graphicriver" title="Graphicriver" /></a></li>
+              <li><a href="#"><img src="{{media url='wysiwyg/logos/logo2.png'}}" alt="Videohive" title="Videohive" /></a></li>
+              <li><a href="#"><img src="{{media url='wysiwyg/logos/logo3.png'}}" alt="Audiojungle" title="Audiojungle" /></a></li>
+              <li><a href="#"><img src="{{media url='wysiwyg/logos/logo4.png'}}" alt="Activeden" title="Activeden" /></a></li>
+              <li><a href="#"><img src="{{media url='wysiwyg/logos/logo5.png'}}" alt="ThemeForest" title="ThemeForest" /></a></li>
+            </ul>
+          </div>
+
+                 ]]>
+             </content>
+             <is_active>1</is_active>
+         </block>
+
+
+
+
+
+
+
+
+
+
+
+
+    </blocks>
+</dresscode>
+

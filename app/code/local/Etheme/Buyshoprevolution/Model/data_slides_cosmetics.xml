@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<buyshop>
+    <slides>
+        <slide1>
+
+        <li data-transition="fade"  data-masterspeed="500"   data-title="First Slide">
+            <!-- MAIN IMAGE -->
+            <img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/cosmetic/dummy.png"  alt="laptopmockup_sliderdy" data-lazyload="{{BASE}}media/etheme/buyshop/buyshoprevolution/cosmetic/slide1.jpg" data-bgposition="center top" data-kenburns="on" data-duration="12000" data-ease="Power0.easeInOut" data-bgfit="115" data-bgfitend="100" data-bgpositionend="center bottom">
+            <!-- LAYERS -->
+            <!-- LAYER NR. 1 -->
+            <div class="tp-caption text1 sft fadeout tp-resizeme rs-parallaxlevel-10"
+			data-x="50"
+			data-y="200"
+			data-speed="300"
+			data-start="1500"
+			data-easing="Power3.easeInOut"
+			data-splitin="chars"
+			data-splitout="none"
+			data-elementdelay="0.1"
+			data-endelementdelay="0.1"
+			data-endspeed="300"
+			style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">of a woman</div>
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption text1 sft fadeout tp-resizeme rs-parallaxlevel-10"
+			data-x="50"
+			data-y="250"
+			data-speed="300"
+			data-start="2000"
+			data-easing="Power3.easeInOut"
+			data-splitin="chars"
+			data-splitout="none"
+			data-elementdelay="0.1"
+			data-endelementdelay="0.1"
+			data-endspeed="300"
+			style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">is passion</div>
+            <!-- LAYER NR. 3 -->
+            <div class="tp-caption text3 sfb fadeout tp-resizeme rs-parallaxlevel-10"
+			data-x="50"
+			data-y="320"
+			data-speed="500"
+			data-start="2500"
+			data-easing="Power3.easeInOut"
+			data-splitin="lines"
+			data-splitout="none"
+			data-elementdelay="0.1"
+			data-endelementdelay="0.1"
+			data-endspeed="300"
+			style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"> But cosmetics are easier to buy.</div>
+            <!-- LAYER NR. 4 -->
+            <div class="tp-caption text2 sfb fadeout tp-resizeme rs-parallaxlevel-10"
+			data-x="50"
+			data-y="170"
+			data-speed="1000"
+			data-start="1000"
+			data-easing="Power3.easeInOut"
+			data-splitin="words"
+			data-splitout="none"
+			data-elementdelay="0.1"
+			data-endelementdelay="0.1"
+			data-endspeed="300"
+			style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">The most beautiful makeup</div>
+          </li>
+
+        </slide1>
+        <slide2>
+
+            <li data-transition="fade"  data-masterspeed="500"   data-title="First Slide">
+            <!-- MAIN IMAGE -->
+            <img src="{{BASE}}media/etheme/buyshop/buyshoprevolution/cosmetic/dummy.png"  alt="laptopmockup_sliderdy" data-lazyload="{{BASE}}media/etheme/buyshop/buyshoprevolution/cosmetic/slide2.jpg" data-bgposition="center top" data-kenburns="on" data-duration="12000" data-ease="Power0.easeInOut" data-bgfit="125" data-bgfitend="100" data-bgpositionend="center bottom">
+            <!-- LAYERS -->
+            <!-- LAYER NR. 1 -->
+            <div class="tp-caption text4 sft fadeout tp-resizeme rs-parallaxlevel-10"
+			data-x="720"
+			data-y="90"
+			data-speed="300"
+			data-start="1500"
+			data-easing="Power3.easeInOut"
+			data-splitin="chars"
+			data-splitout="none"
+			data-elementdelay="0.1"
+			data-endelementdelay="0.1"
+			data-endspeed="300"
+			style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">It is better</div>
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption text5 sfr fadeout tp-resizeme rs-parallaxlevel-10"
+			data-x="720"
+			data-y="115"
+			data-speed="300"
+			data-start="2000"
+			data-easing="Power3.easeInOut"
+			data-splitin="chars"
+			data-splitout="none"
+			data-elementdelay="0.1"
+			data-endelementdelay="0.1"
+			data-endspeed="300"
+			style="z-index: 3; max-width: auto; max-height: auto;">to be looked</div>
+           <!-- LAYER NR. 3 -->
+            <div class="tp-caption text5 sfr fadeout tp-resizeme rs-parallaxlevel-10"
+			data-x="720"
+			data-y="165"
+			data-speed="300"
+			data-start="2500"
+			data-easing="Power3.easeInOut"
+			data-splitin="chars"
+			data-splitout="none"
+			data-elementdelay="0.1"
+			data-endelementdelay="0.1"
+			data-endspeed="300"
+			style="z-index: 3; max-width: auto; max-height: auto;">over than</div>
+           <!-- LAYER NR. 4 -->
+            <div class="tp-caption text6 sfb fadeout tp-resizeme rs-parallaxlevel-10"
+			data-x="720"
+			data-y="230"
+			data-speed="500"
+			data-start="3000"
+			data-easing="Power3.easeInOut"
+			data-splitin="lines"
+			data-splitout="none"
+			data-elementdelay="0.1"
+			data-endelementdelay="0.1"
+			data-endspeed="300"
+			style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"> to be overlooked</div>
+          </li>
+
+        </slide2>
+    </slides>
+</buyshop>

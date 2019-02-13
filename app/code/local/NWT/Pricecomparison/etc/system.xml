@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * NWT_Pricecomparison extension
+ *
+ * @category    NWT
+ * @package     NWT_Pricecomparison
+ * @copyright   Copyright (c) 2014 Nordic Web Team ( http://nordicwebteam.se/ )
+ * @license     NWT Commercial License (NWTCL 1.0)
+ * @author      Emil [carco] Sirbu (emil.sirbu@gmail.com)
+ *
+ */
+ -->
+<config>
+  <sections>
+    <pricecomparison translate="label" module="pricecomparison">
+      <label>Price Comparison Settings</label>
+      <tab>nwt</tab>
+      <frontend_type>text</frontend_type>
+      <sort_order>0</sort_order>
+      <show_in_default>1</show_in_default>
+      <show_in_website>1</show_in_website>
+      <show_in_store>1</show_in_store>
+      <groups>
+        <default translate="label" module="pricecomparison">
+          <label>General</label>
+          <sort_order>0</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+          <expanded>1</expanded>
+          <fields>
+            <pc_delivery_time translate="label">
+              <label>Delivery Time</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>0</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <comment>Choose a default option for your products delivery time.</comment>
+            </pc_delivery_time>
+            <pc_delivery_cost translate="label">
+              <label>Delivery Cost</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>1</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <comment>Choose a default option for your products delivery cost.</comment>
+            </pc_delivery_cost>
+            <pc_reitaler_message translate="label">
+              <label>Retailer Message</label>
+              <frontend_type>textarea</frontend_type>
+              <sort_order>4</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>1</show_in_website>
+              <show_in_store>1</show_in_store>
+              <comment>Write a default message for all products of the retailer.</comment>
+            </pc_reitaler_message>
+          </fields>
+        </default>
+      </groups>
+      </pricecomparison>
+  </sections>
+</config>

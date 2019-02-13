@@ -1,0 +1,159 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+?>
+
+<?php
+    $header=Mage::getStoreConfig('buyshoplayout/general/header');
+?>
+
+<!--HEADER-->
+<?php if($header=='simple'): ?>
+<div class="header_wrapper ">
+    <?php $temp=Mage::getStoreConfig('buyshopcolors/header_navigation/central_image'); ?>
+    <div id="header" data-retina="true" <?php if(!empty($temp)):?> style=" background: url('<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'buyshop/'.Mage::getStoreConfig('buyshopcolors/header_navigation/central_image')?>')  no-repeat center 2px"<?php endif; unset ($temp);?> >
+
+
+        <div class="container">
+            <div class="wrapper_w">
+                <div id="logo"> <a href="<?php echo $this->getUrl('') ?>"><img   data-retina="true" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'buyshop/'.Mage::getStoreConfig('buyshopconfig/options/logo_header')?>"  alt="<?php echo $this->getLogoAlt() ?>"></a> </div>
+                <div class="pull-right padding-1">
+                    <?php echo $this->getChildHtml('topcart') ?>
+                </div>
+                <div class="pull-right padding-1">
+                    <?php echo $this->getChildHtml('topSearch') ?>
+                </div>
+            </div>
+            <?php if(Mage::getStoreConfig('buyshoplayout/navigation/show_topmenu')):?>
+                <?php echo $this->getChildHtml('topMenu') ?>
+            <?php endif;?>
+        </div>
+    </div>
+</div>
+<?php endif; ?>
+
+<?php if($header=='functional'): ?>
+
+    <div id="header" class="header_v_2">
+        <div class="container">
+            <div class="row">
+                <div class="span12 aligncenter">
+                    <div id="logo"> <a href="<?php echo $this->getUrl('') ?>"><img  data-retina="true" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'buyshop/'.Mage::getStoreConfig('buyshopconfig/options/logo_header')?>"  alt="<?php echo $this->getLogoAlt() ?>"></a> </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="span12">
+
+                    <nav>
+                        <?php echo $this->getChildHtml('mobileMenu') ?>
+                        <?php echo $this->getChildHtml('advMenuamazing') ?>
+                    </nav>
+
+                    <div class="pull-left">
+                        <?php echo $this->getChildHtml('topSearch') ?>
+                    </div>
+                    <div class="pull-left top-links" >
+                        <div class="fadelink"> <a href="#"><?php echo $this->__('Account') ?></a>
+                            <div class="ul_wrapper">
+                                <?php echo $this->getChildHtml('topLinks')?>
+                            </div>
+                        </div>
+                        <?php echo $this->getChildHtml('store_language')?>
+                        <?php echo $this->getChildHtml('currency')?>
+                    </div>
+                    <?php echo $this->getChildHtml('topcart') ?>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="line_header_bot"></div>
+    </div>
+
+<script type="text/javascript" >
+    jQuery(function(){
+        jQuery('section#content .container.top').removeClass('top');
+    })
+</script>
+<?php endif; ?>
+<!--HEADER EOF-->
+
+
+<?php if(Mage::getStoreConfig('buyshopconfig/options/spy_panel') && Mage::getStoreConfig('buyshoplayout/navigation/show_topmenu') && Mage::getStoreConfig('buyshoplayout/general/header')!='functional'): ?>
+<div id="spy" class="visible-desktop">
+<div class="container">
+<div class="row">
+<div class="span12">
+    <nav>
+
+    </nav>
+</div>
+<div class="spy-left">
+    <div class="logo"><a href="<?php echo $this->getUrl('') ?>"><img   data-retina="true" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA).'buyshop/'.Mage::getStoreConfig('buyshopconfig/options/logo_header')?>"  alt="<?php echo $this->getLogoAlt() ?>"></a></div>
+</div>
+<div class="spy-right">
+   <div class="spyshop"></div>
+    <?php echo $this->getChildHtml('topLineSearch') ?>
+</div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+    jQuery(function() {
+        jQuery(window).scroll(function() {
+            if (jQuery(".container").width()>767){
+                if (jQuery(this).scrollTop() > jQuery ('#header .wrapper_w').height() +60+ jQuery ('#topline').height()) {
+                    jQuery('#spy').addClass('fix');
+					if(jQuery('#megamenu').length)
+					{
+						jQuery('#spy nav').html(jQuery('#megamenu:first').clone());
+					}else if(jQuery('#nav.simple').length)
+					{
+						jQuery('#spy nav').html(jQuery('#nav.simple:first').clone());
+					}
+
+
+
+                    jQuery('#spy .spyshop').html(jQuery('.pull-right.padding-1 .shoppingcart').clone());
+                    jQuery("#spy .shoppingcart .fadelink").mouseenter(function() {
+                        jQuery(this).parent().find(".shopping_cart_mini").stop(true, true).fadeIn(200, "linear");
+                    });
+                    jQuery("#spy .shoppingcart .fadelink").mouseleave(function() {
+                        jQuery(this).parent().find(".shopping_cart_mini").stop(true, true).fadeOut(200, "linear");
+                    });
+                } else {
+                    jQuery('#spy').removeClass('fix');
+                }}
+        });
+
+    });
+</script>
+<?php endif; ?>

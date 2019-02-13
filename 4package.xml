@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Packslip</name>
+    <version>0.1.4</version>
+    <stability>stable</stability>
+    <license>GPL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Print a packing slip before shipping.</summary>
+    <description>Easy way to Print a packing slip of orders prior to shipping or invoicing.</description>
+    <notes>Latest release</notes>
+    <authors><author><name>D3vW3b</name><user>d3v</user><email>d3vw3b@gmail.com</email></author></authors>
+    <date>2017-01-16</date>
+    <time>10:13:58</time>
+    <contents><target name="magecommunity"><dir name="Devweb"><dir name="Packslip"><dir name="Model"><file name="Observer.php" hash="a226db594c33ff0d4923592838e5d833"/><dir name="Order"><file name="Shipment.php" hash="5809aee04fde9cbc1ec2375490656b19"/></dir></dir><dir name="controllers"><file name="PackslipController.php" hash="7d95cf67146c8ade8920f36a59aac7c6"/></dir><dir name="etc"><file name="config.xml" hash="734dc47422d9df6b4d154d5683f99b7e"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Devweb_Packslip.xml" hash="a4c53536c60b18bef0d10670e330c296"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>4.3.0</min><max>8.0.0</max></php></required></dependencies>
+</package>

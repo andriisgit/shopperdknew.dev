@@ -1,0 +1,44 @@
+<?php
+  /**
+   * Engage Commerce
+   *
+   * NOTICE OF LICENSE
+   *
+   * This source file is subject to the Open Software License (OSL 3.0)
+   * that is bundled with this package in the file LICENSE.txt.
+   * It is also available through the world-wide-web at this URL:
+   * http://opensource.org/licenses/osl-3.0.php
+   * If you did not receive a copy of the license and are unable to
+   * obtain it through the world-wide-web, please send an email
+   * to license@magentocommerce.com so we can send you a copy immediately.
+   *
+   * @category    EngageCommerce
+   * @package     EngageCommerce_Facebook
+   * @copyright   Copyright (c) 2016 Engage Commerce (http://engagecommerce.io)
+   * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+   */
+  $pixelHelper = Mage::helper("engagecommerce_facebook");
+  $pixelId = $pixelHelper->getPixelId();
+  $pixelArr = array_filter(array_map('trim', explode(',', $pixelId)), 'strlen');
+?>
+
+<!-- Engage Commerce: Facebook Pixel Base Code -->
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+  <?php foreach($pixelArr as $id): ?>
+    fbq('init', '<?php echo $id ?>');
+  <?php endforeach; ?>
+
+  fbq('track', "PageView");
+</script>
+
+<?php foreach($pixelArr as $id): ?>
+  <noscript>
+    <img height="1" width="1" style="display:none" src="//www.facebook.com/tr?id=<?php echo $id ?>&ev=PageView&noscript=1" />
+  </noscript>
+<?php endforeach; ?>

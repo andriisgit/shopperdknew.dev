@@ -1,0 +1,39 @@
+<?php if(Mage::getStoreConfig('buyshoplayout/general/footer_info')):?>
+<div class="line_above_footer"></div>
+<div id="bottom_block">
+    <div class="container">
+        <div class="row animate-delay-outer">
+            <div class="span6">
+                <div class="row">
+                    <div class="span3 animate-delay fadeUp">
+                        <h4><i class="icon-vcard"></i><?php echo Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('buyshop_about_in_footer')->getTitle()?></h4>
+                        <div class="cleancode">
+                            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('buyshop_about_in_footer')->toHtml() ?>
+                        </div>
+                        <br />
+                        <?php echo $this->getChildHtml('store_switcher');?>
+                    </div>
+                    <div class="span3 animate-delay fadeUp">
+                        <?php echo $this->getChildHtml('fb_fan_box') ?>
+                    </div>
+                </div>
+            </div>
+            <div class="span6">
+                <div class="row">
+                    <div class="span3 animate-delay fadeUp">
+                        <?php echo $this->getChildHtml('twitter') ?>
+                    </div>
+                    <div class="span3 animate-delay fadeUp">
+                        <h4><i class="icon-mail"></i><?php echo Mage::getModel('cms/block')->setStoreId(Mage::app()->getStore()->getId())->load('buyshop_contacts_in_footer')->getTitle()?></h4>
+                        <div class="cleancode">
+                            <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('buyshop_contacts_in_footer')->toHtml() ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="push"></div>
+</div>
+
+<?php endif; ?>

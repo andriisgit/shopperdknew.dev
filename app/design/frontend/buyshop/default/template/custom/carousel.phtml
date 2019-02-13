@@ -1,0 +1,7 @@
+<?php
+    if($type=Mage::getStoreConfig('buyshoplayout/home_page/carousel'))
+    {
+         echo '<div class="carousels">'.$this->getChildHtml('carousel_'.$type).'</div>';
+    }
+?>
+

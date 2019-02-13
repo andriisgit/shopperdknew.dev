@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Etheme_Buyshoparallax>
+            <version>0.1.1</version>
+        </Etheme_Buyshoparallax>
+    </modules>
+    <frontend>
+        <layout>
+            <updates>
+                <buyshoparallax>
+                    <file>buyshoparallax.xml</file>
+                </buyshoparallax>
+            </updates>
+        </layout>
+    </frontend>
+    <admin>
+        <routers>
+			<buyshoparallax>
+				<use>admin</use>
+				<args>
+					<module>Etheme_Buyshoparallax</module>
+					<frontName>buyshoparallax</frontName>
+				</args>
+			</buyshoparallax>
+        </routers>
+    </admin>
+    <adminhtml>
+		<menu>
+            <etheme>
+
+                <children>
+                    <slider>
+                        <title>Slider Configuration</title>
+                        <sort_order>3</sort_order>
+                        <children>
+                            <parallax>
+                                <title>Parallax slider</title>
+                                <sort_order>2</sort_order>
+                                <children>
+                                    <upload1>
+                                        <title>Manage slides</title>
+                                        <sort_order>1</sort_order>
+                                        <action>buyshoparallax/adminhtml_buyshoparallax</action>
+                                    </upload1>
+
+                                </children>
+                            </parallax>
+                        </children>
+                    </slider>
+                </children>
+            </etheme>
+		</menu>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+                         <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <buyshoparallax>
+                                            <title>Buyshop - Parallax slider</title>
+                                        </buyshoparallax>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                        <etheme>
+                            <title>eTheme - BuyShop</title>
+                            <children>
+                                <slider>
+                                    <title>Slider Configuration</title>
+                                    <children>
+                                        <parallax>
+                                            <title>Parallax slider</title>
+                                            <children>
+
+                                                <upload1>
+                                                    <title>Upload slides</title>
+                                                </upload1>
+                                            </children>
+                                        </parallax>
+                                    </children>
+                                </slider>
+                            </children>
+                        </etheme>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+    </adminhtml>
+    <global>
+        <models>
+            <buyshoparallax>
+                <class>Etheme_Buyshoparallax_Model</class>
+                <resourceModel>buyshoparallax_mysql4</resourceModel>
+            </buyshoparallax>
+            <buyshoparallax_mysql4>
+                <class>Etheme_Buyshoparallax_Model_Mysql4</class>
+                <entities>
+                    <buyshoparallax>
+                        <table>buyshoparallax</table>
+                    </buyshoparallax>
+	                <buyshoparallax_store>
+                        <table>buyshoparallax_store</table>
+                    </buyshoparallax_store>
+                </entities>
+            </buyshoparallax_mysql4>
+       </models>
+       <resources>
+	      <buyshoparallax_setup>
+	        <setup>
+	          <module>Etheme_Buyshoparallax</module>
+	        </setup>
+	        <connection>
+	          <use>core_setup</use>
+	        </connection>
+	      </buyshoparallax_setup>
+	      <buyshoparallax_write>
+	        <connection>
+	          <use>core_write</use>
+	        </connection>
+	      </buyshoparallax_write>
+	      <buyshoparallax_read>
+	        <connection>
+	          <use>core_read</use>
+	        </connection>
+	      </buyshoparallax_read>
+	    </resources>
+        <blocks>
+            <buyshoparallax>
+                <class>etheme_buyshoparallax_Block</class>
+            </buyshoparallax>
+        </blocks>
+        <helpers>
+            <buyshoparallax>
+                <class>etheme_buyshoparallax_Helper</class>
+            </buyshoparallax>
+        </helpers>
+    </global>
+</config>

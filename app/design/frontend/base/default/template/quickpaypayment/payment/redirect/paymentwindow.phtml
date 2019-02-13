@@ -1,0 +1,41 @@
+<?php
+/* Upgraded to version 10 of protocol */
+$payment = Mage::getModel('quickpaypayment/payment');
+
+$order = Mage::getModel('sales/order');
+$order->loadByIncrementId($payment->getCheckout()->getLastRealOrderId());
+
+$quickpay_state = Mage::getSingleton('core/session')->getQuickpayState();
+
+// Get array of selections
+if (isset($quickpay_state[0]) && $quickpay_state[0] == 'checkbox1') {
+    $brandingId = $payment->getConfigData('brandingidchecked');
+} else {
+    $brandingId = $payment->getConfigData('brandingid');
+}
+
+$parameters = array(
+    "agreement_id"                 => $payment->getConfigData("agreementid"),
+    "amount"                       => $order->getTotalDue() * 100,
+    "continueurl"                  => $this->getSuccessUrl(),
+    "cancelurl"                    => $this->getCancelUrl(),
+    "callbackurl"                  => $this->getCallbackUrl(),
+    "language"                     => $payment->calcLanguage(Mage::app()->getLocale()->getLocaleCode()),
+    "autocapture"                  => $payment->getConfigData('instantcapture'),
+    "autofee"                      => $payment->getConfigData('transactionfee'),
+    "payment_methods"              => $order->getPayment()->getMethodInstance()->getPaymentMethods(),
+    "branding_id"                  => $brandingId,
+    "google_analytics_tracking_id" => $payment->getConfigData('googleanalyticstracking'),
+    "google_analytics_client_id"   => $payment->getConfigData('googleanalyticsclientid'),
+    "customer_email"               => $order->getCustomerEmail() ?: '',
+);
+
+$result = Mage::helper('quickpaypayment')->qpCreatePayment($order);
+$result = Mage::helper('quickpaypayment')->qpCreatePaymentLink($result->id, $parameters);
+
+$paymentUrl = $result->url;
+?>
+<script type="text/javascript">
+    window.location.href = "<?php echo $paymentUrl; ?>";
+</script>
+<?php exit(); ?>

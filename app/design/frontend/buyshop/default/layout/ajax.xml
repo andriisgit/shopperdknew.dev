@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <!--produt detail page-->
+    <default>
+        <reference name="head">
+            <action method="addJs"><script>etheme/buyshop/jquery-1.8.0.min.js</script></action>
+            <action method="addJs" ifconfig="buyshopconfig/options/ajax_add_to_cart"><script>VS/jquery.mousewheel-3.0.4.pack.js</script></action>
+            <action method="addJs"><script>VS/ajaxwishlist.js</script></action>
+            <action method="addJs"><script>VS/addtocart.js</script></action>
+        </reference>
+    </default>
+    <catalog_product_view>
+        <reference name="head">
+            <action method="addJs" ifconfig="ajax/wishlistcompare/enabled">
+                <script>VS/ajaxwishlist.js</script>
+            </action>
+        </reference>
+
+    </catalog_product_view>
+
+    <!-- Category listing page-->
+    <catalog_category_default>
+        <reference name="head">
+            <block type="core/template" name="after_body_start" template="ajax/ajaxtoolbar.phtml" />
+            <action method="addJs" ifconfig="buyshopconfig/options/ajax_toolbar">
+                <script>VS/ajaxtoolbar.js</script>
+            </action>
+        </reference>
+    </catalog_category_default>
+
+    <!-- Category listing page layered-->
+    <catalog_category_layered>
+        <reference name="head">
+            <block type="core/template" name="after_body_start" template="ajax/ajaxtoolbar.phtml" />
+            <action method="addJs"  ifconfig="buyshopconfig/options/ajax_toolbar">
+                <script>VS/ajaxtoolbar.js</script>
+            </action>
+        </reference>
+    </catalog_category_layered>
+
+    <!-- optins page in lightbox-->
+    <ajax_index_options>
+        <update handle="catalog_product_view" />
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/empty.phtml</template>
+            </action>
+        </reference>
+        <remove name="header" />
+        <remove name="footer" />
+        <reference name="content">
+            <reference name="product.info">
+                <action method="setTemplate">
+                    <template>ajax/catalog/product/options.phtml</template>
+                </action>
+            </reference>
+            <remove name="product.info.additional" />
+            <remove name="product.description" />
+            <remove name="product.info.extrahint" />
+            <remove name="product.info.upsell" />
+            <remove name="catalog.product.related" />
+            <remove name="addthis_sharetool" />
+            <remove name="topline" />
+            <remove name="product.attributes" />
+        </reference>
+    </ajax_index_options>
+
+
+</layout> 

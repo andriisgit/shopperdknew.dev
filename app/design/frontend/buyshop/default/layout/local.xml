@@ -1,0 +1,348 @@
+<?xml version="1.0"?>
+<layout>
+    <default>
+
+        <reference name="head">
+            <!--CSS-->
+            <action method="addItem"><type>skin_css</type><name>css/reset.css</name><params/></action>
+            <action method="addItem"><type>skin_css</type><name>css/bootstrap.css</name><params/></action>
+            <action method="addItem"><type>skin_css</type><name>css/bootstrap-responsive.css</name><params/></action>
+            <action method="addItem"><type>skin_css</type><name>css/andepict.css</name><params/></action>
+            <action method="addItem"><type>skin_css</type><name>css/product-slider.css</name><params/></action>
+            <action method="addItem"><type>skin_css</type><name>css/fb_style.css</name><params/></action>
+            <action method="addItem"><type>skin_css</type><name>css/flexslider.css</name><params/></action>
+            <action method="addItem"><type>skin_css</type><name>css/jquery.selectbox.css</name><params/></action>
+            <action method="addItem"><type>skin_css</type><name>css/style.css</name><params/></action>
+            <action method="addItem"><type>skin_css</type><name>css/my_adds.css</name><params/></action>
+            <action method="addItem"><type>skin_css</type><name>css/fancybox/jquery.fancybox-1.3.4.css</name><params/></action>
+            <action method="addItem"><type>skin_css</type><name>css/styleie9.css</name><params/><if>lt IE 9</if></action>
+            <action method="addItem"><type>skin_css</type><name>css/styleie10.css</name><params/><if>gt IE 9</if></action>
+            <action method="addItem"><type>skin_css</type><name>css/styleie8.css</name><params/><if>lte IE 8</if></action>
+            <action method="addItem"><type>skin_css</type><name>css/revolution.css</name><params/></action>
+            <action method="addItem"><type>skin_css</type><name>css/jquery.countdown.css</name><params/></action>
+            <action method="addItem"><type>skin_css</type><name>css/isotope.css</name><params/></action>
+            <action method="addItem"><type>skin_css</type><name>css/animate.css</name><params/></action>
+            <action method="addItem"><type>skin_css</type><name>css/slick.css</name><params/></action>
+            <action method="addItem"><type>skin_css</type><name>css/skin_advanced.css</name><params/></action>
+
+            <action method="addItem" ifconfig="buyshopcolors/general/custom_css"><type>skin_css</type><name>css/custom_changes.css</name><params/></action>
+
+            <!--JS-->
+            <!--<action method="addJs"><script>etheme/buyshop/jquery-1.7.2.min.js</script></action>-->
+            <action method="addJs"><script>etheme/buyshop/jquery-1.8.0.min.js</script></action>
+            <!--<action method="addJs"><script>etheme/buyshop/jquery-latest.min.js</script></action>
+            <action method="addJs"><script>etheme/buyshop/jquery-migrate-1.2.1.js</script></action>-->
+            <action method="addJs"><script>lightboxes/no-conflict.js</script></action>
+            <action method="addJs"><script>etheme/buyshop/bootstrap.min.js</script></action>
+            <action method="addItem"><type>skin_js</type><name>js/lib/modernizr.custom.min.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/app.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/lib/imagesloaded.js</name></action>
+            <action method="addJs"><script>etheme/buyshop/jquery.easing.js</script></action>
+            <action method="addJs"><script>etheme/buyshop/jquery.selectbox-0.2.min.js</script></action>
+            <action method="addJs"><script>etheme/buyshop/jquery.mousewheel.pack.js</script></action>
+            <action method="addJs"><script>etheme/buyshop/jquery.elastislide.js</script></action>
+            <action method="addJs"><script>VS/jquery.fancybox-1.3.4.pack.js</script></action>
+            <action method="addJs"><script>etheme/buyshop/jquery.flexslider.min.js</script></action>
+            <action method="addJs"><script>etheme/buyshop/jquery.tagsphere.min.js</script></action>
+            <action method="addJs"><script>etheme/buyshop/retina-replace.js</script></action>
+            <action method="addJs"><script>etheme/buyshop/jquery.plugin.min.js</script></action>
+            <action method="addJs"><script>etheme/buyshop/jquery.countdown.min.js</script></action>
+            <action method="addJs"><script>etheme/buyshop/jquery.isotope.min.js</script></action>
+            <action method="addJs"><script>etheme/buyshop/jquery.jcarousel.min.js</script></action>
+            <action method="addJs"><script>etheme/buyshop/jquery.inview.js</script></action>
+            <action method="addJs"><script>etheme/buyshop/slick.min.js</script></action>
+
+            <action method="addJs"><script>etheme/buyshop/custom.js</script></action>
+            <action method="addItem"><type>js</type><name>etheme/buyshop/html5.js</name><params/><if>lte IE 8</if></action>
+            <action method="addItem"><type>js</type><name>etheme/buyshop/html5.js</name><params/><if>lt IE 9</if></action>
+            <action method="addItem"><type>js</type><name>etheme/buyshop/css3-mediaqueries.js</name><params/><if>lt IE 9</if></action>
+        </reference>
+
+
+        <reference name="root">
+            <reference name="root">
+                <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+            </reference>
+            <!--<remove name="left"></remove>-->
+
+
+            <block type="core/template" name="topline" as="topline" template="custom/topline.phtml">
+                <action method="insert">
+                    <block_name_to_insert>top.links</block_name_to_insert>
+                    <sort_relative_to_other_childname/>
+                    <sort_before_or_after/>
+                    <alias>topLinks</alias>
+                </action>
+                <block type="page/switch" name="store_language" as="store_language"
+                       template="page/switch/languages.phtml"/>
+                <block type="directory/currency" name="currency_top" template="page/switch/currency.phtml"/>
+                <block type="customer/form_login" name="mini_login" template="customer/form/mini.login.phtml"/>
+                <block type="core/template" name="socialogin" as="socialogin" template="customer/socialogin.phtml"></block>
+                <block type="buyshopconfig/twitter" name="twitter_last_feed" as="twitter_last_feed" template="twitter/twitter_last_feed.phtml"/>v
+            </block>
+
+
+            <!--TOOLBAR-->
+            <block type="core/template"  name="toolbar" as="toolbar" template="custom/toolbar.phtml">
+                <block type="checkout/cart_sidebar" name="topcart" as="topcart" template="checkout/cart/topcart.phtml"/>
+                <block type="core/template" name="right.search" as="rightSearch" template="custom/search_mini.phtml"/>
+            </block>
+
+
+        </reference>
+        <reference name="before_body_end">
+
+            <block type="core/template" name="loader_ajax" as="loader_ajax" template="custom/preloader.phtml" />
+        </reference>
+        <reference name="left">
+            <remove name="currency"></remove>
+            <remove name="left.permanent.callout"></remove>
+            <remove name="left.newsletter"></remove>
+
+
+
+
+        </reference>
+
+        <reference name="right">
+            <remove name="right.permanent.callout"/>
+        </reference>
+
+        <!--HEADER-->
+        <reference name="header">
+            <action method="unsetChild">
+                <name>topLinks</name>
+            </action>
+            <block type="core/template" name="topline.search" as="topLineSearch" template="custom/topLineSearch.phtml"/>
+            <block type="checkout/cart_sidebar" name="topcart" as="topcart" template="checkout/cart/topcart.phtml"/>
+
+            <block type="buyshopconfig/navigation" name="buyshop.collapsedmenu" as="mobileMenu"
+                   template="page/html/mobilemenu.phtml"/>
+
+            <block type="buyshopconfig/navigation" name="buyshop.advmenu.amazing" as="advMenuamazing"
+                   template="page/html/topmenu_amazing.phtml"/>
+
+
+
+            <reference name="top.menu">
+                <action method="unsetChild"><name>catalog.topnav</name></action>
+                <block type="buyshopconfig/navigation" name="catalog.topnav.menu" template="page/html/topmenu.phtml"/>
+            </reference>
+
+
+            <block type="directory/currency" name="currency" template="page/switch/currency.phtml"/>
+            <action method="insert">
+                <block_name_to_insert>top.links</block_name_to_insert>
+                <sort_relative_to_other_childname/>
+                <sort_before_or_after/>
+                <alias>topLinks</alias>
+            </action>
+        </reference>
+        <!--HEADER EOF-->
+
+        <reference name="left">
+            <action method="unsetChild">
+                <name>topLinks</name>
+            </action>
+            <block type="buyshopconfig/navigation" name="leftmenu" as="leftmenu" template="page/html/leftmenu.phtml" before="-"/>
+        </reference>
+
+        <reference name="top.links">
+            <block type="buyshopconfig/comparelink" name="compare_link"/>
+            <action method="addLinkBlock">
+                <blockName>compare_link</blockName>
+            </action>
+        </reference>
+
+        <!--FOOTER-->
+        <reference name="footer">
+            <block type="newsletter/subscribe" name="footer.newsletter" as="footer_newsletter" template="newsletter/subscribe.phtml"/>
+        </reference>
+        <!--FOOTER EOF-->
+        <remove name="catalog.leftnav" />
+    </default>
+
+
+
+    <cms_index_index>
+       <!-- <reference name="head">
+            <action method="addJs"><script>etheme/buyshop/jquery-1.7.2.min.js</script></action>
+            <action method="addJs"><script>etheme/buyshop/jquery-1.8.0.min.js</script></action>
+        </reference>-->
+        <reference name="root">
+            <!--SLIDERS-->
+            <block type="core/template" name="slider" as="slider" template="custom/slider.phtml">
+                <block type="buyshopflex/buyshopflex" name="slider.flex" as="slider_flex" template="custom/slider_flex.phtml"></block>
+                <block type="buyshoparallax/buyshoparallax" name="slider.parallax" as="slider_parallax" template="custom/slider_parallax.phtml"></block>
+                <block type="buyshoprevolution/buyshoprevolution" name="slider.parallax" as="slider_revolution" template="custom/slider_revolution.phtml"></block>
+                <block type="core/template" name="slider.image" as="slider_image"  template="custom/slider_image.phtml"></block>
+            </block>
+
+            <block type="core/template"  name="footer_info" as="footer_info" template="custom/footer_info.phtml">
+                <block type="buyshopconfig/twitter" name="twitter" as="twitter" template="twitter/twitter.phtml"/>
+                <block type="core/template" name="fb_fan_box" as="fb_fan_box" template="custom/fb_fan_box.phtml"/>
+                <block type="page/switch" name="store_switcher" as="store_switcher" template="page/switch/stores.phtml"/>
+            </block>
+
+        </reference>
+        <reference name="before_body_end">
+            <block  type="core/template"  name="top_class_destroy" as="top_class_destroy" template="custom/top_class_destroy.phtml" />
+        </reference>
+
+
+    </cms_index_index>
+
+    <!--CATEGORIES-->
+    <catalog_category_default translate="label">
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>css/nouislider.css</name><params/></action>
+            <action method="addJs"><script>etheme/buyshop/jquery.nouislider.min.js</script></action>
+            <action method="addJs"><script>etheme/buyshop/AC_RunActiveContent.js</script></action>
+        </reference>
+        <reference name="left">
+
+
+            <block type="catalog/layer_view" name="catalog.shopby" as="shop_by" template="catalog/layer/view.phtml" after="leftmenu"/>
+            <block type="reports/product_viewed" before="right.permanent.callout" name="right.reports.product.viewed" template="reports/product_viewed.phtml" />
+            <!--<block type="tag/popular" name="tags_popular" template="tag/popular.phtml"/>-->
+            <block type="catalog/product_compare_sidebar"  name="catalog.compare.sidebar" as="compare" template="catalog/product/compare/sidebar.phtml" after="shop_by"/>
+            <block type="core/template" name="price_slider" template="ajax/price_slider.phtml" after="compare"/>
+            <block type="poll/activePoll" name="left.poll" as="poll">
+                <action method="setPollTemplate"><template>poll/active.phtml</template><type>poll</type></action>
+                <action method="setPollTemplate"><template>poll/result.phtml</template><type>results</type></action>
+            </block>
+            <block type="core/template" name="slider" template="custom/sidebar/slider.phtml"/>
+
+
+
+        </reference>
+    </catalog_category_default>
+
+    <catalog_category_layered translate="label">
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>css/nouislider.css</name><params/></action>
+            <action method="addJs"><script>etheme/buyshop/jquery.nouislider.min.js</script></action>
+            <action method="addJs"><script>etheme/buyshop/AC_RunActiveContent.js</script></action>
+        </reference>
+        <reference name="left">
+
+
+            <block type="catalog/layer_view" name="catalog.shopby" as="shop_by" template="catalog/layer/view.phtml" after="leftmenu"/>
+            <block type="reports/product_viewed" before="right.permanent.callout" name="right.reports.product.viewed" template="reports/product_viewed.phtml" />
+            <!--<block type="tag/popular" name="tags_popular" template="tag/popular.phtml"/>-->
+            <block type="catalog/product_compare_sidebar"  name="catalog.compare.sidebar" as="compare" template="catalog/product/compare/sidebar.phtml" after="shop_by"/>
+            <block type="core/template" name="price_slider" template="ajax/price_slider.phtml" after="compare"/>
+            <block type="poll/activePoll" name="left.poll" as="poll">
+                <action method="setPollTemplate"><template>poll/active.phtml</template><type>poll</type></action>
+                <action method="setPollTemplate"><template>poll/result.phtml</template><type>results</type></action>
+            </block>
+            <block type="core/template" name="slider" template="custom/sidebar/slider.phtml"/>
+        </reference>
+    </catalog_category_layered>
+
+    <catalog_product_view>
+
+
+
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+        <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>css/cloud-zoom.css</name><params/></action>
+            <action method="addJs"><script>etheme/buyshop/cloud-zoom.1.0.2.js</script></action>
+        </reference>
+
+
+        <reference name="product.info">
+            <block type="core/template" name="custom_related_block"  template="custom/custom_related_block.phtml">
+                <block type="catalog/product_list_related" name="catalog.product.related" as="related_products" template="catalog/product/list/related.phtml"/>
+            </block>
+            <block type="review/product_view_list" name="reviews" as="reviews" template="review/product/view/list.phtml">
+                <block type="review/form" name="product.review.form" as="review_form">
+                    <block type="page/html_wrapper" name="product.review.form.fields.before" as="form_fields_before" translate="label">
+                        <label>Review Form Fields Before</label>
+                        <action method="setMayBeInvisible"><value>1</value></action>
+                    </block>
+                </block>
+            </block>
+            <block type="catalog/product_list_upsell" name="product.info.upsell" as="upsell_products" template="catalog/product/list/upsell.phtml">
+                <action method="setColumnCount"><columns>4</columns></action>
+                <action method="setItemLimit"><type>upsell</type><limit>16</limit></action>
+            </block>
+
+            <block type="inchoo_prevnext/links" name="inchoo.prevnext.links"  as="prev_next" template="inchoo/prevnext/links.phtml" />
+            <block type="catalog/product_view_media" name="product.info.media.mobile" as="media_mobile" template="catalog/product/view/media_mobile.phtml"/>
+
+
+        </reference>
+
+        <reference name="product.info.media">
+            <block type="core/text_list" name="product.info.media.after" as="after" />
+        </reference>
+
+    </catalog_product_view>
+
+    <contacts_index_index translate="label">
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        <reference name="left">
+            <block type="core/template" name="slider" template="custom/sidebar/slider.phtml"/>
+        </reference>
+    </contacts_index_index>
+
+    <checkout_onepage_success>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+    </checkout_onepage_success>
+    <customer_account>
+        <reference name="left">
+            <remove name="cart_sidebar"></remove>
+        </reference>
+    </customer_account>
+
+    <catalogsearch_result_index translate="label">
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        <reference name="left">
+            <remove name="tags_popular"></remove>
+        </reference>
+    </catalogsearch_result_index>
+
+    <sales_order_print translate="label">
+        <reference name="head">
+            <!--CSS-->
+            <action method="addItem"><type>skin_css</type><name>css/reset.css</name><params/></action>
+            <action method="addItem"><type>skin_css</type><name>css/bootstrap.css</name><params/></action>
+            <action method="addItem"><type>skin_css</type><name>css/style.css</name><params/></action>
+        </reference>
+    </sales_order_print>
+    <sendfriend_product_send>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+    </sendfriend_product_send>
+    <PRODUCT_TYPE_configurable>
+        <reference name="product.info.options.configurable">
+            <block type="core/text_list" name="product.info.options.configurable.renderers" as="attr_renderers">
+                <block type="configurableswatches/catalog_product_view_type_configurable_swatches" template="configurableswatches/catalog/product/view/type/options/configurable/swatches.phtml" />
+            </block>
+            <block type="core/text_list" name="product.info.options.configurable.after" as="after">
+                <block type="core/template" template="configurableswatches/catalog/product/view/type/configurable/swatch-js.phtml" />
+            </block>
+        </reference>
+    </PRODUCT_TYPE_configurable>
+    <wordpress_default>
+    <reference name="root">
+        <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+    </reference>
+    </wordpress_default>
+</layout>

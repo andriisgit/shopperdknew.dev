@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<layout>
+    <!-- Add rates menu -->
+    <adminhtml_pacsoftrates_index>
+        <reference name="content">
+            <block type="pacsoft/adminhtml_rates" name="pacsoft_rates">
+            </block>
+        </reference>
+    </adminhtml_pacsoftrates_index>
+
+    <adminhtml_pacsoftrates_addons>
+        <reference name="content">
+            <block type="pacsoft/adminhtml_addons" name="root" ></block>
+        </reference>
+    </adminhtml_pacsoftrates_addons>
+
+    <adminhtml_pacsoftOrder_addons>
+        <reference name="left">
+            <block type="pacsoft/adminhtml_orderAddons" name="pacsoft_orderAddons"></block>
+        </reference>
+    </adminhtml_pacsoftOrder_addons>
+
+    <adminhtml_pacsoft_shippingInfo>
+        <reference name="left">
+            <block type="pacsoft/adminhtml_shippingInfo" name="pacsoft_shippingInfo"></block>
+        </reference>
+    </adminhtml_pacsoft_shippingInfo>
+
+</layout>

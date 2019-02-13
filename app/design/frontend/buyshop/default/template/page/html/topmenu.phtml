@@ -1,0 +1,131 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Top menu for store
+ *
+ * @see Mage_Page_Block_Html_Topmenu
+ */
+?>
+
+
+<div class="row">
+    <div class="span12">
+        <nav>
+
+        <ul class="nav nav-list hidden-desktop">
+            <li class="nav-header"><a href="#level1" title="" data-toggle="collapse"><i class="icon-th"></i>&nbsp;&nbsp;
+                <?php echo $this->__('MENU') ?> <i class="icon-down pull-right"></i> </a>
+                <ul class="collapse in" id="level1">
+                    <?php echo $this->renderCategoriesMenuHtml(0,0,'','mobile')?>
+
+                    <!--#1 DUPLICATE THIS SECTION IF YOU WANT MORE CUSTOM MENU ITEMS-->
+                    <?php if(Mage::getStoreConfig('buyshoplayout/navigation/custom_block')){?>
+                    <?php if(Mage::getStoreConfig('buyshoplayout/navigation/custom_menu_title')){?>
+                    <li>
+                        <a href="<?php echo Mage::getStoreConfig('buyshoplayout/navigation/custom_menu_url') ?>" >
+                            <span><?php echo Mage::getStoreConfig('buyshoplayout/navigation/custom_menu_title') ?></span> </a>
+                    </li>
+                    <?php  } ?>
+                    <?php  } ?>
+                    <!--end #1-->
+
+                    <!--#2 DUPLICATE THIS SECTION IF YOU WANT MORE SIMPLE  MENU LINKS-->
+                    <?php if(Mage::getStoreConfig('buyshoplayout/navigation/second_link')){?>
+                        <li><a href="<?php echo Mage::getStoreConfig('buyshoplayout/navigation/second_link_url')?>"><?php echo Mage::getStoreConfig('buyshoplayout/navigation/second_link_title')?></a></li>
+                    <?php  } ?>
+                    <!--end #2-->
+
+                </ul>
+            </li>
+        </ul>
+
+
+
+
+        <?php $class='class="simple"'; if(Mage::getStoreConfig('buyshoplayout/navigation/menutype')=='megamenu'){?>
+        <div id="megamenu">
+        <?php $class=''; }?>
+
+            <ul id="nav" <?php echo $class?>>
+                <?php if(Mage::getStoreConfig('buyshoplayout/navigation/home_button')){?>
+                <li class="li-first-home"> <a href="<?php echo $this->getUrl('')?>"><i class="icon-home"></i></a> </li>
+                <?php } ?>
+
+
+                <?php if(Mage::getStoreConfig('buyshoplayout/navigation/menutype')=='simple'){?>
+                <?php echo $this->renderCategoriesMenuHtml(0,0) ?>
+                <?php } else { ?>
+                <?php echo $this->renderCategoriesMenuHtml(0,0,'','megamenu') ?>
+                <?php } ?>
+
+
+
+                <?php if(Mage::getStoreConfig('buyshoplayout/navigation/custom_block')){?>
+
+                <!--#1 DUPLICATE THIS SECTION IF YOU WANT MORE CUSTOM MENU ITEMS-->
+                <li id="menu_custom_block"  class="level0 nav-2 level-top first parent">
+                    <a href="<?php echo Mage::getStoreConfig('buyshoplayout/navigation/custom_menu_url') ?>" class="level-top">
+                        <span><?php echo Mage::getStoreConfig('buyshoplayout/navigation/custom_menu_title') ?></span> </a>
+
+                    <ul class="level0">
+                        <li>
+                            <div class="menu_custom_block">
+                                <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('buyshop_header_topmenu_custom_block')->toHtml()?>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <!--end #1-->
+
+
+                <?php } ?>
+
+
+
+
+                <!--#2 DUPLICATE THIS SECTION IF YOU WANT MORE SIMPLE  MENU LINKS-->
+                <?php if(Mage::getStoreConfig('buyshoplayout/navigation/second_link')){?>
+                <li><a href="<?php echo Mage::getStoreConfig('buyshoplayout/navigation/second_link_url')?>"><?php echo Mage::getStoreConfig('buyshoplayout/navigation/second_link_title')?></a></li>
+                <?php  } ?>
+                <!--end #2-->
+
+
+
+            </ul>
+
+        <?php if(Mage::getStoreConfig('buyshoplayout/navigation/menutype')=='megamenu'){?>
+        </div>
+        <?php }?>
+        </nav>
+    </div>
+</div>
+
+
+
+
+

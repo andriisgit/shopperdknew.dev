@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Engage Commerce
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * @category    EngageCommerce
+ * @package     EngageCommerce_Facebook
+ * @copyright   Copyright (c) 2016 Engage Commerce (http://engagecommerce.io)
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <engagecommerce_facebook>
+            <version>0.0.1</version>
+        </engagecommerce_facebook>
+    </modules>
+    <global>
+        <models>
+            <engagecommerce_facebook>
+                <class>EngageCommerce_Facebook_Model</class>
+                <resourceModel>engagecommerce_facebook_resource</resourceModel>
+            </engagecommerce_facebook>
+            <engagecommerce_facebook_resource>
+                <class>EngageCommerce_Facebook_Model_Resource</class>
+            </engagecommerce_facebook_resource>
+
+            <engagecommerce_facebook_loadorder>
+                <class>EngageCommerce_Facebook_Model_LoadOrder</class>
+                <resourceModel>engagecommerce_facebook_loadorder_resource</resourceModel>
+            </engagecommerce_facebook_loadorder>
+            <engagecommerce_facebook_loadorder_resource>
+                <class>EngageCommerce_Facebook_Model_LoadOrder_Resource</class>
+            </engagecommerce_facebook_loadorder_resource>
+        </models>
+        <helpers>
+            <engagecommerce_facebook>
+                <class>EngageCommerce_Facebook_Helper</class>
+            </engagecommerce_facebook>
+        </helpers>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <engagecommerce_facebook>
+                    <file>engagecommerce_facebook.xml</file>
+                </engagecommerce_facebook>
+            </updates>
+        </layout>
+    </frontend>
+    <default>
+        <engagecommerce_facebook>
+            <facebook_pixel>
+                <enabled>0</enabled>
+                <loadorder>before_head_end</loadorder>
+            </facebook_pixel>
+        </engagecommerce_facebook>
+    </default>
+</config>

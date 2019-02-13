@@ -1,0 +1,212 @@
+5.2.4
+Fixed small bug in actioncontroller, causing webhooks to fail if product didn't exist in Magento.
+
+5.2.3
+Fixed small bug in configuration, causing javascript error
+
+5.2.2
+Added new feature to control if debtor information should be updated
+
+5.2.1
+Fixed bug when editing order from admin (Apparently shipping adress is not present).
+
+5.2.0
+Fixed minor bug, when checking if module is active on store
+
+5.1.9
+Changed VAT calculation to delivery country instead of billing country
+
+5.1.8
+Fixed issue with updating stock of bundled products
+
+5.1.7
+Fixed issue with undefined storeid
+
+5.1.6
+Fixed error with storeid in eapi.php
+
+5.1.5
+Made it possible to change URL of the API to be used
+
+5.1.4
+Fixed bug in helper/store.php
+
+5.1.3
+Fixed problem with capital letter in LogView.php
+
+5.1.2
+Fixed issue with callback URL when fetching e-conomic token
+
+5.1.1
+Made the module compatible with SUPEE-6788
+Added new function. limiting the number of products to be sent to and updated from e-conomic manually.
+
+5.1.0
+Fixed issue with using SKU as product id between e-conomic and Magento
+
+5.0.9
+Expanded the list of Epay cars
+
+5.0.8
+Added function, so inventory location is set on the orderline
+
+5.0.7
+Log is now read from the bottom, without opening the entire file - should improve performance on the configuration page
+Changed force booking, so current invoices can be created regardless if integrity check fails
+It is now possible to use inventory locations
+
+5.0.6
+Made the module compatible with Magestores Reward points module
+Added new feature, so that discount can be placed on the individual orderlines, i.e. fixes discount an multiple tax errors
+
+5.0.5
+Added X-EconomicAppIdentifier header to SOAP request
+
+5.0.4
+Fixed problem with VAT id not being transfered when using Magento 1.9
+
+5.0.3
+Added new feature to override the integrity check when booking invoices (or updating to current invoices)
+Added X-EconomicAppIdentifier as header to soap requests
+
+5.0.2
+Fixed problem with credit memo, and discount under certain circumstances
+
+5.0.1
+Fixed problem with credit memo and Magento 1.9
+Re-enabled automatic order delete function
+
+5.0.0
+Added options to control if debtor group should be compared when searching for debtors in e-conomic
+Added functionality that inserts contact person on an order if a company name is present.
+Changed rule for when a new contact is created (from comparing e-mail to comparing name instead).
+
+4.9.9
+Fixed bug in updating product information from e-conomic, causing multiple warnings in log files
+Fixed problem with updating debtor group of debtor in e-conomic, when "Always create debtor" is set to No.
+
+4.9.8
+Fixed issue with credit memo and fixed/dynamic price of bundled products
+Fixed issue with deleting products in e-conomic, when products where deleted in Magento
+
+4.9.7
+Fixed problem with VAT and personal EU customers
+
+4.9.6
+Fixed URL redirect when using fetching token from e-conomic
+
+4.9.5
+Fixed some translation errors
+
+4.9.4
+Fixed problem with validating turned off, and order grid always showing orders as validated
+
+4.9.3
+Changed URL of e-conomics API to https://api.e-conomic.com/secure/api1/EconomicWebService.asmx?wsdl
+Module now converts <br/> to \r\n when sending shipping rate description to e-conomic
+
+4.9.2
+Fixed issue with the mass-action on the product grid. When updating Magento items with information from e-conomic an error occured.
+
+4.9.1
+Fixed translation error
+
+4.9.0
+Fixed issue, creating new debtors when address was edited
+Fixed minor bugs in creation of debtor and calculating debtorgroup
+Removed all visible warnings from system.log
+
+4.8.9
+Changed observer to use sales_order_save_commit_after instead of sales_order_save_after
+
+4.8.8
+Fixed issue with editing addresses and "Always create debtor" set to true
+
+4.8.7
+Fixed issue with creating credit memos and "Always create debtor" set to true
+
+4.8.6
+Fixed issue with ACL and order info menu
+
+4.8.5
+Fixed issue with backend product grid and mass actions
+
+4.8.4
+Added possibility to use default shipping item, removing the need to map all shipping methods to e-conomic items.
+
+4.8.3
+Fixed small error in create product, causing storeid to be 0 when it should not be!
+
+4.8.2
+Fixed issue with credit memoes and configurable products
+
+4.8.1
+Removed custom part: add telephone to text field
+
+4.8.0
+Rewrote credit memo part
+Fixed problem with callback URL not being storeview dependant
+Added new feature - no booking if validation fails
+
+4.7.5
+Fixed problem with countries not being correct because of not being uppercase under some circumstances
+
+4.7.4
+Added the possibility to not choose a order status - when determining when to synchonize orders/invoices
+Fixed problem with shipping carrier not being present, when using some 3'rd party extensions
+
+4.7.3
+Fixed issue in backend loading different websites and storeview configurations
+
+4.7.2
+Added setting to control if standard debtor should have it's debtor information updated
+
+4.7.1
+Rewrote debtor part, so it handles the different types of creating modes, and can handle tax regardless if "Create new debtors"
+No, Yes or Always.
+Changed copyright years to 2014
+
+4.7.0
+Added grid that contains information about the synchronized (and not synchronized) orders
+Removed constraint that order can only be synced once
+Added button to the orders, so synchonization can be done directly from the order
+Disabled the function - use Magento order number as debtor number
+
+4.3.0
+Changed Soap library to use Zend_Soap_Client instead of SoapClient
+Added feature so tax is correct based on homecountry, EU and abroad
+Added possibility to transfer paymentfee from quickpay
+Changed country from transferring country codes to transfer names
+Added syncronization of delivery addresses from Magento to e-conomic. Only works on registered customers.
+
+4.2.1
+Fixed problem with order discount and tax being wrongly calculated
+
+4.2.0
+Added feature to control synchronization of Customers to debtor contacts
+
+Added feature to map credit card types to payment terms when using Quickpay or epay 
+
+Fixed issues with saving settings in multiple storeviews
+
+4.1.4
+Changed configuration from using select boxes to now using inout boxes when setting items for shipping, discount and payment fee. 
+
+4.1.3
+Added possibility to sync credit notes.
+Fixed minor issues
+
+4.0.5
+Fixed problem with Integrity check and order upgrade
+
+4.0.2
+Added new feature "Integrity check". The feature enables the user to be notified if an error is found in the transfer of a order from e-conomic to Magento.
+
+4.0.1
+Removed error when only one item present in e-conomic.
+
+4.0.0
+Added new debtor group feature. It is now possible to map Magento customer group to any debtor group in e-conomic 
+
+3.7.0
+Integrated EAN module from Nybohansen ApS

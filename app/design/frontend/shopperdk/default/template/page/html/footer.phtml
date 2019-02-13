@@ -1,0 +1,140 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+$config = Mage::getStoreConfig('shoppersettings/social', Mage::app()->getStore()->getId());
+$appearance = Mage::getStoreConfig('shoppersettings/appearance', Mage::app()->getStore()->getId());
+$route = Mage::app()->getFrontController()->getRequest()->getRouteName();
+$action = Mage::app()->getFrontController()->getRequest()->getActionName();
+?>
+<!-- footer BOF -->
+<div class="footer-container">
+    <?php if ( !($route == 'customer' && ($action == 'login' || $action == 'forgotpassword' || $action == 'create')) ) : ?>
+	<?php echo $this->getChildHtml('shopper_brands'); ?>
+    <div class="footer-banners">
+	    <?php $cms_block = Mage::getModel('cms/block')
+		    ->setStoreId( Mage::app()->getStore()->getId() )
+		    ->load('shopper_footer_banners_no');
+	    if($cms_block->getIsActive()) {
+		    echo $this->getLayout()->createBlock('cms/block')->setBlockId('shopper_footer_banners_no')->toHtml();
+	    }
+	    ?>
+</div>
+<div class="footer-container">
+
+    <div class="footer-banners2">
+	    <?php $cms_block = Mage::getModel('cms/block')
+		    ->setStoreId( Mage::app()->getStore()->getId() )
+		    ->load('shopper_footer_block2_no');
+	    if($cms_block->getIsActive()) {
+		    echo $this->getLayout()->createBlock('cms/block')->setBlockId('shopper_footer_block2_no')->toHtml();
+	    }
+	    ?>
+
+    </div>
+    <?php if (Mage::getStoreConfig('shoppersettings/social/show_footer_blocks')): ?>
+    <div class="footer-info">
+        <div class="row clearfix facebook">
+
+            <div class="grid_4">
+<!-- TrustBox script -->
+<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+<!-- End Trustbox script -->
+<!-- TrustBox widget - Mini -->
+<div class="trustpilot-widget" data-locale="da-DK" data-template-id="53aa8807dec7e10d38f59f32" data-businessunit-id="48a0ba4c0000640005031bae" data-style-height="150px" data-style-width="100%" data-theme="light">
+<a href="https://dk.trustpilot.com/review/www.hifi-freaks.dk" target="_blank">Trustpilot</a>
+</div>
+<center>
+<!-- End TrustBox widget -->
+            <?php if ( empty($config['facebook_replace']) ) { ?>
+                <div class="block-content">
+                <iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2F<?php echo $config['facebook'] ?>&amp;width=270&amp;show_faces=true&amp;colorscheme=light&amp;stream=false&amp;show_border=false&amp;header=false" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                </div>
+            <?php } else {
+                $cms_block = Mage::getModel('cms/block')
+		            ->setStoreId( Mage::app()->getStore()->getId() )
+		            ->load($config['facebook_replace']);
+	            if($cms_block->getIsActive()) {
+		            echo $this->getLayout()->createBlock('cms/block')->setBlockId($config['facebook_replace'])->toHtml();
+	            }
+            } ?>
+</center>
+       </div>
+
+      
+            <div class="grid_4 information">
+	            <?php $cms_block = Mage::getModel('cms/block')
+		            ->setStoreId( Mage::app()->getStore()->getId() )
+		            ->load('shopper_footer_information_no');
+	            if($cms_block->getIsActive()) {
+		            echo $this->getLayout()->createBlock('cms/block')->setBlockId('shopper_footer_information_no')->toHtml();
+	            }
+	            ?>
+            </div>
+            <div class="grid_4">
+	            <?php $cms_block = Mage::getModel('cms/block')
+		            ->setStoreId( Mage::app()->getStore()->getId() )
+		            ->load('shopper_footer_contact');
+	            if($cms_block->getIsActive()) {
+		            echo $this->getLayout()->createBlock('cms/block')->setBlockId('shopper_footer_contact_no')->toHtml();
+	            }
+	            ?>
+            </div>
+
+
+
+        </div>
+    </div>
+ <?php endif; ?>
+    <?php endif; // ( !($route == 'customer' && $action == 'login') ) : ?>
+ 
+</div>
+<!--Start of Zopim Live Chat Script by Diglin GmbH-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+$.src='//v2.zopim.com/?1YYqajb3MNYHGFy8n0E7AVhTxDhlxmrT';z.t=+new Date;$.
+type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+</script><!--End of Zopim Live Chat Script by Diglin GmbH-->
+<!--Zopim Options by Diglin GmbH--><script>$zopim(function(){
+$zopim.livechat.setDisableSound(false);
+$zopim.livechat.theme.setTheme('simple');
+$zopim.livechat.concierge.setName('Live Support');
+$zopim.livechat.concierge.setTitle('Ask us anything');
+$zopim.livechat.badge.setLayout('image_left');
+$zopim.livechat.badge.setText('Chat with us');
+$zopim.livechat.badge.show();
+$zopim.livechat.window.setTitle('Support');
+$zopim.livechat.window.setSize('small');
+$zopim.livechat.setGreetings({'online': 'Click here to chat','offline': 'Leave a message'});
+$zopim.livechat.button.setPosition('br');
+$zopim.livechat.window.setPosition('br');
+$zopim.livechat.button.setPositionMobile('br');
+$zopim.livechat.theme.setColor('#6B71A2', 'primary');
+$zopim.livechat.theme.setColor('#6B71A2', 'badge');
+$zopim.livechat.theme.reload();
+});
+</script><!--EOF Zopim Options by Diglin GmbH-->
+<!-- footer EOF -->

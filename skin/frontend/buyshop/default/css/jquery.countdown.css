@@ -1,0 +1,84 @@
+/* jQuery Countdown styles 2.0.0. */
+.countdown_sale_price{ margin: 10px 0 0 }
+.sale_price_label{margin: 0px 0 7px 0; font-weight: bold}
+.is-countdown {
+
+    padding: 3px 0 14px;
+}
+.countdown-rtl {
+	direction: rtl;
+}
+.countdown-holding span {
+	color: #888;
+}
+.countdown-row {
+	clear: both;
+	width: 100%;
+	padding: 0px 2px;
+	text-align: center;
+}
+.countdown-show1 .countdown-section {
+	width: 98%;
+}
+.countdown-show2 .countdown-section {
+	width: 48%;
+}
+.countdown-show3 .countdown-section {
+	width: 32.5%;
+}
+.countdown-show4 .countdown-section {
+	width: 24.5%;
+}
+.countdown-show5 .countdown-section {
+	width: 19.5%;
+}
+.countdown-show6 .countdown-section {
+	width: 16.25%;
+}
+.countdown-show7 .countdown-section {
+	width: 14%;
+}
+.countdown-section {
+	display: block;
+	float: left;
+	font-size: 75%;
+	text-align: center;
+}
+.countdown-amount {
+    font-size: 200%;
+}
+.countdown-period {
+    display: block;
+}
+.countdown-descr {
+	display: block;
+	width: 100%;
+}
+
+
+
+/**/
+.countdown_box {
+    color: #FFFFFF;
+    font-family: arial;
+    left: 0;
+    line-height: 18px;
+    position: absolute;
+    text-align: center;
+    top: 70px;
+    width: 100%;
+    z-index: 999;
+}
+.countdown_inner {
+    border: 5px solid #FFFFFF;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    margin: 0 8px;
+    padding: 16px 0 21px;
+    background-color: #FD4326;
+}
+.countdown_inner .title{font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 11px;}
+
+.product-shop .countdown_box{ position: inherit !important}
+.product-shop .countdown_inner{  margin: 10px 5px 0 !important}

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Inchoo_Backorderreport>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Inchoo_Backorderreport>
+    </modules>
+</config>

@@ -1,0 +1,109 @@
+<?php
+/**
+ * Nybohansen ApS
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ *
+ * =================================================================
+ *                 MAGENTO EDITION USAGE NOTICE
+ * =================================================================
+ * This package designed for Magento COMMUNITY edition
+ * We do not guarantee correct work of this extension
+ * on any other Magento edition except Magento COMMUNITY edition.
+ * In case of incorrect edition usage, we don't provide support.
+ * =================================================================
+ *
+ * @category   Nybohansen
+ * @package    Nybohansen_Pacsoft
+ * @copyright  Copyright (c) 2014 Nybohansen ApS
+ * @license    LICENSE.txt
+ */
+
+$_code = $this->getMethodCode();
+$_shipment_type = $this->getRateId();
+$carrier = $this->getMethodInstance();
+$_rate = $this->getRate();
+$adress_id = $this->getAddressId();
+$country_code = $this->getCountryCode();
+
+?>
+<?php if ($this->showParcelShopChoice() || $this->showDeliveryNote()): ?>
+
+<ul class="form-list" id="shipping_form_<?php echo $_rate->getCode() ?>_<?php echo $adress_id?>" style="">
+
+    <?php if ($this->showParcelShopChoice()): ?>
+
+
+        <li>
+            <label for="pacsoft[<?php echo $adress_id?>][zip]" class="required"><em>*</em><?php echo $this->__('Enter the zip code, to find the nearest Pacsoft parcel shop:') ?></label>
+            <span class="input-box">
+                <input type='hidden' id='pacsoft_<?php echo $adress_id?>_shipment_type' name='pacsoft[<?php echo $adress_id?>][rate_id]' value='<?php echo $_shipment_type ?>'/>
+                <input type='text' id='pacsoft_<?php echo $adress_id?>_zip' name='pacsoft[<?php echo $adress_id?>][zip]' autocomplete=off value='<?php echo $this->getSelectedZip(); ?>'/>
+
+                <button type='button' class="button" title="<?php echo $this->__('Gem') ?>" name='pacsoft_save_btn_<?php echo $adress_id?>' id='pacsoft_save_btn_<?php echo $adress_id?>'><span><?php echo $this->__('Save') ?></span></button>
+
+                <img id='pacsoft_<?php echo $adress_id?>_loading_spinner' src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" border="0" title="Loading" style="height: 16px; width: 16px;"/>
+            </span>
+            <div id="pacsoft_<?php echo $adress_id?>_content"><?php $this->getParcelShopsAsSelectBox()?></div>
+        </li>
+
+
+        <script type="text/javascript">
+            // <![CDATA[
+
+            document.observe('dom:loaded', function(){
+                Translator.add('Please select a delivery point', '<?php echo $this->__('Please select a delivery point'); ?>');
+                createServiceForm<?php echo $adress_id?>();
+            });
+
+            createServiceForm<?php echo $adress_id?>();
+
+            function createServiceForm<?php echo $adress_id?>(){
+                new ServicePointForm('<?php echo $adress_id?>',
+                    '<?php echo $_rate->getCode() ?>',
+                    $('shipping_form_<?php echo $_rate->getCode() ?>_<?php echo $adress_id?>'),
+                    '<?php echo $country_code?>',
+                    '<?php echo Mage::helper("adminhtml")->getUrl('pacsoft/ajax/index') ?>');
+            }
+
+            // ]]>
+        </script>
+    <?php endif; ?>
+
+    <?php if ($this->showDeliveryNote()): ?>
+
+        <li>
+            <label for="pacsoft[<?php echo $adress_id?>][deliveryNote]"><?php echo $this->__('Enter a delivery note:') ?></label>
+        <span class="input-box">
+            <input type='hidden' id='pacsoft_<?php echo $adress_id?>_shipment_type' name='shipping_pacsoft[rate_id][<?php echo $adress_id?>]' value='<?php echo $_shipment_type ?>'/>
+            <input type='text' id='shipping_delivery_note_<?php echo $adress_id?>' name='pacsoft[<?php echo $adress_id?>][deliveryNote]' autocomplete=off value='<?php echo $this->getDeliveryNote(); ?>'/>
+        </span>
+        </li>
+
+        <script type="text/javascript">
+            // <![CDATA[
+
+            document.observe('dom:loaded', function(){
+                createDeliveryNoteForm<?php echo $adress_id?>();
+            });
+
+            createDeliveryNoteForm<?php echo $adress_id?>();
+
+            function createDeliveryNoteForm<?php echo $adress_id?>(){
+                new DeliveryNoteForm('<?php echo $adress_id?>',
+                                      '<?php echo $_rate->getCode() ?>',
+                                      $('shipping_form_<?php echo $_rate->getCode() ?>_<?php echo $adress_id?>'));
+            }
+
+            // ]]>
+        </script>
+
+    <?php endif; ?>
+
+</ul>
+
+<?php endif; ?>
+

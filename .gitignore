@@ -41,11 +41,13 @@
 /var/package/*
 !/var/package/*.xml
 
-.htaccess
-/media/cache/
-/media/tmp/
-/.idea
-/.history
+/.htaccess
+media/cache/
+media/tmp/
+.idea/
+.VSCode/
+.history/
+.git/
 kontrakt-klarna.pdf
 categories.csv
 shopperdknew.clpprj

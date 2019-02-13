@@ -1,0 +1,189 @@
+/* Sprite images:
+-------------------------------*/
+    select,
+    .sorter .sort-order a,
+
+    button.btn-proceed-checkout span span:before, 
+    .cart-top-title a span.icon,
+
+    .btn-edit,
+
+    .btn-remove,                    
+    .compare-top-container .details .actions a:before,
+    .block-compare .block-content .actions a:before,
+
+    .std ul.disc li,
+    #queldoreiNav li.custom-block div.sub-wrapper>ul>li,
+    #queldoreiNav li.custom-block div.sub-wrapper ul li,  
+    #nav li.custom-block ul li>ul>li,             
+    .toolbar-dropdown ul li,                
+    .block .block-content li, .block .block-content li.item, 
+    .block-layered-nav .block-content dd li,        
+    .product-tabs-content ul.disc li,
+
+    .header-switch span.current:before,
+
+    .cart-top > a, 
+    .search-top,                                
+    .search-top-container .search-form .search-top-title span.icon,
+
+    .compare-top,             
+    .compare-top-title a span.icon, 
+    .product-view .add-to-links li.compare span.icon,
+
+    .footer-info ul.twitterList li span.tweet-icon,
+    .breadcrumbs span,
+    .error-msg:before,
+    .success-msg:before,
+    .note-msg:before,
+    .notice-msg:before,
+
+    .slider-container .jcarousel-list .button-container button.button span span,
+    .products-grid .button-container button.button span span,     
+    .products-list .button-container .btn-add-cart span, 
+    .box-up-sell2 .jcarousel-list .button-container button.button span span,
+
+    .toolbar-switch .toolbar-title:before,
+    .products-grid .hover .button-container button.button span span em,
+    .data-table .btn-edit2,
+    .data-table .btn-remove2,
+    .block-layered-price .ui-widget-content .ui-state-default,
+    .product-view .add-to-cart button.button span span,
+    .product-view .add-to-links li span.icon,
+    .product-view .add-to-links li.email-friend span.icon,
+    #nav ul ul li,
+    .blog-icon .inner                                               { background-size: 300px 350px;}
+
+
+    .nav-container li > a em                                        { background-size: 72px 72px;}
+
+    .jcarousel-next-horizontal,  .jcarousel-prev-horizontal         { background-size: 70px 70px;}
+    #toTop                                                          { background-size: 56px 112px;}
+    .sorter .view-mode .grid:before                                 { background-size: 27px 54px;}
+    .sorter .view-mode .list:before                                 { background-size: 27px 54px;}
+    .product-prev span, .product-next span                          { background-size: 26px 54px;}
+    .rating-box, .rating-box .rating                                { background-size: 12px 20px;}
+    
+    .flex-direction-nav a,
+    .tp-leftarrow.round, .tp-rightarrow.round,
+    .tp-leftarrow.large, .tp-rightarrow.large                       { background-size: 154px 154px;}
+
+     a.social_links                                                 { background-size: 36px 1170px;}
+    .footer-info .block-control                                     { background-size: 70px 70px;}
+    #search_mini_form .form-search button                           { background-size: 23px 58px;}
+    div.alert button                                                { background-size: 9px 18px;}
+    .new-label, .sale-label                                         { background-size: 364px 182px;}
+    .block .block-content a.shopby_more,
+    .qty-elements a, div.summary-collapse:before                    { background-size: 34px 34px;}
+    body.blog-post-view .postView .postDetails > div                { background-size: 16px 62px;}
+
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),only screen and (-moz-min-device-pixel-ratio: 1.5),only screen and (-o-min-device-pixel-ratio: 3/2),only screen and (min-device-pixel-ratio: 1.5) {
+/* Sprite images:
+-------------------------------*/
+    select,
+    .sorter .sort-order a,
+
+    button.btn-proceed-checkout span span:before, 
+    .cart-top-title a span.icon,
+
+    .btn-edit,
+
+    .btn-remove,                    
+    .compare-top-container .details .actions a:before,
+    .block-compare .block-content .actions a:before,
+
+    .std ul.disc li,
+    #queldoreiNav li.custom-block div.sub-wrapper>ul>li,
+    #queldoreiNav li.custom-block div.sub-wrapper ul li,  
+    #nav li.custom-block ul li>ul>li,             
+    .toolbar-dropdown ul li,                
+    .block .block-content li, .block .block-content li.item, 
+    .block-layered-nav .block-content dd li,        
+    .product-tabs-content ul.disc li,
+
+    .header-switch span.current:before,
+
+    .cart-top > a, 
+    .search-top,                                
+    .search-top-container .search-form .search-top-title span.icon,
+
+    .compare-top,             
+    .compare-top-title a span.icon, 
+    .product-view .add-to-links li.compare span.icon,
+
+    .footer-info ul.twitterList li span.tweet-icon,
+    .breadcrumbs span,
+    .error-msg:before,
+    .success-msg:before,
+    .note-msg:before,
+    .notice-msg:before,
+
+    .slider-container .jcarousel-list .button-container button.button span span,
+    .products-grid .button-container button.button span span,     
+    .products-list .button-container .btn-add-cart span, 
+    .box-up-sell2 .jcarousel-list .button-container button.button span span,
+
+    .toolbar-switch .toolbar-title:before,
+    .products-grid .hover .button-container button.button span span em,
+    .data-table .btn-edit2,
+    .data-table .btn-remove2,
+    .block-layered-price .ui-widget-content .ui-state-default,
+    .product-view .add-to-cart button.button span span,
+    .product-view .add-to-links li span.icon,
+    .product-view .add-to-links li.email-friend span.icon,
+   .blog-icon .inner
+
+    #nav ul ul li                                                   { background-image: url(../images/retina/shopper_sprite@2x.png);}
+    .nav-container li > a em                                        { background-image: url(../images/retina/nav_sprite@2x.png);}
+
+
+    .jcarousel-next-horizontal,  .jcarousel-prev-horizontal         { background-image: url(../images/retina/arrow_about@2x.png)}
+    #toTop                                                          { background-image: url(../images/retina/arrow_totop@2x.png)}
+    .sorter .view-mode .grid:before                                 { background-image: url(../images/retina/i_grid_mode@2x.png)}
+    .sorter .view-mode .list:before                                 { background-image: url(../images/retina/i_list_mode@2x.png)}
+    .product-prev span, .product-next span                          { background-image: url(../images/retina/prev_next@2x.png)}
+    .rating-box, .rating-box .rating                                { background-image: url(../images/retina/rating@2x.png)}
+    
+    .product-view .product-img-box .jcarousel-next-horizontal, .product-view .product-img-box .jcarousel-prev-horizontal,
+    .flex-direction-nav a,
+    .tp-leftarrow.round, .tp-rightarrow.round,
+    .tp-leftarrow.large, .tp-rightarrow.large                       { background-image: url(../images/retina/slideshow_arrows@2x.png)}
+     
+     a.social_links                                                 { background-image: url(../images/retina/sprite_socialbuttons@2x.png)}
+    .footer-info .block-control                                     { background-image: url(../images/retina/arrow_footer@2x.png)}
+    #search_mini_form .form-search button                           { background-image: url(../images/retina/search_icon@2x.png)}
+    div.alert button                                                { background-image: url(../images/retina/remove-popup@2x.png)}
+    .new-label, .sale-label                                         { background-image: url(../images/retina/labels@2x.png)}
+    .block .block-content a.shopby_more,
+    .qty-elements a, div.summary-collapse:before                    { background-image: url(../images/retina/moreless@2x.png)}
+   body.blog-post-view .postView .postDetails > div                { background-image: url(../images/retina/post_meta@2x.png)}
+ 
+   
+/* Custom style
+-------------------------------*/
+    .block-slider .slides > li, .block-viewed .block-content li, .block-tags .block-content li,
+    .block-bestsellers .block-content li, .block-login .block-content li, .block-reorder .block-content li.item,
+    .block-compare .block-content li.item, .block-slider .flex-control-nav li,
+    .block-poll .block-content,
+    .block .block-content li.item                                   { background:none;}
+
+    .block-compare .block-content .actions a::before,
+    .compare-top-container .details .actions a::before              { display:none }
+    .form-list li.wide select                                       { width:200px }
+
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5) and (max-width: 959px),only screen and (-moz-min-device-pixel-ratio: 1.5) and (max-width: 959px),only screen and (-o-min-device-pixel-ratio: 3/2) and (max-width: 959px),only screen and (min-device-pixel-ratio: 1.5) and (max-width: 959px){
+  /*  .toolbar-switch .toolbar-title:before                           { background-image:none}*/
+
+    .block-slider .slides > li, .block-viewed .block-content li, .block-tags .block-content li,
+    .block-bestsellers .block-content li, .block-login .block-content li, .block-reorder .block-content li.item,
+    .block-compare .block-content li.item, .block-slider .flex-control-nav li,
+    .block-poll .block-content,
+    .block .block-content li.item                                   { background:none;}
+
+    .block-compare .block-content .actions a::before,
+    .compare-top-container .details .actions a::before              { display:none}
+    .form-list li.wide select                                       { width:200px}
+}

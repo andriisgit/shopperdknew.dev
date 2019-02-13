@@ -1,0 +1,77 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Cart cross sell items template
+ *
+ * @see Mage_Checkout_Block_Cart_Crosssell
+ */
+?>
+<?php if($this->getItemCount() && Mage::getStoreConfig('buyshopconfig/options/crossels')): ?>
+
+<div class="upsell">
+    <h2><?php echo $this->__('Based on your selection, you may be interested in the following items:') ?></h2>
+    <div class="carousel es-carousel-wrapper style0 upsell">
+        <div class="es-carousel">
+            <div class="row">
+                <div class="product_outer">
+                    <?php foreach ($this->getItems() as $_product): ?>
+                    <?php
+                    $widthBig=258;
+                    $heightBig=245;
+                    $widthSmall=71;
+                    $heightSmall=65;
+                    $price=$this->getPriceHtml($_product, true);
+
+                    ?>
+                    <!--PRODUCT-->
+                    <?php  echo Mage::helper('buyshopconfig')->getProductHtml($_product,$this,$widthBig,$heightBig,3,false,true,false,true,$price)?>
+                    <?php echo Mage::helper('buyshopconfig')->getProductHover($_product,$this,$widthBig,$heightBig,$widthSmall,$heightSmall,'',false,true,$price)?>
+                    <!--PRODUCT EOF-->
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    jQuery('.carousel.style0').elastislide({
+        easing: 'easeInOutQuad',
+        speed: 1200
+
+    });
+        <?php if($this->getItemCount()<=4):?>
+    jQuery('.upsell .es-nav').addClass('visible-phone');
+        <?php endif ?>
+</script>
+
+
+
+<?php endif; ?>

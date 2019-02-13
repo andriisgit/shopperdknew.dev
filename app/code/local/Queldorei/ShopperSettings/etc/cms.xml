@@ -1,0 +1,1842 @@
+﻿<?xml version="1.0"?>
+<root>
+    <cms>
+        <pages>
+		<item>
+                <title>Contacts_V3</title>
+                <identifier>contacts_v3</identifier>
+                <content><![CDATA[
+				<div style="margin:40px 15%;">
+<h3  style="font-size:17px; font-weight:bold; text-align:center; color:#949494; margin-bottom:10px;">Feel Free To Contact  Us<br> with Any Questions</h3>
+<h2 style="font-size:48px; font-weight:900; text-align:center;line-height:48px">Get in Touch </h2>
+
+
+<hr style="border-color: #FE5252; border-width: 3px;margin: 40px 45%;"/>
+
+<p class="a-center">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+</div>
+
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;height:460px;width:100%;"><div id="gmap_canvas" style="height:460px;width:100%;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://www.themecircle.net" id="get-map-data">themecircle</a></div><script type="text/javascript"> function init_map(){var myOptions = {scrollwheel:false,zoom:14,center:new google.maps.LatLng(40.805478,-73.96522499999998),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(40.805478, -73.96522499999998)});infowindow = new google.maps.InfoWindow({content:"<b>The Breslin</b><br/>2880 Broadway<br/> New York" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>   
+
+
+<div class=" row clearfix" style="margin: 50px 0;">
+<div class="one_third a-center">
+<span style="color:#fe5252; font-size:48px; margin-bottom:25px" class="fa fa-map-o"></span>
+
+<h3><strong>how to find us</strong></h3>
+			<p> The Business Centre, 61 Wellfield Road<br>
+Roath Cardiff, CF24 3DG</p>
+			<a href="#"><h4 style="font-weight:bold; font-size:15px; color:#fe5252;">get direcions</h4></a>
+</div>
+
+<div class="one_third a-center">
+<span style="color:#fe5252; font-size:48px; margin-bottom:25px" class="fa fa-whatsapp"></span>
+
+<h3><strong>call us now</strong></h3>
+			<p> Phone: 1-234-567-89<br>
+ Fax: 1-234-567-89<br></p>
+			<a href="#" ><h4 style="font-weight:bold; font-size:15px; color:#fe5252;">live chat</h4></a>
+</div>
+
+<div class="one_third last a-center">
+<span style="color:#fe5252; font-size:48px; margin-bottom:25px" class="fa fa-paper-plane-o"></span>
+
+<h3><strong>send us a message</strong></h3>
+			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered. </p>
+			<a href="mailto:mail@yoursite.com" ><h4 style="font-weight:bold; font-size:15px; color:#fe5252;">mail@yoursite.com</h4></a>
+</div>
+</div>
+				]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>
+			<item>
+                <title>Contacts without form</title>
+                <identifier>contacts_without_form</identifier>
+                <content><![CDATA[
+				{{block type="cms/block" block_id="shopper_google_map"}}
+
+
+<div style="margin:40px;">
+<h3  style="font-size:17px; font-weight:bold; text-align:center; color:#949494; margin-bottom:10px;">Feel Free To Contact  Us<br> with Any Questions</h3>
+<h2 style="font-size:48px; font-weight:900; text-align:center;line-height:48px">Get in Touch </h2>
+</div>
+
+<hr style="border-color: #FE5252; border-width: 3px;margin: 0  45%;"/>
+
+<div class=" row clearfix" style="margin: 50px 0;">
+<div class="one_third a-center">
+<span style="color:#fe5252; font-size:48px; margin-bottom:25px" class="fa fa-map-o"></span>
+
+<h3><strong>how to find us</strong></h3>
+			<p> The Business Centre, 61 Wellfield Road<br>
+Roath Cardiff, CF24 3DG</p>
+			<a href="#"><h4 style="font-weight:bold; font-size:15px; color:#fe5252;">get direcions</h4></a>
+</div>
+
+<div class="one_third a-center">
+<span style="color:#fe5252; font-size:48px; margin-bottom:25px" class="fa fa-whatsapp"></span>
+
+<h3><strong>call us now</strong></h3>
+			<p> Phone: 1-234-567-89<br>
+ Fax: 1-234-567-89<br></p>
+			<a href="#" ><h4 style="font-weight:bold; font-size:15px; color:#fe5252;">live chat</h4></a>
+</div>
+
+<div class="one_third last a-center">
+<span style="color:#fe5252; font-size:48px; margin-bottom:25px" class="fa fa-paper-plane-o"></span>
+
+<h3><strong>send us a message</strong></h3>
+			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered. </p>
+			<a href="mailto:mail@yoursite.com" ><h4 style="font-weight:bold; font-size:15px; color:#fe5252;">mail@yoursite.com</h4></a>
+</div>
+</div>
+				]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>			
+			<item>
+                <title>Icon Box</title>
+                <identifier>icon-box</identifier>
+                <content><![CDATA[
+				<div style="margin:80px 0;">
+<h3  style="font-size:17px; font-weight:bold; text-align:center; color:#949494; margin-bottom:0px;">585 Font Icons </h3>
+<h2 style="font-size:48px; font-weight:900; text-align:center;">Icon Box</h1>
+</div>
+
+<div class=" row clearfix">
+<div class="one_third a-center">
+<span style="color:#fe5252; font-size:54px; margin-bottom:25px" class="fa fa-bicycle"></span>
+
+<h3><strong>THEME OPTIONS</strong></h3>
+			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p>
+			<a href="#" ><h4 style="font-weight:bold; font-size:15px; color:#fe5252;"> LEARN MORE</h4></a>
+</div>
+
+<div class="one_third a-center">
+<span style="color:#fe5252; font-size:54px; margin-bottom:25px" class="fa fa-diamond"></span>
+
+<h3><strong>THEME OPTIONS</strong></h3>
+			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p>
+			<a href="#" ><h4 style="font-weight:bold; font-size:15px; color:#fe5252;"> LEARN MORE</h4></a>
+</div>
+
+<div class="one_third last a-center">
+<span style="color:#fe5252; font-size:54px; margin-bottom:25px" class="fa fa-paper-plane-o"></span>
+
+<h3><strong>THEME OPTIONS</strong></h3>
+			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p>
+			<a href="#" ><h4 style="font-weight:bold; font-size:15px; color:#fe5252;"> LEARN MORE</h4></a>
+</div>
+</div>
+
+<hr style="margin:80px 0; border-color:#E4E4E4;"/>
+
+<div class=" row clearfix">
+<div class="one_third a-center">
+<div class="icon_box icon_style_bg_color a-center">
+			<div class="icon_wrapper" style="background-color:#fe5252; border-color:#ffffff">
+				<span style="color:#fff; font-size:43px;" class="fa fa-trophy"></span>
+			</div>
+			<h3><strong>THEME OPTIONS</strong></h3>
+			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p></div>
+			<a href="#" ><h4 style="font-weight:bold; font-size:15px"> LEARN MORE</h4></a>
+</div>
+<div class="one_third a-center">
+<div class="icon_box icon_style_bg_color a-center">
+			<div class="icon_wrapper" style="background-color:#fe5252; border-color:#ffffff">
+				<span style="color:#fff; font-size:43px;" class="fa fa-thumbs-up"></span>
+			</div>
+			<h3><strong>THEME OPTIONS</strong></h3>
+			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p></div>
+			<a href="#" ><h4 style="font-weight:bold; font-size:15px"> LEARN MORE</h4></a>
+</div>
+<div class="one_third last a-center">
+<div class="icon_box icon_style_bg_color a-center">
+			<div class="icon_wrapper" style="background-color:#fe5252; border-color:#ffffff">
+				<span style="color:#fff; font-size:43px;" class="fa fa-heart"></span>
+			</div>
+			<h3><strong>THEME OPTIONS</strong></h3>
+			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p></div>
+			<a href="#" ><h4 style="font-weight:bold; font-size:15px"> LEARN MORE</h4></a>
+</div>
+</div>
+
+
+<hr style="margin:80px 0; border-color:#E4E4E4;"/>
+
+<div class=" row clearfix">
+<div class="one_third a-center">
+<div class="icon_box icon_style_outlined a-center">
+			<div class="icon_wrapper" style=" border-color:#322c29">
+				<span style="color:#322c29; font-size:43px;" class="fa fa-shopping-cart"></span>
+			</div>
+			<h3><strong>THEME OPTIONS</strong></h3>
+			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p></div>
+			<a href="#" ><h4 style="font-weight:bold; font-size:15px"> LEARN MORE</h4></a>
+</div>
+<div class="one_third a-center">
+<div class="icon_box icon_style_outlined a-center">
+			<div class="icon_wrapper" style=" border-color:#322c29">
+				<span style="color:#322c29; font-size:43px;" class="fa fa-credit-card"></span>
+			</div>
+			<h3><strong>THEME OPTIONS</strong></h3>
+			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p></div>
+			<a href="#" ><h4 style="font-weight:bold; font-size:15px"> LEARN MORE</h4></a>
+</div>
+<div class="one_third last a-center">
+<div class="icon_box icon_style_outlined a-center">
+			<div class="icon_wrapper" style=" border-color:#322c29">
+				<span style="color:#322c29; font-size:43px;" class="fa fa-gift"></span>
+			</div>
+			<h3><strong>THEME OPTIONS</strong></h3>
+			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p></div>
+			<a href="#" ><h4 style="font-weight:bold; font-size:15px"> LEARN MORE</h4></a>
+</div>
+</div>
+
+
+
+<hr style="margin:80px 0; border-color:#E4E4E4;"/>
+
+<div class=" row clearfix">
+<div class="one_fourth a-center">
+<div class="icon_box icon_style_outlined-small a-center">
+			<div class="icon_wrapper" style=" border-color:#322c29">
+				<span style="color:#322c29; font-size:25px;" class="fa fa-shopping-cart"></span>
+			</div>
+			<h3><strong>THEME OPTIONS</strong></h3>
+			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p>
+			<a href="#" ><h4 style="font-weight:bold; font-size:15px"> LEARN MORE</h4></a>
+</div>
+</div>
+<div class="one_fourth a-center">
+<div class="icon_box icon_style_outlined-small a-center" >
+			<div class="icon_wrapper" style=" border-color:#322c29">
+				<span style="color:#322c29; font-size:25px;" class="fa fa-credit-card"></span>
+			</div>
+			<h3><strong>THEME OPTIONS</strong></h3>
+			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p>
+			<a href="#" ><h4 style="font-weight:bold; font-size:15px"> LEARN MORE</h4></a>
+</div>
+</div>
+<div class="one_fourth a-center">
+<div class="icon_box icon_style_outlined-small a-center">
+			<div class="icon_wrapper" style=" border-color:#322c29">
+				<span style="color:#322c29; font-size:25px;" class="fa fa-gift"></span>
+			</div>
+			<h3><strong>THEME OPTIONS</strong></h3>
+			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p>
+			<a href="#" ><h4 style="font-weight:bold; font-size:15px"> LEARN MORE</h4></a>
+</div>
+</div>
+<div class="one_fourth last a-center">
+<div class="icon_box icon_style_outlined-small a-center">
+			<div class="icon_wrapper" style=" border-color:#322c29">
+				<span style="color:#322c29; font-size:25px;" class="fa fa-heart"></span>
+			</div>
+			<h3><strong>THEME OPTIONS</strong></h3>
+			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p>
+			<a href="#" ><h4 style="font-weight:bold; font-size:15px"> LEARN MORE</h4></a>
+</div>
+</div>
+</div>
+
+
+<hr style="margin:80px 0; border-color:#E4E4E4;"/>
+
+<div class=" row clearfix">
+<div class="grid_2">
+<div class="icon_box icon_style_bg_color-small a-center">
+			<div class="icon_wrapper" style="background-color:#F1F1F1; border-color:#F1F1F1">
+				<span style="color:#FE5252; font-size:25px;" class="fa fa-diamond"></span>
+			</div>
+			<h3 style="font-size:18px;"><strong>Diamond</strong></h3>
+			<p>There are many variations of passages of Lorem</p>
+			<a href="#" ><h4 style="font-weight:bold; color:#FE5252; font-size:12px">VIEW</h4></a>
+</div>
+</div>
+<div class="grid_2">
+<div class="icon_box icon_style_bg_color-small a-center">
+			<div class="icon_wrapper" style="background-color:#F1F1F1; border-color:#F1F1F1">
+				<span style="color:#FE5252; font-size:25px;" class="fa fa-bicycle"></span>
+			</div>
+			<h3 style="font-size:18px;"><strong>Bycicle</strong></h3>
+			<p>There are many variations of passages of Lorem</p>
+			<a href="#" ><h4 style="font-weight:bold; color:#FE5252; font-size:12px"> VIEW</h4></a>
+</div>
+</div>
+<div class="grid_2">
+<div class="icon_box icon_style_bg_color-small a-center">
+			<div class="icon_wrapper" style="background-color:#F1F1F1; border-color:#F1F1F1">
+				<span style="color:#FE5252; font-size:25px;" class="fa fa-shopping-cart"></span>
+			</div>
+			<h3 style="font-size:18px;"><strong>Shopping</strong></h3>
+			<p>There are many variations of passages of Lorem</p>
+			<a href="#" ><h4 style="font-weight:bold; color:#FE5252; font-size:12px">VIEW</h4></a>
+</div>
+</div>
+<div class="grid_2">
+<div class="icon_box icon_style_bg_color-small a-center">
+			<div class="icon_wrapper" style="background-color:#F1F1F1; border-color:#F1F1F1">
+				<span style="color:#FE5252; font-size:25px;" class="fa fa-credit-card"></span>
+			</div>
+			<h3 style="font-size:18px;"><strong>Credit</strong></h3>
+			<p>There are many variations of passages of Lorem</p>
+			<a href="#" ><h4 style="font-weight:bold; color:#FE5252; font-size:12px"> VIEW</h4></a>
+</div>
+</div>
+<div class="grid_2">
+<div class="icon_box icon_style_bg_color-small a-center">
+			<div class="icon_wrapper" style="background-color:#F1F1F1; border-color:#F1F1F1">
+				<span style="color:#FE5252; font-size:25px;" class="fa fa-heart"></span>
+			</div>
+			<h3 style="font-size:18px;"><strong>Heart</strong></h3>
+			<p>There are many variations of passages of Lorem</p>
+			<a href="#" ><h4 style="font-weight:bold; color:#FE5252; font-size:12px"> VIEW</h4></a>
+</div>
+</div>
+<div class="grid_2 last">
+<div class="icon_box icon_style_bg_color-small a-center">
+			<div class="icon_wrapper" style="background-color:#F1F1F1; border-color:#F1F1F1">
+				<span style="color:#FE5252; font-size:25px;" class="fa fa-trophy"></span>
+			</div>
+
+			<h3 style="font-size:18px;"><strong>Trophy</strong></h3>
+			<p>There are many variations of passages of Lorem</p>
+			<a href="#" ><h4 style="font-weight:bold; color:#FE5252; font-size:12px">VIEW</h4></a>
+</div>
+</div>
+</div>
+
+
+<p style="margin:80px 0;"></p>
+				]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>			
+			<item>
+                <title>Shopper Page Slider in Content with Sidebar</title>
+                <identifier>shopper_home_2col</identifier>
+                <content><![CDATA[
+				<div class="row clearfix">
+<div class="grid_8">{{revslider alias="shic"}}</div>
+<div class="grid_4 last" >
+<p class="simple_hover hide_on_mobile" style="padding-bottom:20px"><a href="#"><img src="{{media url="wysiwyg/sl_b_1.jpg"}}" alt="" /></a></p>
+<p class="simple_hover hide_on_mobile" style="padding-bottom:20px"><a href="#"><img src="{{media url="wysiwyg/sl_b_2.jpg"}}" alt="" /></a></p>
+<p class="simple_hover hide_on_mobile" style="padding-bottom:20px"><a href="#"><img src="{{media url="wysiwyg/sl_b_3.jpg"}}" alt="" /></a></p>
+</div>
+</div>
+
+<p style="padding:20px"></p>
+<div class="home-right-col clearfix">
+<div class="home-main home-main-left"><div class="home-main-wrap">
+{{block type="shoppersettings/product_list" category_id="35" title="Staff pick" num_products="8" template="catalog/product/featured_products_slider.phtml"}}
+
+  <!-- TWO BANNER -->
+
+<div class="homepage-banners clearfix">
+<div class="one_half">
+<a href="//queldorei.com/">
+<div class="content pright" >
+<strong style="font-weight:400;">perfection<br>
+in details</strong>
+<br/>
+<button class="button button_white" onclick="window.location='{{store url=''}}'"><span><span>Shop Now</span></span></button>
+</div>
+<img src="{{media url="wysiwyg/sl_b_4.jpg"}}" alt="Premium Magento themes" />
+</a>
+</div>
+<div class="one_half last">
+<a href="//queldorei.com/">
+<div class="content">
+<strong style="font-weight:400;">this theme<br>
+is huge!</strong>
+<br/>
+<button class="button button_white" onclick="window.location='{{store url=''}}'"><span><span>Shop Now</span></span></button>
+</div>
+<img src="{{media url="wysiwyg/sl_b_5.jpg"}}" alt="Premium Magento themes" />
+</a>
+
+</div>
+</div>
+<p style="padding:30px"></p>
+{{block type="shoppersettings/product_list" category_id="35" title="Awesome Products" num_products="8" template="catalog/product/featured_products_slider.phtml"}}
+
+</div></div>
+
+<div class="home-right">
+{{block type="cms/block" block_id="shopper_banners_slideshow" }}
+{{block type="newsletter/subscribe" template="newsletter/subscribe_home.phtml" }}
+</div>
+</div>
+
+
+<!-- FULL WIDTH BLOCK -->
+
+<div class="fw_container clearfix cms-content">
+		<div class="fullwidth-bg a-center clearfix" style="background:#f6f4f4 url({{media url="wysiwyg/bg_fullwidth.jpg"}}) 0% 100%;">
+		<div  class="tb_padding_wrap" style="position:relative">
+
+			<div class="a-center white-border-wrap" >
+<div  style="margin:40px 0;">
+				<img src="{{media url="wysiwyg/ava.png"}}" alt="" />
+				<br/> <br/>			
+				<p  style="color:#7c7c7c;">"I'm a business owner with no technical background. I could easily install and customize the theme myself and my site looks awesome. Thanks to the comprehensive documentation, I never needed to contact support. "</p>
+				<a href="#"><h4>Elizabeth Black</h4></a>
+</div>
+</div>
+			
+		</div>
+	</div>
+</div>                                
+				]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>						
+			<item>
+                <title>Shopper Home Page Long Full Width</title>
+                <identifier>shopper_home_long_full_width</identifier>
+                <content><![CDATA[
+				<!-- TWO BANNER -->
+<p style="padding:15px"></p>
+<div class="homepage-banners row clearfix " style="padding:40px">
+<div class="grid_6">
+
+<a href="//queldorei.com/">
+<div class="content pright" >
+<strong style="font-weight:400;">powerful<br>
+magento theme</strong>
+<div class="border"></div>
+<p>'60s-inspired bangles, pendants,</p>
+<p>and head piecesfrom Nicole</p>
+<button class="button button_white" onclick="window.location='{{store url=''}}'"><span><span>Shop Now</span></span></button>
+</div>
+<img src="{{media url="wysiwyg/banner_shfw1.jpg"}}" alt="Premium Magento themes" />
+</a>
+</div>
+<div class="grid_6">
+<a href="//queldorei.com/">
+<div class="content">
+<strong style="font-weight:400;">sale 50%<br>
+on bags</strong>
+<div class="border"></div>
+<p>'60s-inspired bangles, pendants,</p>
+<p>and head piecesfrom Nicole</p>
+<button class="button button_white" onclick="window.location='{{store url=''}}'"><span><span>Shop Now</span></span></button>
+</div>
+<img src="{{media url="wysiwyg/banner_shfw2.jpg"}}" alt="Premium Magento themes" />
+</a>
+
+</div>
+</div>
+
+<!-- FEATURED PRODUCTS -->
+<h3  class="small_above_title">place your products in tabs</h3>
+<h2 class="regular_big_title">Shop These Looks</h1>
+<br>
+
+<!-- TABS -->
+
+<div class="clean_tabs">
+<div class="tabs">
+<ul>
+<li><a href="#tabs-1">WOMAN</a></li>
+<li><a href="#tabs-2">MEN</a></li>
+<li><a href="#tabs-3">INFORMATION</a></li>
+</ul>
+<div id="tabs-1">
+{{block type="shoppersettings/product_list" category_id="35"  title=" " num_products="4" template="catalog/product/featured_products.phtml"}}
+</div>
+<div id="tabs-2">
+{{block type="shoppersettings/product_list" category_id="40"  title=" " num_products="4" template="catalog/product/featured_products.phtml"}}
+</div>
+<div id="tabs-3">
+<br><br>
+<p  style="color:#7c7c7c; font-size:14px; line-heigh:22px;">"Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+
+<p  style="color:#7c7c7c; font-size:14px; line-heigh:22px;">"Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+<br><br>
+</div>
+</div>
+</div>
+
+
+<!-- FULL WIDTH BLOCK -->
+
+<div class="fw_container clearfix" style="margin-bottom:80px;">
+
+		<div class="fullwidth-bg a-center clearfix" style="background:#f6f4f4 url({{media url="wysiwyg/bg_fullwidth.jpg"}}) 0% 100%;">
+		<div style="position: relative;" class="tb_padding_wrap">
+<p style="padding:20px"></p>
+			<h1 class="thin_huge_title">unique elegant <br>
+magento theme</h1>
+<hr>
+						
+				<p  style="color:#7c7c7c; margin:30px 0;">"I'm a business owner with no technical background. I could easily install and customize the theme myself and my site looks awesome. Thanks to the comprehensive documentation, I never needed to contact support."</p>
+				<a href="//queldorei.com/"><button class="button button_white" onclick="window.location='{{store url=''}}'"><span><span>Shop Now</span></span></button></a>
+<p style="padding:20px"></p>
+			
+		</div>
+	</div>
+</div>
+
+
+<!-- NEW SALE PRODUCTS -->
+<div class="clearfix">
+
+{{block type="catalog/product_new" products_count="10" title="New Arrivals" template="catalog/product/new_products_slider.phtml"}}
+
+</div>
+
+<!-- 3 ICON BOXES -->
+
+
+<div class=" row clearfix">
+<div class="cms-content">
+<div class="one_third a-center simple_hover">
+<span style="color:#ffb4b1; font-size:54px; margin-bottom:25px" class="fa fa-bicycle"></span>
+
+<h3><strong>EASY TO USE</strong></h3>
+			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p>
+			<a href="#" ><h4 style="font-weight:bold; font-size:15px; color:#ffb4b1;"> LEARN MORE</h4></a>
+</div>
+
+<div class="one_third a-center simple_hover">
+<span style="color:#ffb4b1; font-size:54px; margin-bottom:25px" class="fa fa-diamond"></span>
+
+<h3><strong>BRILLIANT DESIGN</strong></h3>
+			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p>
+			<a href="#" ><h4 style="font-weight:bold; font-size:15px; color:#ffb4b1;"> LEARN MORE</h4></a>
+</div>
+
+<div class="one_third last a-center simple_hover">
+<span style="color:#ffb4b1; font-size:54px; margin-bottom:25px" class="fa fa-paper-plane-o"></span>
+
+<h3><strong>VARIOUS PAGES</strong></h3>
+			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p>
+			<a href="#" ><h4 style="font-weight:bold; font-size:15px; color:#ffb4b1;"> LEARN MORE</h4></a>
+</div></div>
+</div>
+
+
+<!-- WHAT PEOPLE SAY-->
+
+<p style="padding:40px"></p>
+<div class="cms-content  row clearfix">
+<div class="one_half a-center white-border-wrap">
+<div  style="margin:40px 0;">
+				<img src="{{media url="wysiwyg/ava1.png"}}" alt="" />
+				<br/> <br/>			
+				<p  style="color:#7c7c7c;">"I'm a business owner with no technical background. I could easily install and customize the theme myself and my site looks awesome. "</p>
+				<a href="#"><h4>Emily Blonde</h4></a>
+</div>
+</div>
+<div class="one_half last  a-center white-border-wrap">
+<div  style="margin:40px 0;">
+				<img src="{{media url="wysiwyg/ava.png"}}" alt="" />
+				<br/> <br/>			
+				<p  style="color:#7c7c7c;">"The documentation for Shopper is incredibly well organized and complete. 
+Nothing is missed. Presented beautifully, in a way that is easy to use and understand. "</p>
+				<a href="#"><h4>Elizabeth Black</h4></a>
+</div>
+</div>
+</div>
+
+<div style="padding:30px"></div>
+				]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>						
+			<item>
+                <title>Shopper Testimonials</title>
+                <identifier>shopper_testimonials</identifier>
+                <content><![CDATA[
+				<h1 style="margin: 80px 0; text-align:center;"><strong>Testimonials Two Columns Wrapped</strong></h1>
+<!-- WHAT PEOPLE SAY-->
+<div class=" row clearfix">
+<div class="one_half white-wrap">	
+				<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>
+				<br/> <br/>
+				<h3 style="font-size:30px; letter-spacing: -2px;">What people say</h3>
+				<p  style="color:#7c7c7c;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a pharetra felis. Morbi imperdiet, lorem at euismod finibus, quam tortor efficitur justo, eget imperdiet purus lorem eu lorem. Aliquam cursus tellus et tincidunt cursus. Donec lectus ex, iaculis eu lacinia eu, auctor quis nisi.  ."</p>
+				<p><a href="#"><h4>John Doe</h4></a></p>
+
+</div>
+<div class="one_half last white-wrap">
+	
+				<img src="{{media url="wysiwyg/ava.png"}}" alt="" />
+				<br/> <br/>			
+				<p  style="color:#7c7c7c;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a pharetra felis. Morbi imperdiet, lorem at euismod finibus, quam tortor efficitur justo, eget imperdiet purus lorem eu lorem. Aliquam cursus tellus et tincidunt cursus. Donec lectus ex, iaculis eu lacinia eu, auctor quis nisi.  "</p>
+				<p><a href="#"><h4>John Doe</h4></a></p>
+</div>
+</div>
+
+<h1 style="margin: 80px 0; text-align:center;"><strong>Testimonials Two Columns<br> Wrapped & Centered</strong></h1>
+<!-- WHAT PEOPLE SAY-->
+
+<div class=" row clearfix">
+<div class="one_half a-center white-wrap">	
+				<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>
+				<br/> <br/>
+				<h3 style="font-size:30px; letter-spacing: -2px;">What people say</h3>
+				<p  style="color:#7c7c7c;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a pharetra felis. Morbi imperdiet, lorem at euismod finibus, quam tortor efficitur justo, eget imperdiet purus lorem eu lorem. Aliquam cursus tellus et tincidunt cursus. Donec lectus ex, iaculis eu lacinia eu, auctor quis nisi.  ."</p>
+				<p><a href="#"><h4>John Doe</h4></a></p>
+
+</div>
+<div class="one_half last  a-center white-wrap">
+	
+				<img src="{{media url="wysiwyg/ava.png"}}" alt="" />
+				<br/> <br/>			
+				<p  style="color:#7c7c7c;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a pharetra felis. Morbi imperdiet, lorem at euismod finibus, quam tortor efficitur justo, eget imperdiet purus lorem eu lorem. Aliquam cursus tellus et tincidunt cursus. Donec lectus ex, iaculis eu lacinia eu, auctor quis nisi.  "</p>
+				<p><a href="#"><h4>John Doe</h4></a></p>
+</div>
+</div>
+
+
+<h1 style="margin: 80px 0; text-align:center;"><strong>Testimonials Two Columns <br> Top Border Wrap</strong></h1>
+<!-- WHAT PEOPLE SAY-->
+
+<div class=" row clearfix">
+<div class="one_half white-border-wrap">	
+				<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>
+				<br/> <br/>
+				<h3 style="font-size:30px; letter-spacing: -2px;">What people say</h3>
+				<p  style="color:#7c7c7c;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a pharetra felis. Morbi imperdiet, lorem at euismod finibus, quam tortor efficitur justo, eget imperdiet purus lorem eu lorem. Aliquam cursus tellus et tincidunt cursus. Donec lectus ex, iaculis eu lacinia eu, auctor quis nisi.  ."</p>
+				<p><a href="#"><h4>John Doe</h4></a></p>
+
+</div>
+<div class="one_half last white-border-wrap">
+	
+				<img src="{{media url="wysiwyg/ava.png"}}" alt="" />
+				<br/> <br/>			
+				<p  style="color:#7c7c7c;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a pharetra felis. Morbi imperdiet, lorem at euismod finibus, quam tortor efficitur justo, eget imperdiet purus lorem eu lorem. Aliquam cursus tellus et tincidunt cursus. Donec lectus ex, iaculis eu lacinia eu, auctor quis nisi.  "</p>
+				<p><a href="#"><h4>John Doe</h4></a></p>
+</div>
+</div>
+
+<h1 style="margin: 80px 0; text-align:center;"><strong>Testimonials Two Columns<br>Top Border Wrap, Centered</strong></h1>
+<!-- WHAT PEOPLE SAY-->
+
+<div class=" row clearfix">
+<div class="one_half a-center white-border-wrap">	
+				<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>
+				<br/> <br/>
+				<h3 style="font-size:30px; letter-spacing: -2px;">What people say</h3>
+				<p  style="color:#7c7c7c;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a pharetra felis. Morbi imperdiet, lorem at euismod finibus, quam tortor efficitur justo, eget imperdiet purus lorem eu lorem. Aliquam cursus tellus et tincidunt cursus. Donec lectus ex, iaculis eu lacinia eu, auctor quis nisi.  ."</p>
+				<p><a href="#"><h4>John Doe</h4></a></p>
+
+</div>
+<div class="one_half last  a-center white-border-wrap">
+	
+				<img src="{{media url="wysiwyg/ava.png"}}" alt="" />
+				<br/> <br/>			
+				<p  style="color:#7c7c7c;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a pharetra felis. Morbi imperdiet, lorem at euismod finibus, quam tortor efficitur justo, eget imperdiet purus lorem eu lorem. Aliquam cursus tellus et tincidunt cursus. Donec lectus ex, iaculis eu lacinia eu, auctor quis nisi.  "</p>
+				<p><a href="#"><h4>John Doe</h4></a></p>
+</div>
+</div>
+
+<h1 style="margin: 80px 0; text-align:center;"><strong>Testimonials Two Columns</strong></h1>
+<!-- WHAT PEOPLE SAY-->
+
+<div class=" row clearfix">
+<div class="one_half ">	
+				<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>
+				<br/> <br/>
+				<h3 style="font-size:30px; letter-spacing: -2px;">What people say</h3>
+				<p  style="color:#7c7c7c;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a pharetra felis. Morbi imperdiet, lorem at euismod finibus, quam tortor efficitur justo, eget imperdiet purus lorem eu lorem. Aliquam cursus tellus et tincidunt cursus. Donec lectus ex, iaculis eu lacinia eu, auctor quis nisi.  ."</p>
+				<p><a href="#"><h4>John Doe</h4></a></p>
+
+</div>
+<div class="one_half last ">
+	
+				<img src="{{media url="wysiwyg/ava.png"}}" alt="" />
+				<br/> <br/>			
+				<p  style="color:#7c7c7c;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a pharetra felis. Morbi imperdiet, lorem at euismod finibus, quam tortor efficitur justo, eget imperdiet purus lorem eu lorem. Aliquam cursus tellus et tincidunt cursus. Donec lectus ex, iaculis eu lacinia eu, auctor quis nisi.  "</p>
+				<p><a href="#"><h4>John Doe</h4></a></p>
+</div>
+</div>
+
+<h1 style="margin: 80px 0; text-align:center;"><strong>Testimonials Two Columns, Centered</strong></h1>
+<!-- WHAT PEOPLE SAY-->
+
+<div class=" row clearfix">
+<div class="one_half a-center ">	
+				<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>
+				<br/> <br/>
+				<h3 style="font-size:30px; letter-spacing: -2px;">What people say</h3>
+				<p  style="color:#7c7c7c;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a pharetra felis. Morbi imperdiet, lorem at euismod finibus, quam tortor efficitur justo, eget imperdiet purus lorem eu lorem. Aliquam cursus tellus et tincidunt cursus. Donec lectus ex, iaculis eu lacinia eu, auctor quis nisi.  ."</p>
+				<p><a href="#"><h4>John Doe</h4></a></p>
+
+</div>
+<div class="one_half last  a-center">
+	
+				<img src="{{media url="wysiwyg/ava.png"}}" alt="" />
+				<br/> <br/>			
+				<p  style="color:#7c7c7c;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a pharetra felis. Morbi imperdiet, lorem at euismod finibus, quam tortor efficitur justo, eget imperdiet purus lorem eu lorem. Aliquam cursus tellus et tincidunt cursus. Donec lectus ex, iaculis eu lacinia eu, auctor quis nisi.  "</p>
+				<p><a href="#"><h4>John Doe</h4></a></p>
+</div>
+</div>
+
+<h1 style="margin: 80px; text-align:center;"><strong>Testimonials Full Width</strong></h1>
+<!-- WHAT PEOPLE SAY-->
+<div class="fw_container clearfix">
+
+		<div class="fullwidth-bg a-center" style="padding: 60px 15%;">
+		<div style="position: relative;">
+				<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>&nbsp;<span style="color:#f2d368; font-size:15px;" class="fa fa-star"></span>
+				<br/> <br/>
+				<h3 style="font-size:30px; letter-spacing: -2px;">What people say</h3>
+				<p  style="color:#7c7c7c;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a pharetra felis. Morbi imperdiet, lorem at euismod finibus, quam tortor efficitur justo, eget imperdiet purus lorem eu lorem. Aliquam cursus tellus et tincidunt cursus. Donec lectus ex, iaculis eu lacinia eu, auctor quis nisi.  Although there are a few glitches, which is acceptable considering it´s a new release, customer support response is quick and can get results and fixes in a jiffy. Thanks to the whole team specially to Serge! More power."</p>
+				<p><a href="#"><h4>John Doe</h4></a></p>
+
+			
+		</div>
+	</div>
+</div>
+
+
+<h1 style="margin: 80px; text-align:center;"><strong>Testimonials Full Width<br> with Background Image</strong></h1>
+<!-- WHAT PEOPLE SAY-->
+
+<div class="fw_container clearfix container-bottom">
+
+		<div class="fullwidth-bg a-center" style="background-color:#f7f7f7; padding: 60px 15%; background-image: url({{media url="wysiwyg/bg_t1.jpg"}});">
+		<div style="position: relative;">
+				<img src="{{media url="wysiwyg/ava.png"}}" alt="" />
+				<br/> <br/>			
+				<p  style="color:#7c7c7c;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a pharetra felis. Morbi imperdiet, lorem at euismod finibus, quam tortor efficitur justo, eget imperdiet purus lorem eu lorem. Aliquam cursus tellus et tincidunt cursus. Donec lectus ex, iaculis eu lacinia eu, auctor quis nisi.  "</p>
+				<p><a href="#"><h4>John Doe</h4></a></p>
+
+
+			
+		</div>
+	</div>
+</div>
+				]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>						
+			<item>
+                <title>Shopper Home Men</title>
+                <identifier>shoppper_home_men</identifier>
+                <content><![CDATA[
+				<br/>
+<br/>
+<div class="homepage-banners row clearfix " style="padding-top:40px;">
+
+<div class="grid_6">
+<a href="//queldorei.com/">
+<div class="content pright">
+<strong style="font-weight:800; color:white; "><br/>Life is About<br/>
+Moments</strong>
+<br/>
+<button class="button button_white" onclick="window.location='{{store url=''}}'"><span><span>Shop Now</span></span></button>
+</div>
+<img src="{{media url="wysiwyg/b_m1.jpg"}}" alt="Premium Magento themes"  />
+</a>
+</div>
+
+<div class="grid_6">
+<a href="//queldorei.com/">
+<div class="content" >
+<strong style="font-weight:800; color:white;"><br/>grand class<br/>
+theme</strong>
+<br/>
+<button class="button button_white" onclick="window.location='{{store url=''}}'"><span><span>Shop Now</span></span></button>
+</div>
+<img src="{{media url="wysiwyg/b_m2.jpg"}}" alt="Premium Magento themes"  />
+</a>
+</div>
+</div>
+
+
+<h2 style="font-weight:800; font-size:50px; letter-spacing:-3px; text-align:center; line-height:44px;">dressing well is a form <br/>
+of good manners</h2>
+<br/>
+<h4 style="font-weight:800; text-align:center; color:#84817f;">- tom ford</h4>
+
+<div class=" row clearfix" style="margin: 60px 0 80px 0;">
+<div class="grid_2">
+<div class="a-center simple_hover">
+<a href="#" ><img src="{{media url="wysiwyg/men_cat_01.png"}}" alt="" />
+			<h3 style="font-size:18px; letter-spacing:-1px; margin-top:20px;"><strong>Shoes</strong></h3></a>			
+</div>
+</div>
+<div class="grid_2">
+<div class="a-center simple_hover">
+<a href="#" ><img src="{{media url="wysiwyg/men_cat_02.png"}}" alt="" />
+			<h3 style="font-size:18px; letter-spacing:-1px; margin-top:20px;"><strong>Shirts</strong></h3></a>			
+</div>
+</div>
+<div class="grid_2">
+<div class="a-center simple_hover">
+<a href="#" ><img src="{{media url="wysiwyg/men_cat_03.png"}}" alt="" />
+			<h3 style="font-size:18px; letter-spacing:-1px; margin-top:20px;"><strong>Glasses</strong></h3></a>			
+</div>
+</div>
+<div class="grid_2">
+<div class="a-center simple_hover">
+<a href="#" ><img src="{{media url="wysiwyg/men_cat_04.png"}}" alt="" />
+			<h3 style="font-size:18px;  letter-spacing:-1px; margin-top:20px;"><strong>Belts</strong></h3></a>			
+</div>
+</div>
+<div class="grid_2">
+<div class="a-center simple_hover">
+<a href="#" ><img src="{{media url="wysiwyg/men_cat_05.png"}}" alt="" />
+			<h3 style="font-size:18px;  letter-spacing:-1px; margin-top:20px;"><strong>Purses</strong></h3></a>			
+</div>
+</div>
+<div class="grid_2 last">
+<div class="a-center simple_hover">
+<a href="#" ><img src="{{media url="wysiwyg/men_cat_06.png"}}" alt="" />
+			<h3 style="font-size:18px; letter-spacing:-1px; margin-top:20px;"><strong>Perfumes</strong></h3></a>			
+</div>
+</div>
+</div>
+				]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>						
+			<item>
+                <title>Shopper Home page - banners</title>
+                <identifier>shopper_home</identifier>
+                <content><![CDATA[
+				
+				]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>					
+
+		    <item>
+                <title>Shopper Home page - banners</title>
+                <identifier>shopper_home</identifier>
+                <content><![CDATA[
+<div class="homepage-banners row clearfix " style="padding-top:40px;">
+	<div class="grid_6"><a href="//queldorei.com/"><img src="{{media url="wysiwyg/banner_alt.jpg"}}" alt="Premium Magento themes" /></a></div>
+	<div class="grid_6">
+		<a href="//queldorei.com/">
+		<div class="content">
+			<strong>Front page<br />Layouts</strong>
+			<div class="border">&nbsp;</div>
+			<p>You can choose between full width</p>
+			<p>with static banners and sidebar with</p>
+			<p>banner slideshow and newsletters</p>
+			<p>or any other block!</p>
+			<button class="button button_white" onclick="window.location='{{store url=''}}'"><span><span>Learn more</span></span></button>
+		</div>
+<img src="{{media url="wysiwyg/banner_alt_01.jpg"}}" alt="Premium Magento themes" />
+		</a>
+	</div>
+</div>
+{{block type="shoppersettings/product_list" category_id="35" num_products="8" template="catalog/product/featured_products.phtml"}}
+{{block type="shoppersettings/product_list" category_id="40" num_products="8" title="Staff pick" template="catalog/product/featured_products_slider.phtml"}}
+{{block type="catalog/product_new" products_count="10" template="catalog/product/new_products_slider.phtml"  cache_lifetime="1"}}
+                ]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>
+			  <item>
+                <title>Shopper Home page - right column</title>
+                <identifier>shopper_home_slideshow</identifier>
+                <content><![CDATA[
+<div class="home-right-col clearfix">
+<div class="home-main"><div class="home-main-wrap">
+{{block type="shoppersettings/product_list" category_id="35" num_products="9" template="catalog/product/featured_products.phtml"}}
+{{block type="shoppersettings/product_list" category_id="38" num_products="8" title="Staff pick" template="catalog/product/featured_products_slider.phtml"}}
+{{block type="catalog/product_new" products_count="10" template="catalog/product/new_products_slider.phtml" cache_lifetime="1"}}
+</div></div>
+<div class="home-right">{{block type="cms/block" block_id="shopper_banners_slideshow" }} 
+{{block type="newsletter/subscribe" template="newsletter/subscribe_home.phtml" }}
+</div>
+</div>
+                ]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>
+            <item>
+                <title>Shopper Home page - left column</title>
+                <identifier>shopper_home_2col_left</identifier>
+                <content><![CDATA[
+<div class="home-left-col clearfix">
+<div class="home-main"><div class="home-main-wrap">
+{{block type="shoppersettings/product_list" category_id="38" num_products="6" template="catalog/product/featured_products.phtml"}}
+{{block type="shoppersettings/product_list" category_id="40" num_products="8" title="Staff pick" template="catalog/product/featured_products_slider.phtml"}}
+{{block type="catalog/product_new" products_count="10" template="catalog/product/new_products_slider.phtml"  cache_lifetime="1"}}
+</div></div>
+<div class="home-left">{{block type="cms/block" block_id="shopper_banners_slideshow" }} {{block type="newsletter/subscribe" template="newsletter/subscribe_home.phtml" }} {{block type="shoppersettings/bestsellers" template="queldorei/bestsellers.phtml" }}</div>
+</div></div>
+                
+
+                ]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>
+			            <item>
+                <title>Shopper No Route page</title>
+                <identifier>shopper_no_route</identifier>
+                <content><![CDATA[
+                    <div class="page-head-alt">
+                    <h3>Whoops, our bad...</h3>
+                    </div>
+                    <dl> <dt>The page you requested was not found, and we have a fine guess why.</dt> <dd>
+                    <ul class="disc">
+                    <li>If you typed the URL directly, please make sure the spelling is correct.</li>
+                    <li>If you clicked on a link to get here, the link is outdated.</li>
+                    </ul>
+                    </dd> </dl>
+                    <p>&nbsp;</p>
+                    <dl> <dt>What can you do?</dt> <dd>Have no fear, help is near! There are many ways you can get back on track with Magento Demo Store.</dd> <dd>
+                    <ul class="buttons">
+                    <li><button class="button" onclick="history.go(-1);"><span><span>Go back</span></span></button></li>
+                    <li><button class="button" onclick="window.location='{{store url=""}}'"><span><span>Store Home</span></span></button></li>
+                    <li><button class="button" onclick="window.location='{{store url="customer/account"}}'"><span><span>My Account</span></span></button></li>
+                    </ul>
+                    </dd></dl>]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>
+			<item>
+                <title>Terms And Conditions</title>
+                <identifier>terms</identifier>
+                <content><![CDATA[
+				<div class="page-head">
+<h3>Terms And Conditions</h3>
+</div>
+				<p style="font-size:16px; line-height:26px;">PLEASE READ THIS PRIVACY STATEMENT CAREFULLY. BY ACCESSING OR USING OUR WEBSITE, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTAND, AND AGREE TO BE BOUND TO ALL THE TERMS OF THIS PRIVACY STATEMENT AND OUR WEBSITE TERMS OF USE. IF YOU DO NOT AGREE TO THESE TERMS, EXIT THIS PAGE AND DO NOT ACCESS OR USE THE WEBSITE.</p>
+<p style="margin:50px 0">
+</p><h3>1. Changes to Privacy Statement</h3>
+<p style="font-size:16px; line-height:26px;">Morbi finibus ligula eget felis pretium, ut varius sem ultricies. Pellentesque ligula risus, gravida a metus in, maximus auctor est. Nulla facilisi. Quisque condimentum ipsum non tincidunt aliquet. Sed quis ligula sagittis, placerat erat et, feugiat risus. Fusce aliquet purus tincidunt eros tristique, non tristique felis semper. Morbi auctor arcu nec nisl consectetur, id tincidunt dui viverra. Donec quis arcu ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue cursus lorem eget tristique. Nulla semper tortor magna, a rutrum nulla consequat tempus. Quisque vehicula augue sed diam semper, in mattis felis ornare. </p>
+<p style="margin:50px 0">
+</p><h3>2. Types of Information Collected and Uses of Collected Information</h3>
+<p style="font-size:16px; line-height:26px;">We collect two types of information about our Website Users: Personally Identifiable Information and Non-Personally Identifiable Information.<br>
+Morbi finibus ligula eget felis pretium, ut varius sem ultricies. Pellentesque ligula risus, gravida a metus in, maximus auctor est. Nulla facilisi. Quisque condimentum ipsum non tincidunt aliquet. Sed quis ligula sagittis, placerat erat et, feugiat risus. Fusce aliquet purus tincidunt eros tristique, non tristique felis semper. Morbi auctor arcu nec nisl consectetur, id tincidunt dui viverra. Donec quis arcu ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue cursus lorem eget tristique. Nulla semper tortor magna, a rutrum nulla consequat tempus. Quisque vehicula augue sed diam semper, in mattis felis ornare. In commodo ullamcorper commodo. Etiam scelerisque augue ac sodales tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+<p style="font-size:16px; line-height:26px;">We may use Personally Identifiable Information to improve our marketing and promotional efforts, our product offerings, and to tailor your experience to the best. For example, if you send an email or post a comment we may use your comments and feedback to tell others about our services, and may post your comment in our marketing materials or on our Website. We may also use Personally Identifiable Information to troubleshoot, resolve disputes, accomplish administrative tasks, contact you, comply with applicable law, and cooperate with law enforcement activities.</p>
+<p style="font-size:16px; line-height:26px;">Morbi finibus ligula eget felis pretium, ut varius sem ultricies. Pellentesque ligula risus, gravida a metus in, maximus auctor est. Nulla facilisi. Quisque condimentum ipsum non tincidunt aliquet. Sed quis ligula sagittis, placerat erat et, feugiat risus. Fusce aliquet purus tincidunt eros tristique, non tristique felis semper. Morbi auctor arcu nec nisl consectetur, id tincidunt dui viverra. Donec quis arcu ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue cursus lorem eget tristique. Nulla semper tortor magna, a rutrum nulla consequat tempus. </p>
+<p style="font-size:16px; line-height:26px;">Nulla semper tortor magna, a rutrum nulla consequat tempus. Quisque vehicula augue sed diam semper, in mattis felis ornare. In commodo ullamcorper commodo. Etiam scelerisque augue ac sodales tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+<p style="margin:50px 0">
+</p><h3>3. Release of Personally Identifiable Information</h3>
+<p style="font-size:16px; line-height:26px;">We will not share your Personally Identifiable Information with other parties except as provided below:</p>
+<p style="font-size:16px; line-height:26px;">Morbi auctor arcu nec nisl consectetur, id tincidunt dui viverra. Donec quis arcu ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue cursus lorem eget tristique. Nulla semper tortor magna, a rutrum nulla consequat tempus. Quisque vehicula augue sed diam semper, in mattis felis ornare. In commodo ullamcorper commodo. Etiam scelerisque augue ac sodales tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+<p style="margin:50px 0">
+</p><h3>4. Release of Non-Personally Identifiable Information</h3>
+<p style="font-size:16px; line-height:26px;">Morbi finibus ligula eget felis pretium, ut varius sem ultricies. Pellentesque ligula risus, gravida a metus in, maximus auctor est. Nulla facilisi. Quisque condimentum ipsum non tincidunt aliquet. Sed quis ligula sagittis, placerat erat et, feugiat risus. Fusce aliquet purus tincidunt eros tristique, non tristique felis semper. Morbi auctor arcu nec nisl consectetur, id tincidunt dui viverra.</p>
+<p style="margin:50px 0">
+</p><h3>5. User Choices on Collection and Use of Information</h3>
+<p style="font-size:16px; line-height:26px;">As discussed above, you can always choose not to provide information, although it may be required to engage in a certain activity on the Website.</p>
+<p style="font-size:16px; line-height:26px;">Morbi finibus ligula eget felis pretium, ut varius sem ultricies. Pellentesque ligula risus, gravida a metus in, maximus auctor est. Nulla facilisi. Quisque condimentum ipsum non tincidunt aliquet. Sed quis ligula sagittis, placerat erat et, feugiat risus. Fusce aliquet purus tincidunt eros tristique, non tristique felis semper. Morbi auctor arcu nec nisl consectetur, id tincidunt dui viverra. Donec quis arcu ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue cursus lorem eget tristique. Nulla semper tortor magna, a rutrum nulla consequat tempus. Quisque vehicula augue sed diam semper, in mattis felis ornare. In commodo ullamcorper commodo. Etiam scelerisque augue ac sodales tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+<p style="margin:50px 0">
+</p><h3>6. Privacy Statement of Third Party Websites</h3>
+<p style="font-size:16px; line-height:26px;">Morbi auctor arcu nec nisl consectetur, id tincidunt dui viverra. Donec quis arcu ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue cursus lorem eget tristique. Nulla semper tortor magna, a rutrum nulla consequat tempus. Quisque vehicula augue sed diam semper, in mattis felis ornare. In commodo ullamcorper commodo. Etiam scelerisque augue ac sodales tincidunt. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+<p style="margin:50px 0">
+</p><h3>7. Miscellaneous Privacy Issues</h3>
+<p style="font-size:16px; line-height:26px;">Sed quis ligula sagittis, placerat erat et, feugiat risus. Fusce aliquet purus tincidunt eros tristique, non tristique felis semper. Morbi auctor arcu nec nisl consectetur, id tincidunt dui viverra. Donec quis arcu ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus congue cursus lorem eget tristique. </p>
+<p style="font-size:16px; line-height:26px;">&nbsp;</p>
+<p style="font-size:16px; line-height:26px;">If you have any questions about this privacy policy, the practices of this site, or your dealings with this site, please contact us.</p>
+<p style="margin:10px 0">
+				</p></div>
+				 ]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>
+				        <item>
+		        <title>Shopper Typography</title>
+		        <identifier>typography</identifier>
+                <content><![CDATA[
+				<div class="page-head">
+<h3>Typography</h3>
+</div>
+<h1>H1 tag example</h1>
+<p>sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure</p>
+<p style="margin:50px 0;"></p>
+<h2>H2 tag example</h2>
+<p>sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure</p>
+<p style="margin:50px 0;"></p>
+<h3>H3 tag example</h3>
+<p>sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure</p>
+<p style="margin:50px 0;"></p>
+<h4>H4 tag example</h4>
+<p>sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure</p>
+<p style="margin:50px 0;"></p>
+<h5>H5 tag example</h5>
+<p>sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure</p>
+<p style="margin:50px 0;"></p>
+<h6>H6 tag example</h6>
+<p>sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure</p>
+<p style="margin:80px 0;"></p>
+
+
+<h1>Columns</h1>
+<div class="one_half "><h3>One Half</h3><p>sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure</p>
+</div>
+<div class="one_half last"><h3>One Half</h3><p>sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure</p></div>
+<div class="clearfix">&nbsp;</div><p style="margin:50px 0;"></p>
+
+<div class="one_third"><h3>One Third</h3><p>sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure</p>
+</div>
+<div class="one_third"><h3>One Third</h3><p>sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure</p>
+</div>
+<div class="one_third last"><h3>One Third</h3><p>sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure</p>
+</div>
+<div class="clearfix">&nbsp;</div><p style="margin:50px 0;"></p>
+
+
+
+<div class="one_fourth"><h3>One Fourth</h3><p>sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure</p>
+</div>
+<div class="one_fourth"><h3>One Fourth</h3><p>sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure</p>
+</div>
+<div class="one_fourth"><h3>One Fourth</h3><p>sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure</p>
+</div>
+<div class="one_fourth last"><h3>One Fourth</h3><p>sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure</p>
+</div>
+<div class="clearfix">&nbsp;</div><p style="margin:80px 0;"></p>
+
+<h2>Blockquotes</h2>
+<div class="one_half ">
+<blockquote>
+Labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum abore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatu
+</blockquote>
+<p style="text-align: right; margin:15px 0 0 0; padding-right: 20px"><a href="//olegnax.com">John Doe</a><br /> Creative Director</p>
+
+</div>
+<div class="one_half last">
+<blockquote>
+<h3>John Doe</h3>
+<p>Labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit voluptatem. Ut itationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum abore et dolore magnam aliquam quaerat volupt</p>
+</blockquote>
+</div>
+
+<div class="clearfix">&nbsp;</div><p style="margin:50px 0;"></p>
+<h2>Blockquotes Wrapped</h2>
+<div class="one_half white-wrap">
+<blockquote>
+Labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum abore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatu
+</blockquote>
+<p style="text-align: right; margin:15px 0 0 0; padding-right: 20px"><a href="//olegnax.com">John Doe</a><br /> Creative Director</p>
+
+</div>
+<div class="one_half last white-border-wrap">
+<blockquote>
+<h3>John Doe</h3>
+<p>Labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit voluptatem. Ut itationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum abore et dolore magnam aliquam quaerat volupt</p>
+</blockquote>
+</div>
+<div class="clearfix">&nbsp;</div>
+
+
+<h2>Lists</h2>
+<div class="one_half ">
+<h3>Marked</h3>
+<ul class="ox_list_simple">
+<li>Curabitur eu sapien eget tortor blandit pretium auctor ac metus.</li>
+<li>Etiam quis est non velit facilisis auctor.</li>
+<li>Vivamus adipiscing auctor quam, at aliquet diam viverra sed.</li>
+<li>Integer a tortor quis purus consectetur luctus sit amet ac elit.</li>
+<li>Duis eget odio ut tellus pulvinar gravida in in purus.</li>
+<li>Cras interdum faucibus erat, sit amet pretium leo dignissim vel.</li>
+</ul>
+</div>
+<div class="one_half last ">
+
+<h3>Ordered</h3>
+<ol class="ox_list_simple">
+<li>Curabitur eu sapien eget tortor blandit pretium auctor ac metus.</li>
+<li>Etiam quis est non velit facilisis auctor.</li>
+<li>Vivamus adipiscing auctor quam, at aliquet diam viverra sed.</li>
+<li>Integer a tortor quis purus consectetur luctus sit amet ac elit.</li>
+<li>Duis eget odio ut tellus pulvinar gravida in in purus.</li>
+<li>Cras interdum faucibus erat, sit amet pretium leo dignissim vel.</li>
+</ol></div>
+<div class="clearfix">&nbsp;</div>
+
+<p style="margin:50px 0;"></p>
+
+<h2>Content Wrappers</h2>
+<div class="one_half  white-wrap">
+<h3>Simple White Wrap</h3>
+<ul class="ox_list_simple">
+<li>Curabitur eu sapien eget tortor blandit pretium auctor ac metus.</li>
+<li>Etiam quis est non velit facilisis auctor.</li>
+<li>Vivamus adipiscing auctor quam, at aliquet diam viverra sed.</li>
+<li>Integer a tortor quis purus consectetur luctus sit amet ac elit.</li>
+<li>Duis eget odio ut tellus pulvinar gravida in in purus.</li>
+<li>Cras interdum faucibus erat, sit amet pretium leo dignissim vel.</li>
+</ul>
+</div>
+<div class="one_half last white-border-wrap">
+
+<h3>White Wrap with Top Border</h3>
+<ol class="ox_list_simple">
+<li>Curabitur eu sapien eget tortor blandit pretium auctor ac metus.</li>
+<li>Etiam quis est non velit facilisis auctor.</li>
+<li>Vivamus adipiscing auctor quam, at aliquet diam viverra sed.</li>
+<li>Integer a tortor quis purus consectetur luctus sit amet ac elit.</li>
+<li>Duis eget odio ut tellus pulvinar gravida in in purus.</li>
+<li>Cras interdum faucibus erat, sit amet pretium leo dignissim vel.</li>
+</ol></div>
+<div class="clearfix">&nbsp;</div>
+
+
+<h2>Wrapped Table</h2>
+<table class="data-table" style="margin-bottom:50px;">
+<thead>
+<tr><th>Header 1</th><th>Header 2</th><th>Header 3</th><th>Header 4</th><th>Header 5</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>Division 1</td>
+<td>Division 2</td>
+<td>Division 3</td>
+<td>Division 4</td>
+<td>Division 5</td>
+</tr>
+<tr>
+<td>Division 1</td>
+<td>Division 2</td>
+<td>Division 3</td>
+<td>Division 4</td>
+<td>Division 5</td>
+</tr>
+<tr>
+<td>Division 1</td>
+<td>Division 2</td>
+<td>Division 3</td>
+<td>Division 4</td>
+<td>Division 5</td>
+</tr>
+<tr>
+<td>Division 1</td>
+<td>Division 2</td>
+<td>Division 3</td>
+<td>Division 4</td>
+<td>Division 5</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Simple Table</h2>
+<table class="ox_table"  style="margin-bottom:50px;">
+<thead>
+<tr><th>Header 1</th><th>Header 2</th><th>Header 3</th><th>Header 4</th><th>Header 5</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>Division 1</td>
+<td>Division 2</td>
+<td>Division 3</td>
+<td>Division 4</td>
+<td>Division 5</td>
+</tr>
+<tr>
+<td>Division 1</td>
+<td>Division 2</td>
+<td>Division 3</td>
+<td>Division 4</td>
+<td>Division 5</td>
+</tr>
+<tr>
+<td>Division 1</td>
+<td>Division 2</td>
+<td>Division 3</td>
+<td>Division 4</td>
+<td>Division 5</td>
+</tr>
+<tr>
+<td>Division 1</td>
+<td>Division 2</td>
+<td>Division 3</td>
+<td>Division 4</td>
+<td>Division 5</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Code</h2>
+<div class="white-wrap"><pre><code>$productCollection = Mage::getResourceModel(\'catalog/product_collection\');
+$layer->prepareProductCollection($productCollection);
+$productCollection->addCountToCategories($categories);
+return $categories;</code></pre></div>
+                
+	                ]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>
+            <item>
+                <title>Contacts</title>
+                <identifier>contacts_page</identifier>
+                <content><![CDATA[
+{{block type="cms/block" block_id="shopper_google_map"}}
+
+<div class="one_half">
+<div class="cform_wrap">{{block type="page/html"  name="formonly" as="formonly" template="contacts/formonly.phtml"}}</div>
+</div>
+<div class="one_half last">
+<div class="block-content contact_block clearfix">
+<h2>How to find us</h2>
+<div class="caddress">
+<p><i class="fa fa-map-marker"></i> &nbsp;&nbsp;The Business Centre<br>
+61 Wellfield Road<br>
+Roath Cardiff<br>
+CF24 3DG</p>
+</div>
+<div class="ccontacts">
+<p><i class="fa fa-phone"></i>&nbsp;&nbsp; Phone: 1-234-567-89<br>
+<i class="fa  fa-fax"></i>&nbsp;&nbsp; Fax: 1-234-567-89<br>
+<i class="fa fa-paper-plane"></i>&nbsp;&nbsp; <a href="mail@lipsum.com">mail@lipsum.com</a></p>
+</div>
+</div>
+<p style="margin:30px;"></p>
+<div class="block-content social_block">
+<h2>Lets get social</h2>
+<ul class="social">
+<li><a class="social_links rss_feed"        href="http://shopper.queldorei.com/feed" target="social"></a></li>
+<li><a class="social_links facebook_account"    href="http://facebook.com/queldorei" target="social"></a></li>
+<li><a class="social_links twitter_account"     href="http://twitter.com/queldorei" target="social"></a></li>
+<li><a class="social_links dribble_account"     href="#" target="social"></a></li>
+<li><a class="social_links flicker_account"     href="#" target="social"></a></li>
+<li><a class="social_links vimeo_account"       href="#" target="social"></a></li>
+<li><a class="social_links picasa_account"      href="http://picasa.google.com/" target="social"></a></li>
+<li><a class="social_links digg_account"        href="http://digg.com/" target="social"></a></li>
+<li><a class="social_links plurk_account"       href="http://plurk.com" target="social"></a></li>
+<li><a class="social_links tripadvisor_account"     href="http://tripadvisor.com" target="social"></a></li>
+<li><a class="social_links yahoo_account"       href="http://yahoo.com" target="social"></a></li>
+<li><a class="social_links email_to"        href="mailto:mail@lipsum.com" target="social"></a></li>
+<li><a class="social_links youtube_account"     href="#" target="social"></a></li>
+<li><a class="social_links pinterest_account"   href="#" target="social"></a></li>
+<li><a class="social_links google_plus_account"     href="http://plus.google.com/u/0/111109476451145065018" target="social"></a></li>   
+<li><a class="social_links linkedin_account"    href="#" target="social"></a></li>
+<li><a class="social_links delicious_account"   href="http://delicious.com" target="social"></a></li>
+<li><a class="social_links devianart_account"   href="http://deviantart.com" target="social"></a></li>
+<li><a class="social_links tumblr_account"      href="http://tumblr.com" target="social"></a></li>
+<li><a class="social_links skype_account"       href="http://skype.com" target="social"></a></li>
+<li><a class="social_links apple_account"       href="http://apple.com/" target="social"></a></li>
+<li><a class="social_links aim_account"         href="http://aim.com" target="social"></a></li>
+<li><a class="social_links paypal_account"      href="http://paypal.com" target="social"></a></li>
+<li><a class="social_links blogger_account"     href="http://blogger.com" target="social"></a></li>
+<li><a class="social_links behance_account"     href="http://behance.net" target="social"></a></li>
+<li><a class="social_links myspace_account"     href="http://myspace.com" target="social"></a></li>
+<li><a class="social_links stumble_account"     href="http://stumbleupon.com" target="social"></a></li>
+<li><a class="social_links forrst_account"      href="http://forrst.com" target="social"></a></li>
+<li><a class="social_links imdb_account"        href="http://imdb.com" target="social"></a></li>
+<li><a class="social_links instagram_account"   href="http://instagram.com" target="social"></a></li>
+</ul>
+</div>
+</div>                                        
+                    ]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>one_column</root_template>
+            </item>	       
+	        <item>
+                <title>Shopper - Three Columns Sample Page</title>
+                <identifier>shopper_3columns</identifier>
+                <content><![CDATA[
+<div class="page-head">
+<h3>Three Columns Sample Page</h3>
+</div>
+<div class="white-wrap" style="margin-top:50px;">
+<ul class="ox_list_simple">
+<li><a href="#answer1">Shipping & Delivery</a></li>
+<li><a href="#answer2">Privacy & Security</a></li>
+<li><a href="#answer3">Returns & Replacements</a></li>
+<li><a href="#answer4">Ordering</a></li>
+<li><a href="#answer5">Payment, Pricing & Promotions</a></li>
+<li><a href="#answer6">Viewing Orders</a></li>
+<li><a href="#answer7">Updating Account Information</a></li>
+</ul>
+</div>
+
+
+<h3 id="answer1">Shipping & Delivery</h3>
+<p style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</p>
+<p style="margin:50px 0;"></p>
+
+<h3 id="answer2">Privacy & Security</h3>
+<p style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</p>
+<p style="margin:50px 0;"></p>
+
+<h3 id="answer3">Returns & Replacements</h3>
+<p style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</p>
+<p style="margin:50px 0;"></p>
+
+<h3 id="answer4">Ordering</h3>
+<p style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</p>
+<p style="margin:50px 0;"></p>
+
+<h3 id="answer5">Payment, Pricing & Promotions</h3>
+<p style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</p>
+<p style="margin:50px 0;"></p>
+
+<h3 id="answer6">Viewing Orders</h3>
+<p style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</p>
+<p style="margin:50px 0;"></p>
+
+<h3 id="answer7">Updating Account Information</h3>
+<p style="margin-bottom:10px;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi luctus. Duis lobortis. Nulla nec velit. Mauris pulvinar erat non massa. Suspendisse tortor turpis, porta nec, tempus vitae, iaculis semper, pede. Cras vel libero id lectus rhoncus porta. Suspendisse convallis felis ac enim. Vivamus tortor nisl, lobortis in, faucibus et, tempus at, dui. Nunc risus. Proin scelerisque augue. Nam ullamcorper. Phasellus id massa. Pellentesque nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc augue. Aenean sed justo non leo vehicula laoreet. Praesent ipsum libero, auctor ac, tempus nec, tempor nec, justo.</p>	                
+	                ]]></content>
+                <is_active>1</is_active>
+                <sort_order>0</sort_order>
+                <stores>
+                    <item>0</item>
+                </stores>
+                <root_template>three_columns</root_template>
+            </item>
+        </pages>
+        <blocks>
+            <item>
+                <title>Shopper Store Logo</title>
+                <identifier>shopper_logo</identifier>
+                <content><![CDATA[<img src="{{media url="queldorei/shopper/logo-no-hififreaks.png"}}" alt="Shopper Store" />]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Shopper Footer banners</title>
+                <identifier>shopper_footer_banners</identifier>
+                <content><![CDATA[
+<div class="row clearfix">
+	<div class="grid_6">
+		<a href="//queldorei.com/" title="free shipping on orders over $100"><img src="{{media url="queldorei/shopper/footer_banner_1.png"}}" alt="" /></a>
+	</div>
+	<div class="grid_6">
+		<a href="//queldorei.com" title="call us! toll free 8-800-123-1234"><img src="{{media url="queldorei/shopper/footer_banner_2.png"}}" alt="" /></a>
+	</div>
+</div>
+                ]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Shopper Footer Contact</title>
+                <identifier>shopper_footer_contact</identifier>
+                <content><![CDATA[
+<h4>Contacts</h4>
+<div class="block-content">
+<p><i class="fa fa-map-marker"></i> &nbsp;&nbsp;Lingeries Store</p>
+<p>34 New Clity 5655, Excel Tower</p>
+<p>OPG Rpad, 4538FH</p>
+<hr>
+<p><i class="fa  fa-phone"></i>&nbsp;&nbsp; +1 800 123 1234</p>
+<hr>
+<p><i class="fa fa-paper-plane"></i>&nbsp;&nbsp; <a href="mail@lipsum.com">mail@lipsum.com</a></p>
+<ul class="social">
+	<li><a class="social_links twitter_account" href="http://twitter.com/queldorei" target="social"><span>Twitter</span></a></li>
+	<li><a class="social_links facebook_account" href="http://facebook.com/queldorei" target="social"><span>Facebook</span></a></li>
+	<li><a class="social_links email_to" href="mailto:mail@lipsum.com"><span>Email</span></a></li>
+	<li><a class="social_links google_plus_account" href="http://plus.google.com/u/0/111109476451145065018" target="social"><span>Google</span></a></li>
+</ul>
+</div>               
+                ]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Shopper Footer Information</title>
+                <identifier>shopper_footer_information</identifier>
+                <content><![CDATA[
+<h4>Information</h4>
+<div class="block-content">
+<ul>
+	<li>Veritatis et quasi architecto</li>
+	<li>Beatae vitae dicta sunt explicabo</li>
+	<li>Nemo enim ipsam voluptatem quia</li>
+	<li>Voluptas sit aspernatur</li>
+	<li>Aut odit aut , sed quia consequunt</li>
+	<li>Umagni dolores eos qui ratione</li>
+	<li>Voluptatem sequi nesciunt.</li>
+</ul>
+</div>
+            ]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Shopper Footer Links</title>
+                <identifier>shopper_footer_links</identifier>
+                <content><![CDATA[
+<ul class="links">
+	<li><a href="{{store url=''}}" title="About Us">About Us</a></li>
+	<li class="separator">&nbsp;</li>
+	<li><a href="{{store url='typography'}}" title="Typography">Typography</a></li>
+	<li class="separator">&nbsp;</li>
+	<li><a href="{{store url='shopper_3columns'}}" title="Delivery & Returns">Delivery & Returns</a></li>
+	<li class="separator">&nbsp;</li>
+	<li><a href="{{store url='terms'}}" title="Terms & Conditions">Terms & Conditions</a></li>
+	<li class="separator">&nbsp;</li>
+	<li><a href="{{store url='contacts_page'}}" title="Contact Us">Contact Us</a></li>
+</ul>
+                ]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Demos</title>
+                <identifier>shopper_navigation_block</identifier>
+                <content><![CDATA[
+<div class="std" style="margin:25px 0">
+<div class="grid_3" style="text-align:center;">
+				<a href="http://shopper.queldorei.com/index.php/full-screen" style="text-decoration:none;" class="simple_hover"><img src="{{media url="wysiwyg/m0.png"}}" alt="" width="100%" style="max-width:200px"><br><br>
+				<h2 style="font-size:14px; font-weight:700;">FULL SCREEN <br>SLIDESHOW</h2></a>
+</div>
+<div class="grid_3" style="text-align:center;">
+				<a href="http://shopper.queldorei.com/index.php/?___store=en" style="text-decoration:none;" class="simple_hover"><img src="{{media url="wysiwyg/m01.png"}}" alt="" width="100%" style="max-width:200px"><br><br>
+				<h2 style="font-size:14px; font-weight:700;">LONG <br>FULL WIDTH</h2></a>
+				
+</div>
+<div class="grid_3" style="text-align:center;">
+				<a href="http://shopper.queldorei.com/index.php/?___store=sp" style="text-decoration:none;" class="simple_hover"><img src="{{media url="wysiwyg/m02.png"}}" alt=""  width="100%" style="max-width:200px"><br><br>					
+				<h2 style="font-size:14px; font-weight:700;">LONG<br>WITH  SIDEBAR</h2></a>
+				
+</div>
+<div class="grid_3 last" style="text-align:center;">
+				<a href="http://shopper.queldorei.com/index.php/?___store=gr" style="text-decoration:none;" class="simple_hover"><img src="{{media url="wysiwyg/m03.png"}}" alt="" width="100%" style="max-width:200px"><br><br>
+				<h2 style="font-size:14px; font-weight:700;">SIMPLE <br>FULL WIDTH</h2></a>
+</div>
+<div class="clearfix" style="padding:35px"></div>
+
+<div class="one_fourth" style="text-align:center;">
+				<a href="http://shopper.queldorei.com/index.php/?___store=gr" style="text-decoration:none;" class="simple_hover"><img src="{{media url="wysiwyg/m04.png"}}" alt="" width="100%" style="max-width:200px"><br><br>
+				<h2 style="font-size:14px; font-weight:700;">FULL WIDTH</h2></a>
+
+</div><div class="one_fourth" style="text-align:center; margin-bottom:10px">
+				<a href="http://shopper.queldorei.com/index.php/?___store=fr" style="text-decoration:none;" class="simple_hover"><img src="{{media url="wysiwyg/m05.png"}}" alt=""  width="100%" style="max-width:200px"><br><br>					
+				<h2 style="font-size:14px; font-weight:700;">RIGHT SIDEBAR</h2></a>	
+
+</div><div class="one_fourth" style="text-align:center; ">
+				<a href="http://shopper.queldorei.com/index.php/?___store=pl"  class="simple_hover" style="text-decoration:none;"><img src="{{media url="wysiwyg/m06.png"}}" alt="" width="100%" style="max-width:200px"><br><br>
+				<h2 style="font-size:14px; font-weight:700;">LEFT SIDEBAR</h2></a>
+
+</div><div class="one_fourth last" style="text-align:center; ">
+				<a href="http://themeforest.net/item/shopper-magento-theme-responsive-retina-ready/3139960"  class="simple_hover" style="text-decoration:none;"><img src="{{media url="wysiwyg/build.png"}}" alt="" width="100%" style="max-width:200px"><br><br>
+				<h2 style="font-size:14px; font-weight:700;">BUILD YOUR OWN LOOK</h2></a>
+</div>
+</div>
+<div class="clearfix"></div>                
+                ]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Shopper Empty Category block</title>
+                <identifier>shopper_empty_category</identifier>
+                <content><![CDATA[
+<center>
+<p><img class="retina" src="{{media url="queldorei/shopper/shop_icon.png"}}" alt="" /></p>
+<br />
+<h1>WOOPS!</h1>
+<h2>There are no products matching the selection.</h2>
+<p>&nbsp;</p>
+* This is a static CMS block displayed if category is empty. <br />You can put your own content here.<br /><br />
+<p><button class="button" onclick="window.location='{{store url=''}}'"><span><span>back to main</span></span></button></p>
+</center>
+                ]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Shopper Empty Cart block</title>
+                <identifier>shopper_empty_cart</identifier>
+                <content><![CDATA[
+<center>
+<p><img class="retina" src="{{media url="queldorei/shopper/shop_icon.png"}}" alt="" /></p>
+<br />
+<h1>WOOPS!</h1>
+<h2>There are no products matching the selection.</h2>
+<p>&nbsp;</p>
+* This is a static CMS block displayed if shopping cart is empty. <br />You can put your own content here.<br /><br />
+<p><button class="button" onclick="window.location='{{store url=''}}'"><span><span>back to main</span></span></button></p>
+</center>
+                ]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Shopper After Tabs</title>
+                <identifier>shopper_after_tabs</identifier>
+                <content><![CDATA[<p class="dotted-border">This is a static CMS block displayed if category is empty. You can put your own content here.</p>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Custom Tab</title>
+                <identifier>shopper_custom_tab</identifier>
+                <content><![CDATA[<p><strong>Lorem Ipsum</strong><span>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Shopper Cart Promotion</title>
+                <identifier>shopper_cart_promotion</identifier>
+                <content><![CDATA[<div class="cart-promotion">Place your promotion here</div>]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Shopper Newsletter text</title>
+                <identifier>shopper_newsletter_text</identifier>
+                <content><![CDATA[Lorem ipsum dolor sit amen, dolor imun ra adlip ulissys]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Shopper Product Addthis block</title>
+                <identifier>shopper_product_addthis</identifier>
+                <content><![CDATA[
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript" src="//s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f574ddc5bcdccbc"></script>
+<!-- AddThis Button END -->
+                        ]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Shopper Slideshow sideblock</title>
+                <identifier>shopper_banners_slideshow</identifier>
+                <content><![CDATA[
+<div class="block block-slideshow">
+    <div class="block-content">
+		<div class="block-slider">
+			<ul class="slides">
+				<li>
+				    <strong class="block-slider-title">Lorem Dolor Sit</strong>
+					<p>Lorem ipsum dolor sit amen, dolor imun ra adlip ulissys lorem ipsum dolor sit amen</p>
+					<img src="{{media url="queldorei/shopper/block/230_1.jpg"}}" alt="" />
+					<button class="button button_white" onclick="window.location='{{store url=''}}'"><span><span>Learn more</span></span></button>
+				</li>
+				<li>
+				    <strong class="block-slider-title">Ipsumimum Dolor Sit</strong>
+					<img src="{{media url="queldorei/shopper/block/230_2.jpg"}}" alt="" />
+					<button class="button button_white" onclick="window.location='{{store url=''}}'"><span><span>Learn more</span></span></button>
+				</li>
+				<li>
+				    <strong class="block-slider-title">Ipsumimum Dolor</strong>
+					<p>Lorem ipsum dolor sit amen, dolor imun ra adlip ulissys lorem ipsum dolor sit amen</p>
+					<img src="{{media url="queldorei/shopper/block/230_3.jpg"}}" alt="" />
+				</li>
+			</ul>
+		</div>
+    </div>
+</div>
+                
+                ]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Shopper Additional Product block</title>
+                <identifier>shopper_product_additional</identifier>
+                <content><![CDATA[
+<div class="block block-product-additional">
+    <div class="block-title">
+        <strong><span>Lorem Ipsumimum Dolor Sit</span></strong>
+    </div>
+    <div class="block-content">
+		<p>Lorem ipsum dolor sit amen, dolor imun ra adlip ulissys lorem ipsum dolor sit amen</p>
+		<img src="{{media url="queldorei/shopper/block/230_3.jpg"}}" alt="" />
+    </div>
+</div>
+                ]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+	        <item>
+                <title>Shopper Custom sideblock</title>
+                <identifier>shopper_custom_sideblock</identifier>
+                <content><![CDATA[
+<div class="block block-custom">
+    <div class="block-title">
+        <strong><span>Lorem Ipsum</span></strong>
+    </div>
+    <div class="block-content">
+		<p>Lorem ipsum dolor sit amen, dolor imun ra adlip ulissys lorem ipsum dolor sit amen</p>
+		<img src="{{media url="queldorei/shopper/block/230_3.jpg"}}" alt="" />
+    </div>
+</div>
+                ]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>           
+			 <item>
+                <title>Shopper Additional Product block</title>
+                <identifier>shopper_product_additional</identifier>
+                <content><![CDATA[
+<div class="block block-product-additional">
+    <div class="block-title">
+        <strong><span>Lorem Ipsumimum Dolor Sit</span></strong>
+    </div>
+    <div class="block-content">
+		<p>Lorem ipsum dolor sit amen, dolor imun ra adlip ulissys lorem ipsum dolor sit amen</p>
+		<img src="{{media url="queldorei/shopper/block/230_3.jpg"}}" alt="" />
+    </div>
+</div>
+                ]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+	        <item>
+                <title>Shopper - Additional Menu Links</title>
+                <identifier>additional_shopper_menu_links</identifier>
+                <content><![CDATA[
+ 
+<li class="level0 level-top">
+                <a href="{{store url='blog'}}" class="level-top">
+                    <span>BLOG</span>
+                </a>               
+            </li>
+ <li class="level0 level-top parent">
+                <a href="#" class="level-top">
+                    <span>Pages</span>
+                </a>    
+				<div class="sub-wrapper" style="left: -10000px;">
+					<ul class="level0">
+					<li class="">
+                    	<ol>
+                        	<li class="level1 nav-1-1 first parent">								
+									<span><h4 style="padding: 0  10px 15px;">HOME PAGES</h4></span>								
+							</li>
+<li class="level1 nav-1-2">
+								<a href="http://shopper.queldorei.com/index.php/full-screen">
+									<span>Fullscreen Slider-  <b style="color:red">New</b></span>
+								</a>
+							</li>
+                            <li class="level1 nav-1-3">
+								<a href="http://shopper.queldorei.com/index.php/?___store=sp">
+									<span>Long with Right sidebar -  <b style="color:red">New</b></span>
+								</a>
+							</li>
+                            <li class="level1 nav-1-4">
+								<a href="http://shopper.queldorei.com/index.php/?___store=en">
+									<span>Long Full Width - <b style="color:red">New</b></span>
+								</a>
+							</li>
+                             <li class="level1 nav-1-5">
+								<a href="http://shopper.queldorei.com/index.php/?___store=gr">
+									<span>Short Full Width 'Men' -  <b style="color:red">New</b></span>
+								</a>
+							</li>
+                            <li class="level1 nav-1-6">
+								<a href="http://shopper.queldorei.com/index.php/?___store=fr">
+									<span>Short with Right sidebar</span>
+								</a>
+							</li>
+                             <li class="level1 nav-1-7">
+								<a href="http://shopper.queldorei.com/index.php/?___store=de">
+									<span>Full Width</span>
+								</a>
+							</li>
+                            <li class="level1 nav-1-8">
+								<a href="http://shopper.queldorei.com/index.php/?___store=pl">
+									<span>Short with Left Sidebar
+</span>
+								</a>
+							</li>
+                            </ol></li>
+
+<li class="last"><ol><li class="level1 nav-1-8 parent">                            
+								<span><h4 style="padding: 0  10px 15px;">PAGES / ELEMENTS</h4></span>		
+							</li>
+                            <li class="level1 nav-1-9">
+								<a href="{{store url='contacts_page'}}">
+									<span>Contacts - Map and Form</span>
+								</a>
+							</li>
+                            <li class="level1 nav-1-10">
+								<a href="{{store url='contacts_v3'}}">
+									<span>Contacts - Simple</span>
+								</a>
+							</li>
+  <li class="level1 nav-1-11">
+								<a href="{{store url='contacts_without_form'}}">
+									<span>Contacts - Without Form</span>
+								</a>
+							</li>
+                            <li class="level1 nav-1-12">
+								<a href="{{store url='typography'}}">
+									<span>Typography</span>
+								</a>
+							</li>
+                            <li class="level1 nav-1-13">
+								<a href="{{store url='icon-box'}}">
+									<span>Icon Box</span>
+								</a>
+							</li>
+                            <li class="level1 nav-1-14">
+								<a href="{{store url='shopper_testimonials'}}">
+									<span>Testimonials</span>
+								</a>
+							</li>                          
+                                <li class="level1 nav-1-15">
+								<a href="{{store url='shopper_3columns'}}">
+									<span>Page with Two Sidebars</span>
+								</a>
+							</li>
+                            <li class="level1 nav-1-16 last">
+								<a href="terms">
+									<span>Terms  Conditions</span>
+								</a>
+							</li>                        
+						</ol>
+                     </li>
+					</ul>
+				</div>           
+            </li>
+            <li class="level0 level-top parent">
+                <a href="#" class="level-top">
+                    <span>Help</span>
+                </a>    
+				<div class="sub-wrapper" style="left: -10000px;">
+					<ul class="level0">
+					<li class="">
+                    	<ol>
+                        	<li class="level1 nav-1-1 first">
+								<a href="http://help.queldorei.com/">
+									<span>Help Forum</span>
+								</a>
+							</li>
+                            <li class="level1 nav-1-2">
+								<a href="http://queldorei.com/faq.html">
+									<span>FAQ</span>
+								</a>
+							</li>
+                            <li class="level1 nav-1-3 last">
+								<a href="http://themeforest.net/item/shopper-magento-theme-responsive-retina-ready/3139960">
+									<span>Purchase</span>
+								</a>
+							</li>                         
+						</ol>
+                     </li>
+					</ul>
+				</div>           
+            </li>         
+              ]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+            <item>
+                <title>Google Map</title>
+                <identifier>shopper_google_map</identifier>
+                <content><![CDATA[
+</div>
+</div>
+</div>
+</div>
+<div class="topmap">
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;height:460px;width:100%;"><div id="gmap_canvas" style="height:460px;width:100%;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://www.themecircle.net" id="get-map-data">themecircle</a></div><script type="text/javascript"> function init_map(){var myOptions = {scrollwheel:false,zoom:14,center:new google.maps.LatLng(40.805478,-73.96522499999998),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(40.805478, -73.96522499999998)});infowindow = new google.maps.InfoWindow({content:"<b>The Breslin</b><br/>2880 Broadway<br/> New York" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>   
+</div>
+<div class="main row clearfix">
+<div class="col-main">
+<div class="col-main-wrap pad" >
+<div class="std">                              
+                ]]></content>
+                <is_active>1</is_active>
+                <stores>
+                    <item>0</item>
+                </stores>
+            </item>
+        </blocks>
+    </cms>
+</root>

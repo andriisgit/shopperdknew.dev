@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<layout>
+    <!-- Add rates menu -->
+    <adminhtml_sales_orderinfogrid_index>
+        <reference name="content">
+            <block type="economic2/adminhtml_sales_orderInfoGrid" name="economic2.orderinfogrid"/>
+        </reference>
+    </adminhtml_sales_orderinfogrid_index>
+
+</layout>

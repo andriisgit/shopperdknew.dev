@@ -1,0 +1,68 @@
+<?php
+/**
+ * Nybohansen ApS
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ *
+ * =================================================================
+ *                 MAGENTO EDITION USAGE NOTICE
+ * =================================================================
+ * This package designed for Magento COMMUNITY edition
+ * We do not guarantee correct work of this extension
+ * on any other Magento edition except Magento COMMUNITY edition.
+ * In case of incorrect edition usage, we don't provide support.
+ * =================================================================
+ *
+ * @category   Nybohansen
+ * @package    Nybohansen_Pacsoft
+ * @copyright  Copyright (c) 2014 Nybohansen ApS
+ * @license    LICENSE.txt
+ */
+?>
+
+<?php if(!count($this->getServicePoints())): ?>
+    <select class="required required-entry validate-select" name="pacsoft[<?php echo $this->getFormCode() ?>][parcelshopId]">
+        <option value=""><?php echo $this->__('No parcel shops in this zip'); ?></option>
+    </select>
+<?php else: ?>
+
+    <?php
+    $innerHtml = '';
+    $displayType = $this->getDisplayType();
+
+    foreach ($this->getServicePoints() as $servicePoint){
+        $servicePointId = $servicePoint->servicePointId;
+        $name = ucwords(strtolower($servicePoint->name));
+        $address = ucwords(strtolower($servicePoint->visitingAddress->streetName)).' '.$servicePoint->visitingAddress->streetNumber;
+        $zip = $servicePoint->visitingAddress->postalCode;
+        $city = $servicePoint->visitingAddress->city;
+
+        if($displayType == 'select' || $displayType == 'admin'){
+            $innerHtml .= '<option '.($this->getPickupId() == $servicePointId ? 'selected' : '').' value="'.$servicePointId.'">'.$name.' · '.$address.' · '.$zip.' · '.$city.'</option>';
+        }else{
+            $innerHtml .= '<li>
+                               <label for="'.$servicePointId.' ">'.$name.' · '.$address.' · '.$zip.' · '.$city.'</label>
+                               <input '.($this->getPickupId() == $servicePointId ? 'checked' : '').' type="radio" class="pacsoft_parcelshop_radio validate-one-required-by-name" id="'.$servicePointId.' " value="'.$servicePointId.'" name="pacsoft['.$this->getFormCode().'][parcelshopId]">
+                           </li>';
+        }
+    }
+    ?>
+
+    <?php if ($displayType == 'select'): ?>
+        <select class="required required-entry validate-select" name="pacsoft[<?php echo $this->getFormCode() ?>][parcelshopId]">
+            <option value=""><?php echo $this->__('Choose parcel shop'); ?></option>
+            <?php echo $innerHtml;?>
+        </select>
+    <?php elseif($displayType == 'admin') : ?>
+        <select class="" name="PUPOPT[servicePointId]">
+            <?php echo $innerHtml;?>
+        </select>
+    <?php else: ?>
+        <ul>
+            <?php echo $innerHtml; ?>
+        </ul>
+    <?php endif; ?>
+<?php endif; ?>

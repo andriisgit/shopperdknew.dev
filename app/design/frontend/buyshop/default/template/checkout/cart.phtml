@@ -1,0 +1,149 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Shopping cart template
+ *
+ * @see Mage_Checkout_Block_Cart
+ */
+?>
+<!--PRUDUCTS BEGIN-->
+<div class="row shopping_cart_grid">
+    <div class="span12">
+        <div class="wrapper">
+            <h2 class="pull-left"><?php echo $this->__('SHOPPING CART') ?></h2>
+            <?php if(!$this->hasError()): ?>
+            <div class="pull-right right-button">
+                <?php foreach ($this->getMethods('top_methods') as $method): ?>
+                <?php if ($methodHtml = $this->getMethodHtml($method)): ?>
+                    <?php echo $methodHtml; ?>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </div>
+            <?php endif; ?>
+        </div>
+        <?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+        <?php echo $this->getChildHtml('form_before') ?>
+
+        <form action="<?php echo $this->getUrl('checkout/cart/updatePost') ?>" method="post">
+            <?php echo $this->getBlockHtml('formkey'); ?>
+        <div class="box-wrapper">
+            <div class="inside">
+                <table class="table shopping-cart-table">
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th><?php echo $this->__('Product Name') ?></th>
+                        <th class="aligncenter">&nbsp;</th>
+                        <th class="aligncenter"><?php echo $this->__('Unit Price') ?></th>
+                        <th class="aligncenter"><?php echo $this->__('Quantity') ?></th>
+                        <th class="aligncenter"><?php echo $this->__('Subtotal') ?></th>
+                        <th class="aligncenter">&nbsp;</th>
+                    </tr>
+
+                    <?php foreach($this->getItems() as $_item): ?>
+                    <?php echo $this->getItemHtml($_item) ?>
+                    <?php endforeach ?>
+                </table>
+                <div class="wrapper">
+                    <div class="pull-left" style="padding-right: 10px;padding-bottom: 3px;"><a href="<?php echo $this->getContinueShoppingUrl() ?>" class="button button-2x dark"><?php echo $this->__('CONTINUE SHOPPING') ?></a></div>
+                    <div class="pull-right hidden-phone"><button type="submit" name="update_cart_action" value="update_qty" class="button-2x dark"><?php echo $this->__('UPDATE CART') ?></button></div>
+                    <div class="pull-left" ><button type="submit" name="update_cart_action" value="empty_cart" title="<?php echo $this->__('Clear Shopping Cart'); ?>" class="button-2x dark" id="empty_cart_button"><span><span><?php echo $this->__('Clear Shopping Cart'); ?></span></span></button></div>
+
+                    <script type="text/javascript">
+                        //<![CDATA[
+                        Event.observe(window, 'load', function()
+                        {
+                            // Internet Explorer (lt 8) does not support value attribute in button elements
+                            $emptyCartButton = $('empty_cart_button');
+                            $cartActionContainer = $('update_cart_action_container');
+                            if ($emptyCartButton && $cartActionContainer) {
+                                Event.observe($emptyCartButton, 'click', function()
+                                {
+                                    $emptyCartButton.setAttribute('name', 'update_cart_action_temp');
+                                    $cartActionContainer.setAttribute('name', 'update_cart_action');
+                                    $cartActionContainer.setValue('empty_cart');
+                                });
+                            }
+
+                        });
+                        //]]>
+                    </script>
+                    <![endif]-->
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+<!--PRUDUCTS EOF-->
+
+
+
+<!--SHIPPING TAX BEGIN-->
+
+<div class="row">
+    <div class="span4">
+        <div class="box-wrapper">
+             <?php if (!$this->getIsVirtual()): echo $this->getChildHtml('shipping'); endif; ?>
+
+        </div>
+    </div>
+    <div class="span4">
+        <div class="box-wrapper">
+            <?php echo $this->getChildHtml('coupon') ?>
+        </div>
+    </div>
+    <div class="span4">
+    <div class="box-wrapper">
+        <div class="inside">
+            <?php echo $this->getChildHtml('totals'); ?>
+            <div class="aligncenter">
+                <?php if(!$this->hasError()): ?>
+                <?php foreach ($this->getMethods('methods') as $method): ?>
+                    <?php if ($methodHtml = $this->getMethodHtml($method)): ?>
+                        <p><?php echo $methodHtml; ?></p>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!--SHIPPING TAX EOF-->
+
+<?php echo $this->getChildHtml('crosssell') ?>
+
+
+
+
+
+
+
+
+

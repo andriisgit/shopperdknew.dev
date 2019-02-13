@@ -1,0 +1,10 @@
+<?php
+$slider=Mage::getStoreConfig('buyshoplayout/home_page/slider');
+if($slider)
+{
+    echo $this->getChildHtml('slider_'.$slider);
+}
+?>
+
+
+

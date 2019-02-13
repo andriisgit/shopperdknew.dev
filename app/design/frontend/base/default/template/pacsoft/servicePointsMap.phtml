@@ -1,0 +1,79 @@
+<?php
+/**
+ * Nybohansen ApS
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE.txt.
+ *
+ * =================================================================
+ *                 MAGENTO EDITION USAGE NOTICE
+ * =================================================================
+ * This package designed for Magento COMMUNITY edition
+ * We do not guarantee correct work of this extension
+ * on any other Magento edition except Magento COMMUNITY edition.
+ * In case of incorrect edition usage, we don't provide support.
+ * =================================================================
+ *
+ * @category   Nybohansen
+ * @package    Nybohansen_Pacsoft
+ * @copyright  Copyright (c) 2014 Nybohansen ApS
+ * @license    LICENSE.txt
+ */
+?>
+
+<div id="pacsoft-overlay-container" class="pacsoft-overlay-container">
+    <div class="pacsoft-overlay-background"></div>
+    <div class="pacsoft-overlay-content">
+        <div>
+            <div id="pacsoft-servicepoints-map" style="width: 600px; height: 500px; float: left"></div>
+            <div id="pacsoft-servicepoint-info" class="pacsoft-servicepoint-info">
+                <h2>Adresse</h2>
+                <p id="pacsoft-servicepoint-info-address"></p>
+                <h2 id="pacsoft-servicepoint-info-opening-hours-headlin">Åbningstider</h2>
+                <table width="980" style="width:200px;border-width:0px;">
+                    <tbody>
+                    <tr>
+                        <td><?php echo $this->__('Monday');?></td>
+                        <td class="pacsoft-servicepoint-info-opening-hours" id="pacsoft-servicepoint-info-opening-hours-MONDAY"></td>
+                    </tr>
+                    <tr>
+                        <td><?php echo $this->__('Tuesday');?></td>
+                        <td class="pacsoft-servicepoint-info-opening-hours" id="pacsoft-servicepoint-info-opening-hours-TUESDAY"></td>
+                    </tr>
+                    <tr>
+                        <td><?php echo $this->__('Wednesday');?></td>
+                        <td class="pacsoft-servicepoint-info-opening-hours" id="pacsoft-servicepoint-info-opening-hours-WEDNESDAY"></td>
+                    </tr>
+                    <tr>
+                        <td><?php echo $this->__('Thursday');?></td>
+                        <td class="pacsoft-servicepoint-info-opening-hours" id="pacsoft-servicepoint-info-opening-hours-THURSDAY"></td>
+                    </tr>
+                    <tr>
+                        <td><?php echo $this->__('Friday');?></td>
+                        <td class="pacsoft-servicepoint-info-opening-hours" id="pacsoft-servicepoint-info-opening-hours-FRIDAY"></td>
+                    </tr>
+                    <tr>
+                        <td><?php echo $this->__('Saturday');?></td>
+                        <td class="pacsoft-servicepoint-info-opening-hours" id="pacsoft-servicepoint-info-opening-hours-SATURDAY"></td>
+                    </tr>
+                    <tr>
+                        <td><?php echo $this->__('Sunday');?></td>
+                        <td class="pacsoft-servicepoint-info-opening-hours" id="pacsoft-servicepoint-info-opening-hours-SUNDAY"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="clear: both;"></div>
+            <div class="buttondiv">
+                <button type='button' class='button' id="pacsoft-overlay-content-close" title="<?php echo $this->__('Cancel') ?>"><span><?php echo $this->__('Cancel') ?></span></button>
+                <button type='button' class='button' id="pacsoft-overlay-content-save" title="<?php echo $this->__('Save') ?>"><span><?php echo $this->__('Save') ?></span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

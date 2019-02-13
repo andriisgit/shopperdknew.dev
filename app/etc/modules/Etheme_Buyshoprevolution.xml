@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Etheme_Buyshoprevolution>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Etheme_Buyshoprevolution>
+    </modules>
+</config>
