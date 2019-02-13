@@ -48,6 +48,7 @@ media/tmp/
 .VSCode/
 .history/
 .git/
+.DS_Store
 kontrakt-klarna.pdf
 categories.csv
 shopperdknew.clpprj
