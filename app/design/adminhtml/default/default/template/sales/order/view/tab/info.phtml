@@ -30,12 +30,13 @@
     <div id="order-messages">
         <?php echo $this->getChildHtml('order_messages') ?>
     </div>
-    <?php echo $this->getChildHtml('order_info') ?>
+    
+    
     <input type="hidden" name="order_id" value="<?php echo $_order->getId() ?>"/>
     <?php if ($_order->getIsVirtual()): ?>
-    <div class="box-right">
+        <div class="box-right">
     <?php else: ?>
-    <div class="box-left">
+        <div class="box-left">
     <?php endif; ?>
         <!--Payment Method-->
         <div class="entry-edit">
@@ -47,6 +48,7 @@
                 <div><?php echo Mage::helper('sales')->__('Order was placed using %s', $_order->getOrderCurrencyCode()) ?></div>
             </fieldset>
         </div>
+
     </div>
     <?php if (!$_order->getIsVirtual()): ?>
     <div class="box-right">
@@ -92,14 +94,17 @@
     <?php echo $this->getItemsHtml() ?>
     <div class="clear"></div>
 
-    <div class="box-left">
+    <?php echo $this->getChildHtml('order_info') ?>
+    
+    <!-- <div class="box-left">
         <div class="entry-edit">
             <div class="entry-edit-head">
-                <h4><?php echo Mage::helper('sales')->__('Comments History') ?></h4>
+                <h4><?php //echo Mage::helper('sales')->__('Comments History') ?></h4>
             </div>
-            <fieldset><?php echo $this->getChildHtml('order_history') ?></fieldset>
+            <fieldset><?php //echo $this->getChildHtml('order_history') ?></fieldset>
         </div>
-    </div>
+    </div> -->
+
     <div class="box-right entry-edit">
         <div class="entry-edit-head"><h4><?php echo Mage::helper('sales')->__('Order Totals') ?></h4></div>
         <div class="order-totals"><?php echo $this->getChildHtml('order_totals') ?></div>

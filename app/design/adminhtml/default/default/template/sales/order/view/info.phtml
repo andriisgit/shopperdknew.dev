@@ -173,3 +173,16 @@ $orderStoreDate = $this->formatDate($_order->getCreatedAtStoreDate(), 'medium', 
 </div>
 <div class="clear"></div>
 <?php endif; ?>
+
+
+    <div class="box-left">
+        <!--Comments History-->
+        <div class="entry-edit">
+            <div class="entry-edit-head">
+                <h4><?php echo Mage::helper('sales')->__('Comments History') ?></h4>
+            </div>
+            <fieldset><?php // echo $this->getChildHtml('order_history');
+            echo $this->getLayout()->getBlock('order_history')->toHtml(); ?></fieldset>
+        </div>
+    </div>
+
