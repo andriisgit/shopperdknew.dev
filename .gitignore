@@ -41,3 +41,12 @@
 /var/package/*
 !/var/package/*.xml
 
+.htaccess
+/media/cache/
+/media/tmp/
+/.idea
+/.history
+kontrakt-klarna.pdf
+categories.csv
+shopperdknew.clpprj
+shopperdknew_clcs.csprj
