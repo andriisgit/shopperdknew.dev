@@ -47,9 +47,9 @@ $action = Mage::app()->getFrontController()->getRequest()->getActionName();
 	    <?php $cms_block = Mage::getModel('cms/block')
 		    ->setStoreId( Mage::app()->getStore()->getId() )
 		    ->load('shopper_footer_banners');
-	    if($cms_block->getIsActive()) {
+	    if($cms_block->getIsActive())
 		    echo $this->getLayout()->createBlock('cms/block')->setBlockId('shopper_footer_block2')->toHtml();
-	    }
+
 	    ?>
 
     </div>
@@ -75,9 +75,8 @@ $action = Mage::app()->getFrontController()->getRequest()->getActionName();
                 $cms_block = Mage::getModel('cms/block')
 		            ->setStoreId( Mage::app()->getStore()->getId() )
 		            ->load($config['facebook_replace']);
-	            if($cms_block->getIsActive()) {
+	            if($cms_block->getIsActive())
 		            echo $this->getLayout()->createBlock('cms/block')->setBlockId($config['facebook_replace'])->toHtml();
-	            }
             } ?>
 </center>
        </div>
@@ -87,18 +86,16 @@ $action = Mage::app()->getFrontController()->getRequest()->getActionName();
 	            <?php $cms_block = Mage::getModel('cms/block')
 		            ->setStoreId( Mage::app()->getStore()->getId() )
 		            ->load('shopper_footer_information');
-	            if($cms_block->getIsActive()) {
+	            if($cms_block->getIsActive())
 		            echo $this->getLayout()->createBlock('cms/block')->setBlockId('shopper_footer_information')->toHtml();
-	            }
 	            ?>
             </div>
             <div class="grid_4">
 	            <?php $cms_block = Mage::getModel('cms/block')
 		            ->setStoreId( Mage::app()->getStore()->getId() )
 		            ->load('shopper_footer_contact');
-	            if($cms_block->getIsActive()) {
+	            if($cms_block->getIsActive())
 		            echo $this->getLayout()->createBlock('cms/block')->setBlockId('shopper_footer_contact')->toHtml();
-	            }
 	            ?>
             </div>
 

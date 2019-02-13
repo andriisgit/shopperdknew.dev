@@ -22,33 +22,40 @@
  * @package     base_default
  * @copyright   Copyright (c) 2006-2015 X.commerce, Inc. (http://www.magento.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
- */
-/**
+ *
+ *
  * @var Mage_Page_Block_Html_Header $this
  */
+
 $config = Mage::getStoreConfig('shoppersettings', Mage::app()->getStore()->getId());
+
 $hdr_style = '';
-if ( $config['design']['search_field'] ) {
+
+if ( $config['design']['search_field'] )
 	$hdr_style .= ' search-field';
-}
-if ( $config['design']['below_logo'] ) {
+
+if ( $config['design']['below_logo'] )
 	$hdr_style .= ' below-logo';
-}
 
 ?>
 
 <!-- HEADER BOF -->
+
 <div class="header-container">
 
-    <div class="header-wrapper <?php echo $hdr_style?>" style="background-color:#4b5c72; font-face=#ffffff">
-        <header>
-            <?php if ( $config['design']['below_logo'] ) : ?>
-                <div class="row clearfix">
-                    <div class="grid_12" >
+    <div class="header-wrapper <?php echo $hdr_style ?>" style="background-color:#4b5c72; font-face=#ffffff">
 
-	     <div class="newnavsmall2">
+    <header>
 
-            		<div class="nav_below <?php if ( $config['navigation']['use_wide_navigation'] ) { echo 'wide-navigation'; } ?>">
+    <?php 
+    if ( $config['design']['below_logo'] ) { ?>
+
+        <div class="row clearfix">
+            <div class="grid_12 center_logo">
+
+                <div class="newnavsmall2">
+                    <div class="nav_below <?php if ( $config['navigation']['use_wide_navigation'] ) { echo 'wide-navigation'; } ?>">
+
                             <!-- NAVIGATION -->
                             <?php
                             if ( !$config['navigation']['use_wide_navigation'] && $config['navigation']['use_navigation'] ) {
@@ -58,78 +65,96 @@ if ( $config['design']['below_logo'] ) {
                             }
                             ?>
                             <!-- NAVIGATION EOF -->
+
                             <?php echo $this->getChildHtml('topContainer'); ?>
-                        </div>
 
-</div>
-	
+                    </div>
+                </div>
 
-<img src=media/dklogo_2.png height=50>
+                <?php echo $this->getChildHtml('callBtn'); ?>
+
+                <img src="media/dklogo_2.png" height="50" class="margin-70">
 
                 <div class="top-dropdowns clearfix">
-
-
-                            <?php echo $this->getChildHtml('cartTop') ?>
-                            <?php echo $this->getChildHtml('compareTop') ?> 
-                            <?php echo $this->getChildHtml('topSearch'); ?>
-                       </div>
-
-
-
-                    </div>
+                    <?php
+                    echo $this->getChildHtml('cartTop');
+                    echo $this->getChildHtml('compareTop'); ?> 
                 </div>
+
+                <?php echo $this->getChildHtml('topSearch'); ?>
+
+            </div>
+        </div>
+
+        <!-- </div>
+
+        <div class="newnavsmall"> -->
+
+        <div class="row clearfix bottom_menu">
+            <div class="grid_12">
+
+                <div class="nav_below <?php if ( $config['navigation']['use_wide_navigation'] ) { echo 'wide-navigation'; } ?>">
+
+                    <!-- NAVIGATION -->
+                    <?php
+                    if ( !$config['navigation']['use_wide_navigation'] && $config['navigation']['use_navigation'] )
+                        echo $this->getChildHtml('topShopperMenu');
+                    else
+                        echo $this->getChildHtml('topMenu', false);
+                   ?>
+                    <!-- NAVIGATION EOF -->
+
+                    <?php echo $this->getChildHtml('topContainer'); ?>
+
+                </div>
+
+           </div>
+        </div>
+
+    <?php } else { ?>
+
+        <div class="row clearfix">
+            <div class="grid_12 <?php if ( $config['navigation']['use_wide_navigation'] ) { echo 'wide-navigation'; } ?>">
+
+                <?php if ($this->getIsHomePage()):?>
+                    <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><?php echo $this->getChildHtml('theme_logo', false) ?></a></h1>
+                <?php else:?>
+                    <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><?php echo $this->getChildHtml('theme_logo', false) ?></a>
+                <?php endif; ?>
+
+                <!-- NAVIGATION -->
+
+                <?php
+                if ( !$config['navigation']['use_wide_navigation'] && $config['navigation']['use_navigation'] )
+                    echo $this->getChildHtml('topShopperMenu');
+                else
+                    echo $this->getChildHtml('topMenu', false);
+                ?>
+                <!-- NAVIGATION EOF -->
+
+                <div class="top-dropdowns clearfix">
+                    <?php echo $this->getChildHtml('cartTop') ?>
+                    <?php echo $this->getChildHtml('compareTop') ?>
+                    <?php echo $this->getChildHtml('topSearch'); ?>
+                </div>
+
+                <?php echo $this->getChildHtml('topContainer'); ?>
+
+            </div>
+        </div>
+
+    <?php } ?>
+
+    </header>
 
     </div>
-<div class="newnavsmall"  ">
-             <div class="row clearfix" >
-                    <div class="grid_12">
-                               <div class="nav_below <?php if ( $config['navigation']['use_wide_navigation'] ) { echo 'wide-navigation'; } ?>">
-                            <!-- NAVIGATION -->
-                            <?php
-                            if ( !$config['navigation']['use_wide_navigation'] && $config['navigation']['use_navigation'] ) {
-                                    echo $this->getChildHtml('topShopperMenu');
-                            } else {
-                                    echo $this->getChildHtml('topMenu', false);
-                            }
-                            ?>
-                            <!-- NAVIGATION EOF -->
-                            <?php echo $this->getChildHtml('topContainer'); ?>
-                        </div>
 
-                   </div>
-                </div>
-
-            <?php else:?>
-                <div class="row clearfix">
-                    <div class="grid_12 <?php if ( $config['navigation']['use_wide_navigation'] ) { echo 'wide-navigation'; } ?>">
-                        <?php if ($this->getIsHomePage()):?>
-                        <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><?php echo $this->getChildHtml('theme_logo', false) ?></a></h1>
-                        <?php else:?>
-                        <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><?php echo $this->getChildHtml('theme_logo', false) ?></a>
-                        <?php endif; ?>
-
-                        <!-- NAVIGATION -->
-                        <?php
-                            if ( !$config['navigation']['use_wide_navigation'] && $config['navigation']['use_navigation'] ) {
-                                echo $this->getChildHtml('topShopperMenu');
-                            } else {
-                                echo $this->getChildHtml('topMenu', false);
-                            }
-                        ?>
-                        <!-- NAVIGATION EOF -->
-                        <div class="top-dropdowns clearfix">
-                            <?php echo $this->getChildHtml('cartTop') ?>
-                            <?php echo $this->getChildHtml('compareTop') ?>
-                            <?php echo $this->getChildHtml('topSearch'); ?>
-                        </div>
-                        <?php echo $this->getChildHtml('topContainer'); ?>
-                    </div>
-                </div>
-	    <?php endif?>
-        </header>
-    </div>
 </div>
 
+
+
 <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us16.list-manage.com","uuid":"530036c4cd513d24b460aa7b7","lid":"0ac9b19c1f"}) })</script>
+
 <!-- HEADER EOF -->
+
 <?php echo $this->getChildHtml('slideshow'); ?>
