@@ -647,7 +647,7 @@ tr.summary-total { cursor:pointer; }
 /* Add to Cart */
 .add-to-cart label { float:left; margin-right:5px; }
 .add-to-cart .qty { float:left; }
-.add-to-cart button.button { float:left;  margin-bottom: 5px;}
+.add-to-cart button.button { background-image:url(../images/sprite/shopper_sprite.png); float:left;  margin-bottom: 5px;}
 .add-to-cart .paypal-logo { clear:both;}
 .add-to-cart .paypal-logo .paypal-or { clear:both; display:block; margin:5px 0; text-align: center;}
 .product-view .add-to-cart .paypal-logo { margin:0; }
@@ -661,7 +661,7 @@ tr.summary-total { cursor:pointer; }
 .product-collateral .box-collateral { margin:0 0 15px; }
 
 /* Product Images */
-.product-view .product-img-box { float:left; width:267px; }
+/* .product-view .product-img-box { float:left; width:267px; } */
 .col3-layout .product-view .product-img-box { float:none; margin:0 auto; }
 .product-view .product-img-box .product-image-zoom { position:relative; width:265px; height:265px; overflow:hidden; z-index:9; }
 .product-view .product-img-box .product-image-zoom img { position:absolute; left:0; top:0; cursor:move; }
@@ -687,7 +687,7 @@ tr.summary-total { cursor:pointer; }
 
 
 /* Product Options */
-.product-options { padding:10px; margin:10px 0 0;  background-color:#f6f6f6; }
+/* .product-options { float: left; margin:10px 0 0; padding:10px; background-color:#f6f6f6; } */
 .product-options dt label { font-weight:bold; }
 .product-options dt .qty-holder { float:right; }
 .product-options dt .qty-holder label { vertical-align:middle; }
