@@ -51,5 +51,5 @@ media/tmp/
 .DS_Store
 kontrakt-klarna.pdf
 categories.csv
-shopperdknew.clpprj
-shopperdknew_clcs.csprj
+shopperdknew.dev.clpprj
+shopperdknew.dev_clcs.csprj

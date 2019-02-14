@@ -38,10 +38,12 @@ $_order = $this->getOrder() ?>
         <col width="1" />
         <col width="1" />
         <col width="1" />
+        <col width="1" />
         <thead>
             <tr class="headings">
                 <th><?php echo $this->helper('sales')->__('Product') ?></th>
                 <th><?php echo $this->helper('sales')->__('Warehouse Racking Place'); ?></th>
+                <th><?php echo 'TarifNumber'; ?></th>
                 <th><span class="nobr"><?php echo $this->helper('sales')->__('Item Status') ?></span></th>
                 <th><span class="nobr"><?php echo $this->helper('sales')->__('Original Price') ?></span></th>
                 <th><?php echo $this->helper('sales')->__('Price') ?></th>
@@ -61,7 +63,7 @@ $_order = $this->getOrder() ?>
                 continue; 
             else 
                 $i++;
-            echo '<tbody class="' . $i % 2 ? 'even' : 'odd' . '">';
+            echo '<tbody class="' . ($i % 2 ? 'even">' : 'odd">');
             echo $this->getItemHtml($_item);
             echo $this->getItemExtraInfoHtml($_item);
             echo '</tbody>';

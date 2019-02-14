@@ -25,7 +25,9 @@
  */
 
 $_item = $this->getItem();
-$this->setPriceDataObject($_item); ?>
+$this->setPriceDataObject($_item);
+$_order = $this->getOrder();
+?>
 <tr <?php if (!$this->canDisplayGiftmessage()): ?> class="border"<?php endif; ?>>
     <td>
         <?php if ($this->canDisplayContainer()): ?>
@@ -39,21 +41,36 @@ $this->setPriceDataObject($_item); ?>
         <?php endif ?>
     </td>
     <!-- warehouse_racking_place -->
-    <td><?php
-        $productId = $_item->getProduct()->getId();
-        $product = Mage::getModel('catalog/product')->load($productId);
-        $attributes = $product->getAttributes();
-        $dispAttribs = array('warehouse_racking_place', 'frekvensomraade');
-        foreach ($attributes as $attribute) {
-            $attributeCode = $attribute->getAttributeCode();
-            if(!in_array($attributeCode, $dispAttribs)) 
-                continue;
-            $label = $attribute->getFrontend()->getLabel($product);
-            $value = $attribute->getFrontend()->getValue($product); 
-            echo $label . ': ' . $value . ';<br>';
-        }
-        ?>
-    </td>
+    <?php
+    $OrderNumber = $this->getOrder()->getIncrementId();
+    $order = Mage::getModel('sales/order')->load($OrderNumber, 'increment_id');
+	$order->getAllVisibleItems();
+	$orderItems = $order->getItemsCollection()
+	    ->addAttributeToSelect('*')
+	    ->addAttributeToFilter('product_type', array('eq'=>'simple'))
+	    ->load();
+	$warehouse_racking_place = '';
+	$tarif_number = '';
+    foreach($orderItems as $sItem) {
+    	if($sItem->getProductType() == "simple") {
+    		$product = Mage::getModel('catalog/product')->load($sItem->getProductId());
+	        $attributes = $product->getAttributes();
+	        foreach ($attributes as $attribute) {
+	            $attributeCode = $attribute->getAttributeCode();
+	            if ($attributeCode == 'warehouse_racking_place') {
+					//$label = $attribute->getFrontend()->getLabel($product);
+	            	$warehouse_racking_place .= $attribute->getFrontend()->getValue($product) . ';<br />';
+				}
+	            if ($attributeCode == 'tarif_number') {
+					//$label = $attribute->getFrontend()->getLabel($product);
+	            	$tarif_number .= $attribute->getFrontend()->getValue($product) . ';<br />';
+				}
+	        }
+		}
+	}
+    ?>
+    <td class="a-center"><?php echo $warehouse_racking_place; ?></td>
+    <td class="a-center"><?php echo $tarif_number; ?></td>
     <td class="a-center"><?php echo $_item->getStatus() ?></td>
     <td class="a-right"><?php echo $this->displayPriceAttribute('original_price') ?></td>
     <td class="a-right">
