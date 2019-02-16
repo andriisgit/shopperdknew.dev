@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Shopperdknew_Pendingorder>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Shopperdknew_Pendingorder>
+    </modules>
+</config> 

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <pendingorder_adminhtml_pendingorder_index>
+        <reference name="content">
+            <block type="pendingorder/adminhtml_pendingorder" name="pendingorder" />
+        </reference>
+    </pendingorder_adminhtml_pendingorder_index>
+</layout>
