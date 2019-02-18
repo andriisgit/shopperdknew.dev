@@ -5,4 +5,9 @@
             <block type="pendingorder/adminhtml_pendingorder" name="pendingorder" />
         </reference>
     </pendingorder_adminhtml_pendingorder_index>
+    <pendingorder_adminhtml_pendingorderd_index>
+        <reference name="content">
+            <block type="pendingorder/adminhtml_pendingorderd" name="pendingorderd" />
+        </reference>
+    </pendingorder_adminhtml_pendingorderd_index>
 </layout>

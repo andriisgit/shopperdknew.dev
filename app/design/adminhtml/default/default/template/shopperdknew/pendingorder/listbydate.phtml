@@ -1,0 +1,71 @@
+<?php
+$order_collection = Mage::getResourceModel('sales/order_collection')
+    ->addFieldToSelect('*')
+    //->addFieldToFilter('customer_id',$customer_id)
+    ->addFieldToFilter('status', array('in' => array('pending')))
+    ->setOrder('created_at', 'desc');
+$tbody = '';
+
+foreach($order_collection as $orders) {
+    $order_id = $orders['entity_id'];
+
+    //Get all items for the order id
+    $order = Mage::getModel('sales/order')->load($order_id);
+    $order->getAllVisibleItems();
+    $items = $order->getItemsCollection()
+        ->addAttributeToSelect('*')
+        ->addAttributeToFilter('product_type', array('eq'=>'simple'))
+        ->load();
+    $payment = $order->getPayment();
+
+    foreach($items as $item) {
+        if ($item->getProductType() == "simple") {
+
+            $pitem = ( $item->getParentItem() ? $item->getParentItem() : $item );
+
+            $product = Mage::getModel('catalog/product')->load($item->getProductId());
+            $attributes = $product->getAttributes();
+            $unit = '';
+            foreach ($attributes as $attribute) {
+                if ($attribute->getAttributeCode() == 'unit') {
+                    //$label = $attribute->getFrontend()->getLabel($product);
+                    $unit = $attribute->getFrontend()->getValue($product);
+                    break;
+                }
+            }
+
+            $tbody .= '<tr><td>' . $order_id . '</td>
+            <td>' . $orders->getCreatedAtDate() . '</td>
+            <td><a href="' . Mage::helper('adminhtml')->getUrl('adminhtml/sales_order/view/order_id/', ['order_id' => $order_id]) . '">' . $orders->getRealOrderId() . '</a></td>
+            <td>' . $item->getName() . '</td>
+            <td class="a-center">' . $unit . number_format($item->getQtyOrdered(), 0) . '</td>
+            <td class="a-right">' . $order->getOrderCurrencyCode() . number_format($pitem->getPrice(), 2, ',', '')
+               . '<br />' . $payment->getMethodInstance()->getTitle() . '</td>
+            <td class="last">' . $order['shipping_description'] . '</td></tr>';
+        }
+    }
+}
+?>
+<div class="grid np">
+    <div class="hor-scroll">
+        <table cellspacing="0" class="data order-tables">
+            <thead>
+            <tr class="headings">
+                <th><?php echo $this->helper('pendingorder')->__('ID') ?></th>
+                <th><?php echo $this->helper('pendingorder')->__('Date') ?></th>
+                <th><?php echo $this->helper('pendingorder')->__('Order') ?></th>
+                <th><?php echo $this->helper('pendingorder')->__('Product') ?></th>
+                <th><?php echo $this->helper('pendingorder')->__('Qty') ?></th>
+                <th><?php echo $this->helper('pendingorder')->__('Base price (w/o tax)') ?></th>
+                <th><?php echo Mage::helper('sales')->__('Shipping &amp; Handling') ?></th>
+            </tr>
+            </thead>
+            <tbody>
+                <?php
+                echo $tbody;
+
+                ?>
+            </tbody>
+        </table>
+    </div>
+</div>

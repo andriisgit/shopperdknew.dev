@@ -40,14 +40,27 @@
 		<menu>
 			<pendingorder module="pendingorder">
 				<title>Pendingorder</title>
-				<sort_order>71</sort_order>               
-				<children>
+				<sort_order>71</sort_order>
+                <children>
+                    <pendingorder>
+                        <title>Get Items sorted by Prod</title>
+                        <action>pendingorder/adminhtml_pendingorder</action>
+                    </pendingorder>
+                    <pendingorderd>
+                        <title>Get Items sorted by Date</title>
+                        <action>pendingorder/adminhtml_pendingorderd</action>
+                    </pendingorderd>
+                </children>
+                <!--
+                <children>
 					<items module="pendingorder">
-						<title>Get Items</title>
+						<title>Get Items sorted by Prod</title>
 						<sort_order>0</sort_order>
 						<action>pendingorder/adminhtml_pendingorder</action>
-					</items>
-				</children>
+
+                    </items>
+                </children>
+                -->
 			</pendingorder>
 		</menu>
 		<acl>

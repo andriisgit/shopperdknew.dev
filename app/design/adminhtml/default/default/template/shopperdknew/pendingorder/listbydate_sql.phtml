@@ -1,0 +1,40 @@
+<?php
+$resource = Mage::getSingleton('core/resource');
+$readConnection = $resource->getConnection('core_read');
+
+$OrdersTableName = $resource->getTableName('sales_flat_order');
+$ItemsTableName = $resource->getTableName('sales_flat_order_item');
+
+$query = 'SELECT O.entity_id, O.updated_at, O.increment_id, I.name, I.qty_ordered, O.base_currency_code, O.base_subtotal, O.shipping_description
+FROM ' . $ItemsTableName . ' I
+INNER JOIN ' . $OrdersTableName . ' O ON O.entity_id=I.order_id
+WHERE O.status=\'pending\' AND I.product_type=\'simple\' ORDER BY O.updated_at ASC';
+$results = $readConnection->fetchAll($query);
+$res_row = '';
+foreach ($results as $result) {
+    $res_row .= '<tr><td>' . $result['entity_id'] . '</td><td>' . date('j M Y', strtotime($result['updated_at'])) . '</td><td><a href="' . Mage::helper('adminhtml')->getUrl('adminhtml/sales_order/view/order_id/', ['order_id' => $result['entity_id']]) . '">' . $result['increment_id'] . '</a></td><td>' . $result['name'] . '</td><td class="a-center">' . number_format($result['qty_ordered'], 0) . '</td><td class="a-right">' . $result['base_currency_code'] . number_format($result['base_subtotal'], 2, ',', '') . '</td><td class="last">' . $result['shipping_description'] . '</td></tr>';
+}
+?>
+<div class="grid np">
+    <div class="hor-scroll">
+        <table cellspacing="0" class="data order-tables">
+            <thead>
+            <tr class="headings">
+                <th><?php echo $this->helper('pendingorder')->__('ID') ?></th>
+                <th><?php echo $this->helper('pendingorder')->__('Date') ?></th>
+                <th><?php echo $this->helper('pendingorder')->__('Order') ?></th>
+                <th><?php echo $this->helper('pendingorder')->__('Product') ?></th>
+                <th><?php echo $this->helper('pendingorder')->__('Qty') ?></th>
+                <th><?php echo $this->helper('pendingorder')->__('Base price Sum') ?></th>
+                <th><?php echo $this->helper('pendingorder')->__('Shipping description') ?></th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+            echo $res_row;
+            unset ($resource, $readConnection, $query, $results, $res_row);
+            ?>
+            </tbody>
+        </table>
+    </div>
+</div>

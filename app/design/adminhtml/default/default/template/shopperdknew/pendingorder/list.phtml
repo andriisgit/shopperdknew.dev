@@ -5,14 +5,33 @@ $readConnection = $resource->getConnection('core_read');
 $OrdersTableName = $resource->getTableName('sales_flat_order');
 $ItemsTableName = $resource->getTableName('sales_flat_order_item');
 
-$query = 'SELECT O.entity_id, O.increment_id, I.name, I.qty_ordered, O.base_currency_code, O.base_subtotal, O.shipping_description
+$query = 'SELECT O.entity_id, O.increment_id, I.name, I.qty_ordered, I.product_id, O.base_currency_code, O.base_subtotal, O.shipping_description
 FROM ' . $ItemsTableName . ' I
 INNER JOIN ' . $OrdersTableName . ' O ON O.entity_id=I.order_id
 WHERE O.status=\'pending\' AND I.product_type=\'simple\' ORDER BY I.name ASC';
 $results = $readConnection->fetchAll($query);
 $res_row = '';
 foreach ($results as $result) {
-    $res_row .= '<tr><td>' . $result['entity_id'] . '</td><td><a href="' . Mage::helper('adminhtml')->getUrl('adminhtml/sales_order/view/order_id/', ['order_id' => $result['entity_id']]) . '">' . $result['increment_id'] . '</a></td><td>' . $result['name'] . '</td><td class="a-center">' . number_format($result['qty_ordered'], 0) . '</td><td class="a-right">' . $result['base_currency_code'] . number_format($result['base_subtotal'], 2, ',', '') . '</td><td class="last">' . $result['shipping_description'] . '</td></tr>';
+    $order = Mage::getModel('sales/order')->load($result['entity_id']);
+    $order->getAllVisibleItems();
+    $product = Mage::getModel('catalog/product')->load($result['product_id']);
+    $attributes = $product->getAttributes();
+    $unit = '';
+    foreach ($attributes as $attribute) {
+        if ($attribute->getAttributeCode() == 'unit') {
+            //$label = $attribute->getFrontend()->getLabel($product);
+            $unit = $attribute->getFrontend()->getValue($product);
+            break;
+        }
+    }
+
+    $res_row .= '<tr><td>' . $result['entity_id'] . '</td>
+        <td><a href="' . Mage::helper('adminhtml')->getUrl('adminhtml/sales_order/view/order_id/', ['order_id' => $result['entity_id']]) . '">' . $result['increment_id'] . '</a></td>
+        <td>' . $result['name'] . '</td>
+        <td class="a-center">' . $unit . number_format($result['qty_ordered'], 0) . '</td>
+        <td class="a-right">' . $result['base_currency_code'] . number_format($result['base_subtotal'], 2, ',', '')
+            . '<br />' . $order->getPayment()->getMethodInstance()->getTitle() . '</td>
+        <td class="last">' . $result['shipping_description'] . '</td></tr>';
 }
 ?>
 <div class="grid np">
