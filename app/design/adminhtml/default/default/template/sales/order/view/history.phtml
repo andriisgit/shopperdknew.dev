@@ -30,10 +30,19 @@
         <div><?php echo Mage::helper('sales')->__('Add Order Comments') ?></div>
         <span class="field-row">
             <label class="normal" for="history_status"><?php echo Mage::helper('sales')->__('Status') ?></label><br/>
+            <?php $ostatuses = Mage::getModel('sales/order_status')->getCollection()->toOptionArray();
+            ?>
             <select name="history[status]" class="select" id="history_status">
-            <?php foreach ($this->getStatuses() as $_code=>$_label): ?>
-                <option value="<?php echo $_code ?>"<?php if($_code==$this->getOrder()->getStatus()): ?> selected="selected"<?php endif; ?>><?php echo $_label ?></option>
-            <?php endforeach; ?>
+            <?php 
+                //Comment to add order statuses// 
+                // foreach ($this->getStatuses() as $_code=>$_label) {
+                foreach ($ostatuses as $ostatus) {
+                    $_code = $ostatus['value'];
+                    $_label = $ostatus['label'];
+                ?>
+                
+                <option value="<?php echo $_code ?>" <?php if($_code==$this->getOrder()->getStatus()): ?> selected="selected"<?php endif; ?>><?php echo $_label ?></option>
+                <?php } ?>
             </select>
         </span>
         <span class="field-row">
